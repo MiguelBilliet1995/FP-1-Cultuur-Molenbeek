@@ -15,13 +15,13 @@
 <body>
     <header>
         <div class="container">
-          <!-- <img src="./images/logo.svg"></img> -->
+          <img src="images/logo-tekst.svg" alt="logo" class="logo">
           <ul>
             <li><a href="index.html" id="home">Home</a></li>
             <li><a href="evenementen.html" id="kalender">Kalender</a></li>
             <li><a href="news.html" id="nieuws">Nieuws</a></li>
             <li><a href="about.html" id="over-ons">Over ons</a></li>
-            <li><a href="#" id="contact">Contact</a></li>
+            <li><a href="contact.html" id="contact" class="active">Contact</a></li>
           </ul>
         </div>
     </header>
@@ -33,7 +33,7 @@
                 </div>
                 <div class="col-sm-8">
                     <form name="contact-form" method="POST">
-                        <legend>Contact</legend>
+                        <h3>Contact</h3>
                         <fieldset class="textinput">
                             <label for="contact-name" class="text-input-label">naam</label>
                             <input id="contact-name" type="text" name="contact-name" >
@@ -42,11 +42,9 @@
                             <label for="contact-email" class="text-input-label">email</label>
                             <input id="contact-email" type="email" name="contact-email">
                         </fieldset>
-                        <textarea name="contact-message" id="contact-message" cols="30" rows="10"></textarea>
-                        <fieldset>
-                            <label for="contact-submit">Verzenden</label>
-                            <input id="contact-submit" type="submit" name="contact-submit">
-                        </fieldset>
+                        <textarea name="contact-message" id="contact-message"></textarea>
+                        
+                        <input id="contact-submit" type="submit" name="contact-submit" class="button button-next">
                     </form>
                 </div>
             </div>
@@ -63,7 +61,7 @@
                   <li><a href="evenementen.html"></a>Kalender</a></li>
                   <li><a href="news.html"></a>Nieuws</a></li>
                   <li><a href="about.html"></a>Over ons</a></li>
-                  <li><a href="contact-from.html"></a>Contact</a></li>
+                  <li><a href="contact.html"  class="active"></a>Contact</a></li>
               </ul>
             </div>
     

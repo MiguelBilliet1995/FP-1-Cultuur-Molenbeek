@@ -2,11 +2,20 @@ $base-color: #EB5B55;
 
 body {
   margin: 0;
-  font-family: 'PT-Sans-Pro', sans-serif;
+  font-family: pt-sans-pro, sans-serif !important;
   height: 100vh;
   width: 100%;
 }
 
+h3 {
+  padding-bottom: 30px;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 800 !important;
+}
 
 /* newspage */
 p {
@@ -33,14 +42,19 @@ img {
 }
 
 header {
-  height: 75px;
+  height: 120px;
   background-color: #EEEEEE;
   margin: 0px 0px 50px 0px;
-  height: 75px;
+
+  .logo {
+    height: 70px;
+    width: auto;
+    margin: 20px 0px;
+  }
 
 
   ul {
-    margin: 25px 0px 0px;
+    margin: 70px 0px 0px;
     float: right;
     list-style: none;
     display: flex;
@@ -50,11 +64,16 @@ header {
 
 
 header li {
-  margin-left: 60px;
+  margin-left: 75px;
+
+  .active {
+    color: $base-color !important;
+  }
 
   a {
     position: relative;
     font-weight: bold;
+    text-decoration: none;
   }
 
   a::after {
@@ -62,10 +81,17 @@ header li {
     position: absolute;
     height: 25px;
     width: 25px;
-    left: -30px;
+    left: -35px;
     background-position: center;
     background-repeat: no-repeat;
+    transition: transform 0.2s;
   }
+
+  a:hover:after {
+    transition: transform 0.5s;
+    transform: rotate(15deg);
+  }
+
 
   #kalender::after {
     background-image: url(../images/icons/kalender-icon.svg);
@@ -96,16 +122,16 @@ footer {
   height: 250px;
   padding: 50px 0px;
 
-  .footer-navigation{
+  .footer-navigation {
 
-    li{
+    li {
       position: relative;
     }
 
-    li::before{
+    li::before {
       position: absolute;
       content: '> ';
-      left: -25px ;
+      left: -25px;
     }
 
   }
@@ -129,10 +155,6 @@ p {
 .news-card {
   margin-bottom: 5rem;
 
-  div {
-    padding: 1.5rem;
-  }
-
   img {
     margin-bottom: 2rem;
 
@@ -143,20 +165,27 @@ p {
     font-weight: 900;
   }
 
-  h2+p {
-    margin: 2rem 0;
+  h2, p{
+    margin: 0px 0px 2rem;
   }
 }
 
 /* about page */
 
-.about {
-  margin: 10rem 0;
+.about, .index {
+  margin: 7rem 0;
 
   h1 {
     font-family: pt-sans-pro, sans-serif;
     font-weight: 900;
+    font-size: 4em;
+    margin-bottom: 5rem;
+    white-space: normal;
   }
+}
+
+.column-2{
+  column-count: 2;
 }
 
 .gallery {
@@ -169,16 +198,11 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
 
-  h1 {
-    font-size: 4em;
-    margin-bottom: 5rem;
-    white-space: normal;
-  }
-
-  span {
-    column-count: 2;
-  }
+.align-center{
+  display: flex;
+  align-items: center;
 }
 
 a {
@@ -188,14 +212,25 @@ a {
 
 /* cards */
 
+.card{
+  position: inherit !important;
+  border: none !important;
+  margin: 30px 0px;
+}
+
 .card img {
   width: 100%;
 }
 
 .info {
   position: relative;
-  font-size: 18px;
-  padding: 20px;
+  font-size: 15px;
+  /*padding: 20px;*/
+  padding: 20px 0px;
+
+  p{
+    margin: 20px 0px 30px;
+  }
 }
 
 h1 {
@@ -219,55 +254,13 @@ h1 {
 }
 
 .textbubbles img {
-  width: 2vw;
+  width: 40px!important;
+  height: auto!important;
   padding-right: 0.5em;
 }
 
 .datum {
-  font-size: 24px;
-}
-
-.button-container {
-  width: 100%;
-  height: 70px;
-  display: inline-flex;
-}
-
-.button {
-  display: table;
-  float: left;
-  margin: 0px auto 0px auto;
-  padding: 0.8em;
-  padding-left: 1em;
-  padding-right: 1em;
   font-size: 20px;
-  font-weight: bold;
-  color: white;
-  background-color: #EB5B55;
-  white-space: nowrap;
-  position: relative;
-}
-
-.button-next::after {
-  content: '';
-  position: absolute;
-  right: 5px;
-  top: 10px;
-  background-image: url(../images/icons/chevron-right-solid.svg);
-  height: 40px;
-  width: 40px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 80% 80%;
-}
-
-.button p {
-  padding-right: 8em;
-  display: inline;
-}
-
-.red {
-  background-color: #EB5B55;
 }
 
 /*Kalender*/
@@ -277,13 +270,12 @@ h1 {
   margin: 0;
 
   width: 100%;
-  height: 100vh;
+  height: auto;
 
-  background-color: #eee;
-  color: #eee;
-  display: -webkit-box;
+
+  /*display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  display: flex;*/
   -webkit-box-pack: center;
   -ms-flex-pack: center;
 
@@ -299,13 +291,9 @@ h1 {
 }
 
 .calendar {
-  margin-left: 1rem;
-  margin-top: 1rem;
-
-  width: 45rem;
-  height: 52rem;
+  width: 100%;
   background-color: #F4A29D;
-
+  color: #eee;
 }
 
 .month {
@@ -383,68 +371,48 @@ h1 {
 }
 
 .weekdays {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   width: 100%;
-  height: 5rem;
-  padding: 0 0.4rem;
   color: #eee;
+
+  tr {
+    width: 100%;
+  }
 }
 
-.weekdays div {
+.weekdays td {
   font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: .1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 6.314rem;
+  border: 0;
 }
 
 .days {
   width: 100%;
   margin: 0.2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  border-spacing: 20px;
 }
 
-.days div {
-  width: 5.7428rem;
-  height: 5rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-size: 1.4rem;
+.days td {
   margin: 0.3rem;
-  background-color: #eee;
   color: #EB5B55;
-  font-size: 20px;
+  font-size: 18px;
+  border: 0;
+}
+
+.days td:not(.today) {
+  background-color: #eee !important;
 }
 
 .days div:hover:not(.today) {
-  border: #EB5B55 solid .5rem;
+  border: #EB5B55 solid 1px !important;
 }
 
 .prev-date,
@@ -453,7 +421,12 @@ h1 {
 }
 
 .today {
-  border: #EB5B55 solid 5px;
+  background-color: #EB5B55 !important;
+
+  .date {
+    color: white;
+  }
+
 }
 
 /*Contact-form*/
@@ -464,9 +437,13 @@ form {
   justify-content: space-between;
   height: 100%;
 
-  textarea{
+  input[type="text"], input[type="email"], textarea{
+    width: 100%;
+  }
+
+  textarea {
     resize: none;
-    width: 500px;
+    min-height: 200px;
     border: 2px black solid;
   }
 
@@ -478,20 +455,20 @@ form {
     position: relative;
     margin: 10px 0px;
 
-    input{
+    input {
       width: 500px;
       border: none;
       border-bottom: 2px black solid;
     }
-  
-    input:focus{
+
+    input:focus {
       outline: none !important;
       border: none;
       border-bottom: 2px $base-color solid;
       background-color: clear;
     }
 
-    .text-input-label{
+    .text-input-label {
       position: absolute;
     }
 
@@ -521,73 +498,26 @@ form {
     }
   }
 }
-/* cards */
-
-.card {
-  left: 100px;
-  position: inherit!important;
-  border: none!important;
-}
 
 .card img {
   width: 100%;
 }
 
-.info {
-  position: relative;
-  font-size: 18px;
-  padding: 20px;
-}
-
-h1 {
-  white-space: nowrap;
-  font-weight: 800;
-  font-size: 30px;
-  margin: 0;
-  margin-top: -0.5em;
-  top: 1vh;
-}
-
-.card .textbubblecontainer {
-  position: relative;
-  margin-top: -1em;
-}
-
-.textbubbles {
-  padding-left: 1vw;
-  white-space: nowrap;
-  float: right;
-  margin-right: 20px;
-}
-
-.textbubbles img {
-  width: 2vw;
-  padding-right: 0.5em;
-}
-
-.datum {
-  font-size: 24px;
-}
-
 .button-container {
   width: 100%;
   height: 70px;
-  display: inline-flex;
 }
 
 .button {
-  display: table;
-  float: left;
-  margin: 0px auto 0px auto;
-  padding: 0.8em;
-  padding-left: 1em;
-  padding-right: 1em;
-  font-size: 20px;
+  padding: 10px 20px;
+  font-size: 17px;
   font-weight: bold;
   color: white;
   background-color: #EB5B55;
-  white-space: nowrap;
   position: relative;
+  height: auto;
+  display: inline-flex;
+  border: 0px;
 }
 
 .button-next::after {
@@ -596,18 +526,25 @@ h1 {
   right: 5px;
   top: 10px;
   background-image: url(../images/icons/chevron-right-solid.svg);
-  height: 40px;
-  width: 40px;
+  height: 25px;
+  width: 25px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 80% 80%;
+  color: white;
 }
 
 .button p {
   padding-right: 8em;
-  display: inline;
+  margin: 0px;
 }
 
 .red {
+  background-color: rgba(235, 91, 85, 0.2);
+  padding: 3px 6px;
+}
+
+.photo-square{
   background-color: #EB5B55;
+  padding-bottom: 100%;
 }

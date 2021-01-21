@@ -3,11 +3,11 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 161 141" style="enable-background:new 0 0 161 141;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#0077B7;}
-	.st1{fill:#FFFFFF;stroke:#0077B7;stroke-width:2;stroke-miterlimit:10;}
+	.st0{fill:#E05248;}
+	.st1{fill:#FFF5F5;stroke:#E05248;stroke-width:2;stroke-miterlimit:10;}
 	.st2{font-family:'Bauhaus93';}
 	.st3{font-size:27.7584px;}
-	.st4{fill:none;stroke:#0077B7;stroke-width:3;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#E05248;stroke-width:3;stroke-miterlimit:10;}
 </style>
 <g id="krant">
 	<path class="st0" d="M156.25,110.58L31.1,140.36c-3.21,0.76-6.46-1.24-7.23-4.45L0.52,37.77c-0.76-3.21,1.24-6.46,4.45-7.23
@@ -16,11 +16,15 @@
 		C141.68,124.3,138.98,127,135.68,127z"/>
 	<path id="foto_krant" class="st0" d="M56.1,65.93H19.99c-3.3,0-6-2.7-6-6V34.92c0-3.3,2.7-6,6-6H56.1c3.3,0,6,2.7,6,6v25.01
 		C62.1,63.23,59.4,65.93,56.1,65.93z"/>
-	<text transform="matrix(1 0 0 1 71.5632 54.6257)" class="st0 st2 st3">NWS</text>
+	<g>
+		<text transform="matrix(1 0 0 1 71.5632 54.6257)" class="st0 st2 st3">NWS</text>
+	</g>
 	<g id="lijntjes">
-		<line class="st4" x1="19.54" y1="84.44" x2="115.77" y2="84.44"/>
-		<line class="st4" x1="19.54" y1="96.47" x2="115.77" y2="96.47"/>
-		<line class="st4" x1="19.54" y1="109.42" x2="115.77" y2="109.42"/>
+		<g>
+			<line class="st4" x1="19.54" y1="84.44" x2="115.77" y2="84.44"/>
+			<line class="st4" x1="19.54" y1="96.47" x2="115.77" y2="96.47"/>
+			<line class="st4" x1="19.54" y1="109.42" x2="115.77" y2="109.42"/>
+		</g>
 	</g>
 </g>
 </svg>
