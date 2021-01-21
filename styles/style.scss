@@ -35,14 +35,22 @@ img {
 
 /* about page */
 
-
 .about {
-    margin-top: 5rem;
+    margin: 5rem 0;
     h1 {
         font-family: pt-sans-pro, sans-serif;
         font-weight: 900;
     }
 }
+
+.align-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+
+
 * {
   font-family: 'PT-Sans-Pro', sans-serif;
 }
