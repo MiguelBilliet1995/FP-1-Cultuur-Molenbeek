@@ -34,7 +34,7 @@ p {
   border: none;
 }
 
-.news-card button i {
+.news-card button svg {
   margin-left: 3rem;
   font-size: .8rem;
 }
