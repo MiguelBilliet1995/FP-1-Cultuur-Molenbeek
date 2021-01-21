@@ -1,48 +1,55 @@
 $base-color: #EB5B55;
 
+html {
+  font-size: 62.5%;
+}
 
 /* newspage */
 p {
-    margin-bottom: 0;
-    font-family: pt-sans-pro, sans-serif;
-    font-weight: 400;
-    font-style: normal;
+  margin-bottom: 0;
+  font-family: pt-sans-pro, sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 img {
-    width: 100%;
+  width: 100%;
 }
 
 .news-card {
-    margin-top: 5rem;
-    div {
-        padding: 1.5rem;
-    }
-    img {
-        margin-bottom: 2rem;
+  margin-top: 5rem;
 
-    }
+  div {
+    padding: 1.5rem;
+  }
 
-    h2 {
-        font-family: pt-sans-pro, sans-serif;
-        font-weight: 900;
-    }
+  img {
+    margin-bottom: 2rem;
 
-    h2 + p {
-        margin: 2rem 0;
-    }
+  }
+
+  h2 {
+    font-family: pt-sans-pro, sans-serif;
+    font-weight: 900;
+  }
+
+  h2+p {
+    margin: 2rem 0;
+  }
 }
 
 /* about page */
 
 
 .about {
-    margin-top: 5rem;
-    h1 {
-        font-family: pt-sans-pro, sans-serif;
-        font-weight: 900;
-    }
+  margin-top: 5rem;
+
+  h1 {
+    font-family: pt-sans-pro, sans-serif;
+    font-weight: 900;
+  }
 }
+
 * {
   font-family: 'PT-Sans-Pro', sans-serif;
 }
@@ -76,11 +83,11 @@ header ul {
 header li {
   margin-left: 60px;
 
-  a{
+  a {
     position: relative;
   }
 
-  a::after{
+  a::after {
     content: '';
     position: absolute;
     height: 25px;
@@ -90,19 +97,19 @@ header li {
     background-repeat: no-repeat;
   }
 
-  #kalender::after{
+  #kalender::after {
     background-image: url(../images/icons/kalender-icon.svg);
   }
-  
-  #nieuws::after{
+
+  #nieuws::after {
     background-image: url(../images/icons/news-icon.svg);
   }
 
-  #over-ons::after{
+  #over-ons::after {
     background-image: url(../images/icons/gallery-icon.svg);
   }
 
-  #contact::after{
+  #contact::after {
     background-image: url(../images/icons/contact-icon.svg);
   }
 
@@ -177,7 +184,7 @@ h1 {
   font-size: 24px;
 }
 
-.button-container{
+.button-container {
   width: 100%;
   height: 70px;
   display: inline-flex;
@@ -198,7 +205,7 @@ h1 {
   position: relative;
 }
 
-.button-next::after{
+.button-next::after {
   content: '';
   position: absolute;
   right: 5px;
@@ -216,9 +223,195 @@ h1 {
   display: inline;
 }
 
-.red{
+.red {
   background-color: #EB5B55;
 }
 
+
+/*Kalender*/
+
+.cal-container {
+  padding: 0;
+  margin: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  background-color: #eee;
+  color: #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+
+  font-family: "pt-sans-pro",
+    sans-serif;
+  font-weight: 600;
+  font-style: normal;
+
+}
+
+.cal-container * {
+  box-sizing: border-box;
+}
+
+.calendar {
+  margin-left: 1rem;
+  margin-top: 1rem;
+
+  width: 45rem;
+  height: 52rem;
+  background-color: #F4A29D;
+
+}
+
+.month {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  width: 100%;
+  height: 12rem;
+  background-color: #F4A29D;
+  padding: 0 2rem;
+}
+
+.month-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 2rem;
+  font-family: 'PT-sans-pro', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: capitalize;
+}
+
+.month-slider p {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.month .prev {
+  font-size: 2.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: #eee;
+}
+
+.month .next {
+  font-size: 2.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: #eee;
+}
+
+.month h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+  margin-bottom: 1rem;
+}
+
+.month p {
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.weekdays {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  padding: 0 0.4rem;
+  color: #eee;
+}
+
+.weekdays div {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: .1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 6.314rem;
+}
+
+.days {
+  width: 100%;
+  margin: 0.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.days div {
+  width: 5.7428rem;
+  height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 1.4rem;
+  margin: 0.3rem;
+  background-color: #eee;
+  color: #EB5B55;
+  font-size: 20px;
+}
+
+.days div:hover:not(.today) {
+  border: #ffae00 solid .2rem;
+}
+
+.prev-date,
+.next-date {
+  opacity: 40%;
+}
+
+.today {
+  border: #EB5B55 solid 5px;
+}
 
 /*# sourceMappingURL=style.css.map */
