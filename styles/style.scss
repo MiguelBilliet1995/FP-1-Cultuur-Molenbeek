@@ -14,7 +14,7 @@ img {
 }
 
 .news-card {
-    margin-top: 5rem;
+    margin-bottom: 5rem;
     div {
         padding: 1.5rem;
     }
@@ -56,62 +56,61 @@ body {
 
 header {
   height: 75px;
-  background-color: #c0c5cb;
-  position: relative;
-  background-image: url(../images/logo.svg);
-  background-repeat: no-repeat;
-  background-position: 80px;
-  background-size: 75px;
-}
+  background-color: #EEEEEE;
+  margin: 0px 0px 50px 0px;
 
-header ul {
-  margin: 25px 0px 0px;
-  float: right;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  list-style: none;
-}
-
-header li {
-  margin-left: 60px;
-
-  a{
-    position: relative;
+  ul {
+    margin: 25px 0px 0px;
+    float: right;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
   }
 
-  a::after{
-    content: '';
-    position: absolute;
-    height: 25px;
-    width: 25px;
-    left: -30px;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  #kalender::after{
-    background-image: url(../images/icons/kalender-icon.svg);
-  }
+  li {
+    margin-left: 60px;
   
-  #nieuws::after{
-    background-image: url(../images/icons/news-icon.svg);
+    a{
+      position: relative;
+      font-weight: bold;
+    }
+  
+    a::after{
+      content: '';
+      position: absolute;
+      height: 25px;
+      width: 25px;
+      left: -30px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  
+    #kalender::after{
+      background-image: url(../images/icons/kalender-icon.svg);
+    }
+    
+    #nieuws::after{
+      background-image: url(../images/icons/news-icon.svg);
+    }
+  
+    #over-ons::after{
+      background-image: url(../images/icons/gallery-icon.svg);
+    }
+  
+    #contact::after{
+      background-image: url(../images/icons/contact-icon.svg);
+    }
+  
+  
   }
-
-  #over-ons::after{
-    background-image: url(../images/icons/gallery-icon.svg);
-  }
-
-  #contact::after{
-    background-image: url(../images/icons/contact-icon.svg);
-  }
-
 
 }
+
 
 
 footer {
-  position: absolute;
+  margin: 50px 0px 0px;
   overflow: hidden;
   bottom: 0;
   border-top: black 1px solid;
