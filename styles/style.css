@@ -1,3 +1,46 @@
+/* newspage */
+p {
+    margin-bottom: 0;
+    font-family: pt-sans-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+img {
+    width: 100%;
+}
+
+.news-card {
+    margin-top: 5rem;
+}
+
+.news-card div {
+    padding: 1.5rem;
+}
+
+.news-card img {
+    margin-bottom: 2rem;
+}
+
+.news-card h2 {
+    font-family: pt-sans-pro, sans-serif;
+    font-weight: 900;
+}
+
+.news-card h2+p {
+    margin: 2rem 0;
+}
+
+/* about page */
+.about {
+    margin-top: 5rem;
+}
+
+.about h1 {
+    font-family: pt-sans-pro, sans-serif;
+    font-weight: 900;
+}
+
 * {
     font-family: 'PT-Sans-Pro', sans-serif;
 }
@@ -29,7 +72,39 @@ header ul {
 }
 
 header li {
-    margin-left: 25px;
+    <<<<<<< HEAD margin-left: 25px;
+    =======margin-left: 60px;
+}
+
+header li a {
+    position: relative;
+}
+
+header li a::after {
+    content: '';
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    left: -30px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header li #kalender::after {
+    background-image: url(../images/icons/kalender-icon.svg);
+}
+
+header li #nieuws::after {
+    background-image: url(../images/icons/news-icon.svg);
+}
+
+header li #over-ons::after {
+    background-image: url(../images/icons/gallery-icon.svg);
+}
+
+header li #contact::after {
+    background-image: url(../images/icons/contact-icon.svg);
+    >>>>>>>d34c5b78ca47cc0dab7f4ba6f8f439b17af6149e
 }
 
 footer {
@@ -46,9 +121,11 @@ footer {
 
 footer ul {
     display: block;
-    top: 30px;
     list-style: none;
+}
 
+.sim li::before {
+    content: "> ";
 }
 
 
@@ -147,4 +224,6 @@ h1 {
     background-color: #EB5B55;
 }
 
+<<<<<<< HEAD
 /*# sourceMappingURL=style.css.map */
+=======>>>>>>>d34c5b78ca47cc0dab7f4ba6f8f439b17af6149e

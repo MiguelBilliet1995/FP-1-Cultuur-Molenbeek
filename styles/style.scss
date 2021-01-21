@@ -1,3 +1,48 @@
+$base-color: #EB5B55;
+
+
+/* newspage */
+p {
+    margin-bottom: 0;
+    font-family: pt-sans-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+img {
+    width: 100%;
+}
+
+.news-card {
+    margin-top: 5rem;
+    div {
+        padding: 1.5rem;
+    }
+    img {
+        margin-bottom: 2rem;
+
+    }
+
+    h2 {
+        font-family: pt-sans-pro, sans-serif;
+        font-weight: 900;
+    }
+
+    h2 + p {
+        margin: 2rem 0;
+    }
+}
+
+/* about page */
+
+
+.about {
+    margin-top: 5rem;
+    h1 {
+        font-family: pt-sans-pro, sans-serif;
+        font-weight: 900;
+    }
+}
 * {
     font-family: 'PT-Sans-Pro', sans-serif;
 }
@@ -29,8 +74,45 @@ header ul {
 }
 
 header li {
+<<<<<<< HEAD
     margin-left: 25px;
+=======
+  margin-left: 60px;
+
+  a{
+    position: relative;
+  }
+
+  a::after{
+    content: '';
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    left: -30px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  #kalender::after{
+    background-image: url(../images/icons/kalender-icon.svg);
+  }
+  
+  #nieuws::after{
+    background-image: url(../images/icons/news-icon.svg);
+  }
+
+  #over-ons::after{
+    background-image: url(../images/icons/gallery-icon.svg);
+  }
+
+  #contact::after{
+    background-image: url(../images/icons/contact-icon.svg);
+  }
+
+
+>>>>>>> d34c5b78ca47cc0dab7f4ba6f8f439b17af6149e
 }
+
 
 footer {
     position: absolute;
@@ -43,6 +125,7 @@ footer {
 }
 
 footer ul {
+<<<<<<< HEAD
     display: block;
     top: 30px;
     list-style: none;
@@ -154,3 +237,106 @@ footer ul {
 
 
     /*# sourceMappingURL=style.css.map */
+=======
+  display: block;
+  top: 30px;
+  list-style: none;
+}
+
+a {
+  color: black !important;
+  text-decoration: none;
+}
+
+/* cards */
+
+.card {
+  left: 100px;
+}
+
+.card img {
+  width: 100%;
+}
+
+.info {
+  position: relative;
+  font-size: 18px;
+  padding: 20px;
+}
+
+h1 {
+  white-space: nowrap;
+  font-weight: 800;
+  font-size: 30px;
+  margin: 0;
+  margin-top: -0.5em;
+  top: 1vh;
+}
+
+.card .textbubblecontainer {
+  position: relative;
+  margin-top: -1em;
+}
+
+.textbubbles {
+  padding-left: 1vw;
+  white-space: nowrap;
+  float: right;
+  margin-right: 20px;
+}
+
+.textbubbles img {
+  width: 2vw;
+  padding-right: 0.5em;
+}
+
+.datum {
+  font-size: 24px;
+}
+
+.button-container{
+  width: 100%;
+  height: 70px;
+  display: inline-flex;
+}
+
+.button {
+  display: table;
+  float: left;
+  margin: 0px auto 0px auto;
+  padding: 0.8em;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: #EB5B55;
+  white-space: nowrap;
+  position: relative;
+}
+
+.button-next::after{
+  content: '';
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  background-image: url(../images/icons/chevron-right-solid.svg);
+  height: 40px;
+  width: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80% 80%;
+}
+
+.button p {
+  padding-right: 8em;
+  display: inline;
+}
+
+.red{
+  background-color: #EB5B55;
+}
+
+
+/*# sourceMappingURL=style.css.map */
+>>>>>>> d34c5b78ca47cc0dab7f4ba6f8f439b17af6149e
