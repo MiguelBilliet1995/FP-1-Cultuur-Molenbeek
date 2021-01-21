@@ -1,3 +1,7 @@
+* {
+  font-family: 'PT-Sans-Pro', sans-serif;
+}
+
 body {
   margin: 0;
   font-family: pt-sans-pro;
@@ -48,4 +52,75 @@ a {
   color: black !important;
   text-decoration: none;
 }
+
+/* cards */
+
+.card {
+  position: relative;
+  left: 100px;
+}
+
+.card img {
+  width: 25vw;
+}
+
+.info {
+  width: 21vw;
+  position: relative;
+  left: 4vw;
+  font-size: 18px;
+}
+
+h1 {
+  white-space: nowrap;
+  font-weight: 800;
+  font-size: 30px;
+  margin: 0;
+  margin-top: -0.5em;
+  top: 1vh;
+}
+
+.card .textbubblecontainer {
+  position: relative;
+  margin-top: -1em;
+}
+
+.textbubbles {
+  padding-left: 1vw;
+  white-space: nowrap;
+}
+
+.textbubbles img {
+  width: 2vw;
+  padding-right: 0.5em;
+}
+
+.datum {
+  font-size: 24px;
+}
+
+.button {
+  display: table;
+  float: left;
+  margin: 0px auto 0px auto;
+  padding: 0.8em;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: #EB5B55;
+  white-space: nowrap;
+}
+
+.button p {
+  padding-right: 8em;
+  display: inline;
+}
+
+.red{
+  background-color: #EB5B55;
+}
+
+
 /*# sourceMappingURL=style.css.map */
