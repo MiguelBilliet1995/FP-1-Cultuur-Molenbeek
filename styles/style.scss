@@ -1,3 +1,48 @@
+$base-color: #EB5B55;
+
+
+/* newspage */
+p {
+    margin-bottom: 0;
+    font-family: pt-sans-pro, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+img {
+    width: 100%;
+}
+
+.news-card {
+    margin-top: 5rem;
+    div {
+        padding: 1.5rem;
+    }
+    img {
+        margin-bottom: 2rem;
+
+    }
+
+    h2 {
+        font-family: pt-sans-pro, sans-serif;
+        font-weight: 900;
+    }
+
+    h2 + p {
+        margin: 2rem 0;
+    }
+}
+
+/* about page */
+
+
+.about {
+    margin-top: 5rem;
+    h1 {
+        font-family: pt-sans-pro, sans-serif;
+        font-weight: 900;
+    }
+}
 * {
   font-family: 'PT-Sans-Pro', sans-serif;
 }
