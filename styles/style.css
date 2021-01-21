@@ -33,12 +33,40 @@ img {
 
 /* about page */
 .about {
-  margin-top: 5rem;
+  margin: 10rem 0;
 }
 
 .about h1 {
   font-family: pt-sans-pro, sans-serif;
   font-weight: 900;
+}
+
+.gallery img {
+  margin-top: 2rem;
+}
+
+.align-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.align-bottom h1 {
+  font-size: 4em;
+  margin-bottom: 5rem;
+  white-space: normal;
+}
+
+.align-bottom span {
+  -webkit-column-count: 2;
+          column-count: 2;
 }
 
 * {
@@ -106,9 +134,8 @@ header li #contact::after {
 }
 
 footer {
-  position: absolute;
+  margin-top: 5rem;
   overflow: hidden;
-  bottom: 0;
   border-top: black 1px solid;
   width: 100%;
   height: 250px;
