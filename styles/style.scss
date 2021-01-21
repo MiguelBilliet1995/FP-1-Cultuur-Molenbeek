@@ -35,14 +35,37 @@ img {
 
 /* about page */
 
-
 .about {
-    margin-top: 5rem;
+    margin: 10rem 0;
     h1 {
         font-family: pt-sans-pro, sans-serif;
         font-weight: 900;
     }
 }
+
+.gallery {
+    img{
+        margin-top: 2rem;
+    }
+}
+
+.align-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    h1{
+        font-size: 4em;
+        margin-bottom: 5rem;
+        white-space: normal;
+    }
+    span {
+        column-count: 2;
+    }
+}
+
+
+
 * {
     font-family: 'PT-Sans-Pro', sans-serif;
 }
@@ -108,13 +131,17 @@ header li {
   #contact::after{
     background-image: url(../images/icons/contact-icon.svg);
   }
+<<<<<<< HEAD
 
 
 >>>>>>> d34c5b78ca47cc0dab7f4ba6f8f439b17af6149e
+=======
+>>>>>>> 831a1f727a93370d8c2e8ba7de083c4228f63a48
 }
 
 
 footer {
+<<<<<<< HEAD
     position: absolute;
     overflow: hidden;
     bottom: 0;
@@ -122,6 +149,14 @@ footer {
     width: 100%;
     height: 250px;
     padding: 20px 0px;
+=======
+    margin-top: 5rem;
+  overflow: hidden;
+  border-top: black 1px solid;
+  width: 100%;
+  height: 250px;
+  padding: 20px 0px;
+>>>>>>> 831a1f727a93370d8c2e8ba7de083c4228f63a48
 }
 
 footer ul {
