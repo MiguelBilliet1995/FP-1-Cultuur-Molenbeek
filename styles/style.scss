@@ -1,8 +1,5 @@
 $base-color: #EB5B55;
 
-html {
-  font-size: 62.5%;
-}
 
 /* newspage */
 p {
@@ -14,28 +11,6 @@ p {
 
 img {
   width: 100%;
-}
-
-.news-card {
-  margin-top: 5rem;
-
-  div {
-    padding: 1.5rem;
-  }
-
-  img {
-    margin-bottom: 2rem;
-
-  }
-
-  h2 {
-    font-family: pt-sans-pro, sans-serif;
-    font-weight: 900;
-  }
-
-  h2+p {
-    margin: 2rem 0;
-  }
 }
 
 /* about page */
@@ -63,28 +38,27 @@ body {
 
 header {
   height: 75px;
-  background-color: #c0c5cb;
-  position: relative;
-  background-image: url(../images/logo.svg);
-  background-repeat: no-repeat;
-  background-position: 80px;
-  background-size: 75px;
+  background-color: #EEEEEE;
+  margin: 0px 0px 50px 0px;
+  height: 75px;
+
+
+  ul {
+    margin: 25px 0px 0px;
+    float: right;
+    list-style: none;
+    display: flex;
+  }
+
 }
 
-header ul {
-  margin: 25px 0px 0px;
-  float: right;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  list-style: none;
-}
 
 header li {
   margin-left: 60px;
 
   a {
     position: relative;
+    font-weight: bold;
   }
 
   a::after {
@@ -117,20 +91,87 @@ header li {
 }
 
 
+
 footer {
-  position: absolute;
+  margin: 50px 0px 0px;
   overflow: hidden;
   bottom: 0;
   border-top: black 1px solid;
   width: 100%;
   height: 250px;
   padding: 20px 0px;
+  margin-top: 5rem;
 }
 
 footer ul {
   display: block;
   top: 30px;
   list-style: none;
+  margin-top: 20px;
+
+}
+
+/* newspage */
+p {
+  margin-bottom: 0;
+  font-family: pt-sans-pro, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.news-card {
+  margin-bottom: 5rem;
+
+  div {
+    padding: 1.5rem;
+  }
+
+  img {
+    margin-bottom: 2rem;
+
+  }
+
+  h2 {
+    font-family: pt-sans-pro, sans-serif;
+    font-weight: 900;
+  }
+
+  h2+p {
+    margin: 2rem 0;
+  }
+}
+
+/* about page */
+
+.about {
+  margin: 10rem 0;
+
+  h1 {
+    font-family: pt-sans-pro, sans-serif;
+    font-weight: 900;
+  }
+}
+
+.gallery {
+  img {
+    margin-top: 2rem;
+  }
+}
+
+.align-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  h1 {
+    font-size: 4em;
+    margin-bottom: 5rem;
+    white-space: normal;
+  }
+
+  span {
+    column-count: 2;
+  }
 }
 
 a {
@@ -226,7 +267,6 @@ h1 {
 .red {
   background-color: #EB5B55;
 }
-
 
 /*Kalender*/
 
@@ -514,4 +554,96 @@ h1 {
   font-size: 20px;
 }
 
-/*# sourceMappingURL=style.css.map */
+a {
+  color: black !important;
+  text-decoration: none;
+}
+
+/* cards */
+
+.card {
+  left: 100px;
+}
+
+.card img {
+  width: 100%;
+}
+
+.info {
+  position: relative;
+  font-size: 18px;
+  padding: 20px;
+}
+
+h1 {
+  white-space: nowrap;
+  font-weight: 800;
+  font-size: 30px;
+  margin: 0;
+  margin-top: -0.5em;
+  top: 1vh;
+}
+
+.card .textbubblecontainer {
+  position: relative;
+  margin-top: -1em;
+}
+
+.textbubbles {
+  padding-left: 1vw;
+  white-space: nowrap;
+  float: right;
+  margin-right: 20px;
+}
+
+.textbubbles img {
+  width: 2vw;
+  padding-right: 0.5em;
+}
+
+.datum {
+  font-size: 24px;
+}
+
+.button-container {
+  width: 100%;
+  height: 70px;
+  display: inline-flex;
+}
+
+.button {
+  display: table;
+  float: left;
+  margin: 0px auto 0px auto;
+  padding: 0.8em;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: #EB5B55;
+  white-space: nowrap;
+  position: relative;
+}
+
+.button-next::after {
+  content: '';
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  background-image: url(../images/icons/chevron-right-solid.svg);
+  height: 40px;
+  width: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80% 80%;
+}
+
+.button p {
+  padding-right: 8em;
+  display: inline;
+}
+
+.red {
+  background-color: #EB5B55;
+}
