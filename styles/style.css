@@ -17,34 +17,27 @@ body {
 
 .info {
   width: 21vw;
-
   position: relative;
   left: 4vw;
-
   font-size: 18px;
 }
 
 h1 {
   white-space: nowrap;
-
   font-weight: 800;
   font-size: 30px;
-
   margin: 0;
   margin-top: -0.5em;
-
   top: 1vh;
 }
 
 .card .textbubblecontainer {
   position: relative;
-
   margin-top: -1em;
 }
 
 .textbubbles {
   padding-left: 1vw;
-
   white-space: nowrap;
 }
 
@@ -66,7 +59,6 @@ h1 {
   padding-right: 1em;
   font-size: 20px;
   font-weight: bold;
-
   color: white;
   background-color: #EB5B55;
   white-space: nowrap;
@@ -80,3 +72,4 @@ h1 {
 .red {
   color: #EB5B55;
 }
+/*# sourceMappingURL=style.css.map */
