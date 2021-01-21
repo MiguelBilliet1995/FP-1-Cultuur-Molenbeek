@@ -1,0 +1,23 @@
+body, html {
+  padding: 0px;
+  margin: 0px;
+  font-family: sans-serif;
+  /* Voorlopig */
+}
+
+.red {
+  background-color: #F00;
+}
+
+.green {
+  background-color: #0F0;
+}
+
+.blue {
+  background-color: #00F;
+}
+
+.blue .blue_2 {
+  background-color: blue !important;
+}
+/*# sourceMappingURL=style.css.map */
