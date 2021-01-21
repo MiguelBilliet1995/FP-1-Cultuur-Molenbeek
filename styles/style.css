@@ -54,21 +54,18 @@ a {
 }
 
 /* cards */
-
 .card {
-  position: relative;
   left: 100px;
 }
 
 .card img {
-  width: 25vw;
+  width: 100%;
 }
 
 .info {
-  width: 21vw;
   position: relative;
-  left: 4vw;
   font-size: 18px;
+  padding: 20px;
 }
 
 h1 {
@@ -88,6 +85,8 @@ h1 {
 .textbubbles {
   padding-left: 1vw;
   white-space: nowrap;
+  float: right;
+  margin-right: 20px;
 }
 
 .textbubbles img {
@@ -97,6 +96,14 @@ h1 {
 
 .datum {
   font-size: 24px;
+}
+
+.button-container {
+  width: 100%;
+  height: 70px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 .button {
@@ -111,6 +118,20 @@ h1 {
   color: white;
   background-color: #EB5B55;
   white-space: nowrap;
+  position: relative;
+}
+
+.button-next::after {
+  content: '';
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  background-image: url(../images/icons/chevron-right-solid.svg);
+  height: 40px;
+  width: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80% 80%;
 }
 
 .button p {
@@ -118,9 +139,7 @@ h1 {
   display: inline;
 }
 
-.red{
+.red {
   background-color: #EB5B55;
 }
-
-
 /*# sourceMappingURL=style.css.map */
