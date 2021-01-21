@@ -29,8 +29,41 @@ header ul {
 }
 
 header li {
-  margin-left: 25px;
+  margin-left: 60px;
+
+  a{
+    position: relative;
+  }
+
+  a::after{
+    content: '';
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    left: -30px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  #kalender::after{
+    background-image: url(../images/icons/kalender-icon.svg);
+  }
+  
+  #nieuws::after{
+    background-image: url(../images/icons/news-icon.svg);
+  }
+
+  #over-ons::after{
+    background-image: url(../images/icons/gallery-icon.svg);
+  }
+
+  #contact::after{
+    background-image: url(../images/icons/contact-icon.svg);
+  }
+
+
 }
+
 
 footer {
   position: absolute;

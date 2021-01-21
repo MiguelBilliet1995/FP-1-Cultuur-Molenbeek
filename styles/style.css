@@ -29,7 +29,37 @@ header ul {
 }
 
 header li {
-  margin-left: 25px;
+  margin-left: 60px;
+}
+
+header li a {
+  position: relative;
+}
+
+header li a::after {
+  content: '';
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  left: -30px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+header li #kalender::after {
+  background-image: url(../images/icons/kalender-icon.svg);
+}
+
+header li #nieuws::after {
+  background-image: url(../images/icons/news-icon.svg);
+}
+
+header li #over-ons::after {
+  background-image: url(../images/icons/gallery-icon.svg);
+}
+
+header li #contact::after {
+  background-image: url(../images/icons/contact-icon.svg);
 }
 
 footer {
