@@ -1,0 +1,40 @@
+p {
+  margin-bottom: 0;
+  font-family: pt-sans-pro, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.news-card {
+  margin-top: 5rem;
+}
+
+.news-card div {
+  padding: 1.5rem;
+}
+
+.news-card img {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.news-card h2 {
+  font-family: pt-sans-pro, sans-serif;
+  font-weight: 900;
+}
+
+.news-card h2 + p {
+  margin: 2rem 0;
+}
+
+.news-card button {
+  padding: 0.5rem 1rem;
+  background-color: #EB5B55;
+  color: white;
+  border: none;
+}
+
+.news-card button i {
+  margin-left: 3rem;
+  font-size: .8rem;
+}
