@@ -1,145 +1,150 @@
 * {
-  font-family: 'PT-Sans-Pro', sans-serif;
+    font-family: 'PT-Sans-Pro', sans-serif;
 }
 
 body {
-  margin: 0;
-  font-family: pt-sans-pro;
-  height: 100vh;
-  width: 100%;
+    margin: 0;
+    font-family: pt-sans-pro;
+    height: 100vh;
+    width: 100%;
 }
 
 header {
-  height: 75px;
-  background-color: #c0c5cb;
-  position: relative;
-  background-image: url(../images/logo.svg);
-  background-repeat: no-repeat;
-  background-position: 80px;
-  background-size: 75px;
+    height: 75px;
+    background-color: #c0c5cb;
+    position: relative;
+    background-image: url(../images/logo.svg);
+    background-repeat: no-repeat;
+    background-position: 80px;
+    background-size: 75px;
 }
 
 header ul {
-  margin: 25px 0px 0px;
-  float: right;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  list-style: none;
+    margin: 25px 0px 0px;
+    float: right;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
 }
 
 header li {
-  margin-left: 25px;
+    margin-left: 25px;
 }
 
 footer {
-  position: absolute;
-  overflow: hidden;
-  bottom: 0;
-  border-top: black 1px solid;
-  width: 100%;
-  height: 250px;
-  padding: 20px 0px;
+    position: absolute;
+    overflow: hidden;
+    bottom: 0;
+    border-top: black 1px solid;
+    width: 100%;
+    height: 250px;
+    padding: 20px 0px;
+    list-style: none;
 }
+
 
 footer ul {
-  display: block;
-  top: 30px;
-  list-style: none;
+    display: block;
+    top: 30px;
+    list-style: none;
+
 }
 
+
 a {
-  color: black !important;
-  text-decoration: none;
+    color: black !important;
+    text-decoration: none;
 }
 
 /* cards */
 .card {
-  left: 100px;
+    left: 100px;
 }
 
 .card img {
-  width: 100%;
+    width: 100%;
 }
 
 .info {
-  position: relative;
-  font-size: 18px;
-  padding: 20px;
+    position: relative;
+    font-size: 18px;
+    padding: 20px;
 }
 
 h1 {
-  white-space: nowrap;
-  font-weight: 800;
-  font-size: 30px;
-  margin: 0;
-  margin-top: -0.5em;
-  top: 1vh;
+    white-space: nowrap;
+    font-weight: 800;
+    font-size: 30px;
+    margin: 0;
+    margin-top: -0.5em;
+    top: 1vh;
 }
 
 .card .textbubblecontainer {
-  position: relative;
-  margin-top: -1em;
+    position: relative;
+    margin-top: -1em;
 }
 
 .textbubbles {
-  padding-left: 1vw;
-  white-space: nowrap;
-  float: right;
-  margin-right: 20px;
+    padding-left: 1vw;
+    white-space: nowrap;
+    float: right;
+    margin-right: 20px;
 }
 
 .textbubbles img {
-  width: 2vw;
-  padding-right: 0.5em;
+    width: 2vw;
+    padding-right: 0.5em;
 }
 
 .datum {
-  font-size: 24px;
+    font-size: 24px;
 }
 
 .button-container {
-  width: 100%;
-  height: 70px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+    width: 100%;
+    height: 70px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
 }
 
 .button {
-  display: table;
-  float: left;
-  margin: 0px auto 0px auto;
-  padding: 0.8em;
-  padding-left: 1em;
-  padding-right: 1em;
-  font-size: 20px;
-  font-weight: bold;
-  color: white;
-  background-color: #EB5B55;
-  white-space: nowrap;
-  position: relative;
+    display: table;
+    float: left;
+    margin: 0px auto 0px auto;
+    padding: 0.8em;
+    padding-left: 1em;
+    padding-right: 1em;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: #EB5B55;
+    white-space: nowrap;
+    position: relative;
 }
 
 .button-next::after {
-  content: '';
-  position: absolute;
-  right: 5px;
-  top: 10px;
-  background-image: url(../images/icons/chevron-right-solid.svg);
-  height: 40px;
-  width: 40px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 80% 80%;
+    content: '';
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    background-image: url(../images/icons/chevron-right-solid.svg);
+    height: 40px;
+    width: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80% 80%;
 }
 
 .button p {
-  padding-right: 8em;
-  display: inline;
+    padding-right: 8em;
+    display: inline;
 }
 
 .red {
-  background-color: #EB5B55;
+    background-color: #EB5B55;
 }
+
 /*# sourceMappingURL=style.css.map */
