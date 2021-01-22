@@ -1,3 +1,6 @@
+/* ----------------------- */
+/* General css */
+/* ----------------------- */
 body {
   margin: 0;
   font-family: pt-sans-pro, sans-serif !important;
@@ -27,16 +30,9 @@ img {
   width: 100%;
 }
 
-/* about page */
-.about {
-  margin-top: 5rem;
-}
-
-.about h1 {
-  font-family: pt-sans-pro, sans-serif;
-  font-weight: 900;
-}
-
+/* ----------------------- */
+/* Header css */
+/* ----------------------- */
 header {
   height: 120px;
   background-color: #EEEEEE;
@@ -111,6 +107,9 @@ header li #contact::after {
   background-image: url(../images/icons/contact-icon.svg);
 }
 
+/* ----------------------- */
+/* Footer css */
+/* ----------------------- */
 footer {
   margin: 50px 0px 0px;
   overflow: hidden;
@@ -135,80 +134,9 @@ footer ul {
   list-style: none;
 }
 
-/* newspage */
-p {
-  margin-bottom: 0;
-  font-family: pt-sans-pro, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.news-card {
-  margin-bottom: 5rem;
-}
-
-.news-card img {
-  margin-bottom: 2rem;
-}
-
-.news-card h2 {
-  font-family: pt-sans-pro, sans-serif;
-  font-weight: 900;
-}
-
-.news-card h2, .news-card p {
-  margin: 0px 0px 2rem;
-}
-
-/* about page */
-.about, .index {
-  margin: 7rem 0;
-}
-
-.about h1, .index h1 {
-  font-family: pt-sans-pro, sans-serif;
-  font-weight: 900;
-  font-size: 4em;
-  margin-bottom: 5rem;
-  white-space: normal;
-}
-
-.column-2 {
-  -webkit-column-count: 2;
-          column-count: 2;
-}
-
-.gallery img {
-  margin-top: 2rem;
-}
-
-.align-bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-.align-center {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-a {
-  color: black !important;
-  text-decoration: none;
-}
-
+/* ----------------------- */
+/* Kalender css */
+/* ----------------------- */
 /* cards */
 .card {
   position: inherit !important;
@@ -419,7 +347,96 @@ h1 {
   color: white;
 }
 
-/*Contact-form*/
+/* ----------------------- */
+/* News css */
+/* ----------------------- */
+p {
+  margin-bottom: 0;
+  font-family: pt-sans-pro, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.news-card {
+  margin-bottom: 5rem;
+}
+
+.news-card img {
+  margin-bottom: 2rem;
+}
+
+.news-card h2 {
+  font-family: pt-sans-pro, sans-serif;
+  font-weight: 900;
+}
+
+.news-card h2, .news-card p {
+  margin: 0px 0px 2rem;
+}
+
+.about {
+  margin-top: 5rem;
+}
+
+.about h1 {
+  font-family: pt-sans-pro, sans-serif;
+  font-weight: 900;
+}
+
+/* ----------------------- */
+/* About css */
+/* ----------------------- */
+.about, .index {
+  margin: 7rem 0;
+}
+
+.about h1, .index h1 {
+  font-family: pt-sans-pro, sans-serif;
+  font-weight: 900;
+  font-size: 4em;
+  margin-bottom: 5rem;
+  white-space: normal;
+}
+
+.column-2 {
+  -webkit-column-count: 2;
+          column-count: 2;
+}
+
+.gallery img {
+  margin-top: 2rem;
+}
+
+.align-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.align-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+a {
+  color: black !important;
+  text-decoration: none;
+}
+
+/* ----------------------- */
+/* Contact css */
+/* ----------------------- */
 form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -497,10 +514,6 @@ form fieldset label[for="contact-submit"]::after {
   background-position: center;
 }
 
-.card img {
-  width: 100%;
-}
-
 .button-container {
   width: 100%;
   height: 70px;
@@ -540,12 +553,10 @@ form fieldset label[for="contact-submit"]::after {
 }
 
 .red {
-  background-color: rgba(235, 91, 85, 0.2);
-  padding: 3px 6px;
+  color: #EB5B55;
 }
 
 .photo-square {
   background-color: #EB5B55;
   padding-bottom: 100%;
 }
-/*# sourceMappingURL=style.css.map */

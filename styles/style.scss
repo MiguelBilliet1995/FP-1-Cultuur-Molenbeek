@@ -1,5 +1,10 @@
 $base-color: #EB5B55;
 
+/* ----------------------- */
+/* General css */
+/* ----------------------- */
+
+
 body {
   margin: 0;
   font-family: pt-sans-pro, sans-serif !important;
@@ -29,17 +34,9 @@ img {
   width: 100%;
 }
 
-/* about page */
-
-
-.about {
-  margin-top: 5rem;
-
-  h1 {
-    font-family: pt-sans-pro, sans-serif;
-    font-weight: 900;
-  }
-}
+/* ----------------------- */
+/* Header css */
+/* ----------------------- */
 
 header {
   height: 120px;
@@ -112,7 +109,9 @@ header li {
 
 }
 
-
+/* ----------------------- */
+/* Footer css */
+/* ----------------------- */
 
 footer {
   margin: 50px 0px 0px;
@@ -144,71 +143,9 @@ footer ul {
 
 }
 
-/* newspage */
-p {
-  margin-bottom: 0;
-  font-family: pt-sans-pro, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.news-card {
-  margin-bottom: 5rem;
-
-  img {
-    margin-bottom: 2rem;
-
-  }
-
-  h2 {
-    font-family: pt-sans-pro, sans-serif;
-    font-weight: 900;
-  }
-
-  h2, p{
-    margin: 0px 0px 2rem;
-  }
-}
-
-/* about page */
-
-.about, .index {
-  margin: 7rem 0;
-
-  h1 {
-    font-family: pt-sans-pro, sans-serif;
-    font-weight: 900;
-    font-size: 4em;
-    margin-bottom: 5rem;
-    white-space: normal;
-  }
-}
-
-.column-2{
-  column-count: 2;
-}
-
-.gallery {
-  img {
-    margin-top: 2rem;
-  }
-}
-
-.align-bottom {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.align-center{
-  display: flex;
-  align-items: center;
-}
-
-a {
-  color: black !important;
-  text-decoration: none;
-}
+/* ----------------------- */
+/* Kalender css */
+/* ----------------------- */
 
 /* cards */
 
@@ -429,7 +366,90 @@ h1 {
 
 }
 
-/*Contact-form*/
+/* ----------------------- */
+/* News css */
+/* ----------------------- */
+p {
+  margin-bottom: 0;
+  font-family: pt-sans-pro, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.news-card {
+  margin-bottom: 5rem;
+
+  img {
+    margin-bottom: 2rem;
+
+  }
+
+  h2 {
+    font-family: pt-sans-pro, sans-serif;
+    font-weight: 900;
+  }
+
+  h2, p{
+    margin: 0px 0px 2rem;
+  }
+}
+
+
+.about {
+  margin-top: 5rem;
+
+  h1 {
+    font-family: pt-sans-pro, sans-serif;
+    font-weight: 900;
+  }
+}
+
+
+/* ----------------------- */
+/* About css */
+/* ----------------------- */
+
+.about, .index {
+  margin: 7rem 0;
+
+  h1 {
+    font-family: pt-sans-pro, sans-serif;
+    font-weight: 900;
+    font-size: 4em;
+    margin-bottom: 5rem;
+    white-space: normal;
+  }
+}
+
+.column-2{
+  column-count: 2;
+}
+
+.gallery {
+  img {
+    margin-top: 2rem;
+  }
+}
+
+.align-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.align-center{
+  display: flex;
+  align-items: center;
+}
+
+a {
+  color: black !important;
+  text-decoration: none;
+}
+
+/* ----------------------- */
+/* Contact css */
+/* ----------------------- */
 
 form {
   display: flex;
@@ -499,10 +519,6 @@ form {
   }
 }
 
-.card img {
-  width: 100%;
-}
-
 .button-container {
   width: 100%;
   height: 70px;
@@ -540,8 +556,7 @@ form {
 }
 
 .red {
-  background-color: rgba(235, 91, 85, 0.2);
-  padding: 3px 6px;
+  color: $base-color;
 }
 
 .photo-square{
