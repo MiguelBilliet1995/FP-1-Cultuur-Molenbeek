@@ -216,7 +216,7 @@ h1 {
   display: flex;*/
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  font-family: "pt-sans-pro", sans-serif;
+  font-family: "pt-sans-pro", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
@@ -386,7 +386,8 @@ p {
   font-weight: 900;
 }
 
-.news-card h2, .news-card p {
+.news-card h2,
+.news-card p {
   margin: 0px 0px 2rem;
 }
 
@@ -402,11 +403,13 @@ p {
 /* ----------------------- */
 /* About css */
 /* ----------------------- */
-.about, .index {
+.about,
+.index {
   margin: 7rem 0;
 }
 
-.about h1, .index h1 {
+.about h1,
+.index h1 {
   font-family: pt-sans-pro, sans-serif;
   font-weight: 900;
   font-size: 4em;
@@ -447,7 +450,7 @@ p {
 
 a {
   color: black !important;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 /* ----------------------- */
@@ -615,3 +618,4 @@ form fieldset label[for="contact-submit"]::after {
 .gezin {
   background-image: url(../images/home_voorgezin.jpg);
 }
+/*# sourceMappingURL=style.css.map */
