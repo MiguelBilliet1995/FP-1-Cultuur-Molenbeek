@@ -1,7 +1,25 @@
 $base-color: #EB5B55;
 
+<<<<<<< Updated upstream
 html {
   font-size: 62.5%;
+=======
+body {
+  margin: 0;
+  font-family: pt-sans-pro, sans-serif !important;
+  height: 100vh;
+  width: 100%;
+}
+
+h3 {
+  padding-bottom: 30px;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 800 !important;
+>>>>>>> Stashed changes
 }
 
 /* newspage */
@@ -16,8 +34,22 @@ img {
   width: 100%;
 }
 
+<<<<<<< Updated upstream
 .news-card {
   margin-top: 5rem;
+=======
+/* about page */
+
+
+.about {
+  margin-top: 5rem;
+
+  h1 {
+    font-family: pt-sans-pro, sans-serif;
+    font-weight: 900;
+  }
+}
+>>>>>>> Stashed changes
 
   div {
     padding: 1.5rem;
@@ -41,6 +73,7 @@ img {
 /* about page */
 
 
+<<<<<<< Updated upstream
 .about {
   margin-top: 5rem;
 
@@ -83,8 +116,14 @@ header ul {
 header li {
   margin-left: 60px;
 
+=======
+>>>>>>> Stashed changes
   a {
     position: relative;
+  }
+
+  .active {
+    color: $base-color !important;
   }
 
   a::after {
@@ -97,6 +136,18 @@ header li {
     background-repeat: no-repeat;
   }
 
+<<<<<<< Updated upstream
+=======
+  a:hover:after {
+    transition: transform 0.5s;
+    transform: rotate(15deg);
+  }
+
+  #home::after {
+    background-image: url(../images/icons/home-icon.svg);
+  }
+
+>>>>>>> Stashed changes
   #kalender::after {
     background-image: url(../images/icons/kalender-icon.svg);
   }
@@ -116,6 +167,10 @@ header li {
 
 }
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 
 footer {
   position: absolute;
@@ -124,7 +179,38 @@ footer {
   border-top: black 1px solid;
   width: 100%;
   height: 250px;
+<<<<<<< Updated upstream
   padding: 20px 0px;
+=======
+  padding: 50px 0px;
+  
+  .active {
+    color: $base-color !important;
+  }
+
+  .footer-navigation {
+
+    li {
+      position: relative;
+    }
+
+    li::before {
+      position: absolute;
+      content: '';
+      background: url(../images/icons/chevron-right-solid-black.svg);
+      background-repeat: no-repeat;
+      left: -25px;
+      top: 6px;
+      height: 12px;
+      /*height of image*/
+      width: 33px;
+      /*width of image*/
+      position: absolute;
+    }
+
+  }
+
+>>>>>>> Stashed changes
 }
 
 footer ul {
@@ -133,6 +219,72 @@ footer ul {
   list-style: none;
 }
 
+<<<<<<< Updated upstream
+=======
+/* newspage */
+p {
+  margin-bottom: 0;
+  font-family: pt-sans-pro, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.news-card {
+  margin-bottom: 5rem;
+
+  img {
+    margin-bottom: 2rem;
+
+  }
+
+  h2 {
+    font-family: pt-sans-pro, sans-serif;
+    font-weight: 900;
+  }
+
+  h2,
+  p {
+    margin: 0px 0px 2rem;
+  }
+}
+
+/* about page */
+
+.about,
+.index {
+  margin: 7rem 0;
+
+  h1 {
+    font-family: pt-sans-pro, sans-serif;
+    font-weight: 900;
+    font-size: 4em;
+    margin-bottom: 5rem;
+    white-space: normal;
+  }
+}
+
+.column-2 {
+  column-count: 2;
+}
+
+.gallery {
+  img {
+    margin-top: 2rem;
+  }
+}
+
+.align-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+}
+
+>>>>>>> Stashed changes
 a {
   color: black !important;
   text-decoration: none;
@@ -141,7 +293,13 @@ a {
 /* cards */
 
 .card {
+<<<<<<< Updated upstream
   left: 100px;
+=======
+  position: inherit !important;
+  border: none !important;
+  margin: 30px 0px;
+>>>>>>> Stashed changes
 }
 
 .card img {
@@ -150,8 +308,18 @@ a {
 
 .info {
   position: relative;
+<<<<<<< Updated upstream
   font-size: 18px;
   padding: 20px;
+=======
+  font-size: 15px;
+  /*padding: 20px;*/
+  padding: 20px 0px;
+
+  p {
+    margin: 20px 0px 30px;
+  }
+>>>>>>> Stashed changes
 }
 
 h1 {
@@ -176,7 +344,12 @@ h1 {
 }
 
 .textbubbles img {
+<<<<<<< Updated upstream
   width: 2vw;
+=======
+  width: 40px !important;
+  height: auto !important;
+>>>>>>> Stashed changes
   padding-right: 0.5em;
 }
 
@@ -354,9 +527,51 @@ h1 {
   height: 5rem;
   padding: 0 0.4rem;
   color: #eee;
+<<<<<<< Updated upstream
 }
 
 .weekdays div {
+=======
+  display: flex;
+  justify-content: space-evenly;
+
+
+  tr {
+    width: 3.3928rem;
+  }
+}
+
+.days {
+  width: 100%;
+  color: #eee;
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.day {
+  width: 3.3928rem;
+  text-align: center;
+}
+
+.prev-date {
+  width: 3.3928rem;
+  text-align: center;
+}
+
+.next-date {
+  width: 3.3928rem;
+  text-align: center;
+}
+
+.today {
+  width: 3.3928rem;
+  text-align: center;
+}
+
+/*.weekdays td {
+>>>>>>> Stashed changes
   font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: .1rem;
@@ -401,16 +616,22 @@ h1 {
   font-size: 20px;
 }
 
+<<<<<<< Updated upstream
 .days div:hover:not(.today) {
   border: #EB5B55 solid .5rem;
+=======
+.days p:hover:not(.today) {
+  border: #EB5B55 solid 1px !important;
+>>>>>>> Stashed changes
 }
-
+*/
 .prev-date,
 .next-date {
   opacity: 40%;
 }
 
 .today {
+<<<<<<< Updated upstream
   border: #EB5B55 solid 5px;
 }
 
@@ -472,13 +693,32 @@ h1 {
 #naam {
   height: 2em;
   width: 30em;
+=======
+  background-color: #EB5B55 !important;
+
+  .date {
+    color: white;
+  }
+
+}
+
+/*Contact-form*/
+>>>>>>> Stashed changes
 
   border: none;
   border-bottom: #EB5B55 solid 3px;
 
+<<<<<<< Updated upstream
   padding: 0;
   margin: 0;
 }
+=======
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+  }
+>>>>>>> Stashed changes
 
 #email {
   height: 2em;
@@ -491,11 +731,21 @@ h1 {
   margin: 0;
 }
 
+<<<<<<< Updated upstream
 #message {
   width: 50%;
   min-width: 30rem;
   border: #EB5B55 solid 3px;
   margin-bottom: 5rem;
+=======
+.card img {
+  width: 100%;
+}
+
+.button-container {
+  width: 100%;
+  height: 70px;
+>>>>>>> Stashed changes
 }
 
 .button {
@@ -510,8 +760,46 @@ h1 {
   margin-top: 2rem;
   cursor: pointer;
 
+<<<<<<< Updated upstream
   font-family: "pt-sans-pro", sans-serif;
   font-size: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
+=======
+.red {
+  background-color: rgba(235, 91, 85, 0.2);
+  padding: 3px 6px;
+}
+
+.photo-square {
+  background-color: #EB5B55;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  img{
+    width: 150px;
+    margin-bottom: 30px;
+  }
+  h1 {
+    color: white;
+    font-size: 4em;
+  }
+}
+
+.kinderen {
+  background-image: url(../images/home_voorkinderen.jpg);
+}
+
+.ouders {
+  background-image: url(../images/home_voorouders.jpg);
+}
+
+.gezin {
+  background-image: url(../images/home_voorgezin.jpg);
+}
+>>>>>>> Stashed changes
