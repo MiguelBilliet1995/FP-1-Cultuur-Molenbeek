@@ -58,14 +58,14 @@ header li {
   margin-left: 75px;
 }
 
-header li .active {
-  color: #EB5B55 !important;
-}
-
 header li a {
   position: relative;
   font-weight: bold;
   text-decoration: none;
+}
+
+header li .active {
+  color: #EB5B55 !important;
 }
 
 header li a::after {
@@ -89,6 +89,10 @@ header li a:hover:after {
   transition: transform 0.5s, -webkit-transform 0.5s;
   -webkit-transform: rotate(15deg);
           transform: rotate(15deg);
+}
+
+header li #home::after {
+  background-image: url(../images/icons/home-icon.svg);
 }
 
 header li #kalender::after {
@@ -119,14 +123,26 @@ footer {
   padding: 50px 0px;
 }
 
+footer .active {
+  color: #EB5B55 !important;
+}
+
 footer .footer-navigation li {
   position: relative;
 }
 
 footer .footer-navigation li::before {
   position: absolute;
-  content: '> ';
+  content: '';
+  background: url(../images/icons/chevron-right-solid-black.svg);
+  background-repeat: no-repeat;
   left: -25px;
+  top: 6px;
+  height: 12px;
+  /*height of image*/
+  width: 33px;
+  /*width of image*/
+  position: absolute;
 }
 
 footer ul {
@@ -200,7 +216,7 @@ h1 {
   display: flex;*/
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  font-family: "pt-sans-pro", sans-serif;
+  font-family: "pt-sans-pro", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
@@ -451,7 +467,9 @@ form {
   height: 100%;
 }
 
-form input[type="text"], form input[type="email"], form textarea {
+form input[type="text"],
+form input[type="email"],
+form textarea {
   width: 100%;
 }
 
@@ -560,3 +578,4 @@ form fieldset label[for="contact-submit"]::after {
   background-color: #EB5B55;
   padding-bottom: 100%;
 }
+/*# sourceMappingURL=style.css.map */
