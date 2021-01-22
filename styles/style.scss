@@ -578,5 +578,31 @@ form {
 
 .photo-square {
   background-color: #EB5B55;
-  padding-bottom: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  img{
+    width: 150px;
+    margin-bottom: 30px;
+  }
+  h1 {
+    color: white;
+    font-size: 4em;
+  }
+}
+
+.kinderen {
+  background-image: url(../images/home_voorkinderen.jpg);
+}
+
+.ouders {
+  background-image: url(../images/home_voorouders.jpg);
+}
+
+.gezin {
+  background-image: url(../images/home_voorgezin.jpg);
 }
