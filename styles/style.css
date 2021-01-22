@@ -62,14 +62,14 @@ header li {
   margin-left: 75px;
 }
 
-header li .active {
-  color: #EB5B55 !important;
-}
-
 header li a {
   position: relative;
   font-weight: bold;
   text-decoration: none;
+}
+
+header li .active {
+  color: #EB5B55 !important;
 }
 
 header li a::after {
@@ -93,6 +93,10 @@ header li a:hover:after {
   transition: transform 0.5s, -webkit-transform 0.5s;
   -webkit-transform: rotate(15deg);
           transform: rotate(15deg);
+}
+
+header li #home::after {
+  background-image: url(../images/icons/home-icon.svg);
 }
 
 header li #kalender::after {
@@ -120,14 +124,26 @@ footer {
   padding: 50px 0px;
 }
 
+footer .active {
+  color: #EB5B55 !important;
+}
+
 footer .footer-navigation li {
   position: relative;
 }
 
 footer .footer-navigation li::before {
   position: absolute;
-  content: '> ';
+  content: '';
+  background: url(../images/icons/chevron-right-solid-black.svg);
+  background-repeat: no-repeat;
   left: -25px;
+  top: 6px;
+  height: 12px;
+  /*height of image*/
+  width: 33px;
+  /*width of image*/
+  position: absolute;
 }
 
 footer ul {
@@ -156,17 +172,20 @@ p {
   font-weight: 900;
 }
 
-.news-card h2, .news-card p {
+.news-card h2,
+.news-card p {
   margin: 0px 0px 2rem;
 }
 
 /* about page */
-.about, .index {
+.about,
+.index {
   margin: 7rem 0;
 }
 
-.about h1, .index h1 {
-  font-family: pt-sans-pro, sans-serif;
+.about h1,
+.index h1 {
+  font-family: 'pt-sans-pro, sans-serif';
   font-weight: 900;
   font-size: 4em;
   margin-bottom: 5rem;
@@ -272,7 +291,7 @@ h1 {
   display: flex;*/
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  font-family: "pt-sans-pro", sans-serif;
+  font-family: "pt-sans-pro", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
@@ -434,7 +453,9 @@ form {
   height: 100%;
 }
 
-form input[type="text"], form input[type="email"], form textarea {
+form input[type="text"],
+form input[type="email"],
+form textarea {
   width: 100%;
 }
 
@@ -540,7 +561,7 @@ form fieldset label[for="contact-submit"]::after {
 }
 
 .red {
-  background-color: rgba(235, 91, 85, 0.2);
+  color: #EB5B55;
   padding: 3px 6px;
 }
 
