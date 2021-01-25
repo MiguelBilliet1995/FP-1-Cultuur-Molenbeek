@@ -617,7 +617,7 @@ form {
 
 .row-one-reservatie {
   display: flex;
-  width: 73.70%;
+  width: 82.5rem;
   margin: auto;
 
 
@@ -630,7 +630,6 @@ form {
   .col-sm-4 {
     display: flex;
     justify-content: space-around;
-    max-width: 33%;
 
     form {
       width: 90%;
@@ -654,13 +653,19 @@ form {
         flex-direction: row;
         justify-content: space-between;
         width: 95%;
-        margin: 1rem auto 6.2rem auto;
+        margin: 1rem auto 7rem auto;
 
         #nultottwaalf {
           margin-left: 1em;
         }
       }
 
+      .label-input-duo .total {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: $base-color;
+        margin-top: -1.8rem;
+      }
 
 
       select {
@@ -676,7 +681,7 @@ form {
   display: flex;
 
 
-  width: 73.70%;
+  width: 82.5rem;
   margin: auto;
   margin-top: 2rem;
 
@@ -690,13 +695,15 @@ form {
 
     .event-list {
       list-style-type: none;
+      padding: 0;
+      width: 95%;
     }
 
-    .event-list-items {
+    ul li {
       display: flex;
       justify-content: space-between;
-      width: 70%;
-
+      margin: 0;
+      padding: 0;
     }
 
     figure {
@@ -710,11 +717,15 @@ form {
       color: $base-color;
     }
 
+    #besch-col2-row2 {
+      padding-top: 55px;
+    }
+
     button {
       width: 80%;
       height: 3rem;
 
-      margin: 10rem 0 0 5.18rem;
+      margin: 4.5rem 0 0 5.18rem;
       padding: 0;
       border: none;
       background-color: $base-color;

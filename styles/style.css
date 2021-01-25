@@ -626,7 +626,7 @@ form fieldset label[for="contact-submit"]::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 73.70%;
+  width: 82.5rem;
   margin: auto;
 }
 
@@ -640,7 +640,6 @@ form fieldset label[for="contact-submit"]::after {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  max-width: 33%;
 }
 
 .row-one-reservatie .col-sm-4 form {
@@ -673,11 +672,18 @@ form fieldset label[for="contact-submit"]::after {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 95%;
-  margin: 1rem auto 6.2rem auto;
+  margin: 1rem auto 7rem auto;
 }
 
 .row-one-reservatie .col-sm-4 .col-sm-2 .label-input-duo:not(.totaal) #nultottwaalf {
   margin-left: 1em;
+}
+
+.row-one-reservatie .col-sm-4 .col-sm-2 .label-input-duo .total {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #EB5B55;
+  margin-top: -1.8rem;
 }
 
 .row-one-reservatie .col-sm-4 .col-sm-2 select {
@@ -689,7 +695,7 @@ form fieldset label[for="contact-submit"]::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 73.70%;
+  width: 82.5rem;
   margin: auto;
   margin-top: 2rem;
 }
@@ -700,16 +706,19 @@ form fieldset label[for="contact-submit"]::after {
 
 .row-two-reservatie .col-sm-4 .event-list {
   list-style-type: none;
+  padding: 0;
+  width: 95%;
 }
 
-.row-two-reservatie .col-sm-4 .event-list-items {
+.row-two-reservatie .col-sm-4 ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 70%;
+  margin: 0;
+  padding: 0;
 }
 
 .row-two-reservatie .col-sm-4 figure {
@@ -723,10 +732,14 @@ form fieldset label[for="contact-submit"]::after {
   color: #EB5B55;
 }
 
+.row-two-reservatie .col-sm-4 #besch-col2-row2 {
+  padding-top: 55px;
+}
+
 .row-two-reservatie .col-sm-4 button {
   width: 80%;
   height: 3rem;
-  margin: 10rem 0 0 5.18rem;
+  margin: 4.5rem 0 0 5.18rem;
   padding: 0;
   border: none;
   background-color: #EB5B55;
