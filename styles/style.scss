@@ -615,4 +615,111 @@ form {
     RESERVATIE 
                 */
 
-.reservatie-main {}
+.row-one-reservatie {
+  display: flex;
+  width: 73.70%;
+  margin: auto;
+
+
+  figure {}
+
+  #leeftijd-cat {
+    display: inline;
+  }
+
+  .col-sm-4 {
+    display: flex;
+    justify-content: space-around;
+    max-width: 33%;
+
+    form {
+      width: 90%;
+      max-height: 283px;
+
+      .reservatie-input {
+        border: none;
+        border-bottom: $base-color 2px solid;
+      }
+
+      .reservatie-label:not(#nah) {
+        padding-top: 2em;
+      }
+    }
+
+    .col-sm-2 {
+      width: 90%;
+
+      .label-input-duo:not(.totaal) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 95%;
+        margin: 1rem auto 6.2rem auto;
+
+        #nultottwaalf {
+          margin-left: 1em;
+        }
+      }
+
+
+
+      select {
+        background-color: $base-color;
+        color: #fff;
+      }
+    }
+
+  }
+}
+
+.row-two-reservatie {
+  display: flex;
+
+
+  width: 73.70%;
+  margin: auto;
+  margin-top: 2rem;
+
+
+
+  .col-sm-4 {
+
+    h1 {
+      margin: 0 0 1.2rem 0;
+    }
+
+    .event-list {
+      list-style-type: none;
+    }
+
+    .event-list-items {
+      display: flex;
+      justify-content: space-between;
+      width: 70%;
+
+    }
+
+    figure {
+      width: 2rem;
+      margin-left: auto;
+    }
+
+    .beschrijving {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: $base-color;
+    }
+
+    button {
+      width: 80%;
+      height: 3rem;
+
+      margin: 10rem 0 0 5.18rem;
+      padding: 0;
+      border: none;
+      background-color: $base-color;
+      color: #fff;
+    }
+  }
+
+}

@@ -216,7 +216,7 @@ h1 {
   display: flex;*/
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  font-family: "pt-sans-pro", sans-serif;
+  font-family: "pt-sans-pro", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
@@ -386,7 +386,8 @@ p {
   font-weight: 900;
 }
 
-.news-card h2, .news-card p {
+.news-card h2,
+.news-card p {
   margin: 0px 0px 2rem;
 }
 
@@ -402,11 +403,13 @@ p {
 /* ----------------------- */
 /* About css */
 /* ----------------------- */
-.about, .index {
+.about,
+.index {
   margin: 7rem 0;
 }
 
-.about h1, .index h1 {
+.about h1,
+.index h1 {
   font-family: pt-sans-pro, sans-serif;
   font-weight: 900;
   font-size: 4em;
@@ -447,7 +450,7 @@ p {
 
 a {
   color: black !important;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 /* ----------------------- */
@@ -615,3 +618,118 @@ form fieldset label[for="contact-submit"]::after {
 .gezin {
   background-image: url(../images/home_voorgezin.jpg);
 }
+
+/*
+    RESERVATIE 
+                */
+.row-one-reservatie {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 73.70%;
+  margin: auto;
+}
+
+.row-one-reservatie #leeftijd-cat {
+  display: inline;
+}
+
+.row-one-reservatie .col-sm-4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  max-width: 33%;
+}
+
+.row-one-reservatie .col-sm-4 form {
+  width: 90%;
+  max-height: 283px;
+}
+
+.row-one-reservatie .col-sm-4 form .reservatie-input {
+  border: none;
+  border-bottom: #EB5B55 2px solid;
+}
+
+.row-one-reservatie .col-sm-4 form .reservatie-label:not(#nah) {
+  padding-top: 2em;
+}
+
+.row-one-reservatie .col-sm-4 .col-sm-2 {
+  width: 90%;
+}
+
+.row-one-reservatie .col-sm-4 .col-sm-2 .label-input-duo:not(.totaal) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 95%;
+  margin: 1rem auto 6.2rem auto;
+}
+
+.row-one-reservatie .col-sm-4 .col-sm-2 .label-input-duo:not(.totaal) #nultottwaalf {
+  margin-left: 1em;
+}
+
+.row-one-reservatie .col-sm-4 .col-sm-2 select {
+  background-color: #EB5B55;
+  color: #fff;
+}
+
+.row-two-reservatie {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 73.70%;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.row-two-reservatie .col-sm-4 h1 {
+  margin: 0 0 1.2rem 0;
+}
+
+.row-two-reservatie .col-sm-4 .event-list {
+  list-style-type: none;
+}
+
+.row-two-reservatie .col-sm-4 .event-list-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 70%;
+}
+
+.row-two-reservatie .col-sm-4 figure {
+  width: 2rem;
+  margin-left: auto;
+}
+
+.row-two-reservatie .col-sm-4 .beschrijving {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #EB5B55;
+}
+
+.row-two-reservatie .col-sm-4 button {
+  width: 80%;
+  height: 3rem;
+  margin: 10rem 0 0 5.18rem;
+  padding: 0;
+  border: none;
+  background-color: #EB5B55;
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */
