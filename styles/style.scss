@@ -1,4 +1,10 @@
+$hard-color: #e05248;
 $base-color: #EB5B55;
+$secondairy-color: #F4A29D;
+
+$light-color: #eeeeee;
+$darker-color: #333333;
+$dark-color: #000000;
 
 /* ----------------------- */
 /* General css */
@@ -245,7 +251,7 @@ h1 {
 
 .calendar {
   width: 100%;
-  background-color: #F4A29D;
+  background-color: $secondairy-color;
   color: #eee;
 }
 
@@ -264,7 +270,7 @@ h1 {
   align-items: flex-start;
   width: 100%;
   height: 12rem;
-  background-color: #F4A29D;
+  background-color: $secondairy-color;
   padding: 0 2rem;
 }
 
@@ -355,7 +361,7 @@ h1 {
 
 .days td {
   margin: 0.3rem;
-  color: #EB5B55;
+  color: $base-color;
   font-size: 18px;
   border: 0;
 }
@@ -365,7 +371,7 @@ h1 {
 }
 
 .days div:hover:not(.today) {
-  border: #EB5B55 solid 1px !important;
+  border: $base-color solid 1px !important;
 }
 
 .prev-date,
@@ -373,8 +379,13 @@ h1 {
   opacity: 40%;
 }
 
+.date {
+  display: block;
+  text-align: center;
+}
+
 .today {
-  background-color: #EB5B55 !important;
+  background-color: $base-color !important;
 
   .date {
     color: white;
@@ -549,7 +560,7 @@ form {
   font-size: 17px;
   font-weight: bold;
   color: white;
-  background-color: #EB5B55;
+  background-color: $base-color;
   position: relative;
   height: auto;
   display: inline-flex;
@@ -580,7 +591,7 @@ form {
 }
 
 .photo-square {
-  background-color: #EB5B55;
+  background-color: $base-color;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;

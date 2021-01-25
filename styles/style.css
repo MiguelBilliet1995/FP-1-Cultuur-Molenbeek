@@ -216,7 +216,7 @@ h1 {
   display: flex;*/
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  font-family: "pt-sans-pro", sans-serif;
+  font-family: "pt-sans-pro", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
@@ -353,6 +353,11 @@ h1 {
 .prev-date,
 .next-date {
   opacity: 40%;
+}
+
+.date {
+  display: block;
+  text-align: center;
 }
 
 .today {
@@ -618,4 +623,3 @@ form fieldset label[for="contact-submit"]::after {
 .gezin {
   background-image: url(../images/home_voorgezin.jpg);
 }
-/*# sourceMappingURL=style.css.map */
