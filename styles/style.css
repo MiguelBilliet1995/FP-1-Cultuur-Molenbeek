@@ -623,9 +623,8 @@ form fieldset label[for="contact-submit"]::after {
     RESERVATIE 
                 */
 .reservatie-main {
-  width: 82.5rem;
+  max-width: 82.5rem;
   margin: auto;
-  overflow: hidden;
 }
 
 .row-one-reservatie {
@@ -634,13 +633,14 @@ form fieldset label[for="contact-submit"]::after {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 82.5rem;
+  max-width: 82.5rem;
   margin: auto;
 }
 
 .row-one-reservatie #description-box {
   margin: 0 .75rem 0 .75rem;
   max-width: 26rem;
+  min-width: 20rem;
 }
 
 .row-one-reservatie #description-box .description-box-head {
@@ -659,19 +659,27 @@ form fieldset label[for="contact-submit"]::after {
   color: #EB5B55;
 }
 
+.row-one-reservatie #form {
+  padding-bottom: 1rem;
+}
+
 .row-one-reservatie .col-sm-4:not(#description-box) {
   margin: 0 .75rem 0 .75rem;
   max-width: 26rem;
+  min-width: 20rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .row-one-reservatie .col-sm-4:not(#description-box) form {
   width: 90%;
   max-height: 283px;
+  margin-bottom: 1rem;
 }
 
 .row-one-reservatie .col-sm-4:not(#description-box) form .reservatie-input {
@@ -689,13 +697,14 @@ form fieldset label[for="contact-submit"]::after {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 82.5rem;
+  max-width: 82.5rem;
   margin: auto;
   margin-top: 2rem;
 }
 
 .row-two-reservatie .col-sm-4 {
   max-width: 26rem;
+  min-width: 20rem;
   margin: 0 .75rem 0 .75rem;
 }
 
@@ -777,7 +786,6 @@ form fieldset label[for="contact-submit"]::after {
   font-weight: 600;
   color: #EB5B55;
   margin: auto;
-  margin-top: -0.2rem;
   width: 90%;
 }
 

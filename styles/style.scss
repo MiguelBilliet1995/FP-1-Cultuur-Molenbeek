@@ -616,27 +616,28 @@ form {
                 */
 
 .reservatie-main {
-  width: 82.5rem;
+  max-width: 82.5rem;
   margin: auto;
-
-  overflow: hidden;
 }
 
 .row-one-reservatie {
   display: flex;
   flex-wrap: wrap;
-  width: 82.5rem;
+
+  max-width: 82.5rem;
   margin: auto;
 
   #description-box {
     margin: 0 .75rem 0 .75rem;
     max-width: 26rem;
+    min-width: 20rem;
 
 
     .description-box-head {
       display: flex;
       justify-content: space-between;
       margin-bottom: 2rem;
+
     }
 
     .beschrijving {
@@ -646,16 +647,24 @@ form {
     }
   }
 
+  #form {
+    padding-bottom: 1rem;
+  }
+
   .col-sm-4:not(#description-box) {
     margin: 0 .75rem 0 .75rem;
     max-width: 26rem;
+    min-width: 20rem;
 
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 
     form {
       width: 90%;
       max-height: 283px;
+
+      margin-bottom: 1rem;
 
       .reservatie-input {
         border: none;
@@ -674,13 +683,14 @@ form {
 .row-two-reservatie {
   display: flex;
   flex-wrap: wrap;
-  width: 82.5rem;
+  max-width: 82.5rem;
   margin: auto;
   margin-top: 2rem;
 
 
   .col-sm-4 {
     max-width: 26rem;
+    min-width: 20rem;
     margin: 0 .75rem 0 .75rem;
 
 
@@ -756,7 +766,6 @@ form {
       color: $base-color;
 
       margin: auto;
-      margin-top: -0.2rem;
       width: 90%;
     }
 
