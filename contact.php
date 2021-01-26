@@ -46,6 +46,27 @@
             <textarea name="contact-message" id="contact-message"></textarea>
 
             <input id="contact-submit" type="submit" name="contact-submit" class="button button-next">
+            <?PHP
+            if (isset($_POST['verzend'])) {
+            $naar = $_POST['contact-email'];
+            $onderwerp = "Bevestiging van ";
+            $boodschap = "
+            <html>
+            <head>
+                <title>testemail</title>
+            </head>
+
+            <body>
+            <h1>test</h1>
+
+            </body>
+            </html> ";
+            $van = "MIME-Version: 1.0 \r\n";
+            $van .= "Content-type: text/html; charset=iso-8859-1\r\n";
+            $van .= "From: 'sim@gillmertens.be' . \r\n";
+            mail($naar, $onderwerp, $boodschap, $van);
+            }
+            ?>
           </form>
         </div>
       </div>
