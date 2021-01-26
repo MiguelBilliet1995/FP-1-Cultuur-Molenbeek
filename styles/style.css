@@ -622,6 +622,11 @@ form fieldset label[for="contact-submit"]::after {
 /*
     RESERVATIE 
                 */
+.reservatie-main {
+  width: 82.5rem;
+  margin: auto;
+}
+
 .row-one-reservatie {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -630,12 +635,30 @@ form fieldset label[for="contact-submit"]::after {
   margin: auto;
 }
 
-.row-one-reservatie #leeftijd-cat {
-  display: inline;
+.row-one-reservatie #description-box {
+  margin: 0 .75rem 0 .75rem;
+  max-width: 26.5rem;
 }
 
-.row-one-reservatie .col-sm-4 {
-  margin: 0 1rem 0 1rem;
+.row-one-reservatie #description-box .description-box-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.row-one-reservatie #description-box .beschrijving {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #EB5B55;
+}
+
+.row-one-reservatie .col-sm-4:not(#description-box) {
+  margin: 0 .75rem 0 .75rem;
+  max-width: 26.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -643,18 +666,18 @@ form fieldset label[for="contact-submit"]::after {
       justify-content: space-around;
 }
 
-.row-one-reservatie .col-sm-4 form {
+.row-one-reservatie .col-sm-4:not(#description-box) form {
   width: 90%;
   max-height: 283px;
 }
 
-.row-one-reservatie .col-sm-4 form .reservatie-input {
+.row-one-reservatie .col-sm-4:not(#description-box) form .reservatie-input {
   border: none;
   border-bottom: #EB5B55 2px solid;
 }
 
-.row-one-reservatie .col-sm-4 form .reservatie-label:not(#nah) {
-  padding-top: 2em;
+.row-one-reservatie .col-sm-4:not(#description-box) form .reservatie-label:not(#nah) {
+  margin-top: 2em;
 }
 
 .row-two-reservatie {
@@ -667,7 +690,8 @@ form fieldset label[for="contact-submit"]::after {
 }
 
 .row-two-reservatie .col-sm-4 {
-  margin: 0 2rem 0 2rem;
+  max-width: 26.5rem;
+  margin: 0 .75rem 0 .75rem;
 }
 
 .row-two-reservatie .col-sm-4 h1 {
@@ -677,7 +701,6 @@ form fieldset label[for="contact-submit"]::after {
 .row-two-reservatie .col-sm-4 .event-list {
   list-style-type: none;
   padding: 0;
-  width: 95%;
 }
 
 .row-two-reservatie .col-sm-4 ul li {
@@ -689,7 +712,6 @@ form fieldset label[for="contact-submit"]::after {
           justify-content: space-between;
   margin: 0;
   padding: 0;
-  max-width: 310px;
 }
 
 .row-two-reservatie .col-sm-4 figure {
@@ -706,8 +728,8 @@ form fieldset label[for="contact-submit"]::after {
 .row-two-reservatie .col-sm-4 button {
   width: 80%;
   height: 3rem;
-  margin: 4.5rem 0 0 5.18rem;
-  padding: 0;
+  margin-left: 2.75rem;
+  margin-top: 3.344rem;
   border: none;
   background-color: #EB5B55;
   color: #fff;
@@ -715,6 +737,10 @@ form fieldset label[for="contact-submit"]::after {
 
 .row-two-reservatie .col-sm-2 {
   width: 90%;
+}
+
+.row-two-reservatie .col-sm-2 #top-duo {
+  margin-top: 3.438rem;
 }
 
 .row-two-reservatie .col-sm-2 .label-input-duo:not(.totaal) {
@@ -728,19 +754,26 @@ form fieldset label[for="contact-submit"]::after {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 95%;
-  margin: 1rem auto 7rem auto;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 0.4rem;
 }
 
 .row-two-reservatie .col-sm-2 .label-input-duo:not(.totaal) #nultottwaalf {
   margin-left: 1em;
 }
 
+.row-two-reservatie .col-sm-2 .label-input-duo:not(.totaal) label::after {
+  border: #EB5B55 1px;
+}
+
 .row-two-reservatie .col-sm-2 .label-input-duo .total {
   font-size: 1.2rem;
   font-weight: 600;
   color: #EB5B55;
-  margin-top: -1.8rem;
+  margin: auto;
+  margin-top: -0.2rem;
+  width: 90%;
 }
 
 .row-two-reservatie .col-sm-2 select {
