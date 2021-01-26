@@ -11,10 +11,10 @@ class DatabaseFactory
         if (self::$verbinding == null) {
 
             if($use_local_DB==true){
-                $mijnComputernaam = "";
-                $mijnGebruikersnaam = "";
-                $mijnWachtwoord = "";
-                $mijnDatabase = "";
+                $mijnComputernaam = "https://web1.64ip.net/";
+                $mijnGebruikersnaam = "gillmert_mb";
+                $mijnWachtwoord = "Molenbeek2021";
+                $mijnDatabase = "gillmert_molenbeek";
             }else{
                 $mijnComputernaam = "";
                 $mijnGebruikersnaam = "";
