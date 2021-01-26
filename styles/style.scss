@@ -465,6 +465,38 @@ p {
   }
 }
 
+/* ----------------------- */
+/* Article css */
+/* ----------------------- */
+
+.articleimage {
+  max-height: 60vh;
+  width: auto !important;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.articletitle {
+  font-size: 40px;
+  white-space: nowrap;
+}
+
+.articledate {
+  font-size: 20px;
+  color: $hard-color;
+  margin-bottom: 5px;
+}
+
+.shareonfacebook {
+  position: absolute;
+}
+
+.shareonfacebook img {
+  width: 30px;
+}
 
 /* ----------------------- */
 /* About css */
@@ -507,6 +539,10 @@ p {
 a {
   color: black !important;
   text-decoration: none !important;
+}
+
+.button a {
+  color: white !important;
 }
 
 /* ----------------------- */
@@ -592,7 +628,7 @@ form {
   padding: 10px 20px;
   font-size: 17px;
   font-weight: bold;
-  color: white;
+  color: white !important;
   background-color: $base-color;
   position: relative;
   height: auto;
