@@ -196,13 +196,41 @@ h1 {
 }
 
 .textbubbles img {
-  width: 40px !important;
-  height: auto !important;
-  padding-right: 0.5em;
+  width: 35px !important;
+  padding-right: 0.2em;
 }
 
 .datum {
   font-size: 20px;
+  font-weight: 400;
+  float: right;
+  margin-right: 5%;
+  line-height: 30px;
+}
+
+.time {
+  color: grey;
+}
+
+.description {
+  padding-top: 0;
+}
+
+.location img {
+  width: 25px;
+}
+
+.price {
+  font-size: 18px;
+  position: relative;
+  float: right;
+  margin-right: 5%;
+  -webkit-transform: translate(0, 10px);
+          transform: translate(0, 10px);
+}
+
+.price img {
+  width: 25px;
 }
 
 /*Kalender*/
@@ -216,7 +244,7 @@ h1 {
   display: flex;*/
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  font-family: "pt-sans-pro", sans-serif;
+  font-family: "pt-sans-pro", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
@@ -623,3 +651,4 @@ form fieldset label[for="contact-submit"]::after {
 .gezin {
   background-image: url(../images/home_voorgezin.jpg);
 }
+/*# sourceMappingURL=style.css.map */
