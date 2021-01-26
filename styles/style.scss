@@ -620,14 +620,12 @@ form {
   width: 82.5rem;
   margin: auto;
 
-
-  figure {}
-
   #leeftijd-cat {
     display: inline;
   }
 
   .col-sm-4 {
+    margin: 0 1rem 0 1rem;
     display: flex;
     justify-content: space-around;
 
@@ -645,34 +643,7 @@ form {
       }
     }
 
-    .col-sm-2 {
-      width: 90%;
 
-      .label-input-duo:not(.totaal) {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 95%;
-        margin: 1rem auto 7rem auto;
-
-        #nultottwaalf {
-          margin-left: 1em;
-        }
-      }
-
-      .label-input-duo .total {
-        font-size: 1.2rem;
-        font-weight: 600;
-        color: $base-color;
-        margin-top: -1.8rem;
-      }
-
-
-      select {
-        background-color: $base-color;
-        color: #fff;
-      }
-    }
 
   }
 }
@@ -680,14 +651,13 @@ form {
 .row-two-reservatie {
   display: flex;
 
-
   width: 82.5rem;
   margin: auto;
   margin-top: 2rem;
 
 
-
   .col-sm-4 {
+    margin: 0 2rem 0 2rem;
 
     h1 {
       margin: 0 0 1.2rem 0;
@@ -702,8 +672,11 @@ form {
     ul li {
       display: flex;
       justify-content: space-between;
+
       margin: 0;
       padding: 0;
+
+      max-width: 310px;
     }
 
     figure {
@@ -717,10 +690,6 @@ form {
       color: $base-color;
     }
 
-    #besch-col2-row2 {
-      padding-top: 55px;
-    }
-
     button {
       width: 80%;
       height: 3rem;
@@ -728,6 +697,35 @@ form {
       margin: 4.5rem 0 0 5.18rem;
       padding: 0;
       border: none;
+      background-color: $base-color;
+      color: #fff;
+    }
+  }
+
+  .col-sm-2 {
+    width: 90%;
+
+    .label-input-duo:not(.totaal) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 95%;
+      margin: 1rem auto 7rem auto;
+
+      #nultottwaalf {
+        margin-left: 1em;
+      }
+    }
+
+    .label-input-duo .total {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: $base-color;
+      margin-top: -1.8rem;
+    }
+
+
+    select {
       background-color: $base-color;
       color: #fff;
     }

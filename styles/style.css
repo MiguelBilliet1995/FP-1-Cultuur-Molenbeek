@@ -635,6 +635,7 @@ form fieldset label[for="contact-submit"]::after {
 }
 
 .row-one-reservatie .col-sm-4 {
+  margin: 0 1rem 0 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -656,41 +657,6 @@ form fieldset label[for="contact-submit"]::after {
   padding-top: 2em;
 }
 
-.row-one-reservatie .col-sm-4 .col-sm-2 {
-  width: 90%;
-}
-
-.row-one-reservatie .col-sm-4 .col-sm-2 .label-input-duo:not(.totaal) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 95%;
-  margin: 1rem auto 7rem auto;
-}
-
-.row-one-reservatie .col-sm-4 .col-sm-2 .label-input-duo:not(.totaal) #nultottwaalf {
-  margin-left: 1em;
-}
-
-.row-one-reservatie .col-sm-4 .col-sm-2 .label-input-duo .total {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #EB5B55;
-  margin-top: -1.8rem;
-}
-
-.row-one-reservatie .col-sm-4 .col-sm-2 select {
-  background-color: #EB5B55;
-  color: #fff;
-}
-
 .row-two-reservatie {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -698,6 +664,10 @@ form fieldset label[for="contact-submit"]::after {
   width: 82.5rem;
   margin: auto;
   margin-top: 2rem;
+}
+
+.row-two-reservatie .col-sm-4 {
+  margin: 0 2rem 0 2rem;
 }
 
 .row-two-reservatie .col-sm-4 h1 {
@@ -719,6 +689,7 @@ form fieldset label[for="contact-submit"]::after {
           justify-content: space-between;
   margin: 0;
   padding: 0;
+  max-width: 310px;
 }
 
 .row-two-reservatie .col-sm-4 figure {
@@ -732,16 +703,47 @@ form fieldset label[for="contact-submit"]::after {
   color: #EB5B55;
 }
 
-.row-two-reservatie .col-sm-4 #besch-col2-row2 {
-  padding-top: 55px;
-}
-
 .row-two-reservatie .col-sm-4 button {
   width: 80%;
   height: 3rem;
   margin: 4.5rem 0 0 5.18rem;
   padding: 0;
   border: none;
+  background-color: #EB5B55;
+  color: #fff;
+}
+
+.row-two-reservatie .col-sm-2 {
+  width: 90%;
+}
+
+.row-two-reservatie .col-sm-2 .label-input-duo:not(.totaal) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 95%;
+  margin: 1rem auto 7rem auto;
+}
+
+.row-two-reservatie .col-sm-2 .label-input-duo:not(.totaal) #nultottwaalf {
+  margin-left: 1em;
+}
+
+.row-two-reservatie .col-sm-2 .label-input-duo .total {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #EB5B55;
+  margin-top: -1.8rem;
+}
+
+.row-two-reservatie .col-sm-2 select {
   background-color: #EB5B55;
   color: #fff;
 }
