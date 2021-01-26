@@ -625,19 +625,22 @@ form fieldset label[for="contact-submit"]::after {
 .reservatie-main {
   width: 82.5rem;
   margin: auto;
+  overflow: hidden;
 }
 
 .row-one-reservatie {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 82.5rem;
   margin: auto;
 }
 
 .row-one-reservatie #description-box {
   margin: 0 .75rem 0 .75rem;
-  max-width: 26.5rem;
+  max-width: 26rem;
 }
 
 .row-one-reservatie #description-box .description-box-head {
@@ -658,7 +661,7 @@ form fieldset label[for="contact-submit"]::after {
 
 .row-one-reservatie .col-sm-4:not(#description-box) {
   margin: 0 .75rem 0 .75rem;
-  max-width: 26.5rem;
+  max-width: 26rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -684,13 +687,15 @@ form fieldset label[for="contact-submit"]::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 82.5rem;
   margin: auto;
   margin-top: 2rem;
 }
 
 .row-two-reservatie .col-sm-4 {
-  max-width: 26.5rem;
+  max-width: 26rem;
   margin: 0 .75rem 0 .75rem;
 }
 
@@ -710,7 +715,7 @@ form fieldset label[for="contact-submit"]::after {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0;
+  margin: 0 0 1rem 0;
   padding: 0;
 }
 
@@ -730,6 +735,7 @@ form fieldset label[for="contact-submit"]::after {
   height: 3rem;
   margin-left: 2.75rem;
   margin-top: 3.344rem;
+  padding: 0;
   border: none;
   background-color: #EB5B55;
   color: #fff;
@@ -755,8 +761,7 @@ form fieldset label[for="contact-submit"]::after {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 90%;
-  margin: auto;
-  margin-bottom: 0.4rem;
+  margin: 0 auto 1rem auto;
 }
 
 .row-two-reservatie .col-sm-2 .label-input-duo:not(.totaal) #nultottwaalf {
