@@ -2,7 +2,7 @@
 include_once('parser/CRUD/evenementen.php');
 include_once('parser/DatabaseFactory.php');
 
-class boetesDB{
+class evenementenDB{
 
     private static function getVerbinding() {
         return DatabaseFactory::getDatabase();
@@ -30,7 +30,7 @@ class boetesDB{
     }
 
     public static function converteerRijNaarObject($databaseRij){
-        return new boetes($databaseRij['id'], $databaseRij['naam'],
+        return new evenementen($databaseRij['id'], $databaseRij['naam'],
             $databaseRij['prijs'], $databaseRij['datum'], $databaseRij['uur'],
             $databaseRij['locatie'], $databaseRij['beschrijving'], $databaseRij['foto']);
     }
