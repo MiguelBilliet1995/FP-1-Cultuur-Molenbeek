@@ -145,6 +145,11 @@ footer .footer-navigation li::before {
   position: absolute;
 }
 
+.footerlogos img {
+  width: 50px;
+  margin: 5px;
+}
+
 footer ul {
   display: block;
   list-style: none;
@@ -631,13 +636,16 @@ form fieldset label[for="contact-submit"]::after {
 }
 
 .photo-square img {
-  width: 150px;
   margin-bottom: 30px;
+  height: 100px;
 }
 
 .photo-square h1 {
+  text-align: center;
+  white-space: normal;
   color: white;
-  font-size: 4em;
+  font-size: 3em;
+  line-height: 0.8em;
 }
 
 .kinderen {
