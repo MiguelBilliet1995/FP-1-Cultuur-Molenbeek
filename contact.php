@@ -16,7 +16,7 @@
 <body>
   <header>
     <div class="container">
-      <img src="images/logo-tekst.svg" alt="logo" class="logo">
+    <a href="index.html"><img src="images/logo-tekst.svg" alt="logo" class="logo"></a>
       <ul>
         <li><a href="index.html" id="home">Home</a></li>
         <li><a href="evenementen.html" id="kalender">Kalender</a></li>
@@ -91,8 +91,12 @@
           <span><b>Contactinfo</b><br />
             info@familiemolenbeek.be<br />
             +32 468 10 99 14 <br>
-            <a href="https://www.instagram.com/cultuur_in_molenbeek/" target="_blank"><span class="icon-instagram"></span></a>
-          <a href="https://www.facebook.com/Cultuur-in-Molenbeek-770192383096967" target="_blank" ><span class="icon-facebook"></span></a>
+            <div class="sociallinks">
+              <a href="https://www.instagram.com/cultuur_in_molenbeek/" target="_blank"><img
+                  src="images/icons/instagram-logo.svg" alt=""></a>
+              <a href="https://www.facebook.com/Cultuur-in-Molenbeek-770192383096967" target="_blank"><img
+                  src="images/icons/facebook-brands.svg" alt=""></a>
+            </div>
           </span>
         </div>
 
