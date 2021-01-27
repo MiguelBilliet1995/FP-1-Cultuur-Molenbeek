@@ -15,15 +15,17 @@
 
 <body>
   <header>
-    <div class="container">
-      <a href="/index.html"> <img src="images/logo-tekst.svg" alt="logo" class="logo"></a>
-      <ul>
-        <li><a href="index.html" id="home" class="active">Home</a></li>
-        <li><a href="evenementen.html" id="kalender">Kalender</a></li>
+    <div class="container dropup">
+      <a href="index.html"><img src="images/logo-tekst.svg" alt="logo" class="logo"></a>
+      <button class="dropbtn">Menu</button>
+      <ul class="dropup-content">
+        <li><a href="index.html" id="home">Home</a></li>
+        <li><a href="evenementen.html" id="kalender" class="active">Kalender</a></li>
         <li><a href="news.html" id="nieuws">Nieuws</a></li>
         <li><a href="about.html" id="over-ons">Over ons</a></li>
         <li><a href="contact.php" id="contact">Contact</a></li>
       </ul>
+    </div>
     </div>
   </header>
 
@@ -141,14 +143,14 @@
 
       </div>
     </div>
-    <video class="animationsDSK"   loop muted height="700" width="700" autoplay >
-      <source src="/images/wereldbol.mp4" type="video/mp4" >
-      </video>
-  <video class="animationsGSM" loop muted autoplay height="2436" width="1125">
-    <source src="/images/animatie mobile.mp4" type="video/mp4">
-  </video>
-  </div>
-    
+    <video class="animationsDSK" loop muted height="700" width="700" autoplay>
+      <source src="/images/wereldbol.mp4" type="video/mp4">
+    </video>
+    <video class="animationsGSM" loop muted autoplay height="2436" width="1125">
+      <source src="/images/animatie mobile.mp4" type="video/mp4">
+    </video>
+    </div>
+
   </footer>
 
 </body>
