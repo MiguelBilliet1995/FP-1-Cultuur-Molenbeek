@@ -48,7 +48,7 @@ header .logo {
 header ul {
   margin: 70px 0px 0px;
   float: right;
-  list-style: none;
+  list-style: none !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -82,33 +82,82 @@ header li a::after {
   transition: transform 0.2s, -webkit-transform 0.2s;
 }
 
+header li a:hover {
+  color: #e05248 !important;
+}
+
 header li a:hover:after {
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
-  -webkit-transform: rotate(15deg);
-          transform: rotate(15deg);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
 }
 
 header li #home::after {
-  background-image: url(../images/icons/home-icon.svg);
+  background-image: url(../images/icons-black/home-icon.svg);
 }
 
 header li #kalender::after {
-  background-image: url(../images/icons/kalender-icon.svg);
+  background-image: url(../images/icons-black/kalender-icon.svg);
 }
 
 header li #nieuws::after {
-  background-image: url(../images/icons/news-icon.svg);
+  background-image: url(../images/icons-black/news-icon.svg);
 }
 
 header li #over-ons::after {
-  background-image: url(../images/icons/gallery-icon.svg);
+  background-image: url(../images/icons-black/gallery-icon.svg);
 }
 
 header li #contact::after {
+  background-image: url(../images/icons-black/contact-icon.svg);
+}
+
+header li #home:hover::after {
+  background-image: url(../images/icons/home-icon.svg);
+}
+
+header li #kalender:hover::after {
+  background-image: url(../images/icons/kalender-icon.svg);
+}
+
+header li #nieuws:hover::after {
+  background-image: url(../images/icons/news-icon.svg);
+}
+
+header li #over-ons:hover::after {
+  background-image: url(../images/icons/gallery-icon.svg);
+}
+
+header li #contact:hover::after {
   background-image: url(../images/icons/contact-icon.svg);
+}
+
+header li .active#home::after {
+  background-image: url(../images/icons/home-icon.svg);
+}
+
+header li .active#kalender::after {
+  background-image: url(../images/icons/kalender-icon.svg);
+}
+
+header li .active#nieuws::after {
+  background-image: url(../images/icons/news-icon.svg);
+}
+
+header li .active#over-ons::after {
+  background-image: url(../images/icons/gallery-icon.svg);
+}
+
+header li .active#contact::after {
+  background-image: url(../images/icons/contact-icon.svg);
+}
+
+.backarrow {
+  width: 30px;
+  position: absolute;
 }
 
 /* ----------------------- */
@@ -121,6 +170,7 @@ footer {
   width: 100%;
   height: 250px;
   padding: 50px 0px;
+  list-style: none;
 }
 
 footer .active {
@@ -150,9 +200,13 @@ footer .footer-navigation li::before {
   margin: 5px;
 }
 
+.sociallinks img {
+  width: 30px;
+  white-space: nowrap;
+}
+
 footer ul {
-  display: block;
-  list-style: none;
+  list-style: none !important;
 }
 
 /* ----------------------- */
@@ -166,6 +220,7 @@ footer ul {
 }
 
 .card img {
+  padding: 0;
   width: 100%;
 }
 
@@ -789,7 +844,7 @@ form fieldset label[for="contact-submit"]::after {
 }
 
 .row-two-reservatie .col-sm-4 .event-list {
-  list-style-type: none;
+  list-style-type: none !important;
   padding: 0;
 }
 
