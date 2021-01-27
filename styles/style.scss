@@ -59,7 +59,7 @@ header {
   ul {
     margin: 70px 0px 0px;
     float: right;
-    list-style: none;
+    list-style: none !important;
     display: flex;
   }
 
@@ -90,32 +90,81 @@ header li {
     transition: transform 0.2s;
   }
 
+  a:hover {
+    color: $hard-color !important;
+  }
+
   a:hover:after {
-    transition: transform 0.5s;
-    transform: rotate(15deg);
+    transition: transform 0.2s;
+    transform: scale(1.2, 1.2)
   }
 
   #home::after {
-    background-image: url(../images/icons/home-icon.svg);
+    background-image: url(../images/icons-black/home-icon.svg);
   }
 
   #kalender::after {
-    background-image: url(../images/icons/kalender-icon.svg);
+    background-image: url(../images/icons-black/kalender-icon.svg);
   }
 
   #nieuws::after {
-    background-image: url(../images/icons/news-icon.svg);
+    background-image: url(../images/icons-black/news-icon.svg);
   }
 
   #over-ons::after {
-    background-image: url(../images/icons/gallery-icon.svg);
+    background-image: url(../images/icons-black/gallery-icon.svg);
   }
 
   #contact::after {
+    background-image: url(../images/icons-black/contact-icon.svg);
+  }
+
+  #home:hover::after {
+    background-image: url(../images/icons/home-icon.svg);
+  }
+
+  #kalender:hover::after {
+    background-image: url(../images/icons/kalender-icon.svg);
+  }
+
+  #nieuws:hover::after {
+    background-image: url(../images/icons/news-icon.svg);
+  }
+
+  #over-ons:hover::after {
+    background-image: url(../images/icons/gallery-icon.svg);
+  }
+
+  #contact:hover::after {
     background-image: url(../images/icons/contact-icon.svg);
   }
 
+  .active#home::after {
+    background-image: url(../images/icons/home-icon.svg);
+  }
 
+  .active#kalender::after {
+    background-image: url(../images/icons/kalender-icon.svg);
+  }
+
+  .active#nieuws::after {
+    background-image: url(../images/icons/news-icon.svg);
+  }
+
+  .active#over-ons::after {
+    background-image: url(../images/icons/gallery-icon.svg);
+  }
+
+  .active#contact::after {
+    background-image: url(../images/icons/contact-icon.svg);
+  }
+}
+
+
+
+.backarrow {
+  width: 30px;
+  position: absolute;
 }
 
 /* ----------------------- */
@@ -125,11 +174,13 @@ header li {
 
 footer {
   margin: 50px 0px 0px;
-  overflow: hidden;
+  overflow: visible;
   border-top: black 1px solid;
   width: 100%;
   height: 250px;
   padding: 50px 0px;
+  list-style: none;
+
 
   .active {
     color: $base-color !important;
@@ -139,6 +190,7 @@ footer {
 
     li {
       position: relative;
+
     }
 
     li::before {
@@ -159,10 +211,18 @@ footer {
 
 }
 
-footer ul {
-  display: block;
-  list-style: none;
+.footerlogos img {
+  width: 50px;
+  margin: 5px;
+}
 
+.sociallinks img {
+  width: 30px;
+  white-space: nowrap;
+}
+
+footer ul {
+  list-style: none !important;
 }
 
 /* ----------------------- */
@@ -178,6 +238,7 @@ footer ul {
 }
 
 .card img {
+  padding: 0;
   width: 100%;
 }
 
@@ -460,6 +521,38 @@ p {
   }
 }
 
+/* ----------------------- */
+/* Article css */
+/* ----------------------- */
+
+.articleimage {
+  max-height: 60vh;
+  width: auto !important;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.articletitle {
+  font-size: 40px;
+  white-space: nowrap;
+}
+
+.articledate {
+  font-size: 20px;
+  color: $hard-color;
+  margin-bottom: 5px;
+}
+
+.shareonfacebook {
+  position: absolute;
+}
+
+.shareonfacebook img {
+  width: 30px;
+}
 
 /* ----------------------- */
 /* About css */
@@ -502,6 +595,10 @@ p {
 a {
   color: black !important;
   text-decoration: none !important;
+}
+
+.button a {
+  color: white !important;
 }
 
 /* ----------------------- */
@@ -587,7 +684,7 @@ form {
   padding: 10px 20px;
   font-size: 17px;
   font-weight: bold;
-  color: white;
+  color: white !important;
   background-color: $base-color;
   position: relative;
   height: auto;
@@ -629,13 +726,17 @@ form {
   padding: 100px;
 
   img {
-    width: 150px;
     margin-bottom: 30px;
+    height: 100px;
   }
 
   h1 {
+    text-align: center;
+    white-space: normal;
+
     color: white;
-    font-size: 4em;
+    font-size: 3em;
+    line-height: 0.8em;
   }
 }
 
@@ -649,4 +750,171 @@ form {
 
 .gezin {
   background-image: url(../images/home_voorgezin.jpg);
+}
+
+/*
+    RESERVATIE 
+                */
+
+.reservatie-main {
+  max-width: 82.5rem;
+  margin: auto;
+}
+
+.row-one-reservatie {
+  display: flex;
+  flex-wrap: wrap;
+
+  max-width: 82.5rem;
+  margin: auto;
+
+  #description-box {
+    margin: 0 .75rem 0 .75rem;
+    max-width: 26rem;
+    min-width: 20rem;
+
+
+    .description-box-head {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+
+    }
+
+    .beschrijving {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: $base-color;
+    }
+  }
+
+  #form {
+    padding-bottom: 1rem;
+  }
+
+  .col-sm-4:not(#description-box) {
+    margin: 0 .75rem 0 .75rem;
+    max-width: 26rem;
+    min-width: 20rem;
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    form {
+      width: 90%;
+      max-height: 283px;
+
+      margin-bottom: 1rem;
+
+      .reservatie-input {
+        border: none;
+        border-bottom: $base-color 2px solid;
+      }
+
+      .reservatie-label:not(#nah) {
+        margin-top: 2em;
+      }
+    }
+
+
+  }
+}
+
+.row-two-reservatie {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 82.5rem;
+  margin: auto;
+  margin-top: 2rem;
+
+
+  .col-sm-4 {
+    max-width: 26rem;
+    min-width: 20rem;
+    margin: 0 .75rem 0 .75rem;
+
+
+    h1 {
+      margin: 0 0 1.2rem 0;
+    }
+
+    .event-list {
+      list-style-type: none !important;
+      padding: 0;
+    }
+
+    ul li {
+      display: flex;
+      justify-content: space-between;
+
+
+      margin: 0 0 1rem 0;
+      padding: 0;
+    }
+
+    figure {
+      width: 2rem;
+      margin-left: auto;
+    }
+
+    .beschrijving {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: $base-color;
+    }
+
+    button {
+      width: 80%;
+      height: 3rem;
+      margin-left: 2.75rem;
+      margin-top: 3.344rem;
+      padding: 0;
+
+      border: none;
+      background-color: $base-color;
+      color: #fff;
+    }
+  }
+
+  .col-sm-2 {
+    width: 90%;
+
+    #top-duo {
+      margin-top: 3.438rem;
+    }
+
+    .label-input-duo:not(.totaal) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      width: 90%;
+      margin: 0 auto 1rem auto;
+
+      #nultottwaalf {
+        margin-left: 1em;
+      }
+
+      label::after {
+        border: $base-color 1px;
+      }
+    }
+
+    .label-input-duo .total {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: $base-color;
+
+      margin: auto;
+      width: 90%;
+    }
+
+
+    select {
+      background-color: $base-color;
+      color: #fff;
+    }
+  }
+
 }
