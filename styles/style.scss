@@ -728,6 +728,8 @@ form {
   img {
     margin-bottom: 30px;
     height: 100px;
+
+    transition: 0.2s;
   }
 
   h1 {
@@ -737,19 +739,29 @@ form {
     color: white;
     font-size: 3em;
     line-height: 0.8em;
+
+    transition: 0.2s;
   }
 }
 
+.photo-square:hover>h1 {
+  transform: scale(1.2);
+}
+
+.photo-square:hover>img {
+  transform: scale(1.2);
+}
+
 .kinderen {
-  background-image: url(../images/home_voorkinderen.jpg);
+  background-image: url(../images/home-kleuters.jpg);
 }
 
 .ouders {
-  background-image: url(../images/home_voorouders.jpg);
+  background-image: url(../images/home-tieners.jpg);
 }
 
 .gezin {
-  background-image: url(../images/home_voorgezin.jpg);
+  background-image: url(../images/home-gezin.jpg);
 }
 
 /*

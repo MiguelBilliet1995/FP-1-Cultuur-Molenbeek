@@ -304,7 +304,7 @@ h1 {
   display: flex;*/
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  font-family: "pt-sans-pro", sans-serif;
+  font-family: "pt-sans-pro", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
@@ -728,6 +728,8 @@ form fieldset label[for="contact-submit"]::after {
 .photo-square img {
   margin-bottom: 30px;
   height: 100px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .photo-square h1 {
@@ -736,18 +738,30 @@ form fieldset label[for="contact-submit"]::after {
   color: white;
   font-size: 3em;
   line-height: 0.8em;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.photo-square:hover > h1 {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.photo-square:hover > img {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .kinderen {
-  background-image: url(../images/home_voorkinderen.jpg);
+  background-image: url(../images/home-kleuters.jpg);
 }
 
 .ouders {
-  background-image: url(../images/home_voorouders.jpg);
+  background-image: url(../images/home-tieners.jpg);
 }
 
 .gezin {
-  background-image: url(../images/home_voorgezin.jpg);
+  background-image: url(../images/home-gezin.jpg);
 }
 
 /*
