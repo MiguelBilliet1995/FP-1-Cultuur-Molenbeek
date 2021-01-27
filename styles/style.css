@@ -163,6 +163,29 @@ header li .active#contact::after {
 /* ----------------------- */
 /* Footer css */
 /* ----------------------- */
+.animationsGSM {
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+  .animationsGSM {
+    display: block;
+    position: fixed;
+    bottom: 50px;
+    z-index: -999;
+  }
+  .animationsDSK {
+    display: none;
+  }
+}
+
+.animationsDSK {
+  position: fixed;
+  right: 0;
+  bottom: -180px;
+  z-index: -999;
+}
+
 footer {
   margin: 50px 0px 0px;
   overflow: visible;
