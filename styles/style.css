@@ -765,6 +765,9 @@ form fieldset label[for="contact-submit"]::after {
   transition: 0.2s;
 }
 
+/* ----------------------- */
+/* Homepage css */
+/* ----------------------- */
 .photo-square:hover > h1 {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
@@ -785,6 +788,10 @@ form fieldset label[for="contact-submit"]::after {
 
 .gezin {
   background-image: url(../images/home-gezin.jpg);
+}
+
+#homepageafbeelding {
+  width: 150%;
 }
 
 /*
