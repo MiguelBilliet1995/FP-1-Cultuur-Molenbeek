@@ -16,7 +16,7 @@
 <body>
   <header>
     <div class="container">
-    <a href="index.html"><img src="images/logo-tekst.svg" alt="logo" class="logo"></a>
+    <a href="index.html"><img src="images/logos/logo-met-text.svg" alt="logo" class="logo"></a>
       <ul>
         <li><a href="index.html" id="home">Home</a></li>
         <li><a href="evenementen.html" id="kalender">Kalender</a></li>
