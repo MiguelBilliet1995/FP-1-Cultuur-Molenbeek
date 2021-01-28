@@ -5,7 +5,7 @@ services:
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     volumes:
-    - ~/Database/fp_db:/var/lib/mysql
+    - ./database/:/var/lib/mysql
     environment:
       MYSQL_ROOT_HOST: 127.0.0.1
       MYSQL_ROOT_PASSWORD: T0XGfOR9dCkk366sCFOq
