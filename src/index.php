@@ -84,63 +84,13 @@
       </div>
     </div>
   </div>
-
-
-
-  <footer>
-    <div class="container">
-      <div class="row">
-
-        <div class="col-md-4">
-          <ul class="footer-navigation">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="evenementen.html">Kalender</a></li>
-            <li><a href="news.html">Nieuws</a></li>
-            <li><a href="about.html">Over ons</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="col-md-4">
-          <span><b>Contactinfo</b><br />
-            info@familiemolenbeek.be<br />
-            +32 468 10 99 14 <br>
-            <div class="sociallinks">
-              <a href="https://www.instagram.com/cultuur_in_molenbeek/" target="_blank"><img
-                  src="images/icons/instagram-logo.svg" alt=""></a>
-              <a href="https://www.facebook.com/Cultuur-in-Molenbeek-770192383096967" target="_blank"><img
-                  src="images/icons/facebook-brands.svg" alt=""></a>
-            </div>
-          </span>
-        </div>
-
-        <div class="col-md-4">
-          <div class="footerlogos"><img src="images/logos/bib-logo.svg" alt=""><img
-              src="images/logos/cultuurinmolebeek.svg" alt=""></div>
-          <div class="footerlogos"><img src="images/logos/vk-logo.svg" alt=""><img src="images/logos/molenbeek-logo.svg"
-              alt=""></div>
-          </ul>
-
-          <div class="year">
-            <li>2020-2021</li>
-            <li> &copy; Familie Molenbeek</li>
-          </div>
-
-
-          </ul>
-        </div>
-
-      </div>
-    </div>
-    <video class="animationsDSK" loop muted height="700" width="700" autoplay>
-      <source src="/images/wereldbol.mp4" type="video/mp4">
-    </video>
-    <video class="animationsGSM" loop muted autoplay height="2436" width="1125">
-      <source src="/images/animatie mobile.mp4" type="video/mp4">
-    </video>
-    </div>
-
-  </footer>
+  <?php include 'include/footer.php'; ?>
+  <video class="animationsDSK" loop muted height="700" width="700" autoplay>
+    <source src="/images/wereldbol.mp4" type="video/mp4">
+  </video>
+  <video class="animationsGSM" loop muted autoplay height="2436" width="1125">
+    <source src="/images/animatie mobile.mp4" type="video/mp4">
+  </video>
 
 </body>
 
