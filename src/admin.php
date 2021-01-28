@@ -1,7 +1,7 @@
 <?php
 
-  include_once("parser/evenementenDB.php");
-  include_once("parser/newsDB.php");
+  include_once("parser/CRUD/evenementenDB.php");
+  include_once("parser/CRUD/newsDB.php");
 
 ?>
 

@@ -11,9 +11,9 @@ class DatabaseFactory
         if (self::$verbinding == null) {
 
             if($use_local_DB==true){
-                $mijnComputernaam = "localhost";
-                $mijnGebruikersnaam = "app_client";
-                $mijnWachtwoord = "wJkEq3ejztAGp4DY";
+                $mijnComputernaam = "127.0.0.1:3306";
+                $mijnGebruikersnaam = "root";
+                $mijnWachtwoord = "T0XGfOR9dCkk366sCFOq";
                 $mijnDatabase = "fullproject";
             }else{
                 $mijnComputernaam = "https://web1.64ip.net/";
