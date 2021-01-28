@@ -14,18 +14,7 @@
 </head>
 
 <body>
-  <header>
-    <div class="container">
-    <a href="index.html"><img src="images/logos/logo-met-text.svg" alt="logo" class="logo"></a>
-      <ul>
-        <li><a href="index.html" id="home">Home</a></li>
-        <li><a href="evenementen.html" id="kalender">Kalender</a></li>
-        <li><a href="news.html" id="nieuws">Nieuws</a></li>
-        <li><a href="about.html" id="over-ons">Over ons</a></li>
-        <li><a href="contact.html" id="contact" class="active">Contact</a></li>
-      </ul>
-    </div>
-  </header>
+  <?php include 'includes/banner.php'; ?>
   <main>
     <div class="container">
       <div class="row">
@@ -72,7 +61,7 @@
       </div>
     </div>
   </main>
-  <?php include 'include/footer.php'; ?>
+  <?php include 'includes/footer.php'; ?>
 </body>
 
 </html>

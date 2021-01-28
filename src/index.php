@@ -84,7 +84,7 @@
       </div>
     </div>
   </div>
-  <?php include 'include/footer.php'; ?>
+  <?php include 'includes/footer.php'; ?>
   <video class="animationsDSK" loop muted height="700" width="700" autoplay>
     <source src="/images/wereldbol.mp4" type="video/mp4">
   </video>
