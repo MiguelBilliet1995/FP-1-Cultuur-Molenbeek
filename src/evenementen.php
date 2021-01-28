@@ -95,8 +95,15 @@
         <h3>Evenementen</h3>
 
         <div class="row">
-          <!-- begin card -->
-          <div class="card col-sm-6">
+
+        <?php
+        include_once('parser/CRUD/evenementenDB.php');
+        $evenementen = evenementenDB::getAll();
+
+        foreach($evenementen as $evenement){
+
+        ?>
+        <div class="card col-sm-6">
             <img src="images/theater.jpg">
             <div class="textbubblecontainer">
               <span class="textbubbles"><img src="images/icons/speechbubblefull.svg" alt=""><img
@@ -104,87 +111,28 @@
                   alt=""><img src="images/icons/speechbubbleempty.svg" alt=""></span>
             </div>
             <div class="info">
-              <h2>Jong Theater <span class="datum"><span class="red">Do 21/1</span><span class="time"> -
-                    14:00</span></span></h2>
-              <span class="location"><img src="images/icons/locationicon.svg" alt="">GC De Vaartkapoen</span>
+              <h2><?php echo $evenement->naam(); ?> <span class="datum"><span class="red"><?php echo $evenement->datum(); ?></span><span class="time"> - <?php echo $evenement->uur(); ?></span></span></h2>
+              <span class="location"><img src="images/icons/locationicon.svg" alt=""><?php echo $evenement->locatie() ?></span>
 
-              <p class="description">Deze voorstelling brengt een groep jonge toneelmakers samen die voor het eerst hun
-                afgewerkt project komen presenteren. Het Jong Theater van Molenbeek stelt “Dag Meneer” voor .
-              </p>
+              <p class="description"><?php echo $evenement->beschrijving() ?></p>
 
               <a href="reserveren.html">
                 <div class="button-container">
-                  <div class="button button-next">
+                  <div class="button button-next" onclick="location.href='reserveer.php?id=<?php echo $evenement->id() ?>'">
                     <p> Schrijf je nu in!</p>
                   </div>
-                  <span class="price"><img src="images/icons/pricetag.svg" alt=""> €999</span>
+                  <span class="price"><img src="images/icons/pricetag.svg" alt="">€<?php echo $evenement->prijs() ?></span>
                 </div>
               </a>
             </div>
           </div>
 
-
-          <!-- einde card -->
-
-          <!-- begin card -->
-
-          <div class="card col-sm-6">
-            <img src="images/sport.jpg">
-            <div class="textbubblecontainer">
-              <span class="textbubbles"><img src="images/icons/speechbubblefull.svg" alt=""><img
-                  src="images/icons/speechbubblefull.svg" alt=""><img src="images/icons/speechbubbleempty.svg"
-                  alt=""><img src="images/icons/speechbubbleempty.svg" alt=""></span>
-            </div>
-            <div class="info">
-              <h2>Sport op het plein</h2>
-              <span class="datum"><span class="red">Donderdag</span>, 21 januari</span>
-              <p class="description">Elke woensdag organiseert familie Molenbeek in samenwerking met Sport Molenbeek
-                sportieve activiteiten voor kinderen op verschillende Molenbeekse pleinen. Klik verder voor meer info.
-
-              </p>
-
-              <div class="button-container">
-                <div class="button button-next">
-                  <p> <a href="reserveren.html"> Schrijf je nu in!</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- einde card -->
-
-          <!-- begin card -->
-
-          <div class="card col-sm-6">
-            <img src="images/boswandeling.jpg">
-            <div class="textbubblecontainer">
-              <span class="textbubbles"><img src="images/icons/speechbubblefull.svg" alt=""><img
-                  src="images/icons/speechbubblefull.svg" alt=""><img src="images/icons/speechbubbleempty.svg"
-                  alt=""><img src="images/icons/speechbubbleempty.svg" alt=""></span>
-            </div>
-            <div class="info">
-              <h2>Groene wandeling</h2>
-              <span class="datum"><span class="red">Donderdag</span>, 21 januari</span>
-              <p class="description">Op 27 Mei organiseert familie Molenbeek een wandeling door de groene zones van
-                Molenbeek. Neem deel met je gezin en ontdek nieuwe greoen plekjes in je eigen gemeente.
-
-              </p>
-
-              <div class="button-container">
-                <div class="button button-next">
-                  <p> <a href="reserveren.html" id="deelenmer"> Schrijf je nu in!</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <!-- einde card -->
+        <?php
+        }
+        ?>
 
         </div>
       </div>
-
-
-
     </div>
   </div>
   <?php include 'includes/footer.php'; ?>
