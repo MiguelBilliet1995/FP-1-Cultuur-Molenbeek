@@ -17,103 +17,28 @@
   <?php include 'includes/banner.php'; ?>
 
   <div class="container">
-    <!-- begin article -->
-    <div class="article">
-      <div class="row">
-        <div class="col-sm-4">
-          <img src="images/sfeer_10.jpg" alt="" class="articleimg">
-        </div>
-        <div class="col-sm-5">
-          <h2 class="articletitle">Het circus komt</h2>
-          <p class="articledate">Di 26/01 Januari</p>
-          <p>
-            Op 28 januari zal het circus opstellen op het grote plein in Molenbeek. Een leuke activitetit om samen met
-            je
-            kinderen te doen. Dit circus staat bekend om zijn gevaarlijke stunts met mensen. Het is zeker de moeite
-            waard
-            om te zien. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, voluptatum. Aperiam illo est
-            molestias aliquid nam, nemo aspernatur deleniti expedita explicabo, fuga rerum ea quasi quidem, doloribus
-            dignissimos recusandae dolores.
-          </p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <a href="#" onclick="
-          window.open(
-            'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
-            'facebook-share-dialog', 
-            'width=626,height=436'); 
-          return false;" class="shareonfacebook">
-            <i>Delen</i> <img src="images/icons/facebook-brands.svg" alt="">
-          </a>
-        </div>
-      </div>
-    </div>
-    <!-- end article -->
+  <?php
+        include_once('parser/CRUD/newsDB.php');
+        $news = newsDB::getAll();
 
-    <!-- begin article -->
-    <div class="article">
-      <div class="row">
-        <div class="col-sm-4">
-          <img src="./images/sfeer_6.jpg" alt="De voorstelling in het theater" class="articleimg">
-        </div>
-        <div class="col-sm-5">
-          <h2 class="articletitle">De boze heks kwam voorlezen voor de kindjes</h2>
-          <p class="articledate">Di 26/01 Januari</p>
-          <p>
-            Vandaag kwam Linda de boze heks verhaaltjes voorlezen in de bibliotheek van Molenbeek. De kindjes zaten vol
-            verbazing en spanning te luisteren hoe zij het verhaal van hans en grietje aan hun vertelde. Lorem ipsum
-            dolor, sit amet consectetur adipisicing elit. Consectetur soluta alias unde facilis ut quasi? Modi, tempore
-            impedit, quis cum debitis sequi suscipit atque magni vel, autem non error recusandae!
-          </p>
+        foreach($news as $newsartikel){
+        ?>
+        <div class="article">
+          <div class="row">
+            <div class="col-sm-4">
+            <img src="images/<?php echo $newsartikel->foto(); ?>" alt="" class="articleimg">
+            </div>
+            <div class="col-sm-8">
+              <h2 class="articletitle"><?php echo $newsartikel->titel(); ?></h2>
+              <p class="articledate"><?php echo $newsartikel->datum(); ?></p>
+              <p><?php echo $newsartikel->artikel(); ?></p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <a href="#" onclick="
-              window.open(
-                'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
-                'facebook-share-dialog', 
-                'width=626,height=436'); 
-              return false;" class="shareonfacebook">
-            <i>Delen</i> <img src="images/icons/facebook-brands.svg" alt="">
-          </a>
-        </div>
-      </div>
-    </div>
-    <!-- end article -->
-
-    <!-- begin article -->
-    <div class="article">
-      <div class="row">
-        <div class="col-sm-4">
-          <img src="./images/sfeer_8.jpg" alt="De voorstelling in het theater" class="articleimg">
-        </div>
-        <div class="col-sm-5">
-          <h2 class="articletitle">Optocht door Molenbeek</h2>
-          <p class="articledate">Di 26/01 Januari</p>
-          <p>
-            Samen met cultuur in Molenbeek en de bib organiseerden we een optcht. Deze liep op 10 januari doorheen de
-            straten om mensen vanuit hun huizen te begroeten en zo het sociaal contact te versterken in deze moeilijke
-            tijden.
-          </p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <a href="#" onclick="
-                  window.open(
-                    'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 
-                    'facebook-share-dialog', 
-                    'width=626,height=436'); 
-                  return false;" class="shareonfacebook">
-            <i>Delen</i> <img src="images/icons/facebook-brands.svg" alt="">
-          </a>
-        </div>
-      </div>
-    </div>
-    <!-- end article -->
+        <?php
+        }
+        ?>
   </div>
   <?php include 'includes/footer.php'; ?>
   <script defer src="./scripts/all.js"></script>
