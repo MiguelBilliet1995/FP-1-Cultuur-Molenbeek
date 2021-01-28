@@ -118,7 +118,7 @@
 
               <a href="reserveren.html">
                 <div class="button-container">
-                  <div class="button button-next" onclick="location.href='reserveer.php?id=<?php echo $evenement->id() ?>'">
+                  <div class="button button-next" onclick="location.href='reserveren.php?id=<?php echo $evenement->id() ?>'">
                     <p> Schrijf je nu in!</p>
                   </div>
                   <span class="price"><img src="images/icons/pricetag.svg" alt="">€<?php echo $evenement->prijs() ?></span>
