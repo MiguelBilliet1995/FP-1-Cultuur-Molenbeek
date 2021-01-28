@@ -548,17 +548,16 @@ p {
 /* Article css */
 /* ----------------------- */
 
-.articleimage {
-  max-height: 60vh;
-  width: auto !important;
+.article {
+  margin-bottom: 50px;
+}
 
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+.articleimg {
+  margin-right: 5%;
 }
 
 .articletitle {
+  top: 0;
   font-size: 40px;
   white-space: nowrap;
 }
@@ -571,6 +570,7 @@ p {
 
 .shareonfacebook {
   position: absolute;
+  margin-top: 10px;
 }
 
 .shareonfacebook img {
@@ -736,6 +736,12 @@ form {
 
 .red {
   color: $base-color;
+}
+
+#bm {
+  position: relative;
+  width: 150%;
+  z-index: -500;
 }
 
 .photo-square {

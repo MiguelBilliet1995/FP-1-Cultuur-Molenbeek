@@ -519,16 +519,16 @@ p {
 /* ----------------------- */
 /* Article css */
 /* ----------------------- */
-.articleimage {
-  max-height: 60vh;
-  width: auto !important;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+.article {
+  margin-bottom: 50px;
+}
+
+.articleimg {
+  margin-right: 5%;
 }
 
 .articletitle {
+  top: 0;
   font-size: 40px;
   white-space: nowrap;
 }
@@ -541,6 +541,7 @@ p {
 
 .shareonfacebook {
   position: absolute;
+  margin-top: 10px;
 }
 
 .shareonfacebook img {
@@ -726,6 +727,12 @@ form fieldset label[for="contact-submit"]::after {
 
 .red {
   color: #EB5B55;
+}
+
+#bm {
+  position: relative;
+  width: 150%;
+  z-index: -500;
 }
 
 .photo-square {
