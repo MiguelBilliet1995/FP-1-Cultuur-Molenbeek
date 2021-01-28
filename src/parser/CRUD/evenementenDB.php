@@ -1,5 +1,5 @@
 <?php
-include_once('evenementen.php');
+include_once('parser/CRUD/evenementen.php');
 include_once('parser/DatabaseFactory.php');
 
 class evenementenDB{

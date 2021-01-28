@@ -21,6 +21,16 @@
 
 </head>
 <body>
+
+
+  <?php
+    $evenementen = evenementenDB::getAll();
+
+    foreach($evenementen as $evenement){
+      print_r($evenement);
+    }
+  ?>
+
   
 </body>
 </html>
