@@ -29,7 +29,7 @@
             <img src="images/<?php echo $newsartikel->foto(); ?>" alt="" class="articleimg">
             </div>
             <div class="col-sm-8">
-              <h2 class="articletitle"><?php echo $newsartikel->titel(); ?></h2>
+              <h2 class="articletitle"><?php echo $newsartikel->naam(); ?></h2>
               <p class="articledate"><?php echo $newsartikel->datum(); ?></p>
               <p><?php echo $newsartikel->artikel(); ?></p>
             </div>
