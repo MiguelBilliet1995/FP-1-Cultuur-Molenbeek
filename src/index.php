@@ -30,7 +30,7 @@
           <p>Er is niets beter dan met de familie samen zijn. Wij bij familie Molenbeek geven inwoners van Molenbeek
             de kans om elke week samen met de familie deel te nemen aan onze activiteiten. Dit is de perfecte manier
             voor nieuwe inwoners om de stad te leren kennen en nieuwe vrienden te maken. </p>
-          <a href="evenementen.html">
+          <a href="evenementen.php">
             <div class="button-container mt-5">
               <div class="button button-next">
                 <p>Schrijf je nu in!</p>

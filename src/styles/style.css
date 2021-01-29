@@ -665,6 +665,8 @@ a {
 /* ----------------------- */
 .contactimage {
   margin: 7em 0;
+  width: 80%;
+  height: auto;
 }
 
 form {
