@@ -22,15 +22,14 @@
 
       <div class="cal-container col-sm-4 pe-5">
 
-        <h3>Kalender</h3>
-
         <div class="calendar">
+          <p id="selected-date">29 januari 2021<p>
           <div class="month">
             <p style="display: none;"></p>
             <div class="month-slider">
               <p class="prev">&#8249;</p>
               <div class="date">
-                <p></p>
+                <p>Januari</p>
               </div>
               <p class="next">&#8250;</p>
             </div>
@@ -55,44 +54,44 @@
           </table>
         </div>
 
-        <div class="col-sm-4 filter-container">
           <h1 class="form-title">Filter op maat van je gezin</h1>
-          <label class="container" for="kleuters">Voor gezinnen met kleuters
+          <label class="single-filter-container" for="kleuters">Voor gezinnen met kleuters
             <input type="checkbox" id="kleuters">
             <span class="checkmark">
             </span>
           </label>
-          <label class="container" for="tieners">Voor gezinnen met tieners
+          <label class="single-filter-container" for="tieners">Voor gezinnen met tieners
             <input type="checkbox" id="tieners">
             <span class="checkmark"></span>
           </label>
-          <label class="container" for="allAges">Voor gezinnen van alle leeftijden
+          <label class="single-filter-container" for="allAges">Voor gezinnen van alle leeftijden
             <input type="checkbox" id="allAges">
             <span class="checkmark"></span>
           </label>
 
           <h1 class="form-title">Filter jouw voorkeuren</h1>
-          <label class="container" for="AlleDagen">Alle Dagen
+          <label class="single-filter-container" for="AlleDagen">Alle Dagen
             <input type="checkbox" id="AlleDagen">
             <span class="checkmark">
             </span>
           </label>
-          <label class="container" for="weekdagen">Weekdagen
+          <label class="single-filter-container" for="weekdagen">Weekdagen
             <input type="checkbox" id="weekdagen">
             <span class="checkmark"></span>
           </label>
-          <label class="container" for="weekend">Weekend
+          <label class="single-filter-container" for="weekend">Weekend
             <input type="checkbox" id="weekend">
             <span class="checkmark"></span>
           </label>
         </div>
-      </div>
 
       <script src="scripts/cal-script.js"></script>
 
       <div class="col-sm-8">
-
-        <h3>Evenementen</h3>
+        <div class="row filterlist">
+          <span class="filteritem">Voor gezinnen met kleuters</span>
+          <span class="filteritem">Alle dagen</span>
+        </div>
 
         <div class="row">
 
@@ -106,17 +105,20 @@
         <div class="card col-sm-6">
             <img src="images/theater.jpg">
             <div class="textbubblecontainer">
-              <span class="textbubbles"><img src="images/icons/speechbubblefull.svg" alt=""><img
-                  src="images/icons/speechbubblefull.svg" alt=""><img src="images/icons/speechbubbleempty.svg"
-                  alt=""><img src="images/icons/speechbubbleempty.svg" alt=""></span>
+            <img src="images/icons/speechbubblefull.svg" alt="">
+              <span class="language">nl</span>
             </div>
             <div class="info">
-              <h2><?php echo $evenement->naam(); ?> <span class="datum"><span class="red"><?php echo $evenement->datum(); ?></span><span class="time"> - <?php echo $evenement->uur(); ?></span></span></h2>
-              <span class="location"><img src="images/icons/locationicon.svg" alt=""><?php echo $evenement->locatie() ?></span>
-
+              <div class="titleDate">
+                <h2><?php echo $evenement->naam(); ?></h2>
+                <span class="datum"><?php echo $evenement->datum(); ?></span>
+              </div>
+              <span class="eventinfo"><img src="images/icons/locationicon.svg" alt=""><?php echo $evenement->locatie() ?></span>
+              <span class="eventinfo"><img src="images/icons/clock-icon.svg" alt=""><?php echo $evenement->uur() ?></span>
               <p class="description"><?php echo $evenement->beschrijving() ?></p>
 
-              <a href="reserveren.php?id=<?php echo $evenement->id() ?>">
+              <!-- <a href="reserveren.php?id=<?php echo $evenement->id() ?>"> -->
+              <a href="reserveren.php">
                 <div class="button-container">
                   <div class="button button-next">
                     <p> Schrijf je nu in!</p>

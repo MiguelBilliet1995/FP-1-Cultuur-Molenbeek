@@ -1,6 +1,6 @@
-$hard-color: #e05248;
-$base-color: #EB5B55;
-$secondairy-color: #F4A29D;
+$soft-color: #72E3D8;
+$base-color: #FFB035;
+$secondairy-color: #EB5B55;
 
 $light-color: #eeeeee;
 $darker-color: #333333;
@@ -91,7 +91,7 @@ header li {
   }
 
   a:hover {
-    color: $hard-color !important;
+    color: $base-color !important;
   }
 
   a:hover:after {
@@ -198,11 +198,15 @@ header li {
 footer {
   margin: 50px 0px 0px;
   overflow: visible;
-  border-top: $dark-color 1px solid;
+  background-color: $secondairy-color;
   width: 100%;
   height: 250px;
   padding: 50px 0px;
   list-style: none;
+
+  * {
+    color: white !important;
+  }
 
 
   .active {
@@ -246,6 +250,11 @@ footer {
 
 footer ul {
   list-style: none !important;
+  li{
+    a{
+      color: white !important;
+    }
+  }
 }
 
 /* ----------------------- */
@@ -257,7 +266,7 @@ footer ul {
 .card {
   position: inherit !important;
   border: none !important;
-  margin: 30px 0px;
+  margin: 2rem 0px;
 }
 
 .card img {
@@ -268,37 +277,47 @@ footer ul {
 .info {
   position: relative;
   font-size: 15px;
-  /*padding: 20px;*/
-  padding: 20px 0px;
-
+  margin-top: -.5rem;
   p {
-    margin: 20px 0px 30px;
+    margin: 1rem 0;
   }
 }
 
-h1 {
-  white-space: nowrap;
-  font-weight: 800;
-  font-size: 30px;
-  margin: 0;
-  margin-top: -0.5em;
-  top: 1vh;
+.filterlist {
+  background-color: $base-color;
+  margin: 0 0 3em 0 !important;
+  padding: 1em;
+  display: flex;
+  span {
+    display: inline;
+    width: max-content;
+    background-color: white;
+    color: $base-color;
+    margin-right: 1em;
+    padding-right: 3em;
+    position: relative;
+  }
+  span::after{
+    content: 'x';
+    position: absolute;
+    top: -2px;
+    right: 10px;
+  }
 }
 
 .card .textbubblecontainer {
-  margin-top: -1em;
-}
-
-.textbubbles {
-  padding-left: 1vw;
-  white-space: nowrap;
-  float: right;
-  margin-right: 20px;
-}
-
-.textbubbles img {
-  width: 35px !important;
-  padding-right: 0.2em;
+  margin-top: -1.5rem;
+  position: relative;
+  img {
+    width: 50px !important;
+    float: right;
+  }
+  span {
+    color: white;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+  }
 }
 
 .datum {
@@ -309,22 +328,33 @@ h1 {
   line-height: 30px;
 }
 
-.time {
-  color: grey;
+.titleDate {
+  display: flex;
+  justify-content: space-between;
+  h2{
+    width: 60%;
+    margin-bottom: 0;
+  }
 }
 
 .description {
   padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
-.location img {
-  width: 25px;
+.eventinfo {
+  display: block;
+  margin-top: 1rem;
+  img {
+    width: 25px;
+    margin-right: .5rem;
+  }
 }
 
 .price {
   font-size: 18px;
   position: relative;
-
   float: right;
   margin-right: 5%;
   transform: translate(0, 10px);
@@ -332,6 +362,7 @@ h1 {
 
 .price img {
   width: 25px;
+  margin-right: .5rem;
 }
 
 /*Kalender*/
@@ -362,9 +393,17 @@ h1 {
 }
 
 .calendar {
+  padding: 1rem;
   width: 100%;
   background-color: $secondairy-color;
-  color: $light-color;
+  color: $secondairy-color;
+}
+
+#selected-date {
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+  margin: 2rem 0;
 }
 
 .month {
@@ -381,7 +420,7 @@ h1 {
   -ms-flex-align: start;
   align-items: flex-start;
   width: 100%;
-  height: 12rem;
+  height: max-content;
   background-color: $secondairy-color;
   padding: 0 2rem;
 }
@@ -410,6 +449,7 @@ h1 {
 .month-slider p {
   padding: 0;
   margin: 0;
+  color: $light-color;
 }
 
 
@@ -473,13 +513,13 @@ h1 {
 
 .days td {
   margin: 0.3rem;
-  color: $base-color;
+  color: $secondairy-color;
   font-size: 18px;
   border: 0;
 }
 
 .days td:not(.today) {
-  background-color: #eee !important;
+  background-color: $light-color !important;
 }
 
 .days div:hover:not(.today) {
@@ -497,12 +537,8 @@ h1 {
 }
 
 .today {
-  background-color: $base-color !important;
-
-  .date {
-    color: white;
-  }
-
+  box-shadow: inset 0 0 0 5px $base-color;
+  background-color: $light-color !important;
 }
 
 /* ----------------------- */
@@ -564,7 +600,7 @@ p {
 
 .articledate {
   font-size: 20px;
-  color: $hard-color;
+  color: $base-color;
   margin-bottom: 5px;
 }
 
@@ -627,7 +663,9 @@ a {
 /* ----------------------- */
 /* Contact css */
 /* ----------------------- */
-
+.contactimage {
+  margin: 7em 0;
+}
 form {
   display: flex;
   flex-direction: column;
@@ -700,7 +738,6 @@ form {
 
 .button-container {
   width: 100%;
-  height: 70px;
 }
 
 .button {
@@ -745,7 +782,7 @@ form {
 }
 
 .photo-square {
-  background-color: $base-color;
+  background-color: $soft-color;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -783,18 +820,6 @@ form {
 
 .photo-square:hover>img {
   transform: scale(1.2);
-}
-
-.kinderen {
-  background-image: url(../images/home-kleuters.jpg);
-}
-
-.ouders {
-  background-image: url(../images/home-tieners.jpg);
-}
-
-.gezin {
-  background-image: url(../images/home-gezin.jpg);
 }
 
 #homepageafbeelding {
@@ -1022,7 +1047,7 @@ form {
   }
 
   .dropup:hover .dropbtn {
-    background-color: $hard-color;
+    background-color: $base-color;
   }
 
   @media only screen and (max-width: 770px) {
@@ -1045,7 +1070,7 @@ form {
   margin: 42px 0 42px 0;
 }
 
-.container {
+.single-filter-container {
   display: block;
   position: relative;
   padding-left: 35px;
@@ -1055,12 +1080,8 @@ form {
   user-select: none;
 }
 
-.container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
+.single-filter-container input {
+  display: none;
 }
 
 .checkmark {
@@ -1070,33 +1091,10 @@ form {
   height: 25px;
   width: 25px;
   margin-right: 1rem;
-  background-color: #F4A29D;
+  border: 3px $secondairy-color solid;
+  background-color: transparent;
 }
 
-.container:hover input~.checkmark {
-  background-color: #EB5B55;
-}
-
-.container input:checked~.checkmark {
-  background-color: #e05248;
-}
-
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-.container input:checked~.checkmark:after {
-  display: block;
-}
-
-.container .checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 7px;
-  height: 12px;
-  border: solid #fff;
-  border-width: 0 3px 3px 0;
-  transform: rotate(45deg);
+.single-filter-container input:checked~.checkmark {
+  background-color: $secondairy-color;
 }
