@@ -30,6 +30,10 @@ img {
   width: 100%;
 }
 
+.nieuwsartikel {
+  margin-bottom: 2rem !important;
+}
+
 /* ----------------------- */
 /* Header css */
 /* ----------------------- */
@@ -211,7 +215,7 @@ footer .footer-navigation li {
 footer .footer-navigation li::before {
   position: absolute;
   content: '';
-  background: url(../images/icons/chevron-right-solid-black.svg);
+  background: url(../images/icons/chevron-right-solid.svg);
   background-repeat: no-repeat;
   left: -25px;
   top: 6px;
@@ -515,7 +519,7 @@ footer ul li a {
 }
 
 .days div:hover:not(.today) {
-  border: #FFB035 solid 1px !important;
+  border: #EB5B55 solid 1px !important;
 }
 
 .prev-date,
@@ -529,8 +533,8 @@ footer ul li a {
 }
 
 .today {
-  -webkit-box-shadow: inset 0 0 0 5px #FFB035;
-          box-shadow: inset 0 0 0 5px #FFB035;
+  -webkit-box-shadow: inset 0 0 0 5px #EB5B55;
+          box-shadow: inset 0 0 0 5px #EB5B55;
   background-color: #eeeeee !important;
 }
 

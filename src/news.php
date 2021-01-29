@@ -23,19 +23,16 @@
 
         foreach($news as $newsartikel){
         ?>
-          <div class="row">
-            <article>
+          <div class="row nieuwsartikel">
               <div class="col-sm-4">
-                <img src="images/<?php echo $newsartikel->foto(); ?>" alt="" class="articleimg">
+                <img src="data/images/news/<?php echo $newsartikel->foto(); ?>" alt="" class="articleimg">
               </div>
               <div class="col-sm-8">
                 <h2 class="articletitle"><?php echo $newsartikel->naam(); ?></h2>
                 <p class="articledate"><?php echo $newsartikel->datum(); ?></p>
                 <p><?php echo $newsartikel->artikel(); ?></p>
               </div>
-            </article>
           </div>
-      </div>
         <?php
         }
         ?>

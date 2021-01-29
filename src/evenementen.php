@@ -103,7 +103,7 @@
 
         ?>
         <div class="card col-sm-6">
-            <img src="images/theater.jpg">
+            <img src="data/images/evenementen/<?php echo $evenement->foto(); ?>">
             <div class="textbubblecontainer">
             <img src="images/icons/speechbubblefull.svg" alt="">
               <span class="language">nl</span>
