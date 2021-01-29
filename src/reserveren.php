@@ -76,13 +76,6 @@
         </p>
       </div>
     </div>
-
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-      et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
-      sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-      et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </p>
     </div>
     </div>
 
@@ -137,9 +130,6 @@
               <option value="3">3</option>
               <option value="4">4</option>
             </select>
-          </div>
-          <div class="label-input-duo totaal">
-            <p class="total">Totaal:</p>
           </div>
         </div>
       </div>

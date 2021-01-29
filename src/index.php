@@ -44,43 +44,28 @@
 
     <div class="row">
       <div class="col-sm-4">
+      <a href=evenementen.php>
         <div class="photo-square kinderen">
           <img src="./images/illustraties/kleuters.svg">
           <h1>Gezinnen met kleuters</h1>
         </div>
-        <a href="evenementen.html">
-          <div class="button-container mt-3">
-            <div class="button button-next w-100">
-              <p>Bekijk aanbod</p>
-            </div>
-          </div>
-        </a>
+      </a>
       </div>
       <div class="col-sm-4">
+      <a href=evenementen.php>
         <div class="photo-square ouders">
           <img src="./images/illustraties/tieners.svg">
           <h1>Gezinnen met tieners</h1>
         </div>
-        <a href="evenementen.html">
-          <div class="button-container mt-3">
-            <div class="button button-next w-100">
-              <p>Bekijk aanbod</p>
-            </div>
-          </div>
-        </a>
+      </a>
       </div>
       <div class="col-sm-4">
+      <a href=evenementen.php>
         <div class="photo-square gezin">
           <img src="./images/illustraties/alle-leeftijden.svg">
           <h1>Gezinnen van alle leeftijden</h1>
         </div>
-        <a href="evenementen.html">
-          <div class="button-container mt-3">
-            <div class="button button-next w-100">
-              <p>Bekijk aanbod</p>
-            </div>
-          </div>
-        </a>
+      </a>
       </div>
     </div>
   </div>

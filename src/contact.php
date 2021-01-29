@@ -19,7 +19,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-4">
-          <img src="./images/sfeer_1.jpg" alt="">
+          <img class="contactimage" src="./images/contactimg.svg" alt="">
         </div>
         <div class="col-sm-8">
           <form name="contact-form" method="POST">
@@ -34,7 +34,7 @@
             </fieldset>
             <textarea name="contact-message" id="contact-message"></textarea>
 
-            <input id="contact-submit" type="submit" name="contact-submit" class="button button-next">
+            <input id="contact-submit" value="confirmeer" type="submit" name="contact-submit" class="button button-next">
             <?PHP
             if (isset($_POST['verzend'])) {
             $naar = $_POST['contact-email'];
