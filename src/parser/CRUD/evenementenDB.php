@@ -29,10 +29,41 @@ class evenementenDB{
         }
     }
 
+    // sorteer functies
+
+
+    // Bv.: evenementenDB::getEventBy("type","kinderen","prijs","ASC");
+
+    public static function getEventBy($columnName, $data, $sort, $sortingDirection){
+
+        if($sort==null){
+            $sort = "id";
+        }
+
+        if($sortingDirection==null){
+            $sort = "DESC";
+        }
+
+        $resultaat = self::getVerbinding()->voerSqlQueryUit("SELECT * FROM evenementen WHERE ? = '?' ORDER BY ? ?", array($columnName, $data, $sort, $sortingDirection));
+        $resultatenArray = array();
+        for ($index = 0; $index < $resultaat->num_rows; $index++) {
+            $databaseRij = $resultaat->fetch_array();
+            $nieuw = self::converteerRijNaarObject($databaseRij);
+            $resultatenArray[$index] = $nieuw;
+        }
+        return $resultatenArray;
+    }
+
+
+
+
+
+    // obeject aanmaken
+
     public static function converteerRijNaarObject($databaseRij){
         return new evenementen($databaseRij['id'], $databaseRij['naam'],
             $databaseRij['prijs'], $databaseRij['datum'], $databaseRij['uur'],
-            $databaseRij['locatie'], $databaseRij['beschrijving'], $databaseRij['foto']);
+            $databaseRij['locatie'], $databaseRij['beschrijving'], $databaseRij['foto'], $databaseRij['type']);
     }
 
 }
