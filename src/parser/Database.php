@@ -58,6 +58,8 @@ class Database
             $mijnSqlQuery = $uiteindelijkeQuery;
         }
 
+        echo $mijnSqlQuery;
+
         $resultaat = $this->mijnVerbinding->query($mijnSqlQuery);
 
         if (!$resultaat){

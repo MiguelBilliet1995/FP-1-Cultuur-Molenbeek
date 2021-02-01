@@ -1,3 +1,24 @@
+<?php
+include_once('parser/CRUD/evenementenDB.php');
+
+if(isset($_GET['filter'])) {
+  $filter = $_GET['filter'];
+  if(isset($_GET['filterdata'])) {
+    $filterData = $_GET['filterdata'];
+  }
+  if(isset($_GET['sort'])){
+    $sort = $_GET['sort'];
+    if(isset($_GET['sortdirection'])) {
+      $sortDirection = $_GET['sortdirection'];
+    } else {
+      $sortDirection = 'DESC';
+    }
+  }
+  $evenementen = evenementenDB::getEventBy($filter, $filterData, $sort,$sortDirection);
+  print_r($evenementen);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -91,7 +112,6 @@
         </div>
         <div class="row">
           <?php
-          include_once('parser/CRUD/evenementenDB.php');
           $evenementen = evenementenDB::getAll();
           foreach($evenementen as $evenement){
           ?>
