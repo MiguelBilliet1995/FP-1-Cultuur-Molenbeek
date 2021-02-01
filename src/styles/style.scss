@@ -64,12 +64,14 @@ nav {
   .navigation-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end !important;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
   }
 
   .logo {
-    width: 200px;
-    margin: 1.5em 0;
+    width: 150px;
+    margin: 0;
   }
 
 
@@ -1120,9 +1122,26 @@ form {
   background-color: $secondairy-color;
 }
 
-@media only screen and (min-width: 0px) {}
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .footer-column {
+    margin-bottom: 2em;
+  }
 
-@media only screen and (min-width: 992px) {
+  .footer-column:last-of-type {
+    margin-bottom: 0em;
+  }
+
+  .navigation-container {
+    align-items: center !important;
+  }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+
+  .navigation-container {
+    align-items: center !important;
+  }
   .event-filters {
     margin-bottom: 1rem;
     display: flex;
@@ -1143,6 +1162,10 @@ form {
 }
 
 @media only screen and (min-width: 1200px) {
+  .navigation-container {
+    align-items: center !important;
+  }
+  
   .event-filters {
     display: block;
   }
@@ -1155,5 +1178,9 @@ form {
 
   .footer-column {
     margin-bottom: 2em;
+  }
+
+  .footer-column:last-of-type {
+    margin-bottom: 0em;
   }
 }

@@ -2,7 +2,7 @@
     <div class="container">
       <div class="row">
 
-        <div class="col-sm-12 col-md-6 footer-column">
+        <div class="col-sm-12 col-md-6 col-lg-4 footer-column">
           <ul class="footer-navigation">
             <li><a href="index.html">Home</a></li>
             <li><a href="evenementen.html">Kalender</a></li>
@@ -12,7 +12,7 @@
           </ul>
         </div>
 
-        <div class="col-sm-12 col-md-6 footer-column">
+        <div class="col-sm-12 col-md-6 col-lg-4 footer-column">
           <span><b>Contactinfo</b><br />
             info@familiemolenbeek.be<br />
             +32 468 10 99 14 <br>
@@ -25,7 +25,7 @@
           </span>
         </div>
 
-        <div class="col-sm-12 col-md-12 footer-column">
+        <div class="col-sm-12 col-md-12 col-lg-4 footer-column">
           </ul>
           <div class="year">
             <li>2020-2021</li>
