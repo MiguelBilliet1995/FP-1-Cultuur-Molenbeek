@@ -38,31 +38,31 @@
 
     <div class="row gallery">
       <div class="col-sm-4">
-        <img src="./images/boswandeling.jpg" alt="sfeerbeeld 11">
+        <img src="./images/gallerij/gallerij_1.jpg" alt="sfeerbeeld 1">
       </div>
       <div class="col-sm-4">
-        <img src="./images/sfeer_6.jpg" alt="sfeerbeeld 11">
+        <img src="./images/gallerij/gallerij_2.jpg" alt="sfeerbeeld 2">
       </div>
       <div class="col-sm-4">
-        <img src="./images/sfeer_14.jpg" alt="sfeerbeeld 11">
+        <img src="./images/gallerij/gallerij_3.jpg" alt="sfeerbeeld 3">
       </div>
       <div class="col-sm-4">
-        <img src="./images/sfeer_10.jpg" alt="sfeerbeeld 11">
+        <img src="./images/gallerij/gallerij_4.jpg" alt="sfeerbeeld 4">
       </div>
       <div class="col-sm-4">
-        <img src="./images/sfeer_11.jpg" alt="sfeerbeeld 11">
+        <img src="./images/gallerij/gallerij_5.jpg" alt="sfeerbeeld 5">
       </div>
       <div class="col-sm-4">
-        <img src="./images/sport.jpg" alt="sfeerbeeld 11">
+        <img src="./images/gallerij/gallerij_6.jpg" alt="sfeerbeeld 6">
       </div>
       <div class="col-sm-4">
-        <img src="./images/the-art-of-story-telling.jpeg" alt="sfeerbeeld 11">
+        <img src="./images/gallerij/gallerij_7.jpg" alt="sfeerbeeld 7">
       </div>
       <div class="col-sm-4">
-        <img src="./images/theater.jpg" alt="sfeerbeeld 11">
+        <img src="./images/gallerij/gallerij_8.jpg" alt="sfeerbeeld 8">
       </div>
       <div class="col-sm-4">
-        <img src="./images/rommelmarkt.jpg" alt="sfeerbeeld 11">
+        <img src="./images/gallerij/gallerij_9.jpg" alt="sfeerbeeld 9">
       </div>
     </div>
   </div>

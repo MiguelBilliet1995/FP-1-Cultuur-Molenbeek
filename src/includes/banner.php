@@ -1,5 +1,5 @@
-<header>
-    <div class="container dropup">
+<nav>
+    <div class="container dropup navigation-container">
       <a href="index.php"><img src="images/logos/logo-met-text.svg" alt="logo" class="logo"></a>
       <button class="dropbtn">Menu</button>
       <ul class="dropup-content">
@@ -11,4 +11,4 @@
       </ul>
     </div>
   </div>
-</header>
+</nav>
