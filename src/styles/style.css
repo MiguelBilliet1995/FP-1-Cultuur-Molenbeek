@@ -49,14 +49,16 @@ nav .navigation-container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end !important;
+      -ms-flex-align: end !important;
+          align-items: flex-end !important;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
 }
 
 nav .logo {
-  width: 200px;
-  margin: 1.5em 0;
+  width: 150px;
+  margin: 0;
 }
 
 nav ul {
@@ -1145,7 +1147,26 @@ form fieldset label[for="contact-submit"]::after {
   background-color: #EB5B55;
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .footer-column {
+    margin-bottom: 2em;
+  }
+  .footer-column:last-of-type {
+    margin-bottom: 0em;
+  }
+  .navigation-container {
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .navigation-container {
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+  }
   .event-filters {
     margin-bottom: 1rem;
     display: -webkit-box;
@@ -1167,6 +1188,11 @@ form fieldset label[for="contact-submit"]::after {
 }
 
 @media only screen and (min-width: 1200px) {
+  .navigation-container {
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+  }
   .event-filters {
     display: block;
   }
@@ -1177,5 +1203,8 @@ form fieldset label[for="contact-submit"]::after {
   }
   .footer-column {
     margin-bottom: 2em;
+  }
+  .footer-column:last-of-type {
+    margin-bottom: 0em;
   }
 }
