@@ -32,7 +32,7 @@ class evenementenDB{
     public static function converteerRijNaarObject($databaseRij){
         return new evenementen($databaseRij['id'], $databaseRij['naam'],
             $databaseRij['prijs'], $databaseRij['datum'], $databaseRij['uur'],
-            $databaseRij['locatie'], $databaseRij['beschrijving'], $databaseRij['foto']);
+            $databaseRij['locatie'], $databaseRij['beschrijving'], $databaseRij['foto'], $databaseRij['type']);
     }
 
 }

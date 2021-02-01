@@ -8,8 +8,9 @@ class evenementen{
     private $locatie;
     private $beschrijving;
     private $foto;
+    private $type;
 
-    public function __construct($id, $naam, $prijs, $datum, $uur, $locatie, $beschrijving, $foto){
+    public function __construct($id, $naam, $prijs, $datum, $uur, $locatie, $beschrijving, $foto, $type){
         $this->id = $id;
         $this->naam = $naam;
         $this->prijs = $prijs;
@@ -18,6 +19,7 @@ class evenementen{
         $this->locatie = $locatie;
         $this->beschrijving = $beschrijving;
         $this->foto = $foto;
+        $this->type = $type;
     }
 
     public function id(){
@@ -50,6 +52,10 @@ class evenementen{
 
     public function foto(){
         return $this->foto;
+    }
+
+    public function type(){
+        return $this->type;
     }
 }
 ?>
