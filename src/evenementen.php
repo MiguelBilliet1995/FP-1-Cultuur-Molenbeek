@@ -14,9 +14,11 @@ if(isset($_GET['filter'])) {
       $sortDirection = 'DESC';
     }
   }
+
   $evenementen = evenementenDB::getEventBy($filter, $filterData, $sort,$sortDirection);
-  print_r($evenementen);
+
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -112,7 +114,9 @@ if(isset($_GET['filter'])) {
         </div>
         <div class="row">
           <?php
-          $evenementen = evenementenDB::getAll();
+          if(!$evenementen){
+            $evenementen = evenementenDB::getAll();
+          }
           foreach($evenementen as $evenement){
           ?>
           <div class="card col-sm-12 col-md-6">

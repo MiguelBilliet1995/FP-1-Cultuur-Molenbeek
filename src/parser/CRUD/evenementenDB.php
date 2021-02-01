@@ -37,14 +37,16 @@ class evenementenDB{
     public static function getEventBy($columnName, $data, $sort, $sortingDirection){
 
         if($sort==null){
-            $sort = "id";
+            $resultaat = self::getVerbinding()->voerSqlQueryUit("SELECT * FROM evenementen WHERE ? = '?'", array($columnName, $data));
+        }else{
+            if($sortingDirection==null){
+                $sortingDirection = "DESC";
+            }
+            $resultaat = self::getVerbinding()->voerSqlQueryUit("SELECT * FROM evenementen WHERE ? = '?' ORDER BY ? ?", array($columnName, $data, $sort, $sortingDirection));
+
         }
 
-        if($sortingDirection==null){
-            $sort = "DESC";
-        }
-
-        $resultaat = self::getVerbinding()->voerSqlQueryUit("SELECT * FROM evenementen WHERE ? = '?' ORDER BY ? ?", array($columnName, $data, $sort, $sortingDirection));
+        
         $resultatenArray = array();
         for ($index = 0; $index < $resultaat->num_rows; $index++) {
             $databaseRij = $resultaat->fetch_array();
@@ -52,6 +54,8 @@ class evenementenDB{
             $resultatenArray[$index] = $nieuw;
         }
         return $resultatenArray;
+
+        
     }
 
 
