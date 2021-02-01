@@ -14,23 +14,12 @@
 </head>
 
 <body>
-  <header>
-    <div class="container">
-    <a href="index.html"><img src="images/logos/logo-met-text.svg" alt="logo" class="logo"></a>
-      <ul>
-        <li><a href="index.html" id="home">Home</a></li>
-        <li><a href="evenementen.html" id="kalender">Kalender</a></li>
-        <li><a href="news.html" id="nieuws">Nieuws</a></li>
-        <li><a href="about.html" id="over-ons">Over ons</a></li>
-        <li><a href="contact.html" id="contact" class="active">Contact</a></li>
-      </ul>
-    </div>
-  </header>
+  <?php include 'includes/banner.php'; ?>
   <main>
     <div class="container">
       <div class="row">
         <div class="col-sm-4">
-          <img src="./images/sfeer_1.jpg" alt="">
+          <img class="contactimage" src="./images/contactimg.svg" alt="">
         </div>
         <div class="col-sm-8">
           <form name="contact-form" method="POST">
@@ -45,7 +34,7 @@
             </fieldset>
             <textarea name="contact-message" id="contact-message"></textarea>
 
-            <input id="contact-submit" type="submit" name="contact-submit" class="button button-next">
+            <input id="contact-submit" value="confirmeer" type="submit" name="contact-submit" class="button button-next">
             <?PHP
             if (isset($_POST['verzend'])) {
             $naar = $_POST['contact-email'];
@@ -72,46 +61,7 @@
       </div>
     </div>
   </main>
-
-  <footer>
-    <div class="container">
-      <div class="row">
-
-        <div class="col-sm-4">
-          <ul class="footer-navigation">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="evenementen.html">Kalender</a></li>
-            <li><a href="news.html">Nieuws</a></li>
-            <li><a href="about.html">Over ons</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="col-sm-4">
-          <span><b>Contactinfo</b><br />
-            info@familiemolenbeek.be<br />
-            +32 468 10 99 14 <br>
-            <div class="sociallinks">
-              <a href="https://www.instagram.com/cultuur_in_molenbeek/" target="_blank"><img
-                  src="images/icons/instagram-logo.svg" alt=""></a>
-              <a href="https://www.facebook.com/Cultuur-in-Molenbeek-770192383096967" target="_blank"><img
-                  src="images/icons/facebook-brands.svg" alt=""></a>
-            </div>
-          </span>
-        </div>
-
-        <div class="col-sm-4">
-          </ul>
-          <div class="year">
-            <li>2020-2021</li>
-            <li> &copy; Familie Molenbeek</li>
-          </div>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </footer>
+  <?php include 'includes/footer.php'; ?>
 </body>
 
 </html>

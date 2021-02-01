@@ -1,11 +1,11 @@
 version: '3'
 services:
-  mysql_db:
+  sql_db:
     image: mysql:5.7
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     volumes:
-    - ./database/:/var/lib/mysql
+    - ./database/sql/:/var/lib/mysql
     environment:
       MYSQL_ROOT_HOST: 127.0.0.1
       MYSQL_ROOT_PASSWORD: T0XGfOR9dCkk366sCFOq
@@ -19,7 +19,7 @@ services:
       context: .
       dockerfile: Dockerfile
     depends_on: 
-      - mysql_db
+      - sql_db
     ports:
       - 8100:80
     volumes:

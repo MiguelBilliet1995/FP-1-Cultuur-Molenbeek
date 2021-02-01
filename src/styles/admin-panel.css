@@ -2,4 +2,159 @@ body {
   margin: 0px;
   padding: 0px;
 }
-/*# sourceMappingURL=admin-panel.css.map */
+
+.card {
+  border: 0px !important;
+  margin-top: 40px;
+}
+
+.card .menu-box {
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 30px;
+}
+
+.card .tab {
+  padding-left: 20px;
+  margin-right: 20px;
+  border-left: 1px solid #f0f0f0;
+}
+
+.card .tab.current-tab {
+  font-size: 20pt;
+  font-weight: bold;
+}
+
+.item {
+  width: 100%;
+}
+
+.item .event-top, .item .event-bottom {
+  padding: 10px 0px;
+}
+
+.item .event-top div, .item .event-bottom div {
+  position: relative;
+}
+
+.item .event-top input, .item .event-top textarea, .item .event-bottom input, .item .event-bottom textarea {
+  width: 100%;
+  height: 100%;
+  font-size: 12pt;
+  border: 1px solid #e6e6e6;
+  position: relative;
+  padding: 10px 15px;
+}
+
+.item .event-top textarea, .item .event-bottom textarea {
+  min-height: 100px;
+}
+
+.item .event-top input:focus, .item .event-top textarea:focus, .item .event-top select:focus, .item .event-bottom input:focus, .item .event-bottom textarea:focus, .item .event-bottom select:focus {
+  outline: none;
+}
+
+.item .event-top input.euro-teken::before, .item .event-bottom input.euro-teken::before {
+  content: '';
+  font-size: 12pt;
+  position: absolute;
+  left: -10px;
+  top: 0px;
+  background-color: red;
+  height: 10px;
+  width: 10px;
+}
+
+.item .event-top input.changed, .item .event-top textarea.changed, .item .event-bottom input.changed, .item .event-bottom textarea.changed {
+  border: solid 1px #f39c12;
+}
+
+.item .event-top input.saved, .item .event-top textarea.saved, .item .event-bottom input.saved, .item .event-bottom textarea.saved {
+  border: solid 1px #2ecc71;
+}
+
+.item .event-top input.failed, .item .event-top textarea.failed, .item .event-bottom input.failed, .item .event-bottom textarea.failed {
+  border: solid 1px #e74c3c;
+  background-color: rgba(231, 76, 60, 0.2);
+}
+
+.item .event-bottom {
+  background-color: rgba(250, 250, 250, 0.8);
+  display: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.item .event-bottom img {
+  width: 100%;
+  height: auto;
+}
+
+.item .event-top {
+  margin-top: 20px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 3px;
+  background-color: white;
+}
+
+.item .event-top:hover {
+  border: 1px solid #f0f0f0;
+}
+
+.item .event-top.active {
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 35px;
+  width: 35px;
+  margin-right: 5px;
+  margin-top: 4px;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5px;
+  float: right;
+}
+
+.button:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.button.button-detail {
+  background-image: url(../images/icons/admin/plus-square-regular.svg);
+}
+
+.button.button-delete {
+  background-image: url(../images/icons/admin/trash-alt-regular.svg);
+}
+
+.button.button-undo {
+  background-image: url(../images/icons/admin/undo-solid.svg);
+}
+
+.button.button-refresh {
+  background-image: url(../images/icons/admin/sync-alt-solid.svg);
+}
+
+.button.button-save {
+  background-image: url(../images/icons/admin/save-regular.svg);
+}
+
+.button.button-add {
+  background-image: url(../images/icons/admin/plus-solid.svg);
+}
+
+.button.blocked {
+  opacity: 0.1;
+}
+
+.button.blocked:hover {
+  cursor: not-allowed !important;
+}

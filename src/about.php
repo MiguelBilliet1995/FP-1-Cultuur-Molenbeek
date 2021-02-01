@@ -14,20 +14,7 @@
 
 <body>
 
-  <header>
-    <div class="container dropup">
-      <a href="index.html"><img src="images/logos/logo-met-text.svg" alt="logo" class="logo"></a>
-      <button class="dropbtn">Menu</button>
-      <ul class="dropup-content">
-        <li><a href="index.html" id="home">Home</a></li>
-        <li><a href="evenementen.html" id="kalender">Kalender</a></li>
-        <li><a href="news.html" id="nieuws">Nieuws</a></li>
-        <li><a href="about.html" id="over-ons" class="active">Over ons</a></li>
-        <li><a href="contact.php" id="contact">Contact</a></li>
-      </ul>
-    </div>
-    </div>
-  </header>
+  <?php include 'includes/banner.php'; ?>
 
   <div class="container">
 
@@ -51,84 +38,35 @@
 
     <div class="row gallery">
       <div class="col-sm-4">
-        <img src="./images/boswandeling.jpg" alt="sfeerbeeld 11">
+        <img src="./images/gallerij/gallerij_1.jpg" alt="sfeerbeeld 1">
       </div>
       <div class="col-sm-4">
-        <img src="./images/sfeer_6.jpg" alt="sfeerbeeld 11">
+        <img src="./images/gallerij/gallerij_2.jpg" alt="sfeerbeeld 2">
       </div>
       <div class="col-sm-4">
-        <img src="./images/sfeer_14.jpg" alt="sfeerbeeld 11">
+        <img src="./images/gallerij/gallerij_3.jpg" alt="sfeerbeeld 3">
       </div>
       <div class="col-sm-4">
-        <img src="./images/sfeer_10.jpg" alt="sfeerbeeld 11">
+        <img src="./images/gallerij/gallerij_4.jpg" alt="sfeerbeeld 4">
       </div>
       <div class="col-sm-4">
-        <img src="./images/sfeer_11.jpg" alt="sfeerbeeld 11">
+        <img src="./images/gallerij/gallerij_5.jpg" alt="sfeerbeeld 5">
       </div>
       <div class="col-sm-4">
-        <img src="./images/sport.jpg" alt="sfeerbeeld 11">
+        <img src="./images/gallerij/gallerij_6.jpg" alt="sfeerbeeld 6">
       </div>
       <div class="col-sm-4">
-        <img src="./images/the-art-of-story-telling.jpeg" alt="sfeerbeeld 11">
+        <img src="./images/gallerij/gallerij_7.jpg" alt="sfeerbeeld 7">
       </div>
       <div class="col-sm-4">
-        <img src="./images/theater.jpg" alt="sfeerbeeld 11">
+        <img src="./images/gallerij/gallerij_8.jpg" alt="sfeerbeeld 8">
       </div>
       <div class="col-sm-4">
-        <img src="./images/rommelmarkt.jpg" alt="sfeerbeeld 11">
+        <img src="./images/gallerij/gallerij_9.jpg" alt="sfeerbeeld 9">
       </div>
     </div>
-
-
-
   </div>
-
-
-  <footer>
-    <div class="container">
-      <div class="row">
-
-        <div class="col-sm-4">
-          <ul class="footer-navigation">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="evenementen.html">Kalender</a></li>
-            <li><a href="news.html">Nieuws</a></li>
-            <li><a href="about.html" class="active">Over ons</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="col-md-4">
-          <span><b>Contactinfo</b><br />
-            info@familiemolenbeek.be<br />
-            +32 468 10 99 14 <br>
-            <div class="sociallinks">
-              <a href="https://www.instagram.com/cultuur_in_molenbeek/" target="_blank"><img
-                  src="images/icons/instagram-logo.svg" alt=""></a>
-              <a href="https://www.facebook.com/Cultuur-in-Molenbeek-770192383096967" target="_blank"><img
-                  src="images/icons/facebook-brands.svg" alt=""></a>
-            </div>
-          </span>
-        </div>
-
-        <div class="col-sm-4">
-          <div class="footerlogos"><img src="images/logos/bib-logo.svg" alt=""><img
-              src="images/logos/cultuurinmolebeek.svg" alt=""></div>
-          <div class="footerlogos"><img src="images/logos/vk-logo.svg" alt=""><img src="images/logos/molenbeek-logo.svg"
-              alt=""></div>
-          </ul>
-          <div class="year">
-            <li>2020-2021</li>
-            <li> &copy; Familie Molenbeek</li>
-          </div>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </footer>
-
-
+  <?php include 'includes/footer.php'; ?>
   <script defer src="./scripts/all.js"></script>
   <script src="scripts/script.js"></script>
 </body>

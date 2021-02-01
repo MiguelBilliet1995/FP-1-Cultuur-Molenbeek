@@ -23,20 +23,7 @@
 </head>
 
 <body>
-  <header>
-    <div class="container dropup">
-      <a href="index.html"><img src="images/logos/logo-met-text.svg" alt="logo" class="logo"></a>
-      <button class="dropbtn">Menu</button>
-      <ul class="dropup-content">
-        <li><a href="index.html" id="home">Home</a></li>
-        <li><a href="evenementen.html" id="kalender">Kalender</a></li>
-        <li><a href="news.html" id="nieuws">Nieuws</a></li>
-        <li><a href="about.html" id="over-ons">Over ons</a></li>
-        <li><a href="contact.php" id="contact">Contact</a></li>
-      </ul>
-    </div>
-    </div>
-  </header>
+  <?php include 'includes/banner.php'; ?>
   <main class="reservatie-main">
     <div class="row-one-reservatie">
       <div class="col-sm-4">
@@ -89,13 +76,6 @@
         </p>
       </div>
     </div>
-
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-      et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor
-      sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-      et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </p>
     </div>
     </div>
 
@@ -151,9 +131,6 @@
               <option value="4">4</option>
             </select>
           </div>
-          <div class="label-input-duo totaal">
-            <p class="total">Totaal:</p>
-          </div>
         </div>
       </div>
 
@@ -162,51 +139,7 @@
       </div>
     </div>
   </main>
-
-
-  <footer>
-    <div class="container">
-      <div class="row">
-
-        <div class="col-sm-4">
-          <ul class="footer-navigation">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="evenementen.html">Kalender</a></li>
-            <li><a href="news.html">Nieuws</a></li>
-            <li><a href="about.html">Over ons</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="col-md-4">
-          <span><b>Contactinfo</b><br />
-            info@familiemolenbeek.be<br />
-            +32 468 10 99 14 <br>
-            <div class="sociallinks">
-              <a href="https://www.instagram.com/cultuur_in_molenbeek/" target="_blank"><img
-                  src="images/icons/instagram-logo.svg" alt=""></a>
-              <a href="https://www.facebook.com/Cultuur-in-Molenbeek-770192383096967" target="_blank"><img
-                  src="images/icons/facebook-brands.svg" alt=""></a>
-            </div>
-          </span>
-        </div>
-
-        <div class="col-sm-4">
-          <div class="footerlogos"><img src="images/logos/bib-logo.svg" alt=""><img
-              src="images/logos/cultuurinmolebeek.svg" alt=""></div>
-          <div class="footerlogos"><img src="images/logos/vk-logo.svg" alt=""><img src="images/logos/molenbeek-logo.svg"
-              alt=""></div>
-          </ul>
-          <div class="year">
-            <li>2020-2021</li>
-            <li> &copy; Familie Molenbeek</li>
-          </div>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </footer>
+  <?php include 'includes/footer.php'; ?>
 </body>
 
 </html>
