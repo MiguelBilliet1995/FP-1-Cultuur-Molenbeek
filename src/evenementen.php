@@ -19,9 +19,7 @@
 
   <div class="container">
     <div class="row">
-
-      <div class="cal-container col-sm-4 pe-5">
-
+      <div class="cal-container col-sm-12 col-md-12 col-lg-12 col-xl-4">
         <div class="calendar">
           <p id="selected-date">29 januari 2021<p>
           <div class="month">
@@ -47,65 +45,60 @@
                 <th>Zat</th>
               </tr>
             </thead>
-            <tbody id="calendar-body" class="days">
-
-            </tbody>
-            <!--<div class="row days"></div>-->
+            <tbody id="calendar-body" class="days"></tbody>
           </table>
         </div>
-
-          <h1 class="form-title">Filter op maat van je gezin</h1>
-          <label class="single-filter-container" for="kleuters">Voor gezinnen met kleuters
-            <input type="checkbox" id="kleuters">
-            <span class="checkmark">
-            </span>
-          </label>
-          <label class="single-filter-container" for="tieners">Voor gezinnen met tieners
-            <input type="checkbox" id="tieners">
-            <span class="checkmark"></span>
-          </label>
-          <label class="single-filter-container" for="allAges">Voor gezinnen van alle leeftijden
-            <input type="checkbox" id="allAges">
-            <span class="checkmark"></span>
-          </label>
-
-          <h1 class="form-title">Filter jouw voorkeuren</h1>
-          <label class="single-filter-container" for="AlleDagen">Alle Dagen
-            <input type="checkbox" id="AlleDagen">
-            <span class="checkmark">
-            </span>
-          </label>
-          <label class="single-filter-container" for="weekdagen">Weekdagen
-            <input type="checkbox" id="weekdagen">
-            <span class="checkmark"></span>
-          </label>
-          <label class="single-filter-container" for="weekend">Weekend
-            <input type="checkbox" id="weekend">
-            <span class="checkmark"></span>
-          </label>
+        <div class="event-filters">
+          <section class="ilter-list">
+            <h1 class="form-title">Filter op maat van je gezin</h1>
+            <label class="single-filter-container" for="kleuters">Voor gezinnen met kleuters
+              <input type="checkbox" id="kleuters">
+              <span class="checkmark">
+              </span>
+            </label>
+            <label class="single-filter-container" for="tieners">Voor gezinnen met tieners
+              <input type="checkbox" id="tieners">
+              <span class="checkmark"></span>
+            </label>
+            <label class="single-filter-container" for="allAges">Voor gezinnen van alle leeftijden
+              <input type="checkbox" id="allAges">
+              <span class="checkmark"></span>
+            </label>
+          </section>
+          <section class="filter-list">
+            <h1 class="form-title">Filter jouw voorkeuren</h1>
+            <label class="single-filter-container" for="AlleDagen">Alle Dagen
+              <input type="checkbox" id="AlleDagen">
+              <span class="checkmark">
+              </span>
+            </label>
+            <label class="single-filter-container" for="weekdagen">Weekdagen
+              <input type="checkbox" id="weekdagen">
+              <span class="checkmark"></span>
+            </label>
+            <label class="single-filter-container" for="weekend">Weekend
+              <input type="checkbox" id="weekend">
+              <span class="checkmark"></span>
+            </label>
+          </section>
         </div>
-
+      </div>
       <script src="scripts/cal-script.js"></script>
-
-      <div class="col-sm-8">
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8">
         <div class="row filterlist">
           <span class="filteritem">Voor gezinnen met kleuters</span>
           <span class="filteritem">Alle dagen</span>
         </div>
-
         <div class="row">
-
-        <?php
-        include_once('parser/CRUD/evenementenDB.php');
-        $evenementen = evenementenDB::getAll();
-
-        foreach($evenementen as $evenement){
-
-        ?>
-        <div class="card col-sm-6">
+          <?php
+          include_once('parser/CRUD/evenementenDB.php');
+          $evenementen = evenementenDB::getAll();
+          foreach($evenementen as $evenement){
+          ?>
+          <div class="card col-sm-12 col-md-6">
             <img src="data/images/evenementen/<?php echo $evenement->foto(); ?>">
             <div class="textbubblecontainer">
-            <img src="images/icons/speechbubblefull.svg" alt="">
+              <img src="images/icons/speechbubblefull.svg" alt="">
               <span class="language">nl</span>
             </div>
             <div class="info">
@@ -116,7 +109,6 @@
               <span class="eventinfo"><img src="images/icons/locationicon.svg" alt=""><?php echo $evenement->locatie() ?></span>
               <span class="eventinfo"><img src="images/icons/clock-icon.svg" alt=""><?php echo $evenement->uur() ?></span>
               <p class="description"><?php echo $evenement->beschrijving() ?></p>
-
               <!-- <a href="reserveren.php?id=<?php echo $evenement->id() ?>"> -->
               <a href="reserveren.php">
                 <div class="button-container">
@@ -128,11 +120,9 @@
               </a>
             </div>
           </div>
-
-        <?php
-        }
-        ?>
-
+          <?php
+          }
+          ?>
         </div>
       </div>
     </div>
