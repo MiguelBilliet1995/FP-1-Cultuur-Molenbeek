@@ -29,6 +29,18 @@ class evenementenDB{
         }
     }
 
+    public static function addEvent($naam, $prijs, $datum, $uur, $locatie, $beschrijving, $foto, $type){
+        $resultaat = self::getVerbinding()->voerSqlQueryUit("INSERT INTO evenementen (naam, prijs, datum, uur, locatie, beschrijving, foto, type) VALUES ('?','?','?','?','?','?','?','?');");
+        return true;
+    }
+
+    public static function deleteEvent($id){
+        $resultaat = self::getVerbinding()->voerSqlQueryUit("DELETE FROM evenementen WHERE id = '?'");
+        if($resultaat){
+            return true;
+        }
+    }
+
     // sorteer functies
 
 

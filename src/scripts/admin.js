@@ -53,6 +53,19 @@ document.querySelectorAll("textarea").forEach((input) => {
 
 });
 
+// option
+document.querySelectorAll("option").forEach((input) => {
+  input.addEventListener('keyup', (e) => {
+    let element = e.path[0];
+    let id = element.id.split("-")[2];
+
+    element.classList.add("changed");
+    document.querySelector('#event-undo-' + id).classList.remove("blocked");
+    document.querySelector('#event-undo-all').classList.remove("blocked");
+    document.querySelector('#event-save-all').classList.remove("blocked");
+  });
+
+});
 
 // savebutton
 document.querySelector("#event-save-all").addEventListener('click', (e) => {

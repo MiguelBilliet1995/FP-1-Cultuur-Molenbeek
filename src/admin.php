@@ -1,5 +1,6 @@
 <?php
 
+  include_once("parser/CRUD/inschrijvingenDB.php");
   include_once("parser/CRUD/evenementenDB.php");
   include_once("parser/CRUD/newsDB.php");
 
@@ -34,8 +35,7 @@
         <div class="menu-box">
           <div class="row">
             <div class="col-sm-8">
-              <span class="tab current-tab">Evenementen</span>
-              <span class="tab">Nieuws</span>
+              <h3>Evenementen</h3>
             </div>
             <div class="col-sm-4">
               <span class="button button-refresh" id="event-refresh-all"></span>
@@ -91,12 +91,51 @@
                 </div>
 
                 <div class="row">
+                  <select id="event-type-<?php echo $evenement->id(); ?>" value="<?php echo $evenement->type(); ?>">
+                    <option value="">Kies een type</option>
+                    <?php
+                      switch($evenement->type()){
+                        case 'kleuters':
+                    ?>
+                    <option value="kleuters" selected="selected">Kleuters</option>
+                    <option value="kinderen">Kinderen</option>
+                    <option value="jongeren">Jongeren</option>
+                    <?php
+                          break;
+                        case 'kinderen':
+                    ?>
+                    <option value="kleuters">Kleuters</option>
+                    <option value="kinderen" selected="selected">Kinderen</option>
+                    <option value="jongeren">Jongeren</option>
+                    <?php
+                          break;
+                        case 'jongeren':
+                    ?>
+                    <option value="kleuters">Kleuters</option>
+                    <option value="kinderen">Kinderen</option>
+                    <option value="jongeren" selected="selected">Jongeren</option>
+                    <?php
+                          break;
+                      }
+                    ?>
+                    
+                  </select>
+                </div>
+
+                <div class="row">
                   <textarea id="event-beschrijving-<?php echo $evenement->id(); ?>"><?php echo $evenement->beschrijving(); ?></textarea>
                 </div>
                 
               </div>
               <div class="col-sm-4">
-                inschrijvingen
+                <?php
+                  $inschrijvingen = inschrijvingenDB::getInschrijvingenByEventId($evenement->id());
+                  foreach($inschrijvingen as $inschrijving){
+                ?>
+                  test
+                <?php
+                  }
+                ?>
               </div>
 
             </div>
