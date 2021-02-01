@@ -70,13 +70,9 @@
     </div>
   </div>
   <?php include 'includes/footer.php'; ?>
-  <video class="animationsDSK" loop muted height="700" width="700" autoplay>
-    <source src="/images/wereldbol.mp4" type="video/mp4">
-  </video>
-  <video class="animationsGSM" loop muted autoplay height="2436" width="1125">
-    <source src="/images/animatie mobile.mp4" type="video/mp4">
-  </video>
 
+  <div id="wereldbol"></div>
+  <script src="scripts/wereldbol-anim.js"></script>
 </body>
 
 </html>

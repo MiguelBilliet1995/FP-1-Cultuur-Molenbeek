@@ -18,6 +18,14 @@ h3 {
   font-weight: 800 !important;
 }
 
+#wereldbol {
+  position: fixed;
+  bottom: -250px;
+  right: -495px;
+  z-index: -999;
+  width: 60%;
+}
+
 /* newspage */
 p {
   margin-bottom: 0;
@@ -452,7 +460,7 @@ footer ul li a {
   display: flex;*/
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  font-family: "pt-sans-pro", sans-serif;
+  font-family: "pt-sans-pro", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
@@ -1179,3 +1187,4 @@ form fieldset label[for="contact-submit"]::after {
     margin-bottom: 2em;
   }
 }
+/*# sourceMappingURL=style.css.map */
