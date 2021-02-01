@@ -1,2 +1,2 @@
-/database/sql/*
-!/database/sql/fullproject/
+#/database/sql/*
+#!/database/sql/fullproject/
