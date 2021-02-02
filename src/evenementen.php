@@ -78,7 +78,7 @@ if(isset($_GET['filter'])&&isset($_GET['sort'])){
             <h1 class="form-title">Filter op maat van je gezin</h1>
             <label for="filter-options">Leeftijdscategorie:</label>
             <select name="family-size-filter" class="filter-listener" id="filter-options">
-              <option value="">filter op...</option>
+              <option disabled selected value="">filter op...</option>
               <option value="kleuters">geinnen met kleuters</option>
               <option value="kinderen">geinnen met kinderen</option>
               <option value="jongeren">geinnen met jongeren</option>
@@ -88,10 +88,11 @@ if(isset($_GET['filter'])&&isset($_GET['sort'])){
             <h1 class="form-title">Sorteren op</h1>
             <label for="sort-options">Sorteeropties:</label>
             <select name="family-size-filter" class="sort-listener" id="sort-options">
-              <option value="prijs-hoogst">prijs hoogst</option>
-              <option value="prijs-laagst">prijs laagst</option>
-              <option value="datum-dichtst">datum dichtst</option>
-              <option value="datum-verst">datum verst</option>
+              <option disabled selected value="">filter op...</option>
+              <option value="prijs%desc">prijs hoogst</option>
+              <option value="prijs%asc">prijs laagst</option>
+              <option value="datum%desc">datum dichtst</option>
+              <option value="datum%asc">datum verst</option>
             </select>
           </section>
         
