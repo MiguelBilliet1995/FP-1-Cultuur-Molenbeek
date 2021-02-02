@@ -92,8 +92,7 @@
           <li class="event-list-item"><span class="beschrijving">Prijs:</span> 4 euro</li>
         </ul>
       </div>
-      <div id="leeftijd-cat" class="col-sm-4">
-        <div class="col-sm-2">
+      <div id="leeftijd-cat">
           <div class="label-input-duo" id="top-duo">
             <label for="nultottwaalf">0-12jaar</label>
             <select name="leeftijd" id="nultottwaalf">
@@ -111,10 +110,8 @@
               <option value="4">4</option>
             </select>
           </div>
-        </div>
-        <div class="col-sm-2">
-          <div class="label-input-duo">
 
+          <div class="label-input-duo">
             <label for="achttientotoud">18-65jaar</label>
             <select name="leeftijd" id="achttientotoud">
               <option value="1">1</option>
@@ -133,11 +130,6 @@
           </div>
         </div>
       </div>
-
-      <div class="col-sm-4">
-        <button>Submit</button>
-      </div>
-    </div>
   </main>
   <?php include 'includes/footer.php'; ?>
 </body>
