@@ -72,38 +72,27 @@ if(isset($_GET['filter'])) {
           </table>
         </div>
         <div class="event-filters">
-          <section class="ilter-list">
+          <section class="filter-list col-sm-6 col-xl-12">
             <h1 class="form-title">Filter op maat van je gezin</h1>
-            <label class="single-filter-container" for="kleuters">Voor gezinnen met kleuters
-              <input type="checkbox" id="kleuters">
-              <span class="checkmark">
-              </span>
-            </label>
-            <label class="single-filter-container" for="tieners">Voor gezinnen met tieners
-              <input type="checkbox" id="tieners">
-              <span class="checkmark"></span>
-            </label>
-            <label class="single-filter-container" for="allAges">Voor gezinnen van alle leeftijden
-              <input type="checkbox" id="allAges">
-              <span class="checkmark"></span>
-            </label>
+            <label for="filter-options">Leeftijdscategorie:</label>
+            <select name="family-size-filter" class="filter-listener" id="filter-options">
+              <option value="kleuters">geinnen met kleuters</option>
+              <option value="jongeren">geinnen met jongeren</option>
+              <option value="adolescenten">geinnen met adolescenten</option>
+              <option value="adolescenten">geinnen van alle leeftijdsgroepen</option>
+            </select>
           </section>
-          <section class="filter-list">
-            <h1 class="form-title">Filter jouw voorkeuren</h1>
-            <label class="single-filter-container" for="AlleDagen">Alle Dagen
-              <input type="checkbox" id="AlleDagen">
-              <span class="checkmark">
-              </span>
-            </label>
-            <label class="single-filter-container" for="weekdagen">Weekdagen
-              <input type="checkbox" id="weekdagen">
-              <span class="checkmark"></span>
-            </label>
-            <label class="single-filter-container" for="weekend">Weekend
-              <input type="checkbox" id="weekend">
-              <span class="checkmark"></span>
-            </label>
+          <section class="filter-list col-sm-6 col-xl-12">
+            <h1 class="form-title">Sorteren op</h1>
+            <label for="sort-options">Sorteeropties:</label>
+            <select name="family-size-filter" class="sort-listener" id="sort-options">
+              <option value="prijs-hoogst">prijs hoogst</option>
+              <option value="prijs-laagst">prijs laagst</option>
+              <option value="datum-dichtst">datum dichtst</option>
+              <option value="datum-verst">datum verst</option>
+            </select>
           </section>
+        
         </div>
       </div>
       <script src="scripts/cal-script.js"></script>
@@ -153,6 +142,7 @@ if(isset($_GET['filter'])) {
   </div>
   <?php include 'includes/footer.php'; ?>
   <script src="scripts/fetch-content.js"></script>
+  <script src="scripts/sort.js"></script>
 </body>
 
 </html>

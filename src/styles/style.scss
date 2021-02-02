@@ -649,38 +649,6 @@ p {
 }
 
 /* ----------------------- */
-/* Article css */
-/* ----------------------- */
-
-.article {
-  margin-bottom: 50px;
-}
-
-.articleimg {
-  margin-right: 5%;
-}
-
-.articletitle {
-  top: 0;
-  font-size: 2.5rem;
-}
-
-.articledate {
-  font-size: 20px;
-  color: $base-color;
-  margin-bottom: 5px;
-}
-
-.shareonfacebook {
-  position: absolute;
-  margin-top: 10px;
-}
-
-.shareonfacebook img {
-  width: 30px;
-}
-
-/* ----------------------- */
 /* About css */
 /* ----------------------- */
 
@@ -895,6 +863,10 @@ form {
   width: 150%;
 }
 
+
+
+
+
 /*
     RESERVATIE 
                 */
@@ -1059,50 +1031,19 @@ form {
       color: #fff;
     }
   }
-
 }
+
+
+
+
 
 /*      Filter css      */
-
-.filter-container {
-  width: 100vw;
-  margin: 0;
-  padding: 0;
-}
 
 .form-title {
   font-size: 1.5rem;
   margin: 2rem 0 1rem 0;
 }
 
-.single-filter-container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 1rem;
-  cursor: pointer;
-
-  user-select: none;
-}
-
-.single-filter-container input {
-  display: none;
-}
-
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  margin-right: 1rem;
-  border: 3px $secondairy-color solid;
-  background-color: transparent;
-}
-
-.single-filter-container input:checked~.checkmark {
-  background-color: $secondairy-color;
-}
 
 @media only screen and (min-width: 0px) and (max-width: 767px) {
   .footer-column {
@@ -1116,25 +1057,35 @@ form {
   .navigation-container {
     align-items: center !important;
   }
+
+  .event-filters {
+    margin-bottom: 3rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
 }
 
 
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
 
+  .footer-column {
+    margin-bottom: 2em;
+  }
+
+  .footer-column:last-of-type {
+    margin-bottom: 0em;
+  }
+
   .navigation-container {
     align-items: center !important;
   }
+
   .event-filters {
-    margin-bottom: 1rem;
+    margin-bottom: 5rem;
     display: flex;
     width: 100%;
     justify-content: space-between;
-  }
-  
-  .filter-list {
-    width: 50%;
-    margin: 0;
-    padding: 0;
   }
 
   .cal-container {
@@ -1150,12 +1101,6 @@ form {
   
   .event-filters {
     display: block;
-  }
-  
-  .filter-list {
-    width: 100%;
-    margin: 0;
-    padding: 0;
   }
 
   .footer-column {

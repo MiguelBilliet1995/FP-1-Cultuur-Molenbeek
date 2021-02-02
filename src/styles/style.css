@@ -653,37 +653,6 @@ p {
 }
 
 /* ----------------------- */
-/* Article css */
-/* ----------------------- */
-.article {
-  margin-bottom: 50px;
-}
-
-.articleimg {
-  margin-right: 5%;
-}
-
-.articletitle {
-  top: 0;
-  font-size: 2.5rem;
-}
-
-.articledate {
-  font-size: 20px;
-  color: #FFB035;
-  margin-bottom: 5px;
-}
-
-.shareonfacebook {
-  position: absolute;
-  margin-top: 10px;
-}
-
-.shareonfacebook img {
-  width: 30px;
-}
-
-/* ----------------------- */
 /* About css */
 /* ----------------------- */
 .about,
@@ -1105,46 +1074,9 @@ form fieldset label[for="contact-submit"]::after {
 }
 
 /*      Filter css      */
-.filter-container {
-  width: 100vw;
-  margin: 0;
-  padding: 0;
-}
-
 .form-title {
   font-size: 1.5rem;
   margin: 2rem 0 1rem 0;
-}
-
-.single-filter-container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 1rem;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.single-filter-container input {
-  display: none;
-}
-
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  margin-right: 1rem;
-  border: 3px #EB5B55 solid;
-  background-color: transparent;
-}
-
-.single-filter-container input:checked ~ .checkmark {
-  background-color: #EB5B55;
 }
 
 @media only screen and (min-width: 0px) and (max-width: 767px) {
@@ -1159,16 +1091,8 @@ form fieldset label[for="contact-submit"]::after {
         -ms-flex-align: center !important;
             align-items: center !important;
   }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1199px) {
-  .navigation-container {
-    -webkit-box-align: center !important;
-        -ms-flex-align: center !important;
-            align-items: center !important;
-  }
   .event-filters {
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1177,10 +1101,29 @@ form fieldset label[for="contact-submit"]::after {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .filter-list {
-    width: 50%;
-    margin: 0;
-    padding: 0;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-column {
+    margin-bottom: 2em;
+  }
+  .footer-column:last-of-type {
+    margin-bottom: 0em;
+  }
+  .navigation-container {
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+  }
+  .event-filters {
+    margin-bottom: 5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .cal-container {
     padding-right: 2rem !important;
@@ -1195,11 +1138,6 @@ form fieldset label[for="contact-submit"]::after {
   }
   .event-filters {
     display: block;
-  }
-  .filter-list {
-    width: 100%;
-    margin: 0;
-    padding: 0;
   }
   .footer-column {
     margin-bottom: 2em;
