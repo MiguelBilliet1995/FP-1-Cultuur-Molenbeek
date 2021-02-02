@@ -11,21 +11,14 @@ body {
 .card .menu-box {
   border-bottom: 1px solid #f0f0f0;
   margin-bottom: 30px;
-}
-
-.card .tab {
-  padding-left: 20px;
-  margin-right: 20px;
-  border-left: 1px solid #f0f0f0;
-}
-
-.card .tab.current-tab {
-  font-size: 20pt;
-  font-weight: bold;
+  padding: 10px 0px;
 }
 
 .item {
   width: 100%;
+  /*.event-top:hover{
+    border: 1px solid rgba(240,240,240,1);
+  }*/
 }
 
 .item .event-top, .item .event-bottom {
@@ -36,7 +29,7 @@ body {
   position: relative;
 }
 
-.item .event-top input, .item .event-top textarea, .item .event-bottom input, .item .event-bottom textarea {
+.item .event-top input, .item .event-top textarea, .item .event-top option, .item .event-bottom input, .item .event-bottom textarea, .item .event-bottom option {
   width: 100%;
   height: 100%;
   font-size: 12pt;
@@ -49,7 +42,7 @@ body {
   min-height: 100px;
 }
 
-.item .event-top input:focus, .item .event-top textarea:focus, .item .event-top select:focus, .item .event-bottom input:focus, .item .event-bottom textarea:focus, .item .event-bottom select:focus {
+.item .event-top input:focus, .item .event-top textarea:focus, .item .event-top select:focus, .item .event-top option:focus, .item .event-bottom input:focus, .item .event-bottom textarea:focus, .item .event-bottom select:focus, .item .event-bottom option:focus {
   outline: none;
 }
 
@@ -64,15 +57,15 @@ body {
   width: 10px;
 }
 
-.item .event-top input.changed, .item .event-top textarea.changed, .item .event-bottom input.changed, .item .event-bottom textarea.changed {
+.item .event-top input.changed, .item .event-top textarea.changed, .item .event-top option.changed, .item .event-bottom input.changed, .item .event-bottom textarea.changed, .item .event-bottom option.changed {
   border: solid 1px #f39c12;
 }
 
-.item .event-top input.saved, .item .event-top textarea.saved, .item .event-bottom input.saved, .item .event-bottom textarea.saved {
+.item .event-top input.saved, .item .event-top textarea.saved, .item .event-top option.saved, .item .event-bottom input.saved, .item .event-bottom textarea.saved, .item .event-bottom option.saved {
   border: solid 1px #2ecc71;
 }
 
-.item .event-top input.failed, .item .event-top textarea.failed, .item .event-bottom input.failed, .item .event-bottom textarea.failed {
+.item .event-top input.failed, .item .event-top textarea.failed, .item .event-top option.failed, .item .event-bottom input.failed, .item .event-bottom textarea.failed, .item .event-bottom option.failed {
   border: solid 1px #e74c3c;
   background-color: rgba(231, 76, 60, 0.2);
 }
@@ -94,10 +87,6 @@ body {
   border: 1px solid rgba(0, 0, 0, 0);
   border-radius: 3px;
   background-color: white;
-}
-
-.item .event-top:hover {
-  border: 1px solid #f0f0f0;
 }
 
 .item .event-top.active {

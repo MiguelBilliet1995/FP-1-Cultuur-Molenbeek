@@ -29,6 +29,18 @@ class evenementenDB{
         }
     }
 
+    public static function addEvent($naam, $prijs, $datum, $uur, $locatie, $beschrijving, $foto, $type){
+        $resultaat = self::getVerbinding()->voerSqlQueryUit("INSERT INTO evenementen (naam, prijs, datum, uur, locatie, beschrijving, foto, type) VALUES ('?','?','?','?','?','?','?','?');");
+        return true;
+    }
+
+    public static function deleteEvent($id){
+        $resultaat = self::getVerbinding()->voerSqlQueryUit("DELETE FROM evenementen WHERE id = '?'");
+        if($resultaat){
+            return true;
+        }
+    }
+
     // sorteer functies
 
 
@@ -36,14 +48,15 @@ class evenementenDB{
 
     public static function getEventBy($columnName, $data, $sort, $sortingDirection){
 
-        if($sort==null){
-            $resultaat = self::getVerbinding()->voerSqlQueryUit("SELECT * FROM evenementen WHERE ? = '?'", array($columnName, $data));
-        }else{
-            if($sortingDirection==null){
-                $sortingDirection = "DESC";
-            }
-            $resultaat = self::getVerbinding()->voerSqlQueryUit("SELECT * FROM evenementen WHERE ? = '?' ORDER BY ? ?", array($columnName, $data, $sort, $sortingDirection));
+        echo $columnName.' '.$data.' '.$sort.' '.$sortingDirection;
 
+
+        if($columnName!==null&&$sort!==null){
+            $resultaat = self::getVerbinding()->voerSqlQueryUit("SELECT * FROM evenementen WHERE ? = '?' ORDER BY ? ?", array($columnName, $data, $sort, $sortingDirection));
+        }elseif($columnName!==null&&$sort==null){
+            $resultaat = self::getVerbinding()->voerSqlQueryUit("SELECT * FROM evenementen WHERE ? = '?'", array($columnName, $data));
+        }elseif($columnName==null&&$sort!==null){
+            $resultaat = self::getVerbinding()->voerSqlQueryUit("SELECT * FROM evenementen ORDER BY ? ?", array($sort, $sortingDirection));
         }
 
         
