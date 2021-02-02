@@ -15,7 +15,7 @@ if(isset($_GET['filter'])) {
     }
   }
 
-  $evenementen = evenementenDB::getEventBy($filter, $filterData, $sort,$sortDirection);
+  $evenementen = evenementenDB::getEventBy($filter, $filterData, $sort, $sortDirection);
 
 }
 
@@ -77,9 +77,8 @@ if(isset($_GET['filter'])) {
             <label for="filter-options">Leeftijdscategorie:</label>
             <select name="family-size-filter" class="filter-listener" id="filter-options">
               <option value="kleuters">geinnen met kleuters</option>
+              <option value="kinderen">geinnen met kinderen</option>
               <option value="jongeren">geinnen met jongeren</option>
-              <option value="adolescenten">geinnen met adolescenten</option>
-              <option value="adolescenten">geinnen van alle leeftijdsgroepen</option>
             </select>
           </section>
           <section class="filter-list col-sm-6 col-xl-12">
