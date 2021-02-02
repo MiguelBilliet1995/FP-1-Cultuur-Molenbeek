@@ -1,23 +1,25 @@
 <?php
 include_once('parser/CRUD/evenementenDB.php');
 
-if(isset($_GET['filter'])) {
-  $filter = $_GET['filter'];
-  if(isset($_GET['filterdata'])) {
-    $filterData = $_GET['filterdata'];
-  }
-  if(isset($_GET['sort'])){
-    $sort = $_GET['sort'];
-    if(isset($_GET['sortdirection'])) {
-      $sortDirection = $_GET['sortdirection'];
-    } else {
-      $sortDirection = 'DESC';
-    }
-  }
 
-  $evenementen = evenementenDB::getEventBy($filter, $filterData, $sort, $sortDirection);
-
+if(isset($_GET['filter'])&&isset($_GET['sort'])){
+  echo "filter en sort";
+  if(!isset($_GET['sortdirection'])){
+    $_GET['sortdirection'] = "DESC";
+  }
+  $evenementen = evenementenDB::getEventBy($_GET['filter'], $_GET['filterdata'], $_GET['sort'], $_GET['sortdirection']);
+}elseif(isset($_GET['filter'])&&!isset($_GET['sort'])){
+  echo "filter zonder sort";
+  $evenementen = evenementenDB::getEventBy($_GET['filter'], $_GET['filterdata'], null, null);
+}elseif(!isset($_GET['filter'])&&isset($_GET['sort'])){
+  echo "sort zonder filter";
+  if(!isset($_GET['sortdirection'])){
+    $_GET['sortdirection'] = "DESC";
+  }
+  $evenementen = evenementenDB::getEventBy(null, null, $_GET['sort'], $_GET['sortdirection']);
 }
+
+
 
 ?>
 
@@ -76,6 +78,7 @@ if(isset($_GET['filter'])) {
             <h1 class="form-title">Filter op maat van je gezin</h1>
             <label for="filter-options">Leeftijdscategorie:</label>
             <select name="family-size-filter" class="filter-listener" id="filter-options">
+              <option value="">filter op...</option>
               <option value="kleuters">geinnen met kleuters</option>
               <option value="kinderen">geinnen met kinderen</option>
               <option value="jongeren">geinnen met jongeren</option>
@@ -102,7 +105,7 @@ if(isset($_GET['filter'])) {
         </div>
         <div class="row">
           <?php
-          if(!$evenementen){
+          if(!$evenementen&&!$_GET["filter"]){
             $evenementen = evenementenDB::getAll();
           }
           foreach($evenementen as $evenement){
