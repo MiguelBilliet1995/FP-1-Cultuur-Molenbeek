@@ -65,7 +65,7 @@ nav .navigation-container {
 }
 
 nav .logo {
-  width: 150px;
+  height: 80px;
   margin: 0;
 }
 
@@ -757,6 +757,15 @@ a {
   height: auto;
 }
 
+#directbericht {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+#contact-submit {
+  margin-bottom: 200px;
+}
+
 form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -772,12 +781,18 @@ form {
 }
 
 form input[type="text"],
-form input[type="email"],
-form textarea {
-  width: 100%;
+form input[type="email"] {
+  width: 25%;
+  min-width: 120px;
+}
+
+form #onderwerp {
+  width: 50%;
+  min-width: 120px;
 }
 
 form textarea {
+  width: 100%;
   resize: none;
   min-height: 200px;
   border: 2px black solid;

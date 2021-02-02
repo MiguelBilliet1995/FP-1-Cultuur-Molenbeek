@@ -70,7 +70,7 @@ nav {
   }
 
   .logo {
-    width: 150px;
+    height: 80px;
     margin: 0;
   }
 
@@ -753,6 +753,15 @@ a {
   height: auto;
 }
 
+#directbericht {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+#contact-submit {
+  margin-bottom: 200px;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -760,12 +769,18 @@ form {
   height: 100%;
 
   input[type="text"],
-  input[type="email"],
-  textarea {
-    width: 100%;
+  input[type="email"] {
+    width: 25%;
+    min-width: 120px;
+  }
+
+  #onderwerp {
+    width: 50%;
+    min-width: 120px;
   }
 
   textarea {
+    width: 100%;
     resize: none;
     min-height: 200px;
     border: 2px black solid;
@@ -1142,6 +1157,7 @@ form {
   .navigation-container {
     align-items: center !important;
   }
+
   .event-filters {
     margin-bottom: 1rem;
     display: flex;
@@ -1165,7 +1181,7 @@ form {
   .navigation-container {
     align-items: center !important;
   }
-  
+
   .event-filters {
     display: block;
   }

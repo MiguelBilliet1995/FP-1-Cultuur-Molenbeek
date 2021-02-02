@@ -8,7 +8,7 @@
             <li><a href="evenementen.html">Kalender</a></li>
             <li><a href="news.html">Nieuws</a></li>
             <li><a href="about.html">Over ons</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
 
