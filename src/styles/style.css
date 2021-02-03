@@ -747,6 +747,7 @@ form {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 100%;
+  margin-top: 30px;
 }
 
 form input[type="text"],
@@ -775,7 +776,9 @@ form input[type="submit"] {
 
 form fieldset {
   position: relative;
-  margin: 10px 0px;
+  margin: 0px;
+  margin-top: -20px;
+  padding: 0px;
 }
 
 form fieldset input {
@@ -797,27 +800,6 @@ form fieldset .text-input-label {
 
 form fieldset #contact-submit {
   display: none;
-}
-
-form fieldset label[for="contact-submit"] {
-  position: relative;
-  background-color: #FFB035;
-  padding: 5px 70px 5px 20px;
-  color: white;
-}
-
-form fieldset label[for="contact-submit"]::after {
-  content: '';
-  background-image: url(../images/icons/chevron-right-solid.svg);
-  color: white;
-  width: 10px;
-  height: 10px;
-  display: block;
-  position: absolute;
-  right: 5px;
-  top: 12px;
-  background-size: 90%;
-  background-position: center;
 }
 
 .button-container {
@@ -867,6 +849,9 @@ form fieldset label[for="contact-submit"]::after {
   z-index: -500;
 }
 
+/* ----------------------- */
+/* Homepage css */
+/* ----------------------- */
 .photo-square {
   background-color: #72E3D8;
   background-size: cover;
@@ -904,9 +889,6 @@ form fieldset label[for="contact-submit"]::after {
   transition: 0.2s;
 }
 
-/* ----------------------- */
-/* Homepage css */
-/* ----------------------- */
 .photo-square:hover > h1 {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);

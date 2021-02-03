@@ -736,6 +736,8 @@ form {
   justify-content: space-between;
   height: 100%;
 
+  margin-top: 30px;
+
   input[type="text"],
   input[type="email"] {
     width: 25%;
@@ -760,7 +762,9 @@ form {
 
   fieldset {
     position: relative;
-    margin: 10px 0px;
+    margin: 0px;
+    margin-top: -20px;
+    padding: 0px;
 
     input {
       width: 500px;
@@ -781,27 +785,6 @@ form {
 
     #contact-submit {
       display: none;
-    }
-
-    label[for="contact-submit"] {
-      position: relative;
-      background-color: $base-color;
-      padding: 5px 70px 5px 20px;
-      color: white;
-    }
-
-    label[for="contact-submit"]::after {
-      content: '';
-      background-image: url(../images/icons/chevron-right-solid.svg);
-      color: white;
-      width: 10px;
-      height: 10px;
-      display: block;
-      position: absolute;
-      right: 5px;
-      top: 12px;
-      background-size: 90%;
-      background-position: center;
     }
   }
 }
@@ -851,6 +834,10 @@ form {
   z-index: -500;
 }
 
+/* ----------------------- */
+/* Homepage css */
+/* ----------------------- */
+
 .photo-square {
   background-color: $soft-color;
   background-size: cover;
@@ -880,10 +867,6 @@ form {
   }
 }
 
-/* ----------------------- */
-/* Homepage css */
-/* ----------------------- */
-
 .photo-square:hover>h1 {
   transform: scale(1.2);
 }
@@ -895,10 +878,6 @@ form {
 #homepageafbeelding {
   width: 150%;
 }
-
-
-
-
 
 /*
     RESERVATIE 

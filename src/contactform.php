@@ -7,9 +7,9 @@ if (isset($_POST['submit'])) {
   $message = $_POST['message'];
 
   $mailTo = "EMAIL ADRES";
-  $headers = "From: ".$mailFrom;
+  $headers = "Van: ".$mailFrom;
   $txt = "U hebt een e-mail ontvangen van " .$name.".\n\n".$message;
   
   mail($mailTo, $subject, $txt, $headers);
-  header("Location: index.php?mailsent");
+  header("Location: emailsent.php");
 }
