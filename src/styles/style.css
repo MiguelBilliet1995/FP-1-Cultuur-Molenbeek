@@ -462,7 +462,7 @@ footer ul li a {
   display: flex;*/
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  font-family: "pt-sans-pro", sans-serif;
+  font-family: "pt-sans-pro", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
@@ -750,6 +750,17 @@ form {
   margin-top: 30px;
 }
 
+form input[type="text"],
+form input[type="email"] {
+  width: 25%;
+  min-width: 120px;
+}
+
+form #onderwerp {
+  width: 50%;
+  min-width: 120px;
+}
+
 form textarea {
   width: 100%;
   resize: none;
@@ -1010,3 +1021,4 @@ form fieldset #contact-submit {
     margin-bottom: 0em;
   }
 }
+/*# sourceMappingURL=style.css.map */
