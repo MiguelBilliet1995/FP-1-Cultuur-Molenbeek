@@ -1,29 +1,45 @@
 <?php
-// Takes raw data from the request
+
+require $_SERVER['DOCUMENT_ROOT'].'/lib/rb.php';
+include_once("../CRUD/evenementenDB.php");
+
+function evenementenObjArrToJsonArr($objArr){
+  $evenementenJSON = array();
+  foreach($objArr as $evenement){
+    print_r($evenement);
+    array_push($evenementenJSON, array('id' => $evenement->id(), 'naam' => $evenement->naam(), 'prijs' => $evenement->prijs(), 'datum' => $evenement->datum(), 'uur' => $evenement->uur(), 'locatie' => $evenement->locatie(), 'beschrijving' => $evenement->beschrijving(), 'foto' => $evenement->foto(), 'type' => $evenement->type()));
+  }
+  return json_encode($evenementenJSON, JSON_FORCE_OBJECT);
+}
+
+
 $json = file_get_contents('php://input');
-
-// Converts it into a PHP object
 $data = json_decode($json);
-print_r($data);
 
-// if(isset($_POST['filter'])&&isset($_POST['sort'])){
-//   echo "filter en sort";
-//   if(!isset($_POST['sortdirection'])){
-//     $_POST['sortdirection'] = "DESC";
-//   }
-//   $evenementen = evenementenDB::getEventBy($_POST['filter'], $_POST['filterdata'], $_POST['sort'], $_POST['sortdirection']);
-//   $evenementenJson = json_encode($evenementen);
-//   print_r($evenementenJson);
-// }elseif(isset($_POST['filter'])&&!isset($_POST['sort'])){
-//     mkdir("test/");
-//   echo "filter zonder sort";
-//   $evenementen = evenementenDB::getEventBy($_POST['filter'], $_POST['filterdata'], null, null);
-// }elseif(!isset($_POST['filter'])&&isset($_POST['sort'])){
-//   echo "sort zonder filter";
-//   if(!isset($_POST['sortdirection'])){
-//     $_POST['sortdirection'] = "DESC";
-//   }
-//   $evenementen = evenementenDB::getEventBy(null, null, $_POST['sort'], $_POST['sortdirection']);
-// }
+if($data->filter&&$data->sort){
+  if(!$data->sortdirection){
+    $sort = "DESC";
+  }else{
+    $sort = $data->sortdirection;
+  }
+
+  $evenementen = evenementenDB::getEventBy($data->filter, $data->filterdata, $data->sort, $sort);
+  echo evenementenObjArrToJsonArr($evenementen);
+
+}elseif($data->filter&&!$data->sort){
+  $evenementen = evenementenDB::getEventBy($data->filter, $data->filterdata, null, null);
+  echo evenementenObjArrToJsonArr($evenementen);
+
+}elseif(!$data->filter&&$data->sort){
+  if(!$data->sortdirection){
+    $sort = "DESC";
+  }else{
+    $sort = $data->sortdirection;
+  }
+
+  $evenementen = evenementenDB::getEventBy(null, null, $data->sort, $sort);
+  echo evenementenObjArrToJsonArr($evenementen);
+
+}
 
 ?>

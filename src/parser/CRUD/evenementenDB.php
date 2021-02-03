@@ -1,6 +1,6 @@
 <?php
-include_once('parser/CRUD/evenementen.php');
-include_once('parser/DatabaseFactory.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/parser/CRUD/evenementen.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/parser/DatabaseFactory.php');
 
 class evenementenDB{
 
@@ -47,9 +47,6 @@ class evenementenDB{
     // Bv.: evenementenDB::getEventBy("type","kinderen","prijs","ASC");
 
     public static function getEventBy($columnName, $data, $sort, $sortingDirection){
-
-        echo $columnName.' '.$data.' '.$sort.' '.$sortingDirection;
-
 
         if($columnName!==null&&$sort!==null){
             $resultaat = self::getVerbinding()->voerSqlQueryUit("SELECT * FROM evenementen WHERE ? = '?' ORDER BY ? ?", array($columnName, $data, $sort, $sortingDirection));

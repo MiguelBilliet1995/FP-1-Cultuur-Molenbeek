@@ -1,6 +1,6 @@
 <?php
-include_once('parser/CRUD/inschrijvingen.php');
-include_once('parser/DatabaseFactory.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/parser/CRUD/inschrijvingen.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/parser/DatabaseFactory.php');
 
 class inschrijvingenDB{
 
