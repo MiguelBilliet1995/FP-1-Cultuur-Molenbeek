@@ -28,6 +28,15 @@ h3 {
   font-weight: 800 !important;
 }
 
+#wereldbol {
+  position: fixed;
+  bottom: -250px;
+  right: -495px;
+  z-index: -999;
+
+  width: 60%;
+}
+
 /* newspage */
 p {
   margin-bottom: 0;
@@ -40,7 +49,7 @@ img {
   width: 100%;
 }
 
-.nieuwsartikel{
+.nieuwsartikel {
   margin-bottom: 2rem !important;
 }
 
@@ -61,7 +70,7 @@ nav {
   }
 
   .logo {
-    width: 150px;
+    height: 80px;
     margin: 0;
   }
 
@@ -280,7 +289,7 @@ footer {
     color: $base-color !important;
   }
 
-  .footer-navigation {  
+  .footer-navigation {
     margin-bottom: 0;
 
     li {
@@ -318,8 +327,9 @@ footer {
 
 footer ul {
   list-style: none !important;
-  li{
-    a{
+
+  li {
+    a {
       color: white !important;
     }
   }
@@ -346,6 +356,7 @@ footer ul {
   position: relative;
   font-size: 15px;
   margin-top: -.5rem;
+
   p {
     margin: 1rem 0;
   }
@@ -356,6 +367,7 @@ footer ul {
   margin: 0 0 2em 0 !important;
   padding: 1em;
   display: flex;
+
   span {
     display: inline;
     width: max-content;
@@ -365,7 +377,8 @@ footer ul {
     padding-right: 3em;
     position: relative;
   }
-  span::after{
+
+  span::after {
     content: 'x';
     position: absolute;
     top: -2px;
@@ -373,13 +386,15 @@ footer ul {
   }
 }
 
-.card .textbubblecontainer {
+.textbubblecontainer {
   margin-top: -1.5rem;
   position: relative;
+
   img {
     width: 50px !important;
     float: right;
   }
+
   span {
     color: white;
     position: absolute;
@@ -399,7 +414,8 @@ footer ul {
 .titleDate {
   display: flex;
   justify-content: space-between;
-  h2{
+
+  h2 {
     width: 60%;
     margin-bottom: 0;
   }
@@ -414,6 +430,7 @@ footer ul {
 .eventinfo {
   display: block;
   margin-top: 1rem;
+
   img {
     width: 25px;
     margin-right: .5rem;
@@ -703,19 +720,37 @@ a {
   width: 80%;
   height: auto;
 }
+
+#directbericht {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+#contact-submit {
+  margin-bottom: 200px;
+}
+
 form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
 
+  margin-top: 30px;
+
   input[type="text"],
-  input[type="email"],
-  textarea {
-    width: 100%;
+  input[type="email"] {
+    width: 25%;
+    min-width: 120px;
+  }
+
+  #onderwerp {
+    width: 50%;
+    min-width: 120px;
   }
 
   textarea {
+    width: 100%;
     resize: none;
     min-height: 200px;
     border: 2px black solid;
@@ -727,7 +762,9 @@ form {
 
   fieldset {
     position: relative;
-    margin: 10px 0px;
+    margin: 0px;
+    margin-top: -20px;
+    padding: 0px;
 
     input {
       width: 500px;
@@ -748,27 +785,6 @@ form {
 
     #contact-submit {
       display: none;
-    }
-
-    label[for="contact-submit"] {
-      position: relative;
-      background-color: $base-color;
-      padding: 5px 70px 5px 20px;
-      color: white;
-    }
-
-    label[for="contact-submit"]::after {
-      content: '';
-      background-image: url(../images/icons/chevron-right-solid.svg);
-      color: white;
-      width: 10px;
-      height: 10px;
-      display: block;
-      position: absolute;
-      right: 5px;
-      top: 12px;
-      background-size: 90%;
-      background-position: center;
     }
   }
 }
@@ -818,6 +834,10 @@ form {
   z-index: -500;
 }
 
+/* ----------------------- */
+/* Homepage css */
+/* ----------------------- */
+
 .photo-square {
   background-color: $soft-color;
   background-size: cover;
@@ -847,10 +867,6 @@ form {
   }
 }
 
-/* ----------------------- */
-/* Homepage css */
-/* ----------------------- */
-
 .photo-square:hover>h1 {
   transform: scale(1.2);
 }
@@ -863,175 +879,210 @@ form {
   width: 150%;
 }
 
-
-
-
-
 /*
     RESERVATIE 
                 */
-
-.reservatie-main {
-  max-width: 82.5rem;
-  margin: auto;
-}
-
-.row-one-reservatie {
-  display: flex;
-  flex-wrap: wrap;
-
-  max-width: 82.5rem;
-  margin: auto;
-
-  #description-box {
-    margin: 0 .75rem 0 .75rem;
-    max-width: 26rem;
-    min-width: 20rem;
-
-
-    .description-box-head {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 2rem;
-
-    }
-
-    .beschrijving {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: $base-color;
-    }
+.event-id-info {
+  h2{
+    font-size: 3em;
   }
 
-  #form {
-    padding-bottom: 1rem;
-  }
-
-  .col-sm-4:not(#description-box) {
-    margin: 0 .75rem 0 .75rem;
-    max-width: 26rem;
-    min-width: 20rem;
-
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-
-    form {
-      width: 90%;
-      max-height: 283px;
-
-      margin-bottom: 1rem;
-
-      .reservatie-input {
-        border: none;
-        border-bottom: $base-color 2px solid;
-      }
-
-      .reservatie-label:not(#nah) {
-        margin-top: 2em;
-      }
-    }
-
-
+  p {
+    margin-top: 2.5em;
   }
 }
 
-.row-two-reservatie {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 82.5rem;
-  margin: auto;
+.event-list {
+  padding: 0;
+  margin: 0;
   margin-top: 2rem;
-
-
-  .col-sm-4 {
-    max-width: 26rem;
-    min-width: 20rem;
-    margin: 0 .75rem 0 .75rem;
-
-
-    h1 {
-      margin: 0 0 1.2rem 0;
-    }
-
-    .event-list {
-      list-style-type: none !important;
-      padding: 0;
-    }
-
-    ul li {
-      display: flex;
-      justify-content: space-between;
-
-
-      margin: 0 0 1rem 0;
-      padding: 0;
-    }
-
-    figure {
-      width: 2rem;
-      margin-left: auto;
-    }
-
-    .beschrijving {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: $base-color;
-    }
-
-    button {
-      width: 80%;
-      height: 3rem;
-      margin-left: 2.75rem;
-      margin-top: 3.344rem;
-      padding: 0;
-
-      border: none;
-      background-color: $base-color;
-      color: #fff;
-    }
+  li {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    line-height: 2.5rem;
   }
-
-  .col-sm-2 {
-    width: 90%;
-
-    #top-duo {
-      margin-top: 3.438rem;
-    }
-
-    .label-input-duo:not(.totaal) {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-
-      width: 90%;
-      margin: 0 auto 1rem auto;
-
-      #nultottwaalf {
-        margin-left: 1em;
-      }
-
-      label::after {
-        border: $base-color 1px;
-      }
-    }
-
-    .label-input-duo .total {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: $base-color;
-
-      margin: auto;
-      width: 90%;
-    }
-
-
-    select {
-      background-color: $base-color;
-      color: #fff;
-    }
+  .beschrijving {
+    font-size: 1.5em;
+    color: $base-color;
   }
 }
+
+.inschrijven {
+  display: block;
+  input {
+    width: 60%;
+    margin-top: 2em;
+  }
+}
+
+
+
+
+                
+
+// .reservatie-main {
+//   max-width: 82.5rem;
+//   margin: auto;
+// }
+
+// .row-one-reservatie {
+//   display: flex;
+//   flex-wrap: wrap;
+
+//   max-width: 82.5rem;
+//   margin: auto;
+
+//   #description-box {
+//     margin: 0 .75rem 0 .75rem;
+//     max-width: 26rem;
+//     min-width: 20rem;
+
+
+//     .description-box-head {
+//       display: flex;
+//       justify-content: space-between;
+//       margin-bottom: 2rem;
+
+//     }
+
+//     .beschrijving {
+//       font-size: 1.2rem;
+//       font-weight: 600;
+//       color: $base-color;
+//     }
+//   }
+
+//   #form {
+//     padding-bottom: 1rem;
+//   }
+
+//   .col-sm-4:not(#description-box) {
+//     margin: 0 .75rem 0 .75rem;
+//     max-width: 26rem;
+//     min-width: 20rem;
+
+//     display: flex;
+//     justify-content: space-around;
+//     flex-wrap: wrap;
+
+//     form {
+//       width: 90%;
+//       max-height: 283px;
+
+//       margin-bottom: 1rem;
+
+//       .reservatie-input {
+//         border: none;
+//         border-bottom: $base-color 2px solid;
+//       }
+
+//       .reservatie-label:not(#nah) {
+//         margin-top: 2em;
+//       }
+//     }
+
+
+//   }
+// }
+
+// .row-two-reservatie {
+//   display: flex;
+//   flex-wrap: wrap;
+//   max-width: 82.5rem;
+//   margin: auto;
+//   margin-top: 2rem;
+
+
+//   .col-sm-4 {
+//     max-width: 26rem;
+//     min-width: 20rem;
+//     margin: 0 .75rem 0 .75rem;
+
+
+//     h1 {
+//       margin: 0 0 1.2rem 0;
+//     }
+
+//     .event-list {
+//       list-style-type: none !important;
+//       padding: 0;
+//     }
+
+//     ul li {
+//       display: flex;
+//       justify-content: space-between;
+
+
+//       margin: 0 0 1rem 0;
+//       padding: 0;
+//     }
+
+//     figure {
+//       width: 2rem;
+//       margin-left: auto;
+//     }
+
+//     .beschrijving {
+//       font-size: 1.2rem;
+//       font-weight: 600;
+//       color: $base-color;
+//     }
+
+//     button {
+//       width: 80%;
+//       height: 3rem;
+//       margin-left: 2.75rem;
+//       margin-top: 3.344rem;
+//       padding: 0;
+
+//       border: none;
+//       background-color: $base-color;
+//       color: #fff;
+//     }
+//   }
+
+//   .col-sm-2 {
+//     width: 90%;
+
+//     #top-duo {
+//       margin-top: 3.438rem;
+//     }
+
+//     .label-input-duo:not(.totaal) {
+//       display: flex;
+//       flex-direction: row;
+//       justify-content: space-between;
+
+//       width: 90%;
+//       margin: 0 auto 1rem auto;
+
+//       #nultottwaalf {
+//         margin-left: 1em;
+//       }
+
+//       label::after {
+//         border: $base-color 1px;
+//       }
+//     }
+
+//     .label-input-duo .total {
+//       font-size: 1.2rem;
+//       font-weight: 600;
+//       color: $base-color;
+
+//       margin: auto;
+//       width: 90%;
+//     }
+
+
+//     select {
+//       background-color: $base-color;
+//       color: #fff;
+//     }
+//   }
+// }
 
 
 
@@ -1091,14 +1142,14 @@ form {
   .cal-container {
     padding-right: 2rem !important;
   }
-  
+
 }
 
 @media only screen and (min-width: 1200px) {
   .navigation-container {
     align-items: center !important;
   }
-  
+
   .event-filters {
     display: block;
   }

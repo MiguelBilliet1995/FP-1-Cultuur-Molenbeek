@@ -18,6 +18,14 @@ h3 {
   font-weight: 800 !important;
 }
 
+#wereldbol {
+  position: fixed;
+  bottom: -250px;
+  right: -495px;
+  z-index: -999;
+  width: 60%;
+}
+
 /* newspage */
 p {
   margin-bottom: 0;
@@ -57,7 +65,7 @@ nav .navigation-container {
 }
 
 nav .logo {
-  width: 150px;
+  height: 80px;
   margin: 0;
 }
 
@@ -374,17 +382,17 @@ footer ul li a {
   right: 10px;
 }
 
-.card .textbubblecontainer {
+.textbubblecontainer {
   margin-top: -1.5rem;
   position: relative;
 }
 
-.card .textbubblecontainer img {
+.textbubblecontainer img {
   width: 50px !important;
   float: right;
 }
 
-.card .textbubblecontainer span {
+.textbubblecontainer span {
   color: white;
   position: absolute;
   right: 20px;
@@ -454,7 +462,7 @@ footer ul li a {
   display: flex;*/
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  font-family: "pt-sans-pro", sans-serif;
+  font-family: "pt-sans-pro", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
@@ -718,6 +726,15 @@ a {
   height: auto;
 }
 
+#directbericht {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+#contact-submit {
+  margin-bottom: 200px;
+}
+
 form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -730,15 +747,22 @@ form {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 100%;
+  margin-top: 30px;
 }
 
 form input[type="text"],
-form input[type="email"],
-form textarea {
-  width: 100%;
+form input[type="email"] {
+  width: 25%;
+  min-width: 120px;
+}
+
+form #onderwerp {
+  width: 50%;
+  min-width: 120px;
 }
 
 form textarea {
+  width: 100%;
   resize: none;
   min-height: 200px;
   border: 2px black solid;
@@ -752,7 +776,9 @@ form input[type="submit"] {
 
 form fieldset {
   position: relative;
-  margin: 10px 0px;
+  margin: 0px;
+  margin-top: -20px;
+  padding: 0px;
 }
 
 form fieldset input {
@@ -774,27 +800,6 @@ form fieldset .text-input-label {
 
 form fieldset #contact-submit {
   display: none;
-}
-
-form fieldset label[for="contact-submit"] {
-  position: relative;
-  background-color: #FFB035;
-  padding: 5px 70px 5px 20px;
-  color: white;
-}
-
-form fieldset label[for="contact-submit"]::after {
-  content: '';
-  background-image: url(../images/icons/chevron-right-solid.svg);
-  color: white;
-  width: 10px;
-  height: 10px;
-  display: block;
-  position: absolute;
-  right: 5px;
-  top: 12px;
-  background-size: 90%;
-  background-position: center;
 }
 
 .button-container {
@@ -844,6 +849,9 @@ form fieldset label[for="contact-submit"]::after {
   z-index: -500;
 }
 
+/* ----------------------- */
+/* Homepage css */
+/* ----------------------- */
 .photo-square {
   background-color: #72E3D8;
   background-size: cover;
@@ -881,9 +889,6 @@ form fieldset label[for="contact-submit"]::after {
   transition: 0.2s;
 }
 
-/* ----------------------- */
-/* Homepage css */
-/* ----------------------- */
 .photo-square:hover > h1 {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
@@ -901,176 +906,46 @@ form fieldset label[for="contact-submit"]::after {
 /*
     RESERVATIE 
                 */
-.reservatie-main {
-  max-width: 82.5rem;
-  margin: auto;
+.event-id-info h2 {
+  font-size: 3em;
 }
 
-.row-one-reservatie {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  max-width: 82.5rem;
-  margin: auto;
+.event-id-info p {
+  margin-top: 2.5em;
 }
 
-.row-one-reservatie #description-box {
-  margin: 0 .75rem 0 .75rem;
-  max-width: 26rem;
-  min-width: 20rem;
-}
-
-.row-one-reservatie #description-box .description-box-head {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 2rem;
-}
-
-.row-one-reservatie #description-box .beschrijving {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #FFB035;
-}
-
-.row-one-reservatie #form {
-  padding-bottom: 1rem;
-}
-
-.row-one-reservatie .col-sm-4:not(#description-box) {
-  margin: 0 .75rem 0 .75rem;
-  max-width: 26rem;
-  min-width: 20rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.row-one-reservatie .col-sm-4:not(#description-box) form {
-  width: 90%;
-  max-height: 283px;
-  margin-bottom: 1rem;
-}
-
-.row-one-reservatie .col-sm-4:not(#description-box) form .reservatie-input {
-  border: none;
-  border-bottom: #FFB035 2px solid;
-}
-
-.row-one-reservatie .col-sm-4:not(#description-box) form .reservatie-label:not(#nah) {
-  margin-top: 2em;
-}
-
-.row-two-reservatie {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  max-width: 82.5rem;
-  margin: auto;
+.event-list {
+  padding: 0;
+  margin: 0;
   margin-top: 2rem;
 }
 
-.row-two-reservatie .col-sm-4 {
-  max-width: 26rem;
-  min-width: 20rem;
-  margin: 0 .75rem 0 .75rem;
-}
-
-.row-two-reservatie .col-sm-4 h1 {
-  margin: 0 0 1.2rem 0;
-}
-
-.row-two-reservatie .col-sm-4 .event-list {
-  list-style-type: none !important;
-  padding: 0;
-}
-
-.row-two-reservatie .col-sm-4 ul li {
+.event-list li {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0 0 1rem 0;
-  padding: 0;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  line-height: 2.5rem;
 }
 
-.row-two-reservatie .col-sm-4 figure {
-  width: 2rem;
-  margin-left: auto;
-}
-
-.row-two-reservatie .col-sm-4 .beschrijving {
-  font-size: 1.2rem;
-  font-weight: 600;
+.event-list .beschrijving {
+  font-size: 1.5em;
   color: #FFB035;
 }
 
-.row-two-reservatie .col-sm-4 button {
-  width: 80%;
-  height: 3rem;
-  margin-left: 2.75rem;
-  margin-top: 3.344rem;
-  padding: 0;
-  border: none;
-  background-color: #FFB035;
-  color: #fff;
+.inschrijven {
+  display: block;
 }
 
-.row-two-reservatie .col-sm-2 {
-  width: 90%;
-}
-
-.row-two-reservatie .col-sm-2 #top-duo {
-  margin-top: 3.438rem;
-}
-
-.row-two-reservatie .col-sm-2 .label-input-duo:not(.totaal) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 90%;
-  margin: 0 auto 1rem auto;
-}
-
-.row-two-reservatie .col-sm-2 .label-input-duo:not(.totaal) #nultottwaalf {
-  margin-left: 1em;
-}
-
-.row-two-reservatie .col-sm-2 .label-input-duo:not(.totaal) label::after {
-  border: #FFB035 1px;
-}
-
-.row-two-reservatie .col-sm-2 .label-input-duo .total {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #FFB035;
-  margin: auto;
-  width: 90%;
-}
-
-.row-two-reservatie .col-sm-2 select {
-  background-color: #FFB035;
-  color: #fff;
+.inschrijven input {
+  width: 60%;
+  margin-top: 2em;
 }
 
 /*      Filter css      */
