@@ -24,31 +24,77 @@
 
 <body>
     <?php include 'includes/banner.php';?>
-    <?php
-    include_once('parser/CRUD/evenementenDB.php');
-    $evenementen = evenementenDB::getEventById($_GET["id"]);
-
-    foreach($evenementen as $evenement){
-    ?>
     <div class="container">
-        <div class="row">
-            <div class="card col-sm-4">
-                <img src="images/theater.jpg">
-                <div class="textbubblecontainer">
-                  <img src="images/icons/speechbubblefull.svg" alt="">
-                  <span class="taal">nl</span>
-                </div>
-                <div class="info">
-                    <h2><?php echo $evenement->naam(); ?> <span class="datum"><span class="red"><?php echo $evenement->datum(); ?></span><span class="time"> - <?php echo $evenement->uur(); ?></span></span></h2>
-                    <span class="location"><img src="images/icons/locationicon.svg" alt=""><?php echo $evenement->locatie() ?></span>
-                    <p class="description"><?php echo $evenement->beschrijving() ?></p>
-                </div>
-            </div>
+      <div class="row">
+        <div class="col-sm-12 col-lg-12 event-id-info">
+          <h2>Wandeling door het bos</h2>
         </div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="col-sm-12 col-lg-4 event-id-info">
+
+          <img src='data/images/evenementen/evenementen_2.jpg'>
+          <div class="textbubblecontainer">
+              <img src="images/icons/speechbubblefull.svg" alt="">
+              <span class="language">nl</span>
+          </div>
+          <p>Elke woensdag organiseert familie Molenbeek in samenwerking met Sport Molenbeek sportieve activiteiten voor kinderen op verschillende Molenbeekse pleinen. Klik verder voor meer info.</p>
+          <ul class="event-list">
+            <li class="event-list-item"><span class="beschrijving">Locatie:</span> Parijsstraat 30 leuven</li>
+            <li class="event-list-item"><span class="beschrijving">Datum:</span> Donderdag, 31januari</li>
+            <li class="event-list-item"><span class="beschrijving">Prijs:</span> 4 euro</li>
+          </ul>
+        </div>
+          <div class="col-sm-12 col-lg-8">
+            <form action="" method='POST' class="inschrijven">
+              <input type="name" name="inschrijven-naam" id="inschrijven-naam">
+              <input type="email" name="inschrijven-email" id="inschrijven-email">
+              <div class="label-input-duo" id="top-duo">
+              <div class="label-input-duo">
+            <label for="nultottwaalf">0-12jaar</label>
+            <select name="leeftijd" id="nultottwaalf">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+
+            <label for="twaalftotachttien">12-18jaar</label>
+            <select name="leeftijd" id="twaalftotachttien">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+
+          <div class="label-input-duo">
+            <label for="achttientotoud">18-65jaar</label>
+            <select name="leeftijd" id="achttientotoud">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+
+            <label for="oudplus">+65jaar</label>
+            <select name="leeftijd" id="oudplus">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+        </div>
+      </div>
+          </form>
+        </div>
+      </div>
     </div>
-    <?php
-    }
-    ?>
+    
     <?php include 'includes/footer.php'; ?>
 </body>
 

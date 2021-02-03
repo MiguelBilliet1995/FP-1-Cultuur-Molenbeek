@@ -386,7 +386,7 @@ footer ul {
   }
 }
 
-.card .textbubblecontainer {
+.textbubblecontainer {
   margin-top: -1.5rem;
   position: relative;
 
@@ -882,168 +882,207 @@ form {
 /*
     RESERVATIE 
                 */
-
-.reservatie-main {
-  max-width: 82.5rem;
-  margin: auto;
-}
-
-.row-one-reservatie {
-  display: flex;
-  flex-wrap: wrap;
-
-  max-width: 82.5rem;
-  margin: auto;
-
-  #description-box {
-    margin: 0 .75rem 0 .75rem;
-    max-width: 26rem;
-    min-width: 20rem;
-
-
-    .description-box-head {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 2rem;
-
-    }
-
-    .beschrijving {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: $base-color;
-    }
+.event-id-info {
+  h2{
+    font-size: 3em;
   }
 
-  #form {
-    padding-bottom: 1rem;
-  }
-
-  .col-sm-4:not(#description-box) {
-    margin: 0 .75rem 0 .75rem;
-    max-width: 26rem;
-    min-width: 20rem;
-
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-
-    form {
-      width: 90%;
-      max-height: 283px;
-
-      margin-bottom: 1rem;
-
-      .reservatie-input {
-        border: none;
-        border-bottom: $base-color 2px solid;
-      }
-
-      .reservatie-label:not(#nah) {
-        margin-top: 2em;
-      }
-    }
-
-
+  p {
+    margin-top: 2.5em;
   }
 }
 
-.row-two-reservatie {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 82.5rem;
-  margin: auto;
+.event-list {
+  padding: 0;
+  margin: 0;
   margin-top: 2rem;
-
-
-  .col-sm-4 {
-    max-width: 26rem;
-    min-width: 20rem;
-    margin: 0 .75rem 0 .75rem;
-
-
-    h1 {
-      margin: 0 0 1.2rem 0;
-    }
-
-    .event-list {
-      list-style-type: none !important;
-      padding: 0;
-    }
-
-    ul li {
-      display: flex;
-      justify-content: space-between;
-
-
-      margin: 0 0 1rem 0;
-      padding: 0;
-    }
-
-    figure {
-      width: 2rem;
-      margin-left: auto;
-    }
-
-    .beschrijving {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: $base-color;
-    }
-
-    button {
-      width: 80%;
-      height: 3rem;
-      margin-left: 2.75rem;
-      margin-top: 3.344rem;
-      padding: 0;
-
-      border: none;
-      background-color: $base-color;
-      color: #fff;
-    }
+  li {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    line-height: 2.5rem;
   }
-
-  .col-sm-2 {
-    width: 90%;
-
-    #top-duo {
-      margin-top: 3.438rem;
-    }
-
-    .label-input-duo:not(.totaal) {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-
-      width: 90%;
-      margin: 0 auto 1rem auto;
-
-      #nultottwaalf {
-        margin-left: 1em;
-      }
-
-      label::after {
-        border: $base-color 1px;
-      }
-    }
-
-    .label-input-duo .total {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: $base-color;
-
-      margin: auto;
-      width: 90%;
-    }
-
-
-    select {
-      background-color: $base-color;
-      color: #fff;
-    }
+  .beschrijving {
+    font-size: 1.5em;
+    color: $base-color;
   }
 }
+
+.inschrijven {
+  display: block;
+  input {
+    width: 60%;
+    margin-top: 2em;
+  }
+}
+
+
+
+
+                
+
+// .reservatie-main {
+//   max-width: 82.5rem;
+//   margin: auto;
+// }
+
+// .row-one-reservatie {
+//   display: flex;
+//   flex-wrap: wrap;
+
+//   max-width: 82.5rem;
+//   margin: auto;
+
+//   #description-box {
+//     margin: 0 .75rem 0 .75rem;
+//     max-width: 26rem;
+//     min-width: 20rem;
+
+
+//     .description-box-head {
+//       display: flex;
+//       justify-content: space-between;
+//       margin-bottom: 2rem;
+
+//     }
+
+//     .beschrijving {
+//       font-size: 1.2rem;
+//       font-weight: 600;
+//       color: $base-color;
+//     }
+//   }
+
+//   #form {
+//     padding-bottom: 1rem;
+//   }
+
+//   .col-sm-4:not(#description-box) {
+//     margin: 0 .75rem 0 .75rem;
+//     max-width: 26rem;
+//     min-width: 20rem;
+
+//     display: flex;
+//     justify-content: space-around;
+//     flex-wrap: wrap;
+
+//     form {
+//       width: 90%;
+//       max-height: 283px;
+
+//       margin-bottom: 1rem;
+
+//       .reservatie-input {
+//         border: none;
+//         border-bottom: $base-color 2px solid;
+//       }
+
+//       .reservatie-label:not(#nah) {
+//         margin-top: 2em;
+//       }
+//     }
+
+
+//   }
+// }
+
+// .row-two-reservatie {
+//   display: flex;
+//   flex-wrap: wrap;
+//   max-width: 82.5rem;
+//   margin: auto;
+//   margin-top: 2rem;
+
+
+//   .col-sm-4 {
+//     max-width: 26rem;
+//     min-width: 20rem;
+//     margin: 0 .75rem 0 .75rem;
+
+
+//     h1 {
+//       margin: 0 0 1.2rem 0;
+//     }
+
+//     .event-list {
+//       list-style-type: none !important;
+//       padding: 0;
+//     }
+
+//     ul li {
+//       display: flex;
+//       justify-content: space-between;
+
+
+//       margin: 0 0 1rem 0;
+//       padding: 0;
+//     }
+
+//     figure {
+//       width: 2rem;
+//       margin-left: auto;
+//     }
+
+//     .beschrijving {
+//       font-size: 1.2rem;
+//       font-weight: 600;
+//       color: $base-color;
+//     }
+
+//     button {
+//       width: 80%;
+//       height: 3rem;
+//       margin-left: 2.75rem;
+//       margin-top: 3.344rem;
+//       padding: 0;
+
+//       border: none;
+//       background-color: $base-color;
+//       color: #fff;
+//     }
+//   }
+
+//   .col-sm-2 {
+//     width: 90%;
+
+//     #top-duo {
+//       margin-top: 3.438rem;
+//     }
+
+//     .label-input-duo:not(.totaal) {
+//       display: flex;
+//       flex-direction: row;
+//       justify-content: space-between;
+
+//       width: 90%;
+//       margin: 0 auto 1rem auto;
+
+//       #nultottwaalf {
+//         margin-left: 1em;
+//       }
+
+//       label::after {
+//         border: $base-color 1px;
+//       }
+//     }
+
+//     .label-input-duo .total {
+//       font-size: 1.2rem;
+//       font-weight: 600;
+//       color: $base-color;
+
+//       margin: auto;
+//       width: 90%;
+//     }
+
+
+//     select {
+//       background-color: $base-color;
+//       color: #fff;
+//     }
+//   }
+// }
 
 
 
