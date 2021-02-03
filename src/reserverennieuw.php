@@ -26,15 +26,18 @@
     <?php include 'includes/banner.php';?>
     <div class="container">
       <div class="row">
+        <div class="col-sm-12">
+          <a href="evenementen.php" class="return-btn">Terug</a>
+        </div>
         <div class="col-sm-12 col-lg-12 event-id-info">
-          <h2>Wandeling door het bos</h2>
+          <h2>Inschrijven voor: <span class="color-base">wandeling door het bos</span></h2>
         </div>
       </div>
 
 
 
       <div class="row">
-        <div class="col-sm-12 col-lg-4 event-id-info">
+        <div class="col-sm-12 col-lg-6 event-id-info">
 
           <img src='data/images/evenementen/evenementen_2.jpg'>
           <div class="textbubblecontainer">
@@ -48,48 +51,54 @@
             <li class="event-list-item"><span class="beschrijving">Prijs:</span> 4 euro</li>
           </ul>
         </div>
-          <div class="col-sm-12 col-lg-8">
+          <div class="col-sm-12 col-lg-6">
             <form action="" method='POST' class="inschrijven">
-              <input type="name" name="inschrijven-naam" id="inschrijven-naam">
-              <input type="email" name="inschrijven-email" id="inschrijven-email">
-              <div class="label-input-duo" id="top-duo">
-              <div class="label-input-duo">
-            <label for="nultottwaalf">0-12jaar</label>
-            <select name="leeftijd" id="nultottwaalf">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-            </select>
+              <input type="text" name="inschrijven-naam" id="inschrijven-naam" placeholder="naam">
+              <input type="text" name="inschrijven-naam" id="inschrijven-naam" placeholder="achternaam">
+              <input type="email" name="inschrijven-email" id="inschrijven-email" placeholder="e-mail">
+              <div class="participants-container" id="top-duo">
+                <div class="label-input-duo">
+                  <label for="nultottwaalf">0-12jaar</label>
+                  <select name="leeftijd" id="nultottwaalf">
+                    <option value="0" selected>0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
 
-            <label for="twaalftotachttien">12-18jaar</label>
-            <select name="leeftijd" id="twaalftotachttien">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-            </select>
-          </div>
+                  <label for="twaalftotachttien">12-18jaar</label>
+                  <select name="leeftijd" id="twaalftotachttien">
+                    <option value="0" selected>0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                </div>
 
-          <div class="label-input-duo">
-            <label for="achttientotoud">18-65jaar</label>
-            <select name="leeftijd" id="achttientotoud">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-            </select>
+                <div class="label-input-duo">
+                  <label for="achttientotoud">18-65jaar</label>
+                  <select name="leeftijd" id="achttientotoud">
+                    <option value="0" selected>0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
 
-            <label for="oudplus">+65jaar</label>
-            <select name="leeftijd" id="oudplus">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-            </select>
-          </div>
-        </div>
-      </div>
+                  <label for="oudplus">+65jaar</label>
+                  <select name="leeftijd" id="oudplus">
+                    <option value="0" selected>0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                </div>
+                <input type="submit" name="confirm-reservatie" value="Reserveer">
+              </div>
+            </div>
           </form>
         </div>
       </div>
