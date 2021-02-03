@@ -1,6 +1,6 @@
 <nav>
     <div class="container dropup navigation-container">
-      <a href="index.php"><img src="images/logos/logo-met-text.svg" alt="logo" class="logo"></a>
+      <a href="index.php"><img src="images/logos/molenbeek-nest-logo.svg" alt="logo" class="logo"></a>
       <button class="dropbtn" onclick="toggleNav(); return false;">Menu</button>
       <ul class="dropup-content">
         <li><a href="index.php" id="home">Home</a></li>

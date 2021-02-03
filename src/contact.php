@@ -19,7 +19,9 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-4">
-          <img class="contactimage" src="./images/contactimg.svg" alt="">
+          <div id="contactanim"></div>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.0/lottie_html.js"></script>
+          <script src="scripts/contact-anim.js"></script>
         </div>
         <div class="col-sm-8">
           <h3>Contact</h3>
