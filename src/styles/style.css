@@ -199,7 +199,6 @@ nav li .active#contact::after {
 
 .backarrow {
   width: 30px;
-  position: absolute;
 }
 
 /*      MOBILE NAVIGATION     */
@@ -524,7 +523,7 @@ footer ul li a {
   display: flex;*/
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  font-family: "pt-sans-pro", sans-serif;
+  font-family: "pt-sans-pro", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
@@ -970,23 +969,11 @@ form fieldset #contact-submit {
                 */
 .return-btn {
   font-size: 1.2rem;
-  position: relative;
-  padding-left: 3rem;
-}
-
-.return-btn::after {
-  content: "";
-  width: 30px;
-  height: 30px;
-  background-image: url(images/icons/chevron-right-solid-black.svg);
-  background-position: center;
-  position: absolute;
-  left: 0;
 }
 
 .event-id-info h2 {
   font-size: 2em;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 
 .event-id-info h2 span {

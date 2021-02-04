@@ -187,7 +187,6 @@ nav li {
 
 .backarrow {
   width: 30px;
-  position: absolute;
 }
 
 
@@ -940,24 +939,12 @@ form {
                 */
 .return-btn {
   font-size: 1.2rem;
-  position: relative;
-  padding-left: 3rem;
-}
-
-.return-btn::after {
-  content: "";
-  width: 30px;
-  height: 30px;
-  background-image: url(images/icons/chevron-right-solid-black.svg);
-  background-position: center;
-  position: absolute;
-  left: 0;
 }
 
 .event-id-info {
   h2 {
     font-size: 2em;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 
     span {
       color: $base-color;

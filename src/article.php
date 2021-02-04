@@ -20,7 +20,7 @@
     <div class="row">
       <div class="col-sm-1"></div>
       <div class="col">
-        <a href="news.html"><img src="./images/icons/backarrow.svg" alt="" class="backarrow"></a>
+        <a href="news.html">
       </div>
     </div>
     
