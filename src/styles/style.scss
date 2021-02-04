@@ -355,16 +355,46 @@ footer ul {
 .info {
   position: relative;
   font-size: 15px;
-  margin-top: -.5rem;
+  margin-top: -.7rem;
 
   p {
     margin: 1rem 0;
   }
 }
 
+.layout-btn {
+  margin: 0!important;
+  padding: 0 0 1rem 0;
+}
+
+.event-layout-btn{
+  border: none;
+  background-color: transparent;
+  width: 40px !important;
+  height: 40px;
+  background-size: cover;
+  background-position: center;
+}
+.event-layout-btn:focus{
+  outline: none;
+}
+
+.box-layout-btn{
+  background-image: url(../images/icons/evenementen/box-layout-btn.svg);
+}
+
+.box-layout-btn.active{
+  background-image: url(../images/icons/evenementen/box-layout-btn-selected.svg);
+}
+
+.row-layout-btn{
+  background-image: url(../images/icons/evenementen/row-layout-btn.svg);
+  margin-left: .5rem;
+}
+
 .filterlist {
   background-color: $base-color;
-  margin: 0 0 2em 0 !important;
+  margin: 0 0 3em 0 !important;
   padding: 1em;
   display: flex;
 
@@ -387,19 +417,21 @@ footer ul {
 }
 
 .textbubblecontainer {
-  margin-top: -1.5rem;
+  margin-top: -1rem;
   position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 
   img {
-    width: 50px !important;
-    float: right;
+    width: 35px !important;
   }
 
   span {
-    color: white;
-    position: absolute;
+    color: $base-color;
     right: 20px;
     top: 5px;
+    font-size: 1em;
   }
 }
 
@@ -671,7 +703,7 @@ p {
 
 .about,
 .index {
-  margin: 7rem 0;
+  margin: 25vh 0;
 
   h1 {
     font-family: pt-sans-pro, sans-serif;
