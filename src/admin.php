@@ -125,20 +125,51 @@
                 <div class="row">
                   <textarea id="event-beschrijving-<?php echo $evenement->id(); ?>"><?php echo $evenement->beschrijving(); ?></textarea>
                 </div>
+
+                <div class="row">
+                  <select id="event-taalniveau-<?php echo $evenement->id(); ?>">
+                      <option value="">Kies een taal niveau</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                  </select>
+                </div>
                 
               </div>
               <div class="col-sm-4">
+
+                
+
                 <?php
                   $inschrijvingen = inschrijvingenDB::getInschrijvingenByEventId($evenement->id());
-                  print_r($inschrijvingen);
-                  foreach($inschrijvingen as $inschrijving){
+
+                  if(count($inschrijvingen) < 1){
                 ?>
-
-
-
+                  Er zijn nog geen registraties.
+                <?php
+                  }else{
+                ?>
+                  <table>
+                <?php
+                    foreach($inschrijvingen as $inschrijving){
+                      ?>
+                        <tr>
+                          <td><?php echo $inschrijving->voornaam().' '.$inschrijving->naam(); ?></td>
+                          <td><?php echo $inschrijving->email(); ?></td>
+                          <td><?php echo ($inschrijving->aantal_1() + $inschrijving->aantal_2() + $inschrijving->aantal_3() + $inschrijving->aantal_4()) ?></td>
+                          <td>
+                            <span class="button button-delete" id="inschrijving-delete-<?php echo $inschrijving->id(); ?>"></span>
+                          </td>
+                        </tr>
+                      <?php
+                    }
+                ?>
+                  </table>
                 <?php
                   }
                 ?>
+                
               </div>
 
             </div>

@@ -86,6 +86,15 @@ body {
   margin-bottom: 15px;
 }
 
+.item .event-bottom table {
+  width: 100%;
+  font-size: 12px;
+}
+
+.item .event-bottom table td {
+  padding: 5px 0px;
+}
+
 .item .event-top {
   margin-top: 20px;
   border: 1px solid rgba(0, 0, 0, 0);
