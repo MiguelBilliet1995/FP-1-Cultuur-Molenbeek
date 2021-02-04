@@ -133,8 +133,7 @@ if(isset($_GET['filter'])&&isset($_GET['sort'])){
               <span class="eventinfo"><img src="images/icons/locationicon.svg" alt=""><?php echo $evenement->locatie() ?></span>
               <span class="eventinfo"><img src="images/icons/clock-icon.svg" alt=""><?php echo $evenement->uur() ?></span>
               <p class="description"><?php echo $evenement->beschrijving() ?></p>
-              <!-- <a href="reserveren.php?id=<?php echo $evenement->id() ?>"> -->
-              <a href="reserveren.php">
+              <a href="reserveren.php?id=<?php echo $evenement->id() ?>">
                 <div class="button-container">
                   <div class="button button-next">
                     <p> Schrijf je nu in!</p>

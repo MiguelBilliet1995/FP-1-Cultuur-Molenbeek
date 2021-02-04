@@ -1,3 +1,19 @@
+<?php
+if(isset($_POST['confirm-reservatie'])){
+  $evenement_id = $_GET['id'];
+  $voornaam = $_POST['voornaam'];
+  $naam = $_POST['naam'];
+  $email = $_POST['email'];
+  $aantal_1 = $_POST['leeftijd-kind'];
+  $aantal_2 = $_POST['leeftijd-tiener'];
+  $aantal_3 = $_POST['leeftijd-volwassen'];
+  $aantal_4 = $_POST['leeftijd-bejaard'];
+
+  $query= "INSERT INTO inschrijvingen (evenement_id, voornaam, naam, email, aantal_1, aantal_2, aantal_3, aantal_4) VALUES ('$evenement_id', '$voornaam', '$naam', '$email', '$aantal_1', '$aantal_2', '$aantal_3', '$aantal_4')";
+  $inhoud = mysqli_query($connectie, $query) or die ("FOUT: " . mysqli_error($connectie));
+
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,11 +42,16 @@
     <?php include 'includes/banner.php';?>
     <div class="container">
       <div class="row">
+      <?php
+      include_once('parser/CRUD/evenementenDB.php');
+      $evenement = evenementenDB::getEventById($_GET['id']);
+      ?>
+
         <div class="col-sm-12">
           <a href="evenementen.php" class="return-btn">Terug</a>
         </div>
         <div class="col-sm-12 col-lg-12 event-id-info">
-          <h2>Inschrijven voor: <span class="color-base">wandeling door het bos</span></h2>
+          <h2>Inschrijven voor: <span class="color-base"><?php echo $evenement->naam();?></span></h2>
         </div>
       </div>
 
@@ -38,16 +59,20 @@
 
       <div class="row">
         <div class="col-sm-12 col-lg-6 event-id-info">
-          <img src='data/images/evenementen/evenementen_2.jpg'>
+          <img src='data/images/evenementen/<?php echo $evenement->foto();?>'>
           <div class="textbubblecontainer">
+              <span class="language">nl:</span>
               <img src="images/icons/speechbubblefull.svg" alt="">
-              <span class="language">nl</span>
-          </div>
-          <p>Elke woensdag organiseert familie Molenbeek in samenwerking met Sport Molenbeek sportieve activiteiten voor kinderen op verschillende Molenbeekse pleinen. Klik verder voor meer info.</p>
+              <img src="images/icons/speechbubblefull.svg" alt="">
+              <img src="images/icons/speechbubbleempty.svg" alt="">
+              <img src="images/icons/speechbubbleempty.svg" alt="">
+              <img src="images/icons/speechbubbleempty.svg" alt="">
+            </div>
+          <p><?php echo $evenement->beschrijving();?></p>
           <ul class="event-list">
-            <li class="event-list-item"><span class="beschrijving">Locatie:</span> Parijsstraat 30 leuven</li>
-            <li class="event-list-item"><span class="beschrijving">Datum:</span> Donderdag, 31januari</li>
-            <li class="event-list-item"><span class="beschrijving">Prijs:</span> 4 euro</li>
+            <li class="event-list-item"><span class="beschrijving">Locatie:</span> <?php echo $evenement->locatie();?></li>
+            <li class="event-list-item"><span class="beschrijving">Datum:</span> <?php echo $evenement->datum();?></li>
+            <li class="event-list-item"><span class="beschrijving">Prijs:</span> <?php echo $evenement->prijs();?> euro</li>
           </ul>
         </div>
           <div class="col-sm-12 col-lg-6">
@@ -55,10 +80,10 @@
               <input type="text" name="inschrijven-naam" id="inschrijven-naam" placeholder="naam">
               <input type="text" name="inschrijven-naam" id="inschrijven-naam" placeholder="achternaam">
               <input type="email" name="inschrijven-email" id="inschrijven-email" placeholder="e-mail">
-              <div class="participants-container" id="top-duo">
-                <div class="label-input-duo">
+              <fieldset class="participants-container" id="top-duo">
+                <fieldset class="label-input-duo">
                   <label for="nultottwaalf">0-12jaar</label>
-                  <select name="leeftijd" id="nultottwaalf">
+                  <select name="leeftijd-kind" id="nultottwaalf">
                     <option value="0" selected>0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -67,18 +92,18 @@
                   </select>
 
                   <label for="twaalftotachttien">12-18jaar</label>
-                  <select name="leeftijd" id="twaalftotachttien">
+                  <select name="leeftijd-tiener" id="twaalftotachttien">
                     <option value="0" selected>0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                   </select>
-                </div>
+                </fieldset>
 
-                <div class="label-input-duo">
+                <fieldset class="label-input-duo">
                   <label for="achttientotoud">18-65jaar</label>
-                  <select name="leeftijd" id="achttientotoud">
+                  <select name="leeftijd-volwassen" id="achttientotoud">
                     <option value="0" selected>0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -87,16 +112,16 @@
                   </select>
 
                   <label for="oudplus">+65jaar</label>
-                  <select name="leeftijd" id="oudplus">
+                  <select name="leeftijd-bejaard" id="oudplus">
                     <option value="0" selected>0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
                   </select>
-                </div>
+                </fieldset>
                 <input type="submit" name="confirm-reservatie" value="Reserveer">
-              </div>
+              </fieldset>
             </div>
           </form>
         </div>
