@@ -1,17 +1,26 @@
 <?php
+include_once('parser/CRUD/inschrijvingenDB.php');
 if(isset($_POST['confirm-reservatie'])){
   $evenement_id = $_GET['id'];
-  $voornaam = $_POST['voornaam'];
-  $naam = $_POST['naam'];
-  $email = $_POST['email'];
+  $voornaam = $_POST['inschrijven-voornaam'];
+  $naam = $_POST['inschrijven-naam'];
+  $email = $_POST['inschrijven-email'];
   $aantal_1 = $_POST['leeftijd-kind'];
   $aantal_2 = $_POST['leeftijd-tiener'];
   $aantal_3 = $_POST['leeftijd-volwassen'];
   $aantal_4 = $_POST['leeftijd-bejaard'];
+  if(inschrijvingenDB::addinschrijving($evenement_id, $voornaam, $naam, $email, $aantal_1, $aantal_2, $aantal_3, $aantal_4)){
+  $mailTo = $email;
+  $headers = "Van: reservatie@molenbeek.be";
+  $txt = "Inschrijvingsbevestiging " . $naam;
+  
+  mail($mailTo, $subject, $txt, $headers);
+  header("Location: emailsent.php");
 
-  $query= "INSERT INTO inschrijvingen (evenement_id, voornaam, naam, email, aantal_1, aantal_2, aantal_3, aantal_4) VALUES ('$evenement_id', '$voornaam', '$naam', '$email', '$aantal_1', '$aantal_2', '$aantal_3', '$aantal_4')";
-  $inhoud = mysqli_query($connectie, $query) or die ("FOUT: " . mysqli_error($connectie));
-
+  } else {
+    echo 'help';
+  }
+  
   }
 ?>
 <!DOCTYPE html>
@@ -77,8 +86,8 @@ if(isset($_POST['confirm-reservatie'])){
         </div>
           <div class="col-sm-12 col-lg-6">
             <form action="" method='POST' class="inschrijven">
-              <input type="text" name="inschrijven-naam" id="inschrijven-naam" placeholder="naam">
-              <input type="text" name="inschrijven-naam" id="inschrijven-naam" placeholder="achternaam">
+              <input type="text" name="inschrijven-voornaam" id="inschrijven-voornaam" placeholder="Voornaam">
+              <input type="text" name="inschrijven-naam" id="inschrijven-naam" placeholder="Naam">
               <input type="email" name="inschrijven-email" id="inschrijven-email" placeholder="e-mail">
               <fieldset class="participants-container" id="top-duo">
                 <fieldset class="label-input-duo">
