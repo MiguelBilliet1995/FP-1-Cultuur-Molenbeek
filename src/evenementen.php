@@ -3,16 +3,13 @@ include_once('parser/CRUD/evenementenDB.php');
 
 
 if(isset($_GET['filter'])&&isset($_GET['sort'])){
-  echo "filter en sort";
   if(!isset($_GET['sortdirection'])){
     $_GET['sortdirection'] = "DESC";
   }
   $evenementen = evenementenDB::getEventBy($_GET['filter'], $_GET['filterdata'], $_GET['sort'], $_GET['sortdirection']);
 }elseif(isset($_GET['filter'])&&!isset($_GET['sort'])){
-  echo "filter zonder sort";
   $evenementen = evenementenDB::getEventBy($_GET['filter'], $_GET['filterdata'], null, null);
 }elseif(!isset($_GET['filter'])&&isset($_GET['sort'])){
-  echo "sort zonder filter";
   if(!isset($_GET['sortdirection'])){
     $_GET['sortdirection'] = "DESC";
   }
@@ -116,12 +113,11 @@ if(isset($_GET['filter'])&&isset($_GET['sort'])){
           foreach($evenementen as $evenement){
           ?>
           <div class="card col-sm-12 col-md-6">
-            <img src="data/images/evenementen/<?php echo $evenement->foto(); ?>">
+            <div class="photo-container" style="background-image: url('data/images/evenementen/<?php echo $evenement->foto(); ?>');"></div>
             <div class="textbubblecontainer">
               <span class="language">nl:</span>
               <img src="images/icons/speechbubblefull.svg" alt="">
               <img src="images/icons/speechbubblefull.svg" alt="">
-              <img src="images/icons/speechbubbleempty.svg" alt="">
               <img src="images/icons/speechbubbleempty.svg" alt="">
               <img src="images/icons/speechbubbleempty.svg" alt="">
             </div>

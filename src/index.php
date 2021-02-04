@@ -47,7 +47,7 @@
       <a href=evenementen.php>
         <div class="photo-square kinderen">
           <img src="./images/illustraties/kleuters.svg">
-          <h1>Gezinnen met kleuters</h1>
+          <!-- <h1>Gezinnen met kleuters</h1> -->
         </div>
       </a>
       </div>
@@ -55,7 +55,7 @@
       <a href=evenementen.php>
         <div class="photo-square ouders">
           <img src="./images/illustraties/tieners.svg">
-          <h1>Gezinnen met tieners</h1>
+          <!-- <h1>Gezinnen met tieners</h1> -->
         </div>
       </a>
       </div>
@@ -63,7 +63,7 @@
       <a href=evenementen.php>
         <div class="photo-square gezin">
           <img src="./images/illustraties/alle-leeftijden.svg">
-          <h1>Gezinnen van alle leeftijden</h1>
+          <!-- <h1>Gezinnen van alle leeftijden</h1> -->
         </div>
       </a>
       </div>
