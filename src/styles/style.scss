@@ -74,7 +74,6 @@ nav {
     margin: 0;
   }
 
-
   ul {
     list-style: none !important;
     display: flex;
@@ -88,7 +87,6 @@ nav {
   li {
     white-space: nowrap;
   }
-
 }
 
 
@@ -775,10 +773,10 @@ a {
 /* Contact css */
 /* ----------------------- */
 
-.contactimage {
-  margin: 7em 0;
-  width: 80%;
-  height: auto;
+#contactanim {
+  position: relative;
+  top: 100px;
+  width: 70%;
 }
 
 #directbericht {
@@ -1203,6 +1201,7 @@ form {
 
   #contactanim {
     margin: 0 auto;
+    top: 0px;
     width: 50vw;
   }
 }

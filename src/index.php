@@ -55,16 +55,14 @@
       <a href="evenementen.php?filter=type&filterdata=jongeren">
         <div class="photo-square ouders">
           <img src="./images/illustraties/tieners.svg">
-          <h1>Gezinnen met tieners</h1>
+          <h1>Gezinnen met kinderen</h1>
         </div>
       </a>
       </div>
       <div class="col-sm-4">
       <a href="evenementen.php">
+      <a href="http://127.0.0.1:8100/evenementen.php?filter=type&filterdata=jongeren">
         <div class="photo-square gezin">
-          <img src="./images/illustraties/alle-leeftijden.svg">
-          <h1>Gezinnen van alle leeftijden</h1>
-        </div>
       </a>
       </div>
     </div>
