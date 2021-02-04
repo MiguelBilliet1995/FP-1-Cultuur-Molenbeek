@@ -116,10 +116,9 @@ if(isset($_GET['filter'])&&isset($_GET['sort'])){
           foreach($evenementen as $evenement){
           ?>
           <div class="card col-sm-12 col-md-6">
-            <img src="data/images/evenementen/<?php echo $evenement->foto(); ?>">
+            <div class="eventphoto"><img src="data/images/evenementen/<?php echo $evenement->foto(); ?>"></div>
             <div class="textbubblecontainer">
-              <span class="language">nl:</span>
-              <img src="images/icons/speechbubblefull.svg" alt="">
+              <img src="images/icons/speechbubblefullnl.svg" alt="">
               <img src="images/icons/speechbubblefull.svg" alt="">
               <img src="images/icons/speechbubbleempty.svg" alt="">
               <img src="images/icons/speechbubbleempty.svg" alt="">

@@ -484,6 +484,11 @@ footer ul li a {
   margin-bottom: 1rem;
 }
 
+.eventphoto {
+  max-height: 270px;
+  overflow: hidden;
+}
+
 .eventinfo {
   display: block;
   margin-top: 1rem;
