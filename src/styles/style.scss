@@ -35,7 +35,7 @@ h3 {
   z-index: -999;
   transform: translate(50%, 50%);
 
-  width: 60%;
+  width: 80%;
 }
 
 /* newspage */
@@ -75,7 +75,6 @@ nav {
     margin: 0;
   }
 
-
   ul {
     list-style: none !important;
     display: flex;
@@ -89,7 +88,6 @@ nav {
   li {
     white-space: nowrap;
   }
-
 }
 
 
@@ -478,6 +476,11 @@ footer ul {
   margin-bottom: 1rem;
 }
 
+.eventphoto {
+  max-height: 270px;
+  overflow: hidden;
+}
+
 .eventinfo {
   display: block;
   margin-top: 1rem;
@@ -770,10 +773,10 @@ a {
 /* Contact css */
 /* ----------------------- */
 
-.contactimage {
-  margin: 7em 0;
-  width: 80%;
-  height: auto;
+#contactanim {
+  position: relative;
+  top: 100px;
+  width: 70%;
 }
 
 #directbericht {
@@ -1198,6 +1201,7 @@ form {
 
   #contactanim {
     margin: 0 auto;
+    top: 0px;
     width: 50vw;
   }
 }

@@ -97,10 +97,13 @@ body {
 .item .event-bottom table {
   width: 100%;
   font-size: 12px;
+  /*tbody{
+
+      }*/
 }
 
-.item .event-bottom table td {
-  padding: 5px 0px;
+.item .event-bottom table thead {
+  font-weight: bold;
 }
 
 .item .event-bottom label {

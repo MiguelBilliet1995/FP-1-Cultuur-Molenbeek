@@ -54,15 +54,19 @@ if(isset($_POST['confirm-contact'])){
       $mail->SMTPSecure = 'tls'; 
       $mail->Port = '587';
       $mail->setFrom('nest-molenbeek@bojraad.be', 'Nest molenbeek');
-      $mail->addAddress($email);
+      $mail->addAddress('migbil25@gmail.com');
       $mail->isHTML(true); 
-      $mail->Subject = "reservatiebevestiging:";
+      $mail->Subject = "Nieuw bericht vanuit contact pagina";
       $data = "
-        kaas
+        <b>Er is een nieuw contact bericht verstuurd vanuit de website</b><br/><br/>
+        <b>Naam: </b>".$_POST['name']."<br/>
+        <b>Email: </b>".$_POST['email']."<br/>
+        <b>Onderwerp: </b>".$_POST['subject']."<br/><br/>
+        <b>Bericht: </b>".$_POST['message']."
       ";
       $mail->Body = $data;
       $mail->send();
-      $status = [1, 'registratie succesvol verlopen'];
+      $status = [1, 'Bericht succesvol verzonden'];
     }catch(Exception $e){
       $status = [0, $e];
     }
