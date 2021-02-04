@@ -57,18 +57,22 @@
             <div class="event-top row" id="event-top-<?php echo $evenement->id(); ?>">
 
               <div class="col-sm-4">
+                <label for="event-naam-<?php echo $evenement->id(); ?>">Naam</label>
                 <input type="text" id="event-naam-<?php echo $evenement->id(); ?>" value="<?php echo $evenement->naam(); ?>">
               </div>
 
               <div class="col-sm-2">
+                <label for="event-prijs-<?php echo $evenement->id(); ?>">Prijs</label>
                 <input type="number" id="event-prijs-<?php echo $evenement->id(); ?>" value="<?php echo $evenement->prijs(); ?>">
               </div>
 
               <div class="col-sm-2">
+                <label for="event-datum-<?php echo $evenement->id(); ?>">Datum</label>
                 <input type="date" id="event-datum-<?php echo $evenement->id(); ?>" value="<?php echo $evenement->datum(); ?>">
               </div>
 
               <div class="col-sm-2">
+                <label for="event-uur-<?php echo $evenement->id(); ?>">Begin uur</label>
                 <input type="time" id="event-uur-<?php echo $evenement->id(); ?>" value="<?php echo $evenement->uur(); ?>">
               </div>
 
@@ -87,10 +91,12 @@
 
               <div class="col-sm-4">
                 <div class="row">
+                  <label for="event-locatie-<?php echo $evenement->id(); ?>">Locatie</label>
                   <input type="text" id="event-locatie-<?php echo $evenement->id(); ?>" value="<?php echo $evenement->locatie(); ?>">
                 </div>
 
                 <div class="row">
+                  <label for="event-type-<?php echo $evenement->id(); ?>">Categorie</label>
                   <select id="event-type-<?php echo $evenement->id(); ?>" value="<?php echo $evenement->type(); ?>">
                     <option value="">Kies een type</option>
                     <?php
@@ -123,16 +129,18 @@
                 </div>
 
                 <div class="row">
+                  <label for="event-beschrijving-<?php echo $evenement->id(); ?>">Beschrijving</label>
                   <textarea id="event-beschrijving-<?php echo $evenement->id(); ?>"><?php echo $evenement->beschrijving(); ?></textarea>
                 </div>
 
                 <div class="row">
+                  <label for="event-taalniveau-<?php echo $evenement->id(); ?>">Taalniveau</label>
                   <select id="event-taalniveau-<?php echo $evenement->id(); ?>">
                       <option value="">Kies een taal niveau</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
+                      <option value="1" <?php if($evenement->taalNiveau()==1){?> selected="selected" <?php } ?>>1</option>
+                      <option value="2" <?php if($evenement->taalNiveau()==2){?> selected="selected" <?php } ?>>2</option>
+                      <option value="3" <?php if($evenement->taalNiveau()==3){?> selected="selected" <?php } ?>>3</option>
+                      <option value="4" <?php if($evenement->taalNiveau()==4){?> selected="selected" <?php } ?>>4</option>
                   </select>
                 </div>
                 
