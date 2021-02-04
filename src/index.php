@@ -70,9 +70,6 @@
     </div>
   </div>
   <?php include 'includes/footer.php'; ?>
-
-  <div id="wereldbol"></div>
-  <script src="scripts/wereldbol-anim.js"></script>
 </body>
 
 </html>

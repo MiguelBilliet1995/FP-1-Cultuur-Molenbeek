@@ -25,7 +25,7 @@ h3 {
   z-index: -999;
   -webkit-transform: translate(50%, 50%);
           transform: translate(50%, 50%);
-  width: 60%;
+  width: 80%;
 }
 
 /* newspage */
@@ -482,6 +482,11 @@ footer ul li a {
   padding-top: 0;
   margin-top: 0;
   margin-bottom: 1rem;
+}
+
+.eventphoto {
+  max-height: 270px;
+  overflow: hidden;
 }
 
 .eventinfo {

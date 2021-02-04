@@ -27,7 +27,7 @@
               <div class="col-sm-4">
                 <img src="data/images/news/<?php echo $newsartikel->foto(); ?>" alt="" class="articleimg">
               </div>
-              <div class="col-sm-8">
+              <div class="col-sm-5">
                 <h2 class="articletitle"><?php echo $newsartikel->naam(); ?></h2>
                 <p class="articledate"><?php echo $newsartikel->datum(); ?></p>
                 <p><?php echo $newsartikel->artikel(); ?></p>
@@ -40,6 +40,11 @@
   <?php include 'includes/footer.php'; ?>
   <script defer src="./scripts/all.js"></script>
   <script src="scripts/script.js"></script>
+  
+  <!-- wereldbol -->
+  <div id="wereldbol"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.0/lottie_html.js"></script>
+  <script src="scripts/wereldbol-anim.js"></script>
 </body>
 
 </html>
