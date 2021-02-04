@@ -146,7 +146,6 @@
                 
               </div>
               <div class="col-sm-4">
-
                 
 
                 <?php
@@ -158,7 +157,7 @@
                 <?php
                   }else{
                 ?>
-                  <label>Inschrijvingen</label>
+                  <label style="left:15px">Inschrijvingen</label>
                   <table>
                   <thead>
                     <tr>
@@ -188,7 +187,6 @@
                 <?php
                   }
                 ?>
-                
               </div>
 
             </div>

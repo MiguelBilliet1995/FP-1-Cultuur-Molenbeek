@@ -119,10 +119,24 @@ if(isset($_GET['filter'])&&isset($_GET['sort'])){
             <div class="eventphoto"><img src="data/images/evenementen/<?php echo $evenement->foto(); ?>"></div>
             <div class="textbubblecontainer">
               <img src="images/icons/speechbubblefullnl.svg" alt="">
-              <img src="images/icons/speechbubblefull.svg" alt="">
-              <img src="images/icons/speechbubbleempty.svg" alt="">
-              <img src="images/icons/speechbubbleempty.svg" alt="">
-              <img src="images/icons/speechbubbleempty.svg" alt="">
+
+              <?php
+                $maxAantalIconen = 4;
+                $totaalIconen = $evenement->taalNiveau();
+                $indexIconen = 0;
+                for ($indexIconen=0; $indexIconen < $totaalIconen; $indexIconen++) { 
+              ?>
+                <img src="images/icons/speechbubblefull.svg" alt="">
+              <?php
+                }
+
+                for (null; $indexIconen < $maxAantalIconen; $indexIconen++) { 
+              ?>
+                <img src="images/icons/speechbubbleempty.svg" alt="">
+              <?php
+                }
+              ?>
+              
             </div>
             <div class="info">
               <div class="titleDate">
