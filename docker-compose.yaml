@@ -13,7 +13,7 @@ services:
       MYSQL_USER: 'app_client'
       MYSQL_PASSWORD: 'wJkEq3ejztAGp4DY'
     ports:
-      - 3306:3306
+      - 3305:3305
   php:
     build:
       context: .

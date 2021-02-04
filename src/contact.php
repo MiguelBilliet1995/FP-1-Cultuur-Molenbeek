@@ -31,7 +31,7 @@
           <br>
           <p id="directbericht">Direct bericht</p>
 
-          <form class="contact-form" action="contactform.php" method="post">
+          <form class="contact-form" action="emailsent.php?url=contact" method="post">
             <fieldset class="textinput">
               <input id="contact-name" type="text" name="name" placeholder="Naam">
             </fieldset>
@@ -43,7 +43,7 @@
             </fieldset>
             <textarea name="message" placeholder="Bericht"></textarea>
 
-            <input id="contact-submit" value="Ok" type="submit" name="Versturen" class="button button-next">
+            <input id="contact-submit" value="Ok" type="submit" name="confirm-contact" class="button button-next">
           </form>
         </div>
       </div>
