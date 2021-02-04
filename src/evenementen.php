@@ -79,9 +79,9 @@ if(isset($_GET['filter'])&&isset($_GET['sort'])){
             <label for="filter-options">Leeftijdscategorie:</label>
             <select name="family-size-filter" class="filter-listener" id="filter-options">
               <option disabled selected value="">filter op...</option>
-              <option value="kleuters">geinnen met kleuters</option>
-              <option value="kinderen">geinnen met kinderen</option>
-              <option value="jongeren">geinnen met jongeren</option>
+              <option value="kleuters">gezinnen met kleuters</option>
+              <option value="kinderen">gezinnen met kinderen</option>
+              <option value="jongeren">gezinnen met jongeren</option>
             </select>
           </section>
           <section class="filter-list col-sm-6 col-xl-12">

@@ -77,6 +77,12 @@ if(isset($_POST['confirm-contact'])){
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+<div class="sent-container">
+    <div id="mail-sent"></div> <!-- animatie zelf -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.0/lottie_html.js"></script> <!-- animatie script downloaden -->
+        <script src="scripts/mail-sent-anim.js"></script> <!-- parameters animatie aanpassen: mail-sent-anim.js -->
+  <div class="email-sent-text">
+
   <?php
   
   if($status[0]== 1){
@@ -113,5 +119,7 @@ if(isset($_POST['confirm-contact'])){
     }
   }
   ?>
+  </div>
+</div>
 </body>
 </html>

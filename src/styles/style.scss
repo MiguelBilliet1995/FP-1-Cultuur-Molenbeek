@@ -30,9 +30,10 @@ h3 {
 
 #wereldbol {
   position: fixed;
-  bottom: -250px;
-  right: -495px;
+  bottom: 0px;
+  right: 0px;
   z-index: -999;
+  transform: translate(50%, 50%);
 
   width: 60%;
 }
@@ -82,6 +83,10 @@ nav {
     flex-grow: 1;
     flex-shrink: 1;
     margin: 0;
+  }
+
+  li {
+    white-space: nowrap;
   }
 
 }
@@ -210,15 +215,14 @@ nav li {
   }
 
   .dropup-content {
-    padding-left: 0;
     display: none;
     position: absolute;
     background-color: #f1f1f100;
     z-index: 1;
 
-    padding: 0;
     margin: 0;
-    margin-left: -15.5rem;
+    margin-left: 25rem;
+    margin-bottom: -1rem;
   }
 
 
@@ -238,8 +242,21 @@ nav li {
     display: inline;
   }
 
-  .dropup:hover .dropbtn {
+  .dropup:checked .dropbtn {
     background-color: $base-color;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .dropup-content {
+    margin-left: 15rem;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .dropup-content {
+    margin-left: 10rem;
+    margin-bottom: -10rem;
   }
 }
 
@@ -690,7 +707,7 @@ p {
 
 
 .about {
-  margin-top: 5rem;
+  margin-top: 2rem;
 
   h1 {
     font-family: pt-sans-pro, sans-serif;
@@ -704,15 +721,19 @@ p {
 
 .about,
 .index {
-  margin: 25vh 0;
+  margin: 10vh 0;
 
   h1 {
     font-family: pt-sans-pro, sans-serif;
     font-weight: 900;
     font-size: 4em;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
     white-space: normal;
   }
+}
+
+#abouttext {
+  margin-top: 15vh;
 }
 
 .column-2 {
@@ -748,6 +769,7 @@ a {
 /* ----------------------- */
 /* Contact css */
 /* ----------------------- */
+
 .contactimage {
   margin: 7em 0;
   width: 80%;
@@ -855,6 +877,14 @@ form {
   position: relative;
   width: 150%;
   z-index: -500;
+}
+
+/* ----------------------- */
+/* mail-sent */
+/* ----------------------- */
+
+#mail-sent {
+  width: 10%;
 }
 
 /* ----------------------- */
@@ -1157,10 +1187,6 @@ form {
 //   }
 // }
 
-
-
-
-
 /*      Filter css      */
 
 .form-title {
@@ -1168,8 +1194,44 @@ form {
   margin: 2rem 0 1rem 0;
 }
 
+@media only screen and (min-width: 0px) and (max-width: 576px) {
+
+  #contactanim {
+    margin: 0 auto;
+    width: 50vw;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 992px) {
+  #wereldbol {
+    display: none;
+  }
+
+  .photo-square {
+    font-size: 0.8em;
+    height: 70%;
+  }
+
+  .photo-square>img {
+    width: 100px;
+  }
+}
 
 @media only screen and (min-width: 0px) and (max-width: 767px) {
+  #bm {
+    width: 100%;
+  }
+
+  .footer-navigation {
+    padding-bottom: 30px;
+    border-bottom: 1px white solid;
+  }
+
+  #contactinfo {
+    padding-bottom: 30px;
+    border-bottom: 1px white solid;
+  }
+
   .footer-column {
     margin-bottom: 2em;
   }

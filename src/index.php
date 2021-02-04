@@ -26,8 +26,8 @@
       </div>
       <div class="col align-center">
         <span>
-          <h1>Alles is leuker met de familie.</h1>
-          <p>Er is niets beter dan met de familie samen zijn. Wij bij familie Molenbeek geven inwoners van Molenbeek
+          <h1 id="homepageslogan">Alles is leuker met familie!</h1>
+          <p>Er is niets beter dan met familie samen zijn. Wij bij Molenbeek Nest geven inwoners van Molenbeek
             de kans om elke week samen met de familie deel te nemen aan onze activiteiten. Dit is de perfecte manier
             voor nieuwe inwoners om de stad te leren kennen en nieuwe vrienden te maken. </p>
           <a href="evenementen.php">

@@ -13,6 +13,7 @@
         </div>
 
         <div class="col-sm-12 col-md-6 col-lg-4 footer-column">
+          <div id="contactinfo">
           <span><b>Contactinfo</b><br />
             info@familiemolenbeek.be<br />
             +32 468 10 99 14 <br>
@@ -23,6 +24,7 @@
                   src="images/icons/facebook-brands.svg" alt=""></a>
             </div>
           </span>
+          </div>
         </div>
 
         <div class="col-sm-12 col-md-12 col-lg-4 footer-column">
