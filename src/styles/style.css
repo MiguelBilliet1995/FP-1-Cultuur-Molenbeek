@@ -894,6 +894,13 @@ form fieldset #contact-submit {
 }
 
 /* ----------------------- */
+/* mail-sent */
+/* ----------------------- */
+#mail-sent {
+  width: 10%;
+}
+
+/* ----------------------- */
 /* Homepage css */
 /* ----------------------- */
 .photo-square {
