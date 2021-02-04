@@ -44,7 +44,7 @@
 
     <div class="row">
       <div class="col-sm-4">
-      <a href=evenementen.php>
+      <a href="http://127.0.0.1:8100/evenementen.php?filter=type&filterdata=kleuters">
         <div class="photo-square kinderen">
           <img src="./images/illustraties/kleuters.svg">
           <h1>Gezinnen met kleuters</h1>
@@ -52,18 +52,18 @@
       </a>
       </div>
       <div class="col-sm-4">
-      <a href=evenementen.php>
+      <a href="http://127.0.0.1:8100/evenementen.php?filter=type&filterdata=kinderen">
         <div class="photo-square ouders">
           <img src="./images/illustraties/tieners.svg">
-          <h1>Gezinnen met tieners</h1>
+          <h1>Gezinnen met kinderen</h1>
         </div>
       </a>
       </div>
       <div class="col-sm-4">
-      <a href=evenementen.php>
+      <a href="http://127.0.0.1:8100/evenementen.php?filter=type&filterdata=jongeren">
         <div class="photo-square gezin">
           <img src="./images/illustraties/alle-leeftijden.svg">
-          <h1>Gezinnen van alle leeftijden</h1>
+          <h1>Gezinnen met jongeren</h1>
         </div>
       </a>
       </div>

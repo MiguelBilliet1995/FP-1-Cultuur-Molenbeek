@@ -786,10 +786,10 @@ a {
 /* ----------------------- */
 /* Contact css */
 /* ----------------------- */
-.contactimage {
-  margin: 7em 0;
-  width: 80%;
-  height: auto;
+#contactanim {
+  position: relative;
+  top: 100px;
+  width: 70%;
 }
 
 #directbericht {
@@ -1071,6 +1071,7 @@ form fieldset #contact-submit {
 @media only screen and (min-width: 0px) and (max-width: 576px) {
   #contactanim {
     margin: 0 auto;
+    top: 0px;
     width: 50vw;
   }
 }
