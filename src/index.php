@@ -61,7 +61,7 @@
       </div>
       <div class="col-sm-4">
       <a href="evenementen.php">
-      <a href="http://127.0.0.1:8100/evenementen.php?filter=type&filterdata=jongeren">
+      <a href="evenementen.php?filter=type&filterdata=jongeren">
         <div class="photo-square gezin">
       </a>
       </div>
