@@ -9,8 +9,9 @@ class evenementen{
     private $beschrijving;
     private $foto;
     private $type;
+    private $taalNiveau;
 
-    public function __construct($id, $naam, $prijs, $datum, $uur, $locatie, $beschrijving, $foto, $type){
+    public function __construct($id, $naam, $prijs, $datum, $uur, $locatie, $beschrijving, $foto, $type, $taalNiveau){
         $this->id = $id;
         $this->naam = $naam;
         $this->prijs = $prijs;
@@ -20,6 +21,7 @@ class evenementen{
         $this->beschrijving = $beschrijving;
         $this->foto = $foto;
         $this->type = $type;
+        $this->taalNiveau = $taalNiveau;
     }
 
     public function id(){
@@ -56,6 +58,10 @@ class evenementen{
 
     public function type(){
         return $this->type;
+    }
+
+    public function taalNiveau(){
+        return $this->taalNiveau;
     }
 }
 ?>
