@@ -60,8 +60,7 @@ nav .navigation-container {
   -webkit-box-align: end !important;
       -ms-flex-align: end !important;
           align-items: flex-end !important;
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
+  padding: 1.5rem 0;
 }
 
 nav .logo {
@@ -221,9 +220,9 @@ nav li .active#contact::after {
     position: absolute;
     background-color: #f1f1f100;
     z-index: 1;
-    padding: 0;
     margin: 0;
-    margin-left: -15.5rem;
+    margin-left: 25rem;
+    margin-bottom: -1rem;
   }
   .dropup-content li {
     list-style: none;
@@ -238,8 +237,21 @@ nav li .active#contact::after {
   .dropup:hover .dropup-content {
     display: inline;
   }
-  .dropup:hover .dropbtn {
+  .dropup:checked .dropbtn {
     background-color: #FFB035;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .dropup-content {
+    margin-left: 15rem;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .dropup-content {
+    margin-left: 10rem;
+    margin-bottom: -10rem;
   }
 }
 
@@ -347,16 +359,47 @@ footer ul li a {
 .info {
   position: relative;
   font-size: 15px;
-  margin-top: -.5rem;
+  margin-top: -.7rem;
 }
 
 .info p {
   margin: 1rem 0;
 }
 
+.layout-btn {
+  margin: 0 !important;
+  padding: 0 0 1rem 0;
+}
+
+.event-layout-btn {
+  border: none;
+  background-color: transparent;
+  width: 40px !important;
+  height: 40px;
+  background-size: cover;
+  background-position: center;
+}
+
+.event-layout-btn:focus {
+  outline: none;
+}
+
+.box-layout-btn {
+  background-image: url(../images/icons/evenementen/box-layout-btn.svg);
+}
+
+.box-layout-btn.active {
+  background-image: url(../images/icons/evenementen/box-layout-btn-selected.svg);
+}
+
+.row-layout-btn {
+  background-image: url(../images/icons/evenementen/row-layout-btn.svg);
+  margin-left: .5rem;
+}
+
 .filterlist {
   background-color: #FFB035;
-  margin: 0 0 2em 0 !important;
+  margin: 0 0 3em 0 !important;
   padding: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -383,20 +426,28 @@ footer ul li a {
 }
 
 .textbubblecontainer {
-  margin-top: -1.5rem;
+  margin-top: -1rem;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .textbubblecontainer img {
-  width: 50px !important;
-  float: right;
+  width: 35px !important;
 }
 
 .textbubblecontainer span {
-  color: white;
-  position: absolute;
+  color: #FFB035;
   right: 20px;
   top: 5px;
+  font-size: 1em;
 }
 
 .datum {
@@ -665,7 +716,7 @@ p {
 /* ----------------------- */
 .about,
 .index {
-  margin: 7rem 0;
+  margin: 25vh 0;
 }
 
 .about h1,
@@ -752,17 +803,6 @@ form {
           justify-content: space-between;
   height: 100%;
   margin-top: 30px;
-}
-
-form input[type="text"],
-form input[type="email"] {
-  width: 25%;
-  min-width: 120px;
-}
-
-form #onderwerp {
-  width: 50%;
-  min-width: 120px;
 }
 
 form textarea {
@@ -910,8 +950,29 @@ form fieldset #contact-submit {
 /*
     RESERVATIE 
                 */
+.return-btn {
+  font-size: 1.2rem;
+  position: relative;
+  padding-left: 3rem;
+}
+
+.return-btn::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-image: url(images/icons/chevron-right-solid-black.svg);
+  background-position: center;
+  position: absolute;
+  left: 0;
+}
+
 .event-id-info h2 {
-  font-size: 3em;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.event-id-info h2 span {
+  color: #FFB035;
 }
 
 .event-id-info p {
@@ -948,8 +1009,39 @@ form fieldset #contact-submit {
 }
 
 .inschrijven input {
-  width: 60%;
+  border: none;
+  border-bottom: 2px #000000 solid;
+  width: 100% !important;
   margin-top: 2em;
+}
+
+.inschrijven input[type="submit"] {
+  padding: .5rem 2rem;
+  border: none;
+  width: -webkit-max-content !important;
+  width: -moz-max-content !important;
+  width: max-content !important;
+  background-color: #FFB035;
+  color: white;
+}
+
+.inschrijven .participants-container {
+  margin-top: 2rem;
+}
+
+.inschrijven .label-input-duo {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.inschrijven .label-input-duo label {
+  font-size: 1.2rem;
+  color: #FFB035;
 }
 
 /*      Filter css      */

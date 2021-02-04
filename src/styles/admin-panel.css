@@ -25,6 +25,12 @@ body {
   padding: 10px 0px;
 }
 
+.item .event-top label, .item .event-bottom label {
+  position: absolute;
+  font-size: 12px;
+  font-weight: bold;
+}
+
 .item .event-top div, .item .event-bottom div {
   position: relative;
 }
@@ -75,6 +81,8 @@ body {
   display: none;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  padding-top: 35px;
+  margin-bottom: 50px;
 }
 
 .item .event-bottom img {
@@ -82,11 +90,37 @@ body {
   height: auto;
 }
 
+.item .event-bottom input, .item .event-bottom select, .item .event-bottom textarea {
+  margin-bottom: 50px;
+}
+
+.item .event-bottom table {
+  width: 100%;
+  font-size: 12px;
+}
+
+.item .event-bottom table td {
+  padding: 5px 0px;
+}
+
+.item .event-bottom label {
+  top: -25px;
+  left: -10px;
+}
+
 .item .event-top {
-  margin-top: 20px;
+  margin-top: 30px;
   border: 1px solid rgba(0, 0, 0, 0);
   border-radius: 3px;
   background-color: white;
+}
+
+.item .event-top label {
+  margin-bottom: 5px;
+  top: -28px;
+  left: 6px;
+  background-color: white;
+  padding: 5px 10px;
 }
 
 .item .event-top.active {

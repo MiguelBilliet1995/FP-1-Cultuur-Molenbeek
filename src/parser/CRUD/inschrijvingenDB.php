@@ -47,6 +47,12 @@ class inschrijvingenDB{
     }
   }
 
+  public static function addInschrijving($evenementId, $voornaam, $naam, $email, $aantal_1, $aantal_2, $aantal_3, $aantal_4){
+    $resultaat = self::getVerbinding()->voerSqlQueryUit("INSERT INTO inschrijvingen (evenement_id, voornaam, naam, email, aantal_1, aantal_2, aantal_3, aantal_4) VALUES ('?','?','?','?','?','?','?','?')",array($evenementId, $voornaam, $naam, $email, $aantal_1, $aantal_2, $aantal_3, $aantal_4));
+    if($resultaat){
+      return true;
+    }
+  }
 
   public static function converteerRijNaarObject($databaseRij){
     return new inschrijvingen($databaseRij['id'], $databaseRij['evenement_id'], $databaseRij['voornaam'], $databaseRij['naam'], $databaseRij['email'], $databaseRij['aantal_1'], $databaseRij['aantal_2'], $databaseRij['aantal_3'], $databaseRij['aantal_4']);

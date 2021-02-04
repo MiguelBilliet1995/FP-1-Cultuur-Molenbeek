@@ -46,13 +46,13 @@ if(isset($_GET['filter'])&&isset($_GET['sort'])){
     <div class="row">
       <div class="cal-container col-sm-12 col-md-12 col-lg-12 col-xl-4">
         <div class="calendar">
-          <p id="selected-date">29 januari 2021<p>
+          <p id="selected-date">5 februari 2021<p>
           <div class="month">
             <p style="display: none;"></p>
             <div class="month-slider">
               <p class="prev">&#8249;</p>
               <div class="date">
-                <p>Januari</p>
+                <p>februari</p>
               </div>
               <p class="next">&#8250;</p>
             </div>
@@ -61,13 +61,13 @@ if(isset($_GET['filter'])&&isset($_GET['sort'])){
           <table class="table table-responsive-sm" id="calendar">
             <thead class="weekdays">
               <tr>
-                <th>Zon</th>
                 <th>Ma</th>
                 <th>Di</th>
                 <th>Woe</th>
                 <th>Don</th>
                 <th>Vrij</th>
                 <th>Zat</th>
+                <th>Zon</th>
               </tr>
             </thead>
             <tbody id="calendar-body" class="days"></tbody>
@@ -79,9 +79,9 @@ if(isset($_GET['filter'])&&isset($_GET['sort'])){
             <label for="filter-options">Leeftijdscategorie:</label>
             <select name="family-size-filter" class="filter-listener" id="filter-options">
               <option disabled selected value="">filter op...</option>
-              <option value="kleuters">geinnen met kleuters</option>
-              <option value="kinderen">geinnen met kinderen</option>
-              <option value="jongeren">geinnen met jongeren</option>
+              <option value="kleuters">gezinnen met kleuters</option>
+              <option value="kinderen">gezinnen met kinderen</option>
+              <option value="jongeren">gezinnen met jongeren</option>
             </select>
           </section>
           <section class="filter-list col-sm-6 col-xl-12">
@@ -104,6 +104,10 @@ if(isset($_GET['filter'])&&isset($_GET['sort'])){
           <span class="filteritem">Voor gezinnen met kleuters</span>
           <span class="filteritem">Alle dagen</span>
         </div>
+        <!-- <div class="row layout-btn">
+          <button class="active box-layout-btn event-layout-btn" onclick="changeEventLayoutBox()"></button>
+          <button class="row-layout-btn event-layout-btn" onclick="changeEventLayoutRow()"></button>
+        </div> -->
         <div class="row">
           <?php
           if(!$evenementen&&!$_GET["filter"]){
@@ -114,8 +118,12 @@ if(isset($_GET['filter'])&&isset($_GET['sort'])){
           <div class="card col-sm-12 col-md-6">
             <img src="data/images/evenementen/<?php echo $evenement->foto(); ?>">
             <div class="textbubblecontainer">
+              <span class="language">nl:</span>
               <img src="images/icons/speechbubblefull.svg" alt="">
-              <span class="language">nl</span>
+              <img src="images/icons/speechbubblefull.svg" alt="">
+              <img src="images/icons/speechbubbleempty.svg" alt="">
+              <img src="images/icons/speechbubbleempty.svg" alt="">
+              <img src="images/icons/speechbubbleempty.svg" alt="">
             </div>
             <div class="info">
               <div class="titleDate">
@@ -125,8 +133,7 @@ if(isset($_GET['filter'])&&isset($_GET['sort'])){
               <span class="eventinfo"><img src="images/icons/locationicon.svg" alt=""><?php echo $evenement->locatie() ?></span>
               <span class="eventinfo"><img src="images/icons/clock-icon.svg" alt=""><?php echo $evenement->uur() ?></span>
               <p class="description"><?php echo $evenement->beschrijving() ?></p>
-              <!-- <a href="reserveren.php?id=<?php echo $evenement->id() ?>"> -->
-              <a href="reserveren.php">
+              <a href="reserveren.php?id=<?php echo $evenement->id() ?>">
                 <div class="button-container">
                   <div class="button button-next">
                     <p> Schrijf je nu in!</p>
@@ -145,7 +152,6 @@ if(isset($_GET['filter'])&&isset($_GET['sort'])){
   </div>
   <?php include 'includes/footer.php'; ?>
   <script src="scripts/fetch-content.js"></script>
-  <script src="scripts/jquery-3.5.1.min.js"></script>
   <script src="scripts/sort.js"></script>
 </body>
 
