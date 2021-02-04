@@ -363,11 +363,11 @@ footer ul {
 }
 
 .layout-btn {
-  margin: 0!important;
+  margin: 0 !important;
   padding: 0 0 1rem 0;
 }
 
-.event-layout-btn{
+.event-layout-btn {
   border: none;
   background-color: transparent;
   width: 40px !important;
@@ -375,19 +375,20 @@ footer ul {
   background-size: cover;
   background-position: center;
 }
-.event-layout-btn:focus{
+
+.event-layout-btn:focus {
   outline: none;
 }
 
-.box-layout-btn{
+.box-layout-btn {
   background-image: url(../images/icons/evenementen/box-layout-btn.svg);
 }
 
-.box-layout-btn.active{
+.box-layout-btn.active {
   background-image: url(../images/icons/evenementen/box-layout-btn-selected.svg);
 }
 
-.row-layout-btn{
+.row-layout-btn {
   background-image: url(../images/icons/evenementen/row-layout-btn.svg);
   margin-left: .5rem;
 }
@@ -919,10 +920,12 @@ form {
   position: absolute;
   left: 0;
 }
+
 .event-id-info {
-  h2{
+  h2 {
     font-size: 2em;
     margin-bottom: 1em;
+
     span {
       color: $base-color;
     }
@@ -937,6 +940,7 @@ form {
   padding: 0;
   margin: 0;
   margin-top: 2rem;
+
   li {
     width: 100%;
     display: flex;
@@ -944,6 +948,7 @@ form {
     align-items: flex-end;
     line-height: 2.5rem;
   }
+
   .beschrijving {
     font-size: 1.5em;
     color: $base-color;
@@ -952,6 +957,7 @@ form {
 
 .inschrijven {
   display: block;
+
   input {
     border: none;
     border-bottom: 2px $dark-color solid;
@@ -967,6 +973,7 @@ form {
     color: white;
 
   }
+
   .participants-container {
     margin-top: 2rem;
   }
@@ -975,6 +982,7 @@ form {
     margin-top: 1rem;
     display: flex;
     justify-content: space-between;
+
     label {
       font-size: 1.2rem;
       color: $base-color;
@@ -985,7 +993,7 @@ form {
 
 
 
-                
+
 
 // .reservatie-main {
 //   max-width: 82.5rem;
