@@ -158,7 +158,17 @@
                 <?php
                   }else{
                 ?>
+                  <label>Inschrijvingen</label>
                   <table>
+                  <thead>
+                    <tr>
+                      <td>Naam</td>
+                      <td>Email</td>
+                      <td>Aantal personen</td>
+                      <td></td>
+                    </tr>
+                  </thead>
+                  <tbody>
                 <?php
                     foreach($inschrijvingen as $inschrijving){
                       ?>
@@ -167,12 +177,13 @@
                           <td><?php echo $inschrijving->email(); ?></td>
                           <td><?php echo ($inschrijving->aantal_1() + $inschrijving->aantal_2() + $inschrijving->aantal_3() + $inschrijving->aantal_4()) ?></td>
                           <td>
-                            <span class="button button-delete" id="inschrijving-delete-<?php echo $inschrijving->id(); ?>"></span>
+                            <!--<span class="button button-delete" id="inschrijving-delete-<?php echo $inschrijving->id(); ?>"></span>-->
                           </td>
                         </tr>
                       <?php
                     }
                 ?>
+                  </tbody>
                   </table>
                 <?php
                   }

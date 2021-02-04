@@ -97,9 +97,14 @@ body{
       width: 100%;
       font-size: 12px;
 
-      td{
-        padding: 5px 0px;
+      thead{
+        font-weight: bold;
       }
+
+      tbody{
+
+      }
+
     }
 
     label{

@@ -13,12 +13,12 @@ services:
       MYSQL_USER: 'app_client'
       MYSQL_PASSWORD: 'wJkEq3ejztAGp4DY'
     ports:
-      - 3305:3305
+      - 3306:3306
   php:
     build:
       context: .
       dockerfile: Dockerfile
-    depends_on: 
+    depends_on:
       - sql_db
     ports:
       - 8100:80
