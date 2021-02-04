@@ -97,6 +97,9 @@ body {
 .item .event-bottom table {
   width: 100%;
   font-size: 12px;
+  /*tbody{
+
+      }*/
 }
 
 .item .event-bottom table thead {
