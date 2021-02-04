@@ -12,18 +12,18 @@ document.querySelector('.sort-listener').addEventListener('change', (e) => {
 });
 
 
-const rowBtn = document.getElementsByClassName('row-layout-btn');
-const boxBtn = document.getElementsByClassName('box-layout-btn');
-function changeEventLayoutBox() {
-    if(rowBtn.classlist.contains('active')){
-        rowBtn.classlist.remove('active');
-    }
-    boxBtn.classlist.add('active');
-}
+// const rowBtn = document.getElementsByClassName('row-layout-btn');
+// const boxBtn = document.getElementsByClassName('box-layout-btn');
+// function changeEventLayoutBox() {
+//     if(rowBtn.classlist.contains('active')){
+//         rowBtn.classlist.remove('active');
+//     }
+//     boxBtn.classlist.add('active');
+// }
 
-function changeEventLayoutRow() {
-    if(boxBtn.classlist.contains('active')){
-        boxBtn.classlist.remove('active');
-    }
-    rowBtn.classlist.add('active');
-}
+// function changeEventLayoutRow() {
+//     if(boxBtn.classlist.contains('active')){
+//         boxBtn.classlist.remove('active');
+//     }
+//     rowBtn.classlist.add('active');
+// }

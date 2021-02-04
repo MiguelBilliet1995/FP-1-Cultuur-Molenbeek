@@ -46,13 +46,13 @@ if(isset($_GET['filter'])&&isset($_GET['sort'])){
     <div class="row">
       <div class="cal-container col-sm-12 col-md-12 col-lg-12 col-xl-4">
         <div class="calendar">
-          <p id="selected-date">29 januari 2021<p>
+          <p id="selected-date">5 februari 2021<p>
           <div class="month">
             <p style="display: none;"></p>
             <div class="month-slider">
               <p class="prev">&#8249;</p>
               <div class="date">
-                <p>Januari</p>
+                <p>februari</p>
               </div>
               <p class="next">&#8250;</p>
             </div>
@@ -61,13 +61,13 @@ if(isset($_GET['filter'])&&isset($_GET['sort'])){
           <table class="table table-responsive-sm" id="calendar">
             <thead class="weekdays">
               <tr>
-                <th>Zon</th>
                 <th>Ma</th>
                 <th>Di</th>
                 <th>Woe</th>
                 <th>Don</th>
                 <th>Vrij</th>
                 <th>Zat</th>
+                <th>Zon</th>
               </tr>
             </thead>
             <tbody id="calendar-body" class="days"></tbody>
@@ -104,10 +104,10 @@ if(isset($_GET['filter'])&&isset($_GET['sort'])){
           <span class="filteritem">Voor gezinnen met kleuters</span>
           <span class="filteritem">Alle dagen</span>
         </div>
-        <div class="row layout-btn">
+        <!-- <div class="row layout-btn">
           <button class="active box-layout-btn event-layout-btn" onclick="changeEventLayoutBox()"></button>
           <button class="row-layout-btn event-layout-btn" onclick="changeEventLayoutRow()"></button>
-        </div>
+        </div> -->
         <div class="row">
           <?php
           if(!$evenementen&&!$_GET["filter"]){

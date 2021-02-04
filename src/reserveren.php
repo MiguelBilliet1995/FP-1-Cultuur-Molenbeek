@@ -1,47 +1,4 @@
-<?php
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-include_once('parser/CRUD/inschrijvingenDB.php');
-if(isset($_POST['confirm-reservatie'])){
-  $evenement_id = $_GET['id'];
-  $voornaam = $_POST['inschrijven-voornaam'];
-  $naam = $_POST['inschrijven-naam'];
-  $email = $_POST['inschrijven-email'];
-  $aantal_1 = $_POST['leeftijd-kind'];
-  $aantal_2 = $_POST['leeftijd-tiener'];
-  $aantal_3 = $_POST['leeftijd-volwassen'];
-  $aantal_4 = $_POST['leeftijd-bejaard'];
-  if(inschrijvingenDB::addinschrijving($evenement_id, $voornaam, $naam, $email, $aantal_1, $aantal_2, $aantal_3, $aantal_4)){
-    require 'parser/vendor/autoload.php';
-    $mail = new PHPMailer(true);
-    try{
-      $mail->SMTPDebug = 0; 
-      $mail->isSMTP(); 
-      $mail->Host = 'sent.one.com';
-      $mail->SMTPAuth = true; 
-      $mail->Username = 'nest-molenbeek@bojraad.be'; 
-      $mail->Password = 'wJkEq3ejztAGp4DY'; 
-      $mail->SMTPSecure = 'tls'; 
-      $mail->Port = '587';
-      $mail->setFrom('reservatie@nestmolenbeek.be', 'Nest molenbeek');
-      $mail->addAddress($email);
-      $mail->isHTML(true); 
-      $mail->Subject = "reservatiebevestiging:";
-      $data = "
-        kaas
-      ";
-      $mail->Body = $data;
-      $mail->send();
-      return true;
-    }catch(Exception $e){
-      return $e;
-    }
-  } else {
-    echo 'help';
-  }
-  
-  }
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -104,7 +61,7 @@ if(isset($_POST['confirm-reservatie'])){
           </ul>
         </div>
           <div class="col-sm-12 col-lg-6">
-            <form action="" method='POST' class="inschrijven">
+            <form action="emailsent.php?id=<?php echo $_GET['id']; ?>&url=reserveren" method='POST' class="inschrijven">
               <input type="text" name="inschrijven-voornaam" id="inschrijven-voornaam" placeholder="Voornaam">
               <input type="text" name="inschrijven-naam" id="inschrijven-naam" placeholder="Naam">
               <input type="email" name="inschrijven-email" id="inschrijven-email" placeholder="e-mail">
