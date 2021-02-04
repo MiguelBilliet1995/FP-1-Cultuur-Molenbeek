@@ -105,8 +105,8 @@ if(isset($_GET['filter'])&&isset($_GET['sort'])){
           <span class="filteritem">Alle dagen</span>
         </div>
         <div class="row layout-btn">
-          <button class="active box-layout-btn event-layout-btn" onclick="#"></button>
-          <button class="row-layout-btn event-layout-btn" onclick="#"></button>
+          <button class="active box-layout-btn event-layout-btn" onclick="changeEventLayoutBox()"></button>
+          <button class="row-layout-btn event-layout-btn" onclick="changeEventLayoutRow()"></button>
         </div>
         <div class="row">
           <?php
@@ -152,7 +152,6 @@ if(isset($_GET['filter'])&&isset($_GET['sort'])){
   </div>
   <?php include 'includes/footer.php'; ?>
   <script src="scripts/fetch-content.js"></script>
-  <script src="scripts/jquery-3.5.1.min.js"></script>
   <script src="scripts/sort.js"></script>
 </body>
 
