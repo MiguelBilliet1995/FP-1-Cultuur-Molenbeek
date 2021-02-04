@@ -25,7 +25,7 @@
       </div>
       <div class="col-sm-8 align-top">
         <div id="abouttext">
-        <h1>Wij zijn familie Molenbeek.</h1>
+        <h1>Wij zijn Nest Molenbeek.</h1>
         <span class="column-2">
           <p>Nest Molenbeek is een organisatorische samenwerking tussen Cultuur in Molenbeek, GC De Vaartkapoen en de Bib.
             Wij steken de handen in elkaar omeen grootschalig aanboda ctiviteiten aan te bieden voor zowel kinderen als
