@@ -104,6 +104,10 @@ if(isset($_GET['filter'])&&isset($_GET['sort'])){
           <span class="filteritem">Voor gezinnen met kleuters</span>
           <span class="filteritem">Alle dagen</span>
         </div>
+        <div class="row layout-btn">
+          <button class="active box-layout-btn event-layout-btn" onclick="#"></button>
+          <button class="row-layout-btn event-layout-btn" onclick="#"></button>
+        </div>
         <div class="row">
           <?php
           if(!$evenementen&&!$_GET["filter"]){
@@ -114,8 +118,12 @@ if(isset($_GET['filter'])&&isset($_GET['sort'])){
           <div class="card col-sm-12 col-md-6">
             <img src="data/images/evenementen/<?php echo $evenement->foto(); ?>">
             <div class="textbubblecontainer">
+              <span class="language">nl:</span>
               <img src="images/icons/speechbubblefull.svg" alt="">
-              <span class="language">nl</span>
+              <img src="images/icons/speechbubblefull.svg" alt="">
+              <img src="images/icons/speechbubbleempty.svg" alt="">
+              <img src="images/icons/speechbubbleempty.svg" alt="">
+              <img src="images/icons/speechbubbleempty.svg" alt="">
             </div>
             <div class="info">
               <div class="titleDate">

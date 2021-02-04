@@ -65,8 +65,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: flex-end !important;
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
+    padding: 1.5rem 0;
   }
 
   .logo {
@@ -211,6 +210,7 @@ nav li {
   }
 
   .dropup-content {
+    padding-left: 0;
     display: none;
     position: absolute;
     background-color: #f1f1f100;
@@ -355,16 +355,46 @@ footer ul {
 .info {
   position: relative;
   font-size: 15px;
-  margin-top: -.5rem;
+  margin-top: -.7rem;
 
   p {
     margin: 1rem 0;
   }
 }
 
+.layout-btn {
+  margin: 0!important;
+  padding: 0 0 1rem 0;
+}
+
+.event-layout-btn{
+  border: none;
+  background-color: transparent;
+  width: 40px !important;
+  height: 40px;
+  background-size: cover;
+  background-position: center;
+}
+.event-layout-btn:focus{
+  outline: none;
+}
+
+.box-layout-btn{
+  background-image: url(../images/icons/evenementen/box-layout-btn.svg);
+}
+
+.box-layout-btn.active{
+  background-image: url(../images/icons/evenementen/box-layout-btn-selected.svg);
+}
+
+.row-layout-btn{
+  background-image: url(../images/icons/evenementen/row-layout-btn.svg);
+  margin-left: .5rem;
+}
+
 .filterlist {
   background-color: $base-color;
-  margin: 0 0 2em 0 !important;
+  margin: 0 0 3em 0 !important;
   padding: 1em;
   display: flex;
 
@@ -387,19 +417,21 @@ footer ul {
 }
 
 .textbubblecontainer {
-  margin-top: -1.5rem;
+  margin-top: -1rem;
   position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 
   img {
-    width: 50px !important;
-    float: right;
+    width: 35px !important;
   }
 
   span {
-    color: white;
-    position: absolute;
+    color: $base-color;
     right: 20px;
     top: 5px;
+    font-size: 1em;
   }
 }
 
@@ -671,7 +703,7 @@ p {
 
 .about,
 .index {
-  margin: 7rem 0;
+  margin: 25vh 0;
 
   h1 {
     font-family: pt-sans-pro, sans-serif;
@@ -738,16 +770,6 @@ form {
 
   margin-top: 30px;
 
-  input[type="text"],
-  input[type="email"] {
-    width: 25%;
-    min-width: 120px;
-  }
-
-  #onderwerp {
-    width: 50%;
-    min-width: 120px;
-  }
 
   textarea {
     width: 100%;
@@ -882,9 +904,28 @@ form {
 /*
     RESERVATIE 
                 */
+.return-btn {
+  font-size: 1.2rem;
+  position: relative;
+  padding-left: 3rem;
+}
+
+.return-btn::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-image: url(images/icons/chevron-right-solid-black.svg);
+  background-position: center;
+  position: absolute;
+  left: 0;
+}
 .event-id-info {
   h2{
-    font-size: 3em;
+    font-size: 2em;
+    margin-bottom: 1em;
+    span {
+      color: $base-color;
+    }
   }
 
   p {
@@ -912,8 +953,32 @@ form {
 .inschrijven {
   display: block;
   input {
-    width: 60%;
+    border: none;
+    border-bottom: 2px $dark-color solid;
+    width: 100% !important;
     margin-top: 2em;
+  }
+
+  input[type="submit"] {
+    padding: .5rem 2rem;
+    border: none;
+    width: max-content !important;
+    background-color: $base-color;
+    color: white;
+
+  }
+  .participants-container {
+    margin-top: 2rem;
+  }
+
+  .label-input-duo {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    label {
+      font-size: 1.2rem;
+      color: $base-color;
+    }
   }
 }
 

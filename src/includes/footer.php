@@ -4,11 +4,11 @@
 
         <div class="col-sm-12 col-md-6 col-lg-4 footer-column">
           <ul class="footer-navigation">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="evenementen.html">Kalender</a></li>
-            <li><a href="news.html">Nieuws</a></li>
-            <li><a href="about.html">Over ons</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="evenementen.php">Kalender</a></li>
+            <li><a href="news.php">Nieuws</a></li>
+            <li><a href="about.php">Over ons</a></li>
+            <li><a href="contact.php">Contact</a></li>
           </ul>
         </div>
 

@@ -3,6 +3,6 @@ var animation = bodymovin.loadAnimation({
   renderer: 'svg',
   loop: true,
   autoplay: true,
-  path: 'json/wereldbol-animatie.json',
+  path: 'json/wereldbol.json',
   assetsPath: 'images/wereldbol-animatie/'
 });
