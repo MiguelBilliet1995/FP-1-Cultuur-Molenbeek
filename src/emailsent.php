@@ -78,13 +78,21 @@ if(isset($_POST['confirm-contact'])){
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="https://use.typekit.net/yvs4yrr.css">
   <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/style-fonts.css">
+  <script src="scripts/script.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 <body>
-<div class="sent-container">
-    <div id="mail-sent"></div> <!-- animatie zelf -->
+<?php include_once 'includes/banner.php'; ?>
+<div class="sent-container container">
+  <div class="col-sm-12">
+    <div id="mail-sent"> <!-- animatie zelf -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.0/lottie_html.js"></script> <!-- animatie script downloaden -->
         <script src="scripts/mail-sent-anim.js"></script> <!-- parameters animatie aanpassen: mail-sent-anim.js -->
+    </div>
   <div class="email-sent-text">
 
   <?php
@@ -124,6 +132,8 @@ if(isset($_POST['confirm-contact'])){
   }
   ?>
   </div>
+  </div>
 </div>
+<?php include 'includes/footer.php'; ?>
 </body>
 </html>

@@ -66,11 +66,12 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: flex-end !important;
-    padding: 1.5rem 0;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 
   .logo {
-    height: 80px;
+    width: 200px;
     margin: 0;
   }
 
@@ -361,15 +362,16 @@ footer ul {
   margin: 2rem 0px;
 }
 
-.card img {
-  padding: 0;
-  width: 100%;
+.card div.photo-container {
+  height: 250px;
+  background-position: center;
+  background-size: cover;
 }
 
 .info {
   position: relative;
   font-size: 15px;
-  margin-top: -.7rem;
+  margin-top: -.5rem;
 
   p {
     margin: 1rem 0;
@@ -432,7 +434,7 @@ footer ul {
 }
 
 .textbubblecontainer {
-  margin-top: -1rem;
+  margin-top: 0rem;
   position: relative;
   display: flex;
   justify-content: flex-end;
@@ -445,8 +447,8 @@ footer ul {
   span {
     color: $base-color;
     right: 20px;
-    top: 5px;
-    font-size: 1em;
+    font-weight: 700;
+    font-size: 1.5em;
   }
 }
 
@@ -454,7 +456,6 @@ footer ul {
   font-size: 20px;
   font-weight: 400;
   float: right;
-  margin-right: 5%;
   line-height: 30px;
 }
 
@@ -493,7 +494,6 @@ footer ul {
   font-size: 18px;
   position: relative;
   float: right;
-  margin-right: 5%;
   transform: translate(0, 10px);
 }
 
