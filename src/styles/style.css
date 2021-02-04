@@ -216,14 +216,13 @@ nav li .active#contact::after {
     position: relative;
   }
   .dropup-content {
-    padding-left: 0;
     display: none;
     position: absolute;
     background-color: #f1f1f100;
     z-index: 1;
-    padding: 0;
     margin: 0;
-    margin-left: -15.5rem;
+    margin-left: 25rem;
+    margin-bottom: -1rem;
   }
   .dropup-content li {
     list-style: none;
@@ -238,8 +237,21 @@ nav li .active#contact::after {
   .dropup:hover .dropup-content {
     display: inline;
   }
-  .dropup:hover .dropbtn {
+  .dropup:checked .dropbtn {
     background-color: #FFB035;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .dropup-content {
+    margin-left: 15rem;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .dropup-content {
+    margin-left: 10rem;
+    margin-bottom: -10rem;
   }
 }
 
