@@ -3,16 +3,13 @@ include_once('parser/CRUD/evenementenDB.php');
 
 
 if(isset($_GET['filter'])&&isset($_GET['sort'])){
-  echo "filter en sort";
   if(!isset($_GET['sortdirection'])){
     $_GET['sortdirection'] = "DESC";
   }
   $evenementen = evenementenDB::getEventBy($_GET['filter'], $_GET['filterdata'], $_GET['sort'], $_GET['sortdirection']);
 }elseif(isset($_GET['filter'])&&!isset($_GET['sort'])){
-  echo "filter zonder sort";
   $evenementen = evenementenDB::getEventBy($_GET['filter'], $_GET['filterdata'], null, null);
 }elseif(!isset($_GET['filter'])&&isset($_GET['sort'])){
-  echo "sort zonder filter";
   if(!isset($_GET['sortdirection'])){
     $_GET['sortdirection'] = "DESC";
   }
@@ -136,7 +133,7 @@ if(isset($_GET['filter'])&&isset($_GET['sort'])){
               <?php
                 }
               ?>
-              
+
             </div>
             <div class="info">
               <div class="titleDate">
