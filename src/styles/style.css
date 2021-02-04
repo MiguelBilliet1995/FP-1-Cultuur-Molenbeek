@@ -20,9 +20,11 @@ h3 {
 
 #wereldbol {
   position: fixed;
-  bottom: -250px;
-  right: -495px;
+  bottom: 0px;
+  right: 0px;
   z-index: -999;
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
   width: 60%;
 }
 
@@ -85,6 +87,10 @@ nav ul {
   -ms-flex-negative: 1;
       flex-shrink: 1;
   margin: 0;
+}
+
+nav li {
+  white-space: nowrap;
 }
 
 nav li {
@@ -703,7 +709,7 @@ p {
 }
 
 .about {
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 
 .about h1 {
@@ -716,7 +722,7 @@ p {
 /* ----------------------- */
 .about,
 .index {
-  margin: 25vh 0;
+  margin: 10vh 0;
 }
 
 .about h1,
@@ -1061,6 +1067,19 @@ form fieldset #contact-submit {
   #contactanim {
     margin: 0 auto;
     width: 50vw;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 992px) {
+  #wereldbol {
+    display: none;
+  }
+  .photo-square {
+    font-size: 0.8em;
+    height: 70%;
+  }
+  .photo-square > img {
+    width: 100px;
   }
 }
 
