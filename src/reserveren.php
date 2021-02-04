@@ -1,4 +1,6 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 include_once('parser/CRUD/inschrijvingenDB.php');
 if(isset($_POST['confirm-reservatie'])){
   $evenement_id = $_GET['id'];
@@ -10,13 +12,30 @@ if(isset($_POST['confirm-reservatie'])){
   $aantal_3 = $_POST['leeftijd-volwassen'];
   $aantal_4 = $_POST['leeftijd-bejaard'];
   if(inschrijvingenDB::addinschrijving($evenement_id, $voornaam, $naam, $email, $aantal_1, $aantal_2, $aantal_3, $aantal_4)){
-  $mailTo = $email;
-  $headers = "Van: reservatie@molenbeek.be";
-  $txt = "Inschrijvingsbevestiging " . $naam;
-  
-  mail($mailTo, $subject, $txt, $headers);
-  header("Location: emailsent.php");
-
+    require 'parser/vendor/autoload.php';
+    $mail = new PHPMailer(true);
+    try{
+      $mail->SMTPDebug = 0; 
+      $mail->isSMTP(); 
+      $mail->Host = 'sent.one.com';
+      $mail->SMTPAuth = true; 
+      $mail->Username = 'nest-molenbeek@bojraad.be'; 
+      $mail->Password = 'wJkEq3ejztAGp4DY'; 
+      $mail->SMTPSecure = 'tls'; 
+      $mail->Port = '587';
+      $mail->setFrom('reservatie@nestmolenbeek.be', 'Nest molenbeek');
+      $mail->addAddress($email);
+      $mail->isHTML(true); 
+      $mail->Subject = "reservatiebevestiging:";
+      $data = "
+        kaas
+      ";
+      $mail->Body = $data;
+      $mail->send();
+      return true;
+    }catch(Exception $e){
+      return $e;
+    }
   } else {
     echo 'help';
   }
