@@ -23,18 +23,22 @@
       <div class="col-sm-4">
         <img src="./images/about_us.jpg" alt="De oprichters van familie molenbeek">
       </div>
-      <div class="col-sm-8 align-bottom">
+      <div class="col-sm-8 align-top">
+        <div id="abouttext">
         <h1>Wij zijn familie Molenbeek.</h1>
         <span class="column-2">
-          <p>Familie Molenbeek is een organisatorische samenwerking tussen Cultuur in Molenbeek, Vaartkapoen en de Bib.
+          <p>Nest Molenbeek is een organisatorische samenwerking tussen Cultuur in Molenbeek, GC De Vaartkapoen en de Bib.
             Wij steken de handen in elkaar omeen grootschalig aanboda ctiviteiten aan te bieden voor zowel kinderen als
             volwassenen om zich te ontspannen, nieuwe contacten te leggen, te leren en te ontdekken. Wij leggen ons ten
             volle toe aan het bieden van een duidelijk overzicht voor alle inwoners met een beperkte of uitgebreide
             kennis van de Nederlandse taal. Ons streefdoel is mensen samen te brengen binnen het unieke kader van onze
             gemeente en een platform te creëren dat zich openstelt voor iedereen.</p>
         </span>
+        </div>
       </div>
     </div>
+
+    <h2>Galerij</h2>
 
     <div class="row gallery">
       <div class="col-sm-4">

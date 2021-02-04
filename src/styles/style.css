@@ -673,8 +673,12 @@ p {
   font-family: pt-sans-pro, sans-serif;
   font-weight: 900;
   font-size: 4em;
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
   white-space: normal;
+}
+
+#abouttext {
+  margin-top: 15vh;
 }
 
 .column-2 {
@@ -954,7 +958,25 @@ form fieldset #contact-submit {
   margin: 2rem 0 1rem 0;
 }
 
+@media only screen and (min-width: 0px) and (max-width: 576px) {
+  #contactanim {
+    margin: 0 auto;
+    width: 50vw;
+  }
+}
+
 @media only screen and (min-width: 0px) and (max-width: 767px) {
+  #bm {
+    width: 100%;
+  }
+  .footer-navigation {
+    padding-bottom: 30px;
+    border-bottom: 1px white solid;
+  }
+  #contactinfo {
+    padding-bottom: 30px;
+    border-bottom: 1px white solid;
+  }
   .footer-column {
     margin-bottom: 2em;
   }

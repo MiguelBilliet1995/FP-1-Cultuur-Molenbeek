@@ -677,9 +677,13 @@ p {
     font-family: pt-sans-pro, sans-serif;
     font-weight: 900;
     font-size: 4em;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
     white-space: normal;
   }
+}
+
+#abouttext {
+  margin-top: 15vh;
 }
 
 .column-2 {
@@ -715,6 +719,7 @@ a {
 /* ----------------------- */
 /* Contact css */
 /* ----------------------- */
+
 .contactimage {
   margin: 7em 0;
   width: 80%;
@@ -883,7 +888,7 @@ form {
     RESERVATIE 
                 */
 .event-id-info {
-  h2{
+  h2 {
     font-size: 3em;
   }
 
@@ -896,6 +901,7 @@ form {
   padding: 0;
   margin: 0;
   margin-top: 2rem;
+
   li {
     width: 100%;
     display: flex;
@@ -903,6 +909,7 @@ form {
     align-items: flex-end;
     line-height: 2.5rem;
   }
+
   .beschrijving {
     font-size: 1.5em;
     color: $base-color;
@@ -911,6 +918,7 @@ form {
 
 .inschrijven {
   display: block;
+
   input {
     width: 60%;
     margin-top: 2em;
@@ -920,7 +928,7 @@ form {
 
 
 
-                
+
 
 // .reservatie-main {
 //   max-width: 82.5rem;
@@ -1095,8 +1103,31 @@ form {
   margin: 2rem 0 1rem 0;
 }
 
+@media only screen and (min-width: 0px) and (max-width: 576px) {
+
+  #contactanim {
+    margin: 0 auto;
+    width: 50vw;
+  }
+}
 
 @media only screen and (min-width: 0px) and (max-width: 767px) {
+  #bm {
+    width: 100%;
+  }
+
+
+
+  .footer-navigation {
+    padding-bottom: 30px;
+    border-bottom: 1px white solid;
+  }
+
+  #contactinfo {
+    padding-bottom: 30px;
+    border-bottom: 1px white solid;
+  }
+
   .footer-column {
     margin-bottom: 2em;
   }

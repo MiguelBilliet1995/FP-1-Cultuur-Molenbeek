@@ -41,7 +41,7 @@
               <img src="images/icons/speechbubblefull.svg" alt="">
               <span class="language">nl</span>
           </div>
-          <p>Elke woensdag organiseert familie Molenbeek in samenwerking met Sport Molenbeek sportieve activiteiten voor kinderen op verschillende Molenbeekse pleinen. Klik verder voor meer info.</p>
+          <p>Elke woensdag organiseert Molenbeek Nest in samenwerking met Sport Molenbeek sportieve activiteiten voor kinderen op verschillende Molenbeekse pleinen. Klik verder voor meer info.</p>
           <ul class="event-list">
             <li class="event-list-item"><span class="beschrijving">Locatie:</span> Parijsstraat 30 leuven</li>
             <li class="event-list-item"><span class="beschrijving">Datum:</span> Donderdag, 31januari</li>
