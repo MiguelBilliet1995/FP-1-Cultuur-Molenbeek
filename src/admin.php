@@ -130,9 +130,12 @@
               <div class="col-sm-4">
                 <?php
                   $inschrijvingen = inschrijvingenDB::getInschrijvingenByEventId($evenement->id());
+                  print_r($inschrijvingen);
                   foreach($inschrijvingen as $inschrijving){
                 ?>
-                  test
+
+
+
                 <?php
                   }
                 ?>

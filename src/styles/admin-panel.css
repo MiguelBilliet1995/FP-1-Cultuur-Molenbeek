@@ -82,6 +82,10 @@ body {
   height: auto;
 }
 
+.item .event-bottom input, .item .event-bottom select, .item .event-bottom textarea {
+  margin-bottom: 15px;
+}
+
 .item .event-top {
   margin-top: 20px;
   border: 1px solid rgba(0, 0, 0, 0);
