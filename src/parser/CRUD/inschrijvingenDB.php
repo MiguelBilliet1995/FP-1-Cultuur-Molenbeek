@@ -41,7 +41,14 @@ class inschrijvingenDB{
   }
 
   public static function deleteInschrijving($id){
-    $resultaat = self::getVerbinding()->voerSqlQueryUit("DELETE FROM inschrijvingen WHERE id = '?'");
+    $resultaat = self::getVerbinding()->voerSqlQueryUit("DELETE FROM inschrijvingen WHERE id = '?'", array($id));
+    if($resultaat){
+      return true;
+    }
+  }
+
+  public static function deleteAllFromEventId($id){
+    $resultaat = self::getVerbinding()->voerSqlQueryUit("DELETE FROM inschrijvingen WHERE evenement_id = '?'", array($id));
     if($resultaat){
       return true;
     }
@@ -55,7 +62,9 @@ class inschrijvingenDB{
   }
 
   public static function converteerRijNaarObject($databaseRij){
-    return new inschrijvingen($databaseRij['id'], $databaseRij['evenement_id'], $databaseRij['voornaam'], $databaseRij['naam'], $databaseRij['email'], $databaseRij['aantal_1'], $databaseRij['aantal_2'], $databaseRij['aantal_3'], $databaseRij['aantal_4']);
+    return new inschrijvingen($databaseRij['id'], $databaseRij['evenement_id'], $databaseRij['voornaam'],
+    $databaseRij['naam'], $databaseRij['email'], $databaseRij['aantal_1'], $databaseRij['aantal_2'],
+    $databaseRij['aantal_3'], $databaseRij['aantal_4']);
   }
 
 }

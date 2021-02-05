@@ -35,7 +35,15 @@ class evenementenDB{
     }
 
     public static function deleteEvent($id){
-        $resultaat = self::getVerbinding()->voerSqlQueryUit("DELETE FROM evenementen WHERE id = '?'");
+        $resultaat = self::getVerbinding()->voerSqlQueryUit("DELETE FROM evenementen WHERE id = '?'",array($id));
+        if($resultaat){
+            return true;
+        }
+    }
+
+
+    public static function updateOne($id, $field, $data){
+        $resultaat = self::getVerbinding()->voerSqlQueryUit("UPDATE evenementen SET ? = '?' WHERE id = '?'",array($field, $data, $id));
         if($resultaat){
             return true;
         }
@@ -77,7 +85,8 @@ class evenementenDB{
     public static function converteerRijNaarObject($databaseRij){
         return new evenementen($databaseRij['id'], $databaseRij['naam'],
             $databaseRij['prijs'], $databaseRij['datum'], $databaseRij['uur'],
-            $databaseRij['locatie'], $databaseRij['beschrijving'], $databaseRij['foto'], $databaseRij['type'], $databaseRij['taal_niveau']);
+            $databaseRij['locatie'], $databaseRij['beschrijving'], $databaseRij['foto'], $databaseRij['type'],
+            $databaseRij['taalniveau']);
     }
 
 }
