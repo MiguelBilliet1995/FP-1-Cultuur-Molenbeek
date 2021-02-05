@@ -87,8 +87,7 @@ if(isset($_POST['confirm-contact'])){
 </head>
 <body>
 <?php include_once 'includes/banner.php'; ?>
-<div class="sent-container container">
-  <div class="col-sm-12">
+<div class="sent-container">
     <div id="mail-sent"> <!-- animatie zelf -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.0/lottie_html.js"></script> <!-- animatie script downloaden -->
         <script src="scripts/mail-sent-anim.js"></script> <!-- parameters animatie aanpassen: mail-sent-anim.js -->
@@ -104,11 +103,11 @@ if(isset($_POST['confirm-contact'])){
     
     if(isset($_GET['id'])){
     ?>
-    <a href="<?php echo $_GET['url'] ?>.php?id=<?php echo $_GET['id']; ?>"><p>terugkeren</p></a>
+    <a href="<?php echo $_GET['url'] ?>.php?id=<?php echo $_GET['id']; ?>">terugkeren</a>
     <?php
     } else {
       ?>
-      <a href="<?php echo $_GET['url'] ?>.php"><p>terugkeren</p></a>
+      <a href="<?php echo $_GET['url'] ?>.php">terugkeren</a>
       <?php
     }
 
@@ -131,7 +130,6 @@ if(isset($_POST['confirm-contact'])){
     }
   }
   ?>
-  </div>
   </div>
 </div>
 <?php include 'includes/footer.php'; ?>

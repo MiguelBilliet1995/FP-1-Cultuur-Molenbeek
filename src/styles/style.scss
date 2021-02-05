@@ -1067,6 +1067,32 @@ form {
   }
 }
 
+.sent-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 50vh;
+}
+
+.email-sent-text {
+  a{
+    position: relative;
+    margin-left: 2rem;
+  }
+}
+.email-sent-text a::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-image: url(../images/icons/chevron-left-solid-black.svg);
+  background-position: center;
+  position: absolute;
+  background-size: 45%;
+  background-repeat: no-repeat;
+  left: -40px;
+}
+
 
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
 
