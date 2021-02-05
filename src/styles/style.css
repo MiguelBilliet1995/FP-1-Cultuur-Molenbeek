@@ -1106,6 +1106,40 @@ form fieldset #contact-submit {
   }
 }
 
+.sent-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 50vh;
+}
+
+.email-sent-text a {
+  position: relative;
+  margin-left: 2rem;
+}
+
+.email-sent-text a::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-image: url(../images/icons/chevron-left-solid-black.svg);
+  background-position: center;
+  position: absolute;
+  background-size: 45%;
+  background-repeat: no-repeat;
+  left: -40px;
+}
+
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
   .footer-column {
     margin-bottom: 2em;
