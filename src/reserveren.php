@@ -31,11 +31,7 @@
       include_once('parser/CRUD/evenementenDB.php');
       $evenement = evenementenDB::getEventById($_GET['id']);
       ?>
-
-        <div class="col-sm-12">
-          
-        </div>
-          <div class="col"><a href="evenementen.php" class="return-btn"><img class="backarrow" src="images/icons/backarrow.svg"></a></div>
+          <div class="col"><a href="evenementen.php" class="return-btn">terug</a></div>
           <div class="col-sm-6">
           <div class="event-id-info">
             <h2 >Inschrijven voor: <span class="color-base"><?php echo $evenement->naam();?></span></h2>
