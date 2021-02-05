@@ -116,7 +116,6 @@ if(isset($_GET['filter'])&&isset($_GET['sort'])){
             <div class="eventphoto"><img src="data/images/evenementen/<?php echo $evenement->foto(); ?>"></div>
             <div class="textbubblecontainer">
               <img src="images/icons/speechbubblefullnl.svg" alt="">
-
               <?php
                 $maxAantalIconen = 4;
                 $totaalIconen = $evenement->taalNiveau();
