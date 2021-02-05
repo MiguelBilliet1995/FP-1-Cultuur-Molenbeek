@@ -15,7 +15,7 @@
         <div class="col-sm-12 col-md-6 col-lg-4 footer-column">
           <div id="contactinfo">
           <span><b>Contactinfo</b><br />
-            info@familiemolenbeek.be<br />
+            nest-molenbeek@emailadres.be<br />
             +32 468 10 99 14 <br>
             <div class="sociallinks">
               <a href="https://www.instagram.com/cultuur_in_molenbeek/" target="_blank"><img
@@ -31,7 +31,7 @@
           </ul>
           <div class="year">
             <li>2020-2021</li>
-            <li> &copy; Familie Molenbeek</li>
+            <li> &copy; Nest Molenbeek</li>
           </div>
           </ul>
         </div>

@@ -200,65 +200,44 @@ nav li .active#contact::after {
 
 .backarrow {
   width: 30px;
-  position: absolute;
 }
 
 /*      MOBILE NAVIGATION     */
-.dropbtn {
+.dropbtn,
+#dropdown-content {
   display: none;
 }
 
 @media only screen and (max-width: 995px) {
+  .desktop-nav {
+    display: none;
+  }
+  .test {
+    width: 100%;
+    min-width: 100%;
+  }
   .dropbtn {
     background-color: #FFB035;
     color: white;
-    font-size: 20px;
+    font-size: 1rem;
     border: none;
     border-radius: 4px;
-    width: 5rem;
-    height: 3rem;
+    padding: .5rem 1rem;
     display: inline-block;
   }
-  .dropup {
-    position: relative;
-  }
-  .dropup-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f100;
-    z-index: 1;
-    margin: 0;
-    margin-left: 25rem;
-    margin-bottom: -1rem;
-  }
-  .dropup-content li {
-    list-style: none;
+  #dropdown-content {
     width: 100%;
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
-  .dropup-content li a {
-    color: black;
-    padding: 12px;
-    text-decoration: none;
-    left: 0;
-  }
-  .dropup:hover .dropup-content {
-    display: inline;
-  }
-  .dropup:checked .dropbtn {
-    background-color: #FFB035;
-  }
-}
-
-@media only screen and (max-width: 760px) {
-  .dropup-content {
-    margin-left: 15rem;
-  }
-}
-
-@media only screen and (max-width: 760px) {
-  .dropup-content {
-    margin-left: 10rem;
-    margin-bottom: -10rem;
+  #dropdown-content li {
+    margin: .5rem 0;
   }
 }
 
@@ -448,7 +427,8 @@ footer ul li a {
 }
 
 .textbubblecontainer img {
-  width: 35px !important;
+  margin: .5em .2rem;
+  width: 30px !important;
 }
 
 .textbubblecontainer span {
@@ -837,7 +817,8 @@ form fieldset {
 }
 
 form fieldset input {
-  width: 500px;
+  min-width: 100px;
+  width: 80%;
   border: none;
   border-bottom: 2px #000000 solid;
 }
@@ -978,15 +959,17 @@ form fieldset #contact-submit {
   content: "";
   width: 30px;
   height: 30px;
-  background-image: url(images/icons/chevron-right-solid-black.svg);
+  background-image: url(../images/icons/chevron-left-solid-black.svg);
   background-position: center;
   position: absolute;
+  background-size: 45%;
+  background-repeat: no-repeat;
   left: 0;
 }
 
 .event-id-info h2 {
   font-size: 2em;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 
 .event-id-info h2 span {
@@ -1062,7 +1045,6 @@ form fieldset #contact-submit {
   color: #FFB035;
 }
 
-/*      Filter css      */
 .form-title {
   font-size: 1.5rem;
   margin: 2rem 0 1rem 0;
