@@ -188,7 +188,6 @@ nav li {
 
 .backarrow {
   width: 30px;
-  position: absolute;
 }
 
 
@@ -938,7 +937,7 @@ form {
 .event-id-info {
   h2 {
     font-size: 2em;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 
     span {
       color: $base-color;

@@ -97,11 +97,12 @@ if(isset($_GET['filter'])&&isset($_GET['sort'])){
       </div>
       <script src="scripts/cal-script.js"></script>
       <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8">
-        <div class="row filterlist">
+      <!--
+      <div class="row filterlist">
           <span class="filteritem">Voor gezinnen met kleuters</span>
           <span class="filteritem">Alle dagen</span>
         </div>
-        <!-- <div class="row layout-btn">
+         <div class="row layout-btn">
           <button class="active box-layout-btn event-layout-btn" onclick="changeEventLayoutBox()"></button>
           <button class="row-layout-btn event-layout-btn" onclick="changeEventLayoutRow()"></button>
         </div> -->
