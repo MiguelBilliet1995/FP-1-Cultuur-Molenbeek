@@ -28,6 +28,16 @@ h3 {
   font-weight: 800 !important;
 }
 
+#wereldbol {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: -999;
+  transform: translate(50%, 50%);
+
+  width: 80%;
+}
+
 /* newspage */
 p {
   margin-bottom: 0;
@@ -40,7 +50,7 @@ img {
   width: 100%;
 }
 
-.nieuwsartikel{
+.nieuwsartikel {
   margin-bottom: 2rem !important;
 }
 
@@ -56,15 +66,14 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: flex-end !important;
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 
   .logo {
-    width: 150px;
+    width: 200px;
     margin: 0;
   }
-
 
   ul {
     list-style: none !important;
@@ -76,6 +85,9 @@ nav {
     margin: 0;
   }
 
+  li {
+    white-space: nowrap;
+  }
 }
 
 
@@ -176,61 +188,44 @@ nav li {
 
 .backarrow {
   width: 30px;
-  position: absolute;
 }
 
 
 /*      MOBILE NAVIGATION     */
-.dropbtn {
+.dropbtn,
+#dropdown-content {
   display: none;
 }
 
 @media only screen and (max-width: 995px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .test {
+    width: 100%;
+    min-width: 100%;
+  }
+
   .dropbtn {
     background-color: $base-color;
     color: white;
-    font-size: 20px;
+    font-size: 1rem;
     border: none;
     border-radius: 4px;
-    width: 5rem;
-    height: 3rem;
+    padding: .5rem 1rem;
     display: inline-block;
   }
 
-  .dropup {
-    position: relative;
-  }
-
-  .dropup-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f100;
-    z-index: 1;
-
-    padding: 0;
-    margin: 0;
-    margin-left: -15.5rem;
-  }
-
-
-  .dropup-content li {
-    list-style: none;
+  #dropdown-content {
     width: 100%;
-  }
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
 
-  .dropup-content li a {
-    color: black;
-    padding: 12px;
-    text-decoration: none;
-    left: 0;
-  }
-
-  .dropup:hover .dropup-content {
-    display: inline;
-  }
-
-  .dropup:hover .dropbtn {
-    background-color: $base-color;
+    li {
+      margin: .5rem 0;
+    }
   }
 }
 
@@ -280,7 +275,7 @@ footer {
     color: $base-color !important;
   }
 
-  .footer-navigation {  
+  .footer-navigation {
     margin-bottom: 0;
 
     li {
@@ -318,12 +313,17 @@ footer {
 
 footer ul {
   list-style: none !important;
-  li{
-    a{
+
+  li {
+    a {
       color: white !important;
     }
   }
 }
+
+
+
+
 
 /* ----------------------- */
 /* Kalender css */
@@ -337,25 +337,59 @@ footer ul {
   margin: 2rem 0px;
 }
 
-.card img {
-  padding: 0;
-  width: 100%;
+.card div.photo-container {
+  height: 250px;
+  background-position: center;
+  background-size: cover;
 }
 
 .info {
   position: relative;
   font-size: 15px;
   margin-top: -.5rem;
+
   p {
     margin: 1rem 0;
   }
 }
 
+.layout-btn {
+  margin: 0 !important;
+  padding: 0 0 1rem 0;
+}
+
+.event-layout-btn {
+  border: none;
+  background-color: transparent;
+  width: 40px !important;
+  height: 40px;
+  background-size: cover;
+  background-position: center;
+}
+
+.event-layout-btn:focus {
+  outline: none;
+}
+
+.box-layout-btn {
+  background-image: url(../images/icons/evenementen/box-layout-btn.svg);
+}
+
+.box-layout-btn.active {
+  background-image: url(../images/icons/evenementen/box-layout-btn-selected.svg);
+}
+
+.row-layout-btn {
+  background-image: url(../images/icons/evenementen/row-layout-btn.svg);
+  margin-left: .5rem;
+}
+
 .filterlist {
   background-color: $base-color;
-  margin: 0 0 2em 0 !important;
+  margin: 0 0 3em 0 !important;
   padding: 1em;
   display: flex;
+
   span {
     display: inline;
     width: max-content;
@@ -365,7 +399,8 @@ footer ul {
     padding-right: 3em;
     position: relative;
   }
-  span::after{
+
+  span::after {
     content: 'x';
     position: absolute;
     top: -2px;
@@ -373,18 +408,23 @@ footer ul {
   }
 }
 
-.card .textbubblecontainer {
-  margin-top: -1.5rem;
+.textbubblecontainer {
+  margin-top: 0rem;
   position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
   img {
-    width: 50px !important;
-    float: right;
+    margin: .5em .2rem;
+    width: 30px !important;
   }
+
   span {
-    color: white;
-    position: absolute;
+    color: $base-color;
     right: 20px;
-    top: 5px;
+    font-weight: 700;
+    font-size: 1.5em;
   }
 }
 
@@ -392,14 +432,14 @@ footer ul {
   font-size: 20px;
   font-weight: 400;
   float: right;
-  margin-right: 5%;
   line-height: 30px;
 }
 
 .titleDate {
   display: flex;
   justify-content: space-between;
-  h2{
+
+  h2 {
     width: 60%;
     margin-bottom: 0;
   }
@@ -411,9 +451,15 @@ footer ul {
   margin-bottom: 1rem;
 }
 
+.eventphoto {
+  max-height: 270px;
+  overflow: hidden;
+}
+
 .eventinfo {
   display: block;
   margin-top: 1rem;
+
   img {
     width: 25px;
     margin-right: .5rem;
@@ -424,7 +470,6 @@ footer ul {
   font-size: 18px;
   position: relative;
   float: right;
-  margin-right: 5%;
   transform: translate(0, 10px);
 }
 
@@ -640,44 +685,12 @@ p {
 
 
 .about {
-  margin-top: 5rem;
+  margin-top: 2rem;
 
   h1 {
     font-family: pt-sans-pro, sans-serif;
     font-weight: 900;
   }
-}
-
-/* ----------------------- */
-/* Article css */
-/* ----------------------- */
-
-.article {
-  margin-bottom: 50px;
-}
-
-.articleimg {
-  margin-right: 5%;
-}
-
-.articletitle {
-  top: 0;
-  font-size: 2.5rem;
-}
-
-.articledate {
-  font-size: 20px;
-  color: $base-color;
-  margin-bottom: 5px;
-}
-
-.shareonfacebook {
-  position: absolute;
-  margin-top: 10px;
-}
-
-.shareonfacebook img {
-  width: 30px;
 }
 
 /* ----------------------- */
@@ -686,15 +699,19 @@ p {
 
 .about,
 .index {
-  margin: 7rem 0;
+  margin: 10vh 0;
 
   h1 {
     font-family: pt-sans-pro, sans-serif;
     font-weight: 900;
     font-size: 4em;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
     white-space: normal;
   }
+}
+
+#abouttext {
+  margin-top: 15vh;
 }
 
 .column-2 {
@@ -730,24 +747,33 @@ a {
 /* ----------------------- */
 /* Contact css */
 /* ----------------------- */
-.contactimage {
-  margin: 7em 0;
-  width: 80%;
-  height: auto;
+
+#contactanim {
+  position: relative;
+  top: 100px;
+  width: 70%;
 }
+
+#directbericht {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+#contact-submit {
+  margin-bottom: 200px;
+}
+
 form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
 
-  input[type="text"],
-  input[type="email"],
-  textarea {
-    width: 100%;
-  }
+  margin-top: 30px;
+
 
   textarea {
+    width: 100%;
     resize: none;
     min-height: 200px;
     border: 2px black solid;
@@ -759,10 +785,13 @@ form {
 
   fieldset {
     position: relative;
-    margin: 10px 0px;
+    margin: 0px;
+    margin-top: -20px;
+    padding: 0px;
 
     input {
-      width: 500px;
+      min-width: 100px;
+      width: 80%;
       border: none;
       border-bottom: 2px $dark-color solid;
     }
@@ -780,27 +809,6 @@ form {
 
     #contact-submit {
       display: none;
-    }
-
-    label[for="contact-submit"] {
-      position: relative;
-      background-color: $base-color;
-      padding: 5px 70px 5px 20px;
-      color: white;
-    }
-
-    label[for="contact-submit"]::after {
-      content: '';
-      background-image: url(../images/icons/chevron-right-solid.svg);
-      color: white;
-      width: 10px;
-      height: 10px;
-      display: block;
-      position: absolute;
-      right: 5px;
-      top: 12px;
-      background-size: 90%;
-      background-position: center;
     }
   }
 }
@@ -850,6 +858,18 @@ form {
   z-index: -500;
 }
 
+/* ----------------------- */
+/* mail-sent */
+/* ----------------------- */
+
+#mail-sent {
+  width: 10%;
+}
+
+/* ----------------------- */
+/* Homepage css */
+/* ----------------------- */
+
 .photo-square {
   background-color: $soft-color;
   background-size: cover;
@@ -879,10 +899,6 @@ form {
   }
 }
 
-/* ----------------------- */
-/* Homepage css */
-/* ----------------------- */
-
 .photo-square:hover>h1 {
   transform: scale(1.2);
 }
@@ -895,179 +911,97 @@ form {
   width: 150%;
 }
 
+
+
+
 /*
     RESERVATIE 
                 */
-
-.reservatie-main {
-  max-width: 82.5rem;
-  margin: auto;
+.return-btn {
+  font-size: 1.2rem;
+  position: relative;
+  padding-left: 3rem;
 }
 
-.row-one-reservatie {
-  display: flex;
-  flex-wrap: wrap;
+.return-btn::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-image: url(../images/icons/chevron-left-solid-black.svg);
+  background-position: center;
+  position: absolute;
+  background-size: 45%;
+  background-repeat: no-repeat;
+  left: 0;
+}
 
-  max-width: 82.5rem;
-  margin: auto;
+.event-id-info {
+  h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
 
-  #description-box {
-    margin: 0 .75rem 0 .75rem;
-    max-width: 26rem;
-    min-width: 20rem;
-
-
-    .description-box-head {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 2rem;
-
-    }
-
-    .beschrijving {
-      font-size: 1.2rem;
-      font-weight: 600;
+    span {
       color: $base-color;
     }
   }
 
-  #form {
-    padding-bottom: 1rem;
-  }
-
-  .col-sm-4:not(#description-box) {
-    margin: 0 .75rem 0 .75rem;
-    max-width: 26rem;
-    min-width: 20rem;
-
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-
-    form {
-      width: 90%;
-      max-height: 283px;
-
-      margin-bottom: 1rem;
-
-      .reservatie-input {
-        border: none;
-        border-bottom: $base-color 2px solid;
-      }
-
-      .reservatie-label:not(#nah) {
-        margin-top: 2em;
-      }
-    }
-
-
+  p {
+    margin-top: 2.5em;
   }
 }
 
-.row-two-reservatie {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 82.5rem;
-  margin: auto;
+.event-list {
+  padding: 0;
+  margin: 0;
   margin-top: 2rem;
 
-
-  .col-sm-4 {
-    max-width: 26rem;
-    min-width: 20rem;
-    margin: 0 .75rem 0 .75rem;
-
-
-    h1 {
-      margin: 0 0 1.2rem 0;
-    }
-
-    .event-list {
-      list-style-type: none !important;
-      padding: 0;
-    }
-
-    ul li {
-      display: flex;
-      justify-content: space-between;
-
-
-      margin: 0 0 1rem 0;
-      padding: 0;
-    }
-
-    figure {
-      width: 2rem;
-      margin-left: auto;
-    }
-
-    .beschrijving {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: $base-color;
-    }
-
-    button {
-      width: 80%;
-      height: 3rem;
-      margin-left: 2.75rem;
-      margin-top: 3.344rem;
-      padding: 0;
-
-      border: none;
-      background-color: $base-color;
-      color: #fff;
-    }
+  li {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    line-height: 2.5rem;
   }
 
-  .col-sm-2 {
-    width: 90%;
-
-    #top-duo {
-      margin-top: 3.438rem;
-    }
-
-    .label-input-duo:not(.totaal) {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-
-      width: 90%;
-      margin: 0 auto 1rem auto;
-
-      #nultottwaalf {
-        margin-left: 1em;
-      }
-
-      label::after {
-        border: $base-color 1px;
-      }
-    }
-
-    .label-input-duo .total {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: $base-color;
-
-      margin: auto;
-      width: 90%;
-    }
-
-
-    select {
-      background-color: $base-color;
-      color: #fff;
-    }
+  .beschrijving {
+    font-size: 1.5em;
+    color: $base-color;
   }
-
 }
 
-/*      Filter css      */
+.inschrijven {
+  display: block;
 
-.filter-container {
-  width: 100vw;
-  margin: 0;
-  padding: 0;
+  input {
+    border: none;
+    border-bottom: 2px $dark-color solid;
+    width: 100% !important;
+    margin-top: 2em;
+  }
+
+  input[type="submit"] {
+    padding: .5rem 2rem;
+    border: none;
+    width: max-content !important;
+    background-color: $base-color;
+    color: white;
+
+  }
+
+  .participants-container {
+    margin-top: 2rem;
+  }
+
+  .label-input-duo {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+
+    label {
+      font-size: 1.2rem;
+      color: $base-color;
+    }
+  }
 }
 
 .form-title {
@@ -1075,36 +1009,45 @@ form {
   margin: 2rem 0 1rem 0;
 }
 
-.single-filter-container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 1rem;
-  cursor: pointer;
+@media only screen and (min-width: 0px) and (max-width: 576px) {
 
-  user-select: none;
+  #contactanim {
+    margin: 0 auto;
+    top: 0px;
+    width: 50vw;
+  }
 }
 
-.single-filter-container input {
-  display: none;
-}
+@media only screen and (min-width: 0px) and (max-width: 992px) {
+  #wereldbol {
+    display: none;
+  }
 
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  margin-right: 1rem;
-  border: 3px $secondairy-color solid;
-  background-color: transparent;
-}
+  .photo-square {
+    font-size: 0.8em;
+    height: 70%;
+  }
 
-.single-filter-container input:checked~.checkmark {
-  background-color: $secondairy-color;
+  .photo-square>img {
+    width: 100px;
+  }
 }
 
 @media only screen and (min-width: 0px) and (max-width: 767px) {
+  #bm {
+    width: 100%;
+  }
+
+  .footer-navigation {
+    padding-bottom: 30px;
+    border-bottom: 1px white solid;
+  }
+
+  #contactinfo {
+    padding-bottom: 30px;
+    border-bottom: 1px white solid;
+  }
+
   .footer-column {
     margin-bottom: 2em;
   }
@@ -1116,46 +1059,76 @@ form {
   .navigation-container {
     align-items: center !important;
   }
+
+  .event-filters {
+    margin-bottom: 3rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+.sent-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 50vh;
+}
+
+.email-sent-text {
+  a{
+    position: relative;
+    margin-left: 2rem;
+  }
+}
+.email-sent-text a::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-image: url(../images/icons/chevron-left-solid-black.svg);
+  background-position: center;
+  position: absolute;
+  background-size: 45%;
+  background-repeat: no-repeat;
+  left: -40px;
 }
 
 
 @media only screen and (min-width: 768px) and (max-width: 1199px) {
 
+  .footer-column {
+    margin-bottom: 2em;
+  }
+
+  .footer-column:last-of-type {
+    margin-bottom: 0em;
+  }
+
   .navigation-container {
     align-items: center !important;
   }
+
   .event-filters {
-    margin-bottom: 1rem;
+    margin-bottom: 5rem;
     display: flex;
     width: 100%;
     justify-content: space-between;
-  }
-  
-  .filter-list {
-    width: 50%;
-    margin: 0;
-    padding: 0;
   }
 
   .cal-container {
     padding-right: 2rem !important;
   }
-  
+
 }
 
 @media only screen and (min-width: 1200px) {
   .navigation-container {
     align-items: center !important;
   }
-  
+
   .event-filters {
     display: block;
-  }
-  
-  .filter-list {
-    width: 100%;
-    margin: 0;
-    padding: 0;
   }
 
   .footer-column {

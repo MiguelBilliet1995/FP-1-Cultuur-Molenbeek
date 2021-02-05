@@ -26,8 +26,8 @@
       </div>
       <div class="col align-center">
         <span>
-          <h1>Alles is leuker met de familie.</h1>
-          <p>Er is niets beter dan met de familie samen zijn. Wij bij familie Molenbeek geven inwoners van Molenbeek
+          <h1 id="homepageslogan">Alles is leuker met familie!</h1>
+          <p>Er is niets beter dan met familie samen zijn. Wij bij Molenbeek Nest geven inwoners van Molenbeek
             de kans om elke week samen met de familie deel te nemen aan onze activiteiten. Dit is de perfecte manier
             voor nieuwe inwoners om de stad te leren kennen en nieuwe vrienden te maken. </p>
           <a href="evenementen.php">
@@ -43,40 +43,42 @@
 
 
     <div class="row">
-      <div class="col-sm-4">
-      <a href=evenementen.php>
-        <div class="photo-square kinderen">
-          <img src="./images/illustraties/kleuters.svg">
-          <h1>Gezinnen met kleuters</h1>
-        </div>
-      </a>
+      <div class="col-sm-3">
+        <a href="evenementen.php?filter=type&filterdata=kleuters">
+          <div class="photo-square kinderen">
+            <img src="./images/illustraties/kleuters.svg">
+            <h1>Gezinnen met kleuters</h1>
+          </div>
+        </a>
       </div>
-      <div class="col-sm-4">
-      <a href=evenementen.php>
-        <div class="photo-square ouders">
-          <img src="./images/illustraties/tieners.svg">
-          <h1>Gezinnen met tieners</h1>
-        </div>
-      </a>
+      <div class="col-sm-3">
+        <a href="evenementen.php?filter=type&filterdata=kinderen">
+          <div class="photo-square kinderen">
+            <img src="./images/illustraties/kinderen.svg">
+            <h1>Gezinnen met kinderen</h1>
+          </div>
+        </a>
       </div>
-      <div class="col-sm-4">
-      <a href=evenementen.php>
-        <div class="photo-square gezin">
-          <img src="./images/illustraties/alle-leeftijden.svg">
-          <h1>Gezinnen van alle leeftijden</h1>
-        </div>
-      </a>
+      <div class="col-sm-3">
+        <a href="evenementen.php?filter=type&filterdata=jongeren">
+          <div class="photo-square ouders">
+            <img src="./images/illustraties/tieners.svg">
+            <h1>Gezinnen met tieners</h1>
+          </div>
+        </a>
       </div>
+      <div class="col-sm-3">
+        <a href="evenementen.php">
+          <div class="photo-square gezin">
+            <img src="./images/illustraties/alle-leeftijden.svg">
+            <h1>Gezinnen van alle leeftijden</h1>
+          </div>
+        </a>
+      </div>
+      </a>
     </div>
   </div>
   <?php include 'includes/footer.php'; ?>
-  <video class="animationsDSK" loop muted height="700" width="700" autoplay>
-    <source src="/images/wereldbol.mp4" type="video/mp4">
-  </video>
-  <video class="animationsGSM" loop muted autoplay height="2436" width="1125">
-    <source src="/images/animatie mobile.mp4" type="video/mp4">
-  </video>
-
 </body>
 
 </html>

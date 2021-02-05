@@ -19,43 +19,31 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-4">
-          <img class="contactimage" src="./images/contactimg.svg" alt="">
+          <div id="contactanim"></div>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.0/lottie_html.js"></script>
+          <script src="scripts/contact-anim.js"></script>
         </div>
         <div class="col-sm-8">
-          <form name="contact-form" method="POST">
-            <h3>Contact</h3>
+          <h3>Contact</h3>
+
+          <p>info@familiemolenbeek.be</p>
+          <p>+32 468 10 99 14</p>
+          <br>
+          <p id="directbericht">Direct bericht</p>
+
+          <form class="contact-form" action="emailsent.php?url=contact" method="post">
             <fieldset class="textinput">
-              <label for="contact-name" class="text-input-label">naam</label>
-              <input id="contact-name" type="text" name="contact-name">
+              <input id="contact-name" type="text" name="name" placeholder="Naam">
             </fieldset>
             <fieldset>
-              <label for="contact-email" class="text-input-label">email</label>
-              <input id="contact-email" type="email" name="contact-email">
+              <input id="contact-email" type="email" name="mail" placeholder="Jouw e-mailadres">
             </fieldset>
-            <textarea name="contact-message" id="contact-message"></textarea>
+            <fieldset>
+              <input id="onderwerp" type="text" name="subject" placeholder="Onderwerp">
+            </fieldset>
+            <textarea name="message" placeholder="Bericht"></textarea>
 
-            <input id="contact-submit" value="confirmeer" type="submit" name="contact-submit" class="button button-next">
-            <?PHP
-            if (isset($_POST['verzend'])) {
-            $naar = $_POST['contact-email'];
-            $onderwerp = "Bevestiging van ";
-            $boodschap = "
-            <html>
-            <head>
-                <title>testemail</title>
-            </head>
-
-            <body>
-            <h1>test</h1>
-
-            </body>
-            </html> ";
-            $van = "MIME-Version: 1.0 \r\n";
-            $van .= "Content-type: text/html; charset=iso-8859-1\r\n";
-            $van .= "From: 'sim@gillmertens.be' . \r\n";
-            mail($naar, $onderwerp, $boodschap, $van);
-            }
-            ?>
+            <input id="contact-submit" value="Ok" type="submit" name="confirm-contact" class="button button-next">
           </form>
         </div>
       </div>

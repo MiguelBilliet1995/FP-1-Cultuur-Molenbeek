@@ -18,6 +18,16 @@ h3 {
   font-weight: 800 !important;
 }
 
+#wereldbol {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: -999;
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+  width: 80%;
+}
+
 /* newspage */
 p {
   margin-bottom: 0;
@@ -52,12 +62,12 @@ nav .navigation-container {
   -webkit-box-align: end !important;
       -ms-flex-align: end !important;
           align-items: flex-end !important;
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 nav .logo {
-  width: 150px;
+  width: 200px;
   margin: 0;
 }
 
@@ -78,6 +88,10 @@ nav ul {
   -ms-flex-negative: 1;
       flex-shrink: 1;
   margin: 0;
+}
+
+nav li {
+  white-space: nowrap;
 }
 
 nav li {
@@ -186,52 +200,44 @@ nav li .active#contact::after {
 
 .backarrow {
   width: 30px;
-  position: absolute;
 }
 
 /*      MOBILE NAVIGATION     */
-.dropbtn {
+.dropbtn,
+#dropdown-content {
   display: none;
 }
 
 @media only screen and (max-width: 995px) {
+  .desktop-nav {
+    display: none;
+  }
+  .test {
+    width: 100%;
+    min-width: 100%;
+  }
   .dropbtn {
     background-color: #FFB035;
     color: white;
-    font-size: 20px;
+    font-size: 1rem;
     border: none;
     border-radius: 4px;
-    width: 5rem;
-    height: 3rem;
+    padding: .5rem 1rem;
     display: inline-block;
   }
-  .dropup {
-    position: relative;
-  }
-  .dropup-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f100;
-    z-index: 1;
-    padding: 0;
-    margin: 0;
-    margin-left: -15.5rem;
-  }
-  .dropup-content li {
-    list-style: none;
+  #dropdown-content {
     width: 100%;
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
-  .dropup-content li a {
-    color: black;
-    padding: 12px;
-    text-decoration: none;
-    left: 0;
-  }
-  .dropup:hover .dropup-content {
-    display: inline;
-  }
-  .dropup:hover .dropbtn {
-    background-color: #FFB035;
+  #dropdown-content li {
+    margin: .5rem 0;
   }
 }
 
@@ -331,9 +337,10 @@ footer ul li a {
   margin: 2rem 0px;
 }
 
-.card img {
-  padding: 0;
-  width: 100%;
+.card div.photo-container {
+  height: 250px;
+  background-position: center;
+  background-size: cover;
 }
 
 .info {
@@ -346,9 +353,40 @@ footer ul li a {
   margin: 1rem 0;
 }
 
+.layout-btn {
+  margin: 0 !important;
+  padding: 0 0 1rem 0;
+}
+
+.event-layout-btn {
+  border: none;
+  background-color: transparent;
+  width: 40px !important;
+  height: 40px;
+  background-size: cover;
+  background-position: center;
+}
+
+.event-layout-btn:focus {
+  outline: none;
+}
+
+.box-layout-btn {
+  background-image: url(../images/icons/evenementen/box-layout-btn.svg);
+}
+
+.box-layout-btn.active {
+  background-image: url(../images/icons/evenementen/box-layout-btn-selected.svg);
+}
+
+.row-layout-btn {
+  background-image: url(../images/icons/evenementen/row-layout-btn.svg);
+  margin-left: .5rem;
+}
+
 .filterlist {
   background-color: #FFB035;
-  margin: 0 0 2em 0 !important;
+  margin: 0 0 3em 0 !important;
   padding: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -374,28 +412,36 @@ footer ul li a {
   right: 10px;
 }
 
-.card .textbubblecontainer {
-  margin-top: -1.5rem;
+.textbubblecontainer {
+  margin-top: 0rem;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.card .textbubblecontainer img {
-  width: 50px !important;
-  float: right;
+.textbubblecontainer img {
+  margin: .5em .2rem;
+  width: 30px !important;
 }
 
-.card .textbubblecontainer span {
-  color: white;
-  position: absolute;
+.textbubblecontainer span {
+  color: #FFB035;
   right: 20px;
-  top: 5px;
+  font-weight: 700;
+  font-size: 1.5em;
 }
 
 .datum {
   font-size: 20px;
   font-weight: 400;
   float: right;
-  margin-right: 5%;
   line-height: 30px;
 }
 
@@ -419,6 +465,11 @@ footer ul li a {
   margin-bottom: 1rem;
 }
 
+.eventphoto {
+  max-height: 270px;
+  overflow: hidden;
+}
+
 .eventinfo {
   display: block;
   margin-top: 1rem;
@@ -433,7 +484,6 @@ footer ul li a {
   font-size: 18px;
   position: relative;
   float: right;
-  margin-right: 5%;
   -webkit-transform: translate(0, 10px);
           transform: translate(0, 10px);
 }
@@ -454,7 +504,7 @@ footer ul li a {
   display: flex;*/
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  font-family: "pt-sans-pro", sans-serif;
+  font-family: "pt-sans-pro", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
@@ -644,7 +694,7 @@ p {
 }
 
 .about {
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 
 .about h1 {
@@ -653,42 +703,11 @@ p {
 }
 
 /* ----------------------- */
-/* Article css */
-/* ----------------------- */
-.article {
-  margin-bottom: 50px;
-}
-
-.articleimg {
-  margin-right: 5%;
-}
-
-.articletitle {
-  top: 0;
-  font-size: 2.5rem;
-}
-
-.articledate {
-  font-size: 20px;
-  color: #FFB035;
-  margin-bottom: 5px;
-}
-
-.shareonfacebook {
-  position: absolute;
-  margin-top: 10px;
-}
-
-.shareonfacebook img {
-  width: 30px;
-}
-
-/* ----------------------- */
 /* About css */
 /* ----------------------- */
 .about,
 .index {
-  margin: 7rem 0;
+  margin: 10vh 0;
 }
 
 .about h1,
@@ -696,8 +715,12 @@ p {
   font-family: pt-sans-pro, sans-serif;
   font-weight: 900;
   font-size: 4em;
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
   white-space: normal;
+}
+
+#abouttext {
+  margin-top: 15vh;
 }
 
 .column-2 {
@@ -743,10 +766,19 @@ a {
 /* ----------------------- */
 /* Contact css */
 /* ----------------------- */
-.contactimage {
-  margin: 7em 0;
-  width: 80%;
-  height: auto;
+#contactanim {
+  position: relative;
+  top: 100px;
+  width: 70%;
+}
+
+#directbericht {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+#contact-submit {
+  margin-bottom: 200px;
 }
 
 form {
@@ -761,15 +793,11 @@ form {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 100%;
+  margin-top: 30px;
 }
 
-form input[type="text"],
-form input[type="email"],
 form textarea {
   width: 100%;
-}
-
-form textarea {
   resize: none;
   min-height: 200px;
   border: 2px black solid;
@@ -783,11 +811,14 @@ form input[type="submit"] {
 
 form fieldset {
   position: relative;
-  margin: 10px 0px;
+  margin: 0px;
+  margin-top: -20px;
+  padding: 0px;
 }
 
 form fieldset input {
-  width: 500px;
+  min-width: 100px;
+  width: 80%;
   border: none;
   border-bottom: 2px #000000 solid;
 }
@@ -805,27 +836,6 @@ form fieldset .text-input-label {
 
 form fieldset #contact-submit {
   display: none;
-}
-
-form fieldset label[for="contact-submit"] {
-  position: relative;
-  background-color: #FFB035;
-  padding: 5px 70px 5px 20px;
-  color: white;
-}
-
-form fieldset label[for="contact-submit"]::after {
-  content: '';
-  background-image: url(../images/icons/chevron-right-solid.svg);
-  color: white;
-  width: 10px;
-  height: 10px;
-  display: block;
-  position: absolute;
-  right: 5px;
-  top: 12px;
-  background-size: 90%;
-  background-position: center;
 }
 
 .button-container {
@@ -875,6 +885,16 @@ form fieldset label[for="contact-submit"]::after {
   z-index: -500;
 }
 
+/* ----------------------- */
+/* mail-sent */
+/* ----------------------- */
+#mail-sent {
+  width: 10%;
+}
+
+/* ----------------------- */
+/* Homepage css */
+/* ----------------------- */
 .photo-square {
   background-color: #72E3D8;
   background-size: cover;
@@ -912,9 +932,6 @@ form fieldset label[for="contact-submit"]::after {
   transition: 0.2s;
 }
 
-/* ----------------------- */
-/* Homepage css */
-/* ----------------------- */
 .photo-square:hover > h1 {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
@@ -932,183 +949,100 @@ form fieldset label[for="contact-submit"]::after {
 /*
     RESERVATIE 
                 */
-.reservatie-main {
-  max-width: 82.5rem;
-  margin: auto;
-}
-
-.row-one-reservatie {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  max-width: 82.5rem;
-  margin: auto;
-}
-
-.row-one-reservatie #description-box {
-  margin: 0 .75rem 0 .75rem;
-  max-width: 26rem;
-  min-width: 20rem;
-}
-
-.row-one-reservatie #description-box .description-box-head {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 2rem;
-}
-
-.row-one-reservatie #description-box .beschrijving {
+.return-btn {
   font-size: 1.2rem;
-  font-weight: 600;
+  position: relative;
+  padding-left: 3rem;
+}
+
+.return-btn::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-image: url(../images/icons/chevron-left-solid-black.svg);
+  background-position: center;
+  position: absolute;
+  background-size: 45%;
+  background-repeat: no-repeat;
+  left: 0;
+}
+
+.event-id-info h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+.event-id-info h2 span {
   color: #FFB035;
 }
 
-.row-one-reservatie #form {
-  padding-bottom: 1rem;
+.event-id-info p {
+  margin-top: 2.5em;
 }
 
-.row-one-reservatie .col-sm-4:not(#description-box) {
-  margin: 0 .75rem 0 .75rem;
-  max-width: 26rem;
-  min-width: 20rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.row-one-reservatie .col-sm-4:not(#description-box) form {
-  width: 90%;
-  max-height: 283px;
-  margin-bottom: 1rem;
-}
-
-.row-one-reservatie .col-sm-4:not(#description-box) form .reservatie-input {
-  border: none;
-  border-bottom: #FFB035 2px solid;
-}
-
-.row-one-reservatie .col-sm-4:not(#description-box) form .reservatie-label:not(#nah) {
-  margin-top: 2em;
-}
-
-.row-two-reservatie {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  max-width: 82.5rem;
-  margin: auto;
+.event-list {
+  padding: 0;
+  margin: 0;
   margin-top: 2rem;
 }
 
-.row-two-reservatie .col-sm-4 {
-  max-width: 26rem;
-  min-width: 20rem;
-  margin: 0 .75rem 0 .75rem;
-}
-
-.row-two-reservatie .col-sm-4 h1 {
-  margin: 0 0 1.2rem 0;
-}
-
-.row-two-reservatie .col-sm-4 .event-list {
-  list-style-type: none !important;
-  padding: 0;
-}
-
-.row-two-reservatie .col-sm-4 ul li {
+.event-list li {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0 0 1rem 0;
-  padding: 0;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  line-height: 2.5rem;
 }
 
-.row-two-reservatie .col-sm-4 figure {
-  width: 2rem;
-  margin-left: auto;
-}
-
-.row-two-reservatie .col-sm-4 .beschrijving {
-  font-size: 1.2rem;
-  font-weight: 600;
+.event-list .beschrijving {
+  font-size: 1.5em;
   color: #FFB035;
 }
 
-.row-two-reservatie .col-sm-4 button {
-  width: 80%;
-  height: 3rem;
-  margin-left: 2.75rem;
-  margin-top: 3.344rem;
-  padding: 0;
+.inschrijven {
+  display: block;
+}
+
+.inschrijven input {
   border: none;
+  border-bottom: 2px #000000 solid;
+  width: 100% !important;
+  margin-top: 2em;
+}
+
+.inschrijven input[type="submit"] {
+  padding: .5rem 2rem;
+  border: none;
+  width: -webkit-max-content !important;
+  width: -moz-max-content !important;
+  width: max-content !important;
   background-color: #FFB035;
-  color: #fff;
+  color: white;
 }
 
-.row-two-reservatie .col-sm-2 {
-  width: 90%;
+.inschrijven .participants-container {
+  margin-top: 2rem;
 }
 
-.row-two-reservatie .col-sm-2 #top-duo {
-  margin-top: 3.438rem;
-}
-
-.row-two-reservatie .col-sm-2 .label-input-duo:not(.totaal) {
+.inschrijven .label-input-duo {
+  margin-top: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 90%;
-  margin: 0 auto 1rem auto;
 }
 
-.row-two-reservatie .col-sm-2 .label-input-duo:not(.totaal) #nultottwaalf {
-  margin-left: 1em;
-}
-
-.row-two-reservatie .col-sm-2 .label-input-duo:not(.totaal) label::after {
-  border: #FFB035 1px;
-}
-
-.row-two-reservatie .col-sm-2 .label-input-duo .total {
+.inschrijven .label-input-duo label {
   font-size: 1.2rem;
-  font-weight: 600;
   color: #FFB035;
-  margin: auto;
-  width: 90%;
-}
-
-.row-two-reservatie .col-sm-2 select {
-  background-color: #FFB035;
-  color: #fff;
-}
-
-/*      Filter css      */
-.filter-container {
-  width: 100vw;
-  margin: 0;
-  padding: 0;
 }
 
 .form-title {
@@ -1116,38 +1050,39 @@ form fieldset label[for="contact-submit"]::after {
   margin: 2rem 0 1rem 0;
 }
 
-.single-filter-container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 1rem;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+@media only screen and (min-width: 0px) and (max-width: 576px) {
+  #contactanim {
+    margin: 0 auto;
+    top: 0px;
+    width: 50vw;
+  }
 }
 
-.single-filter-container input {
-  display: none;
-}
-
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  margin-right: 1rem;
-  border: 3px #EB5B55 solid;
-  background-color: transparent;
-}
-
-.single-filter-container input:checked ~ .checkmark {
-  background-color: #EB5B55;
+@media only screen and (min-width: 0px) and (max-width: 992px) {
+  #wereldbol {
+    display: none;
+  }
+  .photo-square {
+    font-size: 0.8em;
+    height: 70%;
+  }
+  .photo-square > img {
+    width: 100px;
+  }
 }
 
 @media only screen and (min-width: 0px) and (max-width: 767px) {
+  #bm {
+    width: 100%;
+  }
+  .footer-navigation {
+    padding-bottom: 30px;
+    border-bottom: 1px white solid;
+  }
+  #contactinfo {
+    padding-bottom: 30px;
+    border-bottom: 1px white solid;
+  }
   .footer-column {
     margin-bottom: 2em;
   }
@@ -1159,16 +1094,8 @@ form fieldset label[for="contact-submit"]::after {
         -ms-flex-align: center !important;
             align-items: center !important;
   }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1199px) {
-  .navigation-container {
-    -webkit-box-align: center !important;
-        -ms-flex-align: center !important;
-            align-items: center !important;
-  }
   .event-filters {
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1177,10 +1104,63 @@ form fieldset label[for="contact-submit"]::after {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .filter-list {
-    width: 50%;
-    margin: 0;
-    padding: 0;
+}
+
+.sent-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 50vh;
+}
+
+.email-sent-text a {
+  position: relative;
+  margin-left: 2rem;
+}
+
+.email-sent-text a::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-image: url(../images/icons/chevron-left-solid-black.svg);
+  background-position: center;
+  position: absolute;
+  background-size: 45%;
+  background-repeat: no-repeat;
+  left: -40px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-column {
+    margin-bottom: 2em;
+  }
+  .footer-column:last-of-type {
+    margin-bottom: 0em;
+  }
+  .navigation-container {
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+  }
+  .event-filters {
+    margin-bottom: 5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .cal-container {
     padding-right: 2rem !important;
@@ -1196,11 +1176,6 @@ form fieldset label[for="contact-submit"]::after {
   .event-filters {
     display: block;
   }
-  .filter-list {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
   .footer-column {
     margin-bottom: 2em;
   }
@@ -1208,3 +1183,4 @@ form fieldset label[for="contact-submit"]::after {
     margin-bottom: 0em;
   }
 }
+/*# sourceMappingURL=style.css.map */

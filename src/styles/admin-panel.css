@@ -3,40 +3,58 @@ body {
   padding: 0px;
 }
 
+.tabs {
+  width: 100%;
+  margin: 50px 0px 20px -5px;
+}
+
+.tabs .tab {
+  display: inline-block !important;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(240, 240, 240, 0);
+  margin-right: 20px;
+}
+
+.tabs .tab:hover, .tabs .tab.active {
+  border: 1px solid #f0f0f0;
+  cursor: pointer;
+}
+
 .card {
   border: 0px !important;
   margin-top: 40px;
+  display: none;
 }
 
 .card .menu-box {
   border-bottom: 1px solid #f0f0f0;
   margin-bottom: 30px;
-}
-
-.card .tab {
-  padding-left: 20px;
-  margin-right: 20px;
-  border-left: 1px solid #f0f0f0;
-}
-
-.card .tab.current-tab {
-  font-size: 20pt;
-  font-weight: bold;
-}
-
-.item {
-  width: 100%;
-}
-
-.item .event-top, .item .event-bottom {
   padding: 10px 0px;
 }
 
-.item .event-top div, .item .event-bottom div {
+.item, .news-item {
+  width: 100%;
+  /*.event-top:hover{
+    border: 1px solid rgba(240,240,240,1);
+  }*/
+}
+
+.item .event-top, .item .event-bottom, .item .news-top, .item .news-bottom, .item .modal-box-form, .news-item .event-top, .news-item .event-bottom, .news-item .news-top, .news-item .news-bottom, .news-item .modal-box-form {
+  padding: 10px 0px;
+}
+
+.item .event-top label, .item .event-bottom label, .item .news-top label, .item .news-bottom label, .item .modal-box-form label, .news-item .event-top label, .news-item .event-bottom label, .news-item .news-top label, .news-item .news-bottom label, .news-item .modal-box-form label {
+  position: absolute;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.item .event-top div, .item .event-bottom div, .item .news-top div, .item .news-bottom div, .item .modal-box-form div, .news-item .event-top div, .news-item .event-bottom div, .news-item .news-top div, .news-item .news-bottom div, .news-item .modal-box-form div {
   position: relative;
 }
 
-.item .event-top input, .item .event-top textarea, .item .event-bottom input, .item .event-bottom textarea {
+.item .event-top input, .item .event-top textarea, .item .event-top select, .item .event-bottom input, .item .event-bottom textarea, .item .event-bottom select, .item .news-top input, .item .news-top textarea, .item .news-top select, .item .news-bottom input, .item .news-bottom textarea, .item .news-bottom select, .item .modal-box-form input, .item .modal-box-form textarea, .item .modal-box-form select, .news-item .event-top input, .news-item .event-top textarea, .news-item .event-top select, .news-item .event-bottom input, .news-item .event-bottom textarea, .news-item .event-bottom select, .news-item .news-top input, .news-item .news-top textarea, .news-item .news-top select, .news-item .news-bottom input, .news-item .news-bottom textarea, .news-item .news-bottom select, .news-item .modal-box-form input, .news-item .modal-box-form textarea, .news-item .modal-box-form select {
   width: 100%;
   height: 100%;
   font-size: 12pt;
@@ -45,15 +63,15 @@ body {
   padding: 10px 15px;
 }
 
-.item .event-top textarea, .item .event-bottom textarea {
+.item .event-top textarea, .item .event-bottom textarea, .item .news-top textarea, .item .news-bottom textarea, .item .modal-box-form textarea, .news-item .event-top textarea, .news-item .event-bottom textarea, .news-item .news-top textarea, .news-item .news-bottom textarea, .news-item .modal-box-form textarea {
   min-height: 100px;
 }
 
-.item .event-top input:focus, .item .event-top textarea:focus, .item .event-top select:focus, .item .event-bottom input:focus, .item .event-bottom textarea:focus, .item .event-bottom select:focus {
+.item .event-top input:focus, .item .event-top textarea:focus, .item .event-top select:focus, .item .event-top select:focus, .item .event-bottom input:focus, .item .event-bottom textarea:focus, .item .event-bottom select:focus, .item .event-bottom select:focus, .item .news-top input:focus, .item .news-top textarea:focus, .item .news-top select:focus, .item .news-top select:focus, .item .news-bottom input:focus, .item .news-bottom textarea:focus, .item .news-bottom select:focus, .item .news-bottom select:focus, .item .modal-box-form input:focus, .item .modal-box-form textarea:focus, .item .modal-box-form select:focus, .item .modal-box-form select:focus, .news-item .event-top input:focus, .news-item .event-top textarea:focus, .news-item .event-top select:focus, .news-item .event-top select:focus, .news-item .event-bottom input:focus, .news-item .event-bottom textarea:focus, .news-item .event-bottom select:focus, .news-item .event-bottom select:focus, .news-item .news-top input:focus, .news-item .news-top textarea:focus, .news-item .news-top select:focus, .news-item .news-top select:focus, .news-item .news-bottom input:focus, .news-item .news-bottom textarea:focus, .news-item .news-bottom select:focus, .news-item .news-bottom select:focus, .news-item .modal-box-form input:focus, .news-item .modal-box-form textarea:focus, .news-item .modal-box-form select:focus, .news-item .modal-box-form select:focus {
   outline: none;
 }
 
-.item .event-top input.euro-teken::before, .item .event-bottom input.euro-teken::before {
+.item .event-top input.euro-teken::before, .item .event-bottom input.euro-teken::before, .item .news-top input.euro-teken::before, .item .news-bottom input.euro-teken::before, .item .modal-box-form input.euro-teken::before, .news-item .event-top input.euro-teken::before, .news-item .event-bottom input.euro-teken::before, .news-item .news-top input.euro-teken::before, .news-item .news-bottom input.euro-teken::before, .news-item .modal-box-form input.euro-teken::before {
   content: '';
   font-size: 12pt;
   position: absolute;
@@ -64,43 +82,70 @@ body {
   width: 10px;
 }
 
-.item .event-top input.changed, .item .event-top textarea.changed, .item .event-bottom input.changed, .item .event-bottom textarea.changed {
+.item .event-top input.changed, .item .event-top textarea.changed, .item .event-top select.changed, .item .event-bottom input.changed, .item .event-bottom textarea.changed, .item .event-bottom select.changed, .item .news-top input.changed, .item .news-top textarea.changed, .item .news-top select.changed, .item .news-bottom input.changed, .item .news-bottom textarea.changed, .item .news-bottom select.changed, .item .modal-box-form input.changed, .item .modal-box-form textarea.changed, .item .modal-box-form select.changed, .news-item .event-top input.changed, .news-item .event-top textarea.changed, .news-item .event-top select.changed, .news-item .event-bottom input.changed, .news-item .event-bottom textarea.changed, .news-item .event-bottom select.changed, .news-item .news-top input.changed, .news-item .news-top textarea.changed, .news-item .news-top select.changed, .news-item .news-bottom input.changed, .news-item .news-bottom textarea.changed, .news-item .news-bottom select.changed, .news-item .modal-box-form input.changed, .news-item .modal-box-form textarea.changed, .news-item .modal-box-form select.changed {
   border: solid 1px #f39c12;
 }
 
-.item .event-top input.saved, .item .event-top textarea.saved, .item .event-bottom input.saved, .item .event-bottom textarea.saved {
+.item .event-top input.saved, .item .event-top textarea.saved, .item .event-top select.saved, .item .event-bottom input.saved, .item .event-bottom textarea.saved, .item .event-bottom select.saved, .item .news-top input.saved, .item .news-top textarea.saved, .item .news-top select.saved, .item .news-bottom input.saved, .item .news-bottom textarea.saved, .item .news-bottom select.saved, .item .modal-box-form input.saved, .item .modal-box-form textarea.saved, .item .modal-box-form select.saved, .news-item .event-top input.saved, .news-item .event-top textarea.saved, .news-item .event-top select.saved, .news-item .event-bottom input.saved, .news-item .event-bottom textarea.saved, .news-item .event-bottom select.saved, .news-item .news-top input.saved, .news-item .news-top textarea.saved, .news-item .news-top select.saved, .news-item .news-bottom input.saved, .news-item .news-bottom textarea.saved, .news-item .news-bottom select.saved, .news-item .modal-box-form input.saved, .news-item .modal-box-form textarea.saved, .news-item .modal-box-form select.saved {
   border: solid 1px #2ecc71;
 }
 
-.item .event-top input.failed, .item .event-top textarea.failed, .item .event-bottom input.failed, .item .event-bottom textarea.failed {
+.item .event-top input.failed, .item .event-top textarea.failed, .item .event-top select.failed, .item .event-bottom input.failed, .item .event-bottom textarea.failed, .item .event-bottom select.failed, .item .news-top input.failed, .item .news-top textarea.failed, .item .news-top select.failed, .item .news-bottom input.failed, .item .news-bottom textarea.failed, .item .news-bottom select.failed, .item .modal-box-form input.failed, .item .modal-box-form textarea.failed, .item .modal-box-form select.failed, .news-item .event-top input.failed, .news-item .event-top textarea.failed, .news-item .event-top select.failed, .news-item .event-bottom input.failed, .news-item .event-bottom textarea.failed, .news-item .event-bottom select.failed, .news-item .news-top input.failed, .news-item .news-top textarea.failed, .news-item .news-top select.failed, .news-item .news-bottom input.failed, .news-item .news-bottom textarea.failed, .news-item .news-bottom select.failed, .news-item .modal-box-form input.failed, .news-item .modal-box-form textarea.failed, .news-item .modal-box-form select.failed {
   border: solid 1px #e74c3c;
   background-color: rgba(231, 76, 60, 0.2);
 }
 
-.item .event-bottom {
+.item .event-bottom, .item .news-bottom, .news-item .event-bottom, .news-item .news-bottom {
   background-color: rgba(250, 250, 250, 0.8);
   display: none;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  padding-top: 35px;
+  margin-bottom: 50px;
 }
 
-.item .event-bottom img {
+.item .event-bottom img, .item .news-bottom img, .news-item .event-bottom img, .news-item .news-bottom img {
   width: 100%;
   height: auto;
 }
 
-.item .event-top {
-  margin-top: 20px;
+.item .event-bottom input, .item .event-bottom select, .item .event-bottom textarea, .item .news-bottom input, .item .news-bottom select, .item .news-bottom textarea, .news-item .event-bottom input, .news-item .event-bottom select, .news-item .event-bottom textarea, .news-item .news-bottom input, .news-item .news-bottom select, .news-item .news-bottom textarea {
+  margin-bottom: 50px;
+}
+
+.item .event-bottom table, .item .news-bottom table, .news-item .event-bottom table, .news-item .news-bottom table {
+  width: 100%;
+  font-size: 12px;
+  /*tbody{
+
+      }*/
+}
+
+.item .event-bottom table thead, .item .news-bottom table thead, .news-item .event-bottom table thead, .news-item .news-bottom table thead {
+  font-weight: bold;
+}
+
+.item .event-bottom label, .item .news-bottom label, .news-item .event-bottom label, .news-item .news-bottom label {
+  top: -25px;
+  left: -10px;
+}
+
+.item .event-top, .item .news-top, .news-item .event-top, .news-item .news-top {
+  margin-top: 30px;
   border: 1px solid rgba(0, 0, 0, 0);
   border-radius: 3px;
   background-color: white;
 }
 
-.item .event-top:hover {
-  border: 1px solid #f0f0f0;
+.item .event-top label, .item .news-top label, .news-item .event-top label, .news-item .news-top label {
+  margin-bottom: 5px;
+  top: -28px;
+  left: 6px;
+  background-color: white;
+  padding: 5px 10px;
 }
 
-.item .event-top.active {
+.item .event-top.active, .news-item .event-top.active {
   border: 1px solid #f0f0f0;
   border-radius: 10px;
   border-bottom-left-radius: 0px;
@@ -158,3 +203,79 @@ body {
 .button.blocked:hover {
   cursor: not-allowed !important;
 }
+
+.status-alert {
+  margin: 50px auto 0px;
+  padding: 15px;
+}
+
+.status-alert.ok {
+  background-color: #55efc4;
+}
+
+.status-alert.error {
+  background-color: #fab1a0;
+}
+
+/* modalbox */
+.modalbox-container {
+  z-index: 50;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: none;
+  /* flex */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modalbox-container .modal-box {
+  width: 75%;
+  max-width: 800px;
+  background-color: white;
+  padding: 20px 30px;
+}
+
+.modalbox-container .modal-box h3 {
+  margin-bottom: 75px;
+}
+
+.modalbox-container .modal-box label {
+  top: -25px;
+}
+
+.modalbox-container .modal-box .col-sm-6 {
+  margin-bottom: 50px;
+}
+
+.modalbox-container .modal-box .form-event-picture {
+  width: 100%;
+  background-color: #f0f0f0;
+  position: relative;
+}
+
+.modalbox-container .modal-box .form-event-picture input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+.modalbox-container .modal-box .form-event-picture input:hover {
+  cursor: pointer;
+}
+
+.modalbox-container .modal-box .form-event-picture::after {
+  content: '';
+  display: block;
+  padding-bottom: 100%;
+}
+/*# sourceMappingURL=admin-panel.css.map */

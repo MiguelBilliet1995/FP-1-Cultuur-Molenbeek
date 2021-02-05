@@ -1,23 +1,22 @@
 <?php
 include_once('parser/CRUD/evenementenDB.php');
 
-if(isset($_GET['filter'])) {
-  $filter = $_GET['filter'];
-  if(isset($_GET['filterdata'])) {
-    $filterData = $_GET['filterdata'];
-  }
-  if(isset($_GET['sort'])){
-    $sort = $_GET['sort'];
-    if(isset($_GET['sortdirection'])) {
-      $sortDirection = $_GET['sortdirection'];
-    } else {
-      $sortDirection = 'DESC';
-    }
-  }
 
-  $evenementen = evenementenDB::getEventBy($filter, $filterData, $sort,$sortDirection);
-
+if(isset($_GET['filter'])&&isset($_GET['sort'])){
+  if(!isset($_GET['sortdirection'])){
+    $_GET['sortdirection'] = "DESC";
+  }
+  $evenementen = evenementenDB::getEventBy($_GET['filter'], $_GET['filterdata'], $_GET['sort'], $_GET['sortdirection']);
+}elseif(isset($_GET['filter'])&&!isset($_GET['sort'])){
+  $evenementen = evenementenDB::getEventBy($_GET['filter'], $_GET['filterdata'], null, null);
+}elseif(!isset($_GET['filter'])&&isset($_GET['sort'])){
+  if(!isset($_GET['sortdirection'])){
+    $_GET['sortdirection'] = "DESC";
+  }
+  $evenementen = evenementenDB::getEventBy(null, null, $_GET['sort'], $_GET['sortdirection']);
 }
+
+
 
 ?>
 
@@ -44,13 +43,13 @@ if(isset($_GET['filter'])) {
     <div class="row">
       <div class="cal-container col-sm-12 col-md-12 col-lg-12 col-xl-4">
         <div class="calendar">
-          <p id="selected-date">29 januari 2021<p>
+          <p id="selected-date">5 februari 2021<p>
           <div class="month">
             <p style="display: none;"></p>
             <div class="month-slider">
               <p class="prev">&#8249;</p>
               <div class="date">
-                <p>Januari</p>
+                <p>februari</p>
               </div>
               <p class="next">&#8250;</p>
             </div>
@@ -59,71 +58,82 @@ if(isset($_GET['filter'])) {
           <table class="table table-responsive-sm" id="calendar">
             <thead class="weekdays">
               <tr>
-                <th>Zon</th>
                 <th>Ma</th>
                 <th>Di</th>
                 <th>Woe</th>
                 <th>Don</th>
                 <th>Vrij</th>
                 <th>Zat</th>
+                <th>Zon</th>
               </tr>
             </thead>
             <tbody id="calendar-body" class="days"></tbody>
           </table>
         </div>
         <div class="event-filters">
-          <section class="ilter-list">
+          <section class="filter-list col-sm-6 col-xl-12">
             <h1 class="form-title">Filter op maat van je gezin</h1>
-            <label class="single-filter-container" for="kleuters">Voor gezinnen met kleuters
-              <input type="checkbox" id="kleuters">
-              <span class="checkmark">
-              </span>
-            </label>
-            <label class="single-filter-container" for="tieners">Voor gezinnen met tieners
-              <input type="checkbox" id="tieners">
-              <span class="checkmark"></span>
-            </label>
-            <label class="single-filter-container" for="allAges">Voor gezinnen van alle leeftijden
-              <input type="checkbox" id="allAges">
-              <span class="checkmark"></span>
-            </label>
+            <label for="filter-options">Leeftijdscategorie:</label>
+            <select name="family-size-filter" class="filter-listener" id="filter-options">
+              <option disabled selected value="">filter op...</option>
+              <option value="kleuters">gezinnen met kleuters</option>
+              <option value="kinderen">gezinnen met kinderen</option>
+              <option value="jongeren">gezinnen met jongeren</option>
+            </select>
           </section>
-          <section class="filter-list">
-            <h1 class="form-title">Filter jouw voorkeuren</h1>
-            <label class="single-filter-container" for="AlleDagen">Alle Dagen
-              <input type="checkbox" id="AlleDagen">
-              <span class="checkmark">
-              </span>
-            </label>
-            <label class="single-filter-container" for="weekdagen">Weekdagen
-              <input type="checkbox" id="weekdagen">
-              <span class="checkmark"></span>
-            </label>
-            <label class="single-filter-container" for="weekend">Weekend
-              <input type="checkbox" id="weekend">
-              <span class="checkmark"></span>
-            </label>
+          <section class="filter-list col-sm-6 col-xl-12">
+            <h1 class="form-title">Sorteren op</h1>
+            <label for="sort-options">Sorteeropties:</label>
+            <select name="family-size-filter" class="sort-listener" id="sort-options">
+              <option disabled selected value="">filter op...</option>
+              <option value="prijs%desc">prijs hoogst</option>
+              <option value="prijs%asc">prijs laagst</option>
+              <option value="datum%desc">datum dichtst</option>
+              <option value="datum%asc">datum verst</option>
+            </select>
           </section>
+        
         </div>
       </div>
       <script src="scripts/cal-script.js"></script>
       <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8">
-        <div class="row filterlist">
+      <!--
+      <div class="row filterlist">
           <span class="filteritem">Voor gezinnen met kleuters</span>
           <span class="filteritem">Alle dagen</span>
         </div>
+         <div class="row layout-btn">
+          <button class="active box-layout-btn event-layout-btn" onclick="changeEventLayoutBox()"></button>
+          <button class="row-layout-btn event-layout-btn" onclick="changeEventLayoutRow()"></button>
+        </div> -->
         <div class="row">
           <?php
-          if(!$evenementen){
+          if(!$evenementen&&!$_GET["filter"]){
             $evenementen = evenementenDB::getAll();
           }
           foreach($evenementen as $evenement){
           ?>
           <div class="card col-sm-12 col-md-6">
-            <img src="data/images/evenementen/<?php echo $evenement->foto(); ?>">
+            <div class="eventphoto"><img src="data/images/evenementen/<?php echo $evenement->foto(); ?>"></div>
             <div class="textbubblecontainer">
-              <img src="images/icons/speechbubblefull.svg" alt="">
-              <span class="language">nl</span>
+              <img src="images/icons/speechbubblefullnl.svg" alt="">
+              <?php
+                $maxAantalIconen = 4;
+                $totaalIconen = $evenement->taalNiveau();
+                $indexIconen = 0;
+                for ($indexIconen=0; $indexIconen < $totaalIconen; $indexIconen++) { 
+              ?>
+                <img src="images/icons/speechbubblefull.svg" alt="">
+              <?php
+                }
+
+                for (null; $indexIconen < $maxAantalIconen; $indexIconen++) { 
+              ?>
+                <img src="images/icons/speechbubbleempty.svg" alt="">
+              <?php
+                }
+              ?>
+
             </div>
             <div class="info">
               <div class="titleDate">
@@ -133,8 +143,7 @@ if(isset($_GET['filter'])) {
               <span class="eventinfo"><img src="images/icons/locationicon.svg" alt=""><?php echo $evenement->locatie() ?></span>
               <span class="eventinfo"><img src="images/icons/clock-icon.svg" alt=""><?php echo $evenement->uur() ?></span>
               <p class="description"><?php echo $evenement->beschrijving() ?></p>
-              <!-- <a href="reserveren.php?id=<?php echo $evenement->id() ?>"> -->
-              <a href="reserveren.php">
+              <a href="reserveren.php?id=<?php echo $evenement->id() ?>">
                 <div class="button-container">
                   <div class="button button-next">
                     <p> Schrijf je nu in!</p>
@@ -153,6 +162,7 @@ if(isset($_GET['filter'])) {
   </div>
   <?php include 'includes/footer.php'; ?>
   <script src="scripts/fetch-content.js"></script>
+  <script src="scripts/sort.js"></script>
 </body>
 
 </html>
