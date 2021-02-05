@@ -192,13 +192,13 @@ nav li {
 
 
 /*      MOBILE NAVIGATION     */
-.dropbtn, 
+.dropbtn,
 #dropdown-content {
   display: none;
 }
 
 @media only screen and (max-width: 995px) {
-  .desktop-nav{
+  .desktop-nav {
     display: none;
   }
 
@@ -222,6 +222,7 @@ nav li {
     display: none;
     flex-direction: column;
     align-items: flex-end;
+
     li {
       margin: .5rem 0;
     }
@@ -1065,6 +1066,32 @@ form {
     width: 100%;
     justify-content: space-between;
   }
+}
+
+.sent-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 50vh;
+}
+
+.email-sent-text {
+  a{
+    position: relative;
+    margin-left: 2rem;
+  }
+}
+.email-sent-text a::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-image: url(../images/icons/chevron-left-solid-black.svg);
+  background-position: center;
+  position: absolute;
+  background-size: 45%;
+  background-repeat: no-repeat;
+  left: -40px;
 }
 
 
