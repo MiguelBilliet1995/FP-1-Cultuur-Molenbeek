@@ -21,21 +21,21 @@ body {
   }*/
 }
 
-.item .event-top, .item .event-bottom {
+.item .event-top, .item .event-bottom, .item .modal-box-form {
   padding: 10px 0px;
 }
 
-.item .event-top label, .item .event-bottom label {
+.item .event-top label, .item .event-bottom label, .item .modal-box-form label {
   position: absolute;
   font-size: 12px;
   font-weight: bold;
 }
 
-.item .event-top div, .item .event-bottom div {
+.item .event-top div, .item .event-bottom div, .item .modal-box-form div {
   position: relative;
 }
 
-.item .event-top input, .item .event-top textarea, .item .event-top option, .item .event-bottom input, .item .event-bottom textarea, .item .event-bottom option {
+.item .event-top input, .item .event-top textarea, .item .event-top select, .item .event-bottom input, .item .event-bottom textarea, .item .event-bottom select, .item .modal-box-form input, .item .modal-box-form textarea, .item .modal-box-form select {
   width: 100%;
   height: 100%;
   font-size: 12pt;
@@ -44,15 +44,15 @@ body {
   padding: 10px 15px;
 }
 
-.item .event-top textarea, .item .event-bottom textarea {
+.item .event-top textarea, .item .event-bottom textarea, .item .modal-box-form textarea {
   min-height: 100px;
 }
 
-.item .event-top input:focus, .item .event-top textarea:focus, .item .event-top select:focus, .item .event-top option:focus, .item .event-bottom input:focus, .item .event-bottom textarea:focus, .item .event-bottom select:focus, .item .event-bottom option:focus {
+.item .event-top input:focus, .item .event-top textarea:focus, .item .event-top select:focus, .item .event-top select:focus, .item .event-bottom input:focus, .item .event-bottom textarea:focus, .item .event-bottom select:focus, .item .event-bottom select:focus, .item .modal-box-form input:focus, .item .modal-box-form textarea:focus, .item .modal-box-form select:focus, .item .modal-box-form select:focus {
   outline: none;
 }
 
-.item .event-top input.euro-teken::before, .item .event-bottom input.euro-teken::before {
+.item .event-top input.euro-teken::before, .item .event-bottom input.euro-teken::before, .item .modal-box-form input.euro-teken::before {
   content: '';
   font-size: 12pt;
   position: absolute;
@@ -63,15 +63,15 @@ body {
   width: 10px;
 }
 
-.item .event-top input.changed, .item .event-top textarea.changed, .item .event-top option.changed, .item .event-bottom input.changed, .item .event-bottom textarea.changed, .item .event-bottom option.changed {
+.item .event-top input.changed, .item .event-top textarea.changed, .item .event-top select.changed, .item .event-bottom input.changed, .item .event-bottom textarea.changed, .item .event-bottom select.changed, .item .modal-box-form input.changed, .item .modal-box-form textarea.changed, .item .modal-box-form select.changed {
   border: solid 1px #f39c12;
 }
 
-.item .event-top input.saved, .item .event-top textarea.saved, .item .event-top option.saved, .item .event-bottom input.saved, .item .event-bottom textarea.saved, .item .event-bottom option.saved {
+.item .event-top input.saved, .item .event-top textarea.saved, .item .event-top select.saved, .item .event-bottom input.saved, .item .event-bottom textarea.saved, .item .event-bottom select.saved, .item .modal-box-form input.saved, .item .modal-box-form textarea.saved, .item .modal-box-form select.saved {
   border: solid 1px #2ecc71;
 }
 
-.item .event-top input.failed, .item .event-top textarea.failed, .item .event-top option.failed, .item .event-bottom input.failed, .item .event-bottom textarea.failed, .item .event-bottom option.failed {
+.item .event-top input.failed, .item .event-top textarea.failed, .item .event-top select.failed, .item .event-bottom input.failed, .item .event-bottom textarea.failed, .item .event-bottom select.failed, .item .modal-box-form input.failed, .item .modal-box-form textarea.failed, .item .modal-box-form select.failed {
   border: solid 1px #e74c3c;
   background-color: rgba(231, 76, 60, 0.2);
 }
@@ -184,3 +184,79 @@ body {
 .button.blocked:hover {
   cursor: not-allowed !important;
 }
+
+.status-alert {
+  margin: 50px auto 0px;
+  padding: 15px;
+}
+
+.status-alert.ok {
+  background-color: #55efc4;
+}
+
+.status-alert.error {
+  background-color: #fab1a0;
+}
+
+/* modalbox */
+.modalbox-container {
+  z-index: 50;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: none;
+  /* flex */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modalbox-container .modal-box {
+  width: 75%;
+  max-width: 800px;
+  background-color: white;
+  padding: 20px 30px;
+}
+
+.modalbox-container .modal-box h3 {
+  margin-bottom: 75px;
+}
+
+.modalbox-container .modal-box label {
+  top: -25px;
+}
+
+.modalbox-container .modal-box .col-sm-6 {
+  margin-bottom: 50px;
+}
+
+.modalbox-container .modal-box .form-event-picture {
+  width: 100%;
+  background-color: #f0f0f0;
+  position: relative;
+}
+
+.modalbox-container .modal-box .form-event-picture input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+}
+
+.modalbox-container .modal-box .form-event-picture input:hover {
+  cursor: pointer;
+}
+
+.modalbox-container .modal-box .form-event-picture::after {
+  content: '';
+  display: block;
+  padding-bottom: 100%;
+}
+/*# sourceMappingURL=admin-panel.css.map */

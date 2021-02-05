@@ -25,47 +25,27 @@ document.querySelectorAll('.button-detail').forEach((item) => {
 
 // alle inputs
 
-// textbox
-document.querySelectorAll("input").forEach((input) => {
-  input.addEventListener('keyup', (e) => {
-    let element = e.path[0];
-    let id = element.id.split("-")[2];
+function changedInput(e){
+  let element = e.path[0];
+  let id = element.id.split("-")[2];
 
-    element.classList.add("changed");
-    document.querySelector('#event-undo-' + id).classList.remove("blocked");
-    document.querySelector('#event-undo-all').classList.remove("blocked");
-    document.querySelector('#event-save-all').classList.remove("blocked");
+  element.classList.add("changed");
+  document.querySelector('#event-undo-' + id).classList.remove("blocked");
+  document.querySelector('#event-undo-all').classList.remove("blocked");
+  document.querySelector('#event-save-all').classList.remove("blocked");
+}
+
+
+document.querySelectorAll(".check-changed").forEach((input) => {
+  input.addEventListener('keyup', (e) => {
+    changedInput(e);
+  });
+  input.addEventListener('change', (e) => {
+    changedInput(e);
   });
 
 });
 
-// textarea
-document.querySelectorAll("textarea").forEach((input) => {
-  input.addEventListener('keyup', (e) => {
-    let element = e.path[0];
-    let id = element.id.split("-")[2];
-
-    element.classList.add("changed");
-    document.querySelector('#event-undo-' + id).classList.remove("blocked");
-    document.querySelector('#event-undo-all').classList.remove("blocked");
-    document.querySelector('#event-save-all').classList.remove("blocked");
-  });
-
-});
-
-// option
-document.querySelectorAll("option").forEach((input) => {
-  input.addEventListener('keyup', (e) => {
-    let element = e.path[0];
-    let id = element.id.split("-")[2];
-
-    element.classList.add("changed");
-    document.querySelector('#event-undo-' + id).classList.remove("blocked");
-    document.querySelector('#event-undo-all').classList.remove("blocked");
-    document.querySelector('#event-save-all').classList.remove("blocked");
-  });
-
-});
 
 // savebutton
 document.querySelector("#event-save-all").addEventListener('click', (e) => {
@@ -87,14 +67,16 @@ document.querySelector("#event-save-all").addEventListener('click', (e) => {
 });
 
 
-function saveChanges(){
+// modal boxes
 
+function openModalBox(modalbox){
+  document.querySelector(".modalbox-container").style.display = "flex";
+  document.querySelector("#" + modalbox).style.display = "block";
 }
 
-function addEvent(){
-
-}
-
-function removeEvent(){
-
+function closeAllModalBox(){
+  document.querySelectorAll(".modal-box").forEach((element) => {
+    element.style.display = "none";
+  });
+  document.querySelector(".modalbox-container").style.display = "none";
 }

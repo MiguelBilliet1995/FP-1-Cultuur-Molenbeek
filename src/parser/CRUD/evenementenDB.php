@@ -29,8 +29,8 @@ class evenementenDB{
         }
     }
 
-    public static function addEvent($naam, $prijs, $datum, $uur, $locatie, $beschrijving, $foto, $type){
-        $resultaat = self::getVerbinding()->voerSqlQueryUit("INSERT INTO evenementen (naam, prijs, datum, uur, locatie, beschrijving, foto, type) VALUES ('?','?','?','?','?','?','?','?');");
+    public static function addEvent($naam, $prijs, $datum, $uur, $locatie, $beschrijving, $foto, $type, $taalniveau){
+        $resultaat = self::getVerbinding()->voerSqlQueryUit("INSERT INTO evenementen (naam, prijs, datum, uur, locatie, beschrijving, foto, type, taal_niveau) VALUES ('?','?','?','?','?','?','?','?','?');", array($naam, $prijs, $datum, $uur, $locatie, $beschrijving, $foto, $type, $taalniveau));
         return true;
     }
 
