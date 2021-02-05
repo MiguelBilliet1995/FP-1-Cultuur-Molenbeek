@@ -192,13 +192,13 @@ nav li {
 
 
 /*      MOBILE NAVIGATION     */
-.dropbtn, 
+.dropbtn,
 #dropdown-content {
   display: none;
 }
 
 @media only screen and (max-width: 995px) {
-  .desktop-nav{
+  .desktop-nav {
     display: none;
   }
 
@@ -222,6 +222,7 @@ nav li {
     display: none;
     flex-direction: column;
     align-items: flex-end;
+
     li {
       margin: .5rem 0;
     }

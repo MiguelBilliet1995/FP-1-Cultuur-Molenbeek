@@ -65,8 +65,8 @@
         <div class="photo-square gezin">
         <img src="./images/illustraties/alle-leeftijden.svg">
         <h1>Gezinnen met jongeren</h1>
-      </a>
       </div>
+      </a>
     </div>
   </div>
 </div>
